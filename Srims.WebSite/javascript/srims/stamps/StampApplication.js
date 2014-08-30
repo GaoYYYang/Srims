@@ -1,0 +1,196 @@
+
+if (!Srims.stamp)
+    Ext.namespace("Srims.stamp");
+
+Srims.stamp.StampApplication = Ext.data.Record.create([{
+    name: 'id',
+    type: 'int',
+    mapping: 'ID'
+}, {
+    name: 'canCensorPassComplete',
+    type: 'boolean',
+    mapping: 'CanCensorPassComplete',
+    convert: Boolean.toBoolean
+}, {
+    name: 'stampStuffFromID',
+    type: 'int',
+    mapping: 'StampStuffFromID'
+}, {
+    name: 'stampStuffFromName',
+    type: 'string',
+    mapping: 'StampStuffFromName'
+}, {
+    name: ' administrator',
+    type: 'string',
+    mapping: 'Administrator'
+}, {
+    name: 'stampApplicationTypeID',
+    type: 'int',
+    mapping: 'StampApplicationTypeID'
+}, {
+    name: 'stampApplicationTypeName',
+    type: 'string',
+    mapping: 'StampApplicationTypeName'
+},{
+    name: 'stampApplicationTypeGroupID',
+    type: 'int',
+    mapping: 'StampApplicationTypeGroupID'
+}, {
+    name: 'stampApplicationTypeGroupName',
+    type: 'string',
+    mapping: 'StampApplicationTypeGroupName'
+}, {
+    name: 'isProjectRelated',
+    type: 'boolean',
+    mapping: 'IsProjectRelated',
+    convert: Boolean.toBoolean
+}, {
+    name: 'stuffNumber',
+    type: 'int',
+    mapping: 'StuffNumber'
+}, {
+    name: 'stampReason',
+    type: 'string',
+    mapping: 'StampReason'
+}, {
+    name: 'keyWord',
+    type: 'string',
+    mapping: 'KeyWord'
+}, {
+    name: 'manager',
+    type: 'string',
+    mapping: 'Manager'
+}, {
+    name: 'managerPhone',
+    type: 'string',
+    mapping: 'ManagerPhone'
+}, {
+    name: 'managerEmail',
+    type: 'string',
+    mapping: 'ManagerEmail'
+}, {
+    name: 'expertPrint',
+    type: 'boolean',
+    mapping: 'ExpertPrint',
+    convert: Boolean.toBoolean
+}, {
+    name: 'sealPerforation',
+    type: 'boolean',
+    mapping: 'SealPerforation',
+    convert: Boolean.toBoolean
+}, {
+    name: 'isDuplexPrint',
+    type: 'boolean',
+    mapping: 'IsDuplexPrint',
+    convert: Boolean.toBoolean
+}, {
+    name: 'principalID',
+    type: 'int',
+    mapping: 'PrincipalID'
+}, {
+    name: 'principal',
+    type: 'string',
+    mapping: 'Principal'
+}, {
+    name: 'currentStateID',
+    type: 'string',
+    mapping: 'CurrentState'
+}, {
+    name: 'currentState',
+    type: 'string',
+    mapping: 'CurrentState'
+}, {
+    name: 'currentStateTime',
+    type: 'date',
+    mapping: 'CurrentStateTime'
+}, {
+    name: 'operator',
+    type: 'string',
+    mapping: 'Operator'
+}, {
+    name: 'hasPermission_Show',
+    type: 'boolean',
+    mapping: 'HasPermission_Show',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_Censor',
+    type: 'boolean',
+    mapping: 'HasPermission_Censor',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_DepartmentCensor',
+    type: 'boolean',
+    mapping: 'HasPermission_DepartmentCensor',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_Edit',
+    type: 'boolean',
+    mapping: 'HasPermission_Edit',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_Stamp',
+    type: 'boolean',
+    mapping: 'HasPermission_Stamp',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_CancleSubmit',
+    type: 'boolean',
+    mapping: 'HasPermission_CancleSubmit',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_Submit',
+    type: 'boolean',
+    mapping: 'HasPermission_Submit',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_ManageStampStuff',
+    type: 'boolean',
+    mapping: 'HasPermission_ManageStampStuff',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canShow',
+    type: 'boolean',
+    mapping: 'CanShow',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canCensor',
+    type: 'boolean',
+    mapping: 'CanCensor',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canCensorPassComplete',
+    type: 'boolean',
+    mapping: 'CanCensorPassComplete',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canDepartmentCensor',
+    type: 'boolean',
+    mapping: 'CanDepartmentCensor',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canEdit',
+    type: 'boolean',
+    mapping: 'CanEdit',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canStamp',
+    type: 'boolean',
+    mapping: 'CanStamp',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canSubmit',
+    type: 'boolean',
+    mapping: 'CanSubmit',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canCancleSubmit',
+    type: 'boolean',
+    mapping: 'CanCancleSubmit',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canManageStampStuff',
+    type: 'boolean',
+    mapping: 'CanManageStampStuff',
+    convert: Boolean.toBoolean
+}]);
+    Srims.data.Entity.apply(Srims.stamp.StampApplication);

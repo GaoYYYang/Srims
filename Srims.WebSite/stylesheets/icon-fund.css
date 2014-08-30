@@ -1,0 +1,68 @@
+﻿.icon-fund, .icon-expert-my-fund
+{
+    background-image: url(../images/icon/fund.png) !important;
+}
+.icon-fund-finance
+{
+    background-image: url(../images/icon/fund-finance.png) !important;
+}
+.icon-finance-auto-import
+{
+    background-image: url(../images/icon/finance-auto-import.png) !important;
+}
+.icon-fund-descend, .icon-expert-fund-descend, .icon-my-descend-fund
+{
+    background-image: url(../images/icon/fund-descend.png) !important;
+}
+.icon-fund-allocation, .icon-performance-allocation, .icon-expert-fund-allocation, .icon-expert-performance-allocation, .icon-fund-waiting-allocation-vertical-project, .icon-fund-waiting-allocation-horizontal-project, .icon-performance-waiting-allocation-vertical-project, .icon-performance-waiting-allocation-horizontal-project
+{
+    background-image: url(../images/icon/fund-allocation.png) !important;
+}
+.icon-fund-voucher, .icon-expert-my-voucher, .icon-recovery-manage, .icon-performance-voucher
+{
+    background-image: url(../images/icon/voucher.png) !important;
+}
+.icon-fund-lent
+{
+    background-image: url(../images/icon/fund-lent.png) !important;
+}
+.icon-fund-censor
+{
+    background-image: url(../images/icon/fund-censor.png) !important;
+}
+.icon-undo-submit
+{
+    background-image: url(../images/icon/reset.png) !important;
+}
+.icon-fund-allocation-list
+{
+    background-image: url(../images/icon/fund-allocation.png) !important;
+}
+.icon-fund-allocation-show
+{
+    background-image: url(../images/icon/fund-allocation.png) !important;
+}
+.icon-fund-allocation-waiting-censor-vertical-project, .icon-project-vertical-censor-fund-allocation, .icon-project-vertical-censor-performance-allocation
+{
+    background-image: url(../images/icon/fund-censor.png) !important;
+}
+.icon-fund-allocation-waiting-censor-horizontal-project, .icon-project-horizontal-censor-fund-allocation, .icon-project-horizontal-censor-performance-allocation
+{
+    background-image: url(../images/icon/fund-censor.png) !important;
+}
+.icon-edit-account-book-nunber
+{
+    background-image: url(../images/icon/edit.png) !important;
+}
+.icon-expert-guid-fund-descend
+{
+    background-image: url(../images/icon/pay-plan-item.png) !important;
+}
+.icon-expert-guid-fund-allocation
+{
+    background-image: url(../images/icon/pay-plan-item.png) !important;
+}
+.icon-fund-allocation-datetime-correct
+{
+    background-image: url(../images/icon/correctDateTime.png) !important;
+}

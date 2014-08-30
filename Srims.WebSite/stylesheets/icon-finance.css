@@ -1,0 +1,42 @@
+﻿.icon-finance, .icon-voucher-finance-financebak, .icon-finance-information
+{
+	background-image: url(../images/icon/finance.png) !important;
+}
+.icon-voucher-finance-state
+{
+	background-image: url(../images/icon/voucher.png) !important;
+}
+.icon-invoice
+{
+	background-image: url(../images/icon/invoice.png) !important;
+}
+.icon-invoice-new
+{
+	background-image: url(../images/icon/invoice-new.png) !important;
+}
+.icon-invoice-edit
+{
+	background-image: url(../images/icon/invoice-edit.png) !important;
+}
+.icon-invoice-delete
+{
+	background-image: url(../images/icon/invoice-delete.png) !important;
+}
+
+.icon-sign-in
+{
+	background-image: url(../images/icon/pass.png) !important;
+}
+.icon-return
+{
+	background-image: url(../images/icon/reject.png) !important;
+}
+
+.icon-allocate
+{
+	background-image: url(../images/icon/ok.png) !important;
+}
+.icon-cancel-allocate
+{
+	background-image: url(../images/icon/project-terminate.png) !important;
+}

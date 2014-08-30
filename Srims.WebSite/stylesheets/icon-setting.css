@@ -1,0 +1,25 @@
+﻿.icon-setting, .icon-system-setting, .icon-log-Set, icon-outsourcing-Set
+{
+	background-image: url(../images/icon/setting.png) !important;
+}
+.icon-notice-text, .icon-notice-text-manage
+{
+	background-image: url(../images/icon/notice-text.png) !important;
+}
+.icon-log, .icon-log-manage, .icon-log-list
+{
+	background-image: url(../images/icon/log.png) !important;
+}
+
+.icon-department, .icon-department-manage, .icon-department-list, .icon-performance-manage
+{
+	background-image: url(../images/icon/department.png) !important;
+}
+.icon-department-new
+{
+	background-image: url(../images/icon/new.png) !important;
+}
+.icon-department-edit
+{
+	background-image: url(../images/icon/edit.png) !important;
+}

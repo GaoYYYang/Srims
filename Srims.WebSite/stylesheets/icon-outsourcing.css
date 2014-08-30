@@ -1,0 +1,17 @@
+﻿.icon-outsourcing, .icon-outsourcing-list,.icon-performance-list
+{
+	background-image: url(../images/icon/outsourcing.png) !important;
+}
+
+.icon-outsourcing-new
+{
+	background-image: url(../images/icon/outsourcing-new.png) !important;
+}
+.icon-outsourcing-show
+{
+	background-image: url(../images/icon/show.png) !important;
+}
+.icon-outsourcing-edit
+{
+	background-image: url(../images/icon/edit.png) !important;
+}

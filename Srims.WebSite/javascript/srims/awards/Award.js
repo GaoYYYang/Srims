@@ -1,0 +1,125 @@
+﻿
+if (!Srims.data) 
+    Ext.namespace('Srims.data');
+if (!Srims.awards) 
+    Ext.namespace("Srims.awards");
+
+Srims.awards.Award = Ext.data.Record.create([{
+    name: 'id',
+    type: 'int',
+    mapping: 'ID'
+}, {
+    name: 'name',
+    type: 'string',
+    mapping: 'Name'
+}, {
+    name: 'rank',
+    type: 'string',
+    mapping: 'Rank'
+}, {
+    name: 'class',
+    type: 'string',
+    mapping: 'Class'
+}, {
+    name: 'attendType',
+    type: 'string',
+    mapping: 'AttendType'
+}, {
+    name: 'introduction',
+    type: 'string',
+    mapping: 'Introduction'
+}, {
+    name: 'authorisedUnit',
+    type: 'string',
+    mapping: 'AuthorisedUnit'
+}, {
+    name: 'classification',
+    type: 'string',
+    mapping: 'Classification'
+}, {
+    name: 'remark',
+    type: 'string',
+    mapping: 'Remark'
+}, {
+    name: 'year',
+    type: 'int',
+    mapping: 'Year'
+}, {
+    name: 'awardFirstWinnerName',
+    type: 'string',
+    mapping: 'AwardFirstWinnerName'
+}, {
+    name: 'awardSecondWinnerName',
+    type: 'string',
+    mapping: 'AwardSecondWinnerName'
+}, {
+    name: 'awardThirdWinnerName',
+    type: 'string',
+    mapping: 'AwardThirdWinnerName'
+}, {
+    name: 'awardFourthWinnerName',
+    type: 'string',
+    mapping: 'AwardFourthWinnerName'
+}, {
+    name: 'awardFifthWinnerName',
+    type: 'string',
+    mapping: 'AwardFifthWinnerName'
+}, {
+    name: 'projectName',
+    type: 'string',
+    mapping: 'ProjectName'
+}, {
+    name: 'collegeName',
+    type: 'string',
+    mapping: 'CollegeName'
+}, {
+    name: 'collegeID',
+    type: 'int',
+    mapping: 'CollegeID'
+}, {
+    name: 'subjectNature',
+    type: 'string',
+    mapping: 'SubjectNature'
+}, {
+    name: 'hasPermission_ShowAward',
+    type: 'boolean',
+    mapping: 'HasPermission_ShowAward',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_EditAward',
+    type: 'boolean',
+    mapping: 'HasPermission_EditAward',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_ShowAwardDocument',
+    type: 'boolean',
+    mapping: 'HasPermission_ShowAwardDocument',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_UploadAwardDocument',
+    type: 'boolean',
+    mapping: 'HasPermission_UploadAwardDocument',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canShowAward',
+    type: 'boolean',
+    mapping: 'CanShowAward',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canEditAward',
+    type: 'boolean',
+    mapping: 'CanEditAward',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canShowAwardDocument',
+    type: 'boolean',
+    mapping: 'CanShowAwardDocument',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canUploadAwardDocument',
+    type: 'boolean',
+    mapping: 'CanUploadAwardDocument',
+    convert: Boolean.toBoolean
+}]);
+Srims.data.Entity.apply(Srims.awards.Award);
+

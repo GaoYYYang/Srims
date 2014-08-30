@@ -1,0 +1,138 @@
+﻿.icon-project, .icon-expert-my-project
+{
+	background-image: url(../images/icon/project.png) !important;
+}
+
+.icon-project-new
+{
+	background-image: url(../images/icon/new.png) !important;
+}
+.icon-project-show
+{
+	background-image: url(../images/icon/show.png) !important;
+}
+.icon-project-edit
+{
+	background-image: url(../images/icon/edit.png) !important;
+}
+.icon-project-delete
+{
+	background-image: url(../images/icon/delete.png) !important;
+}
+.icon-project-query
+{
+	background-image: url(../images/icon/query.png) !important;
+}
+.icon-project-member-manage
+{
+	background-image: url(../images/icon/member-manage.png) !important;
+}
+
+.icon-project-horizontal, .icon-project-horizontal-list
+{
+	background-image: url(../images/icon/project-horizontal.png) !important;
+}
+.icon-project-horizontal-new
+{
+	background-image: url(../images/icon/project-horizontal-new.png) !important;
+}
+.icon-project-horizontal-query
+{
+	background-image: url(../images/icon/project-horizontal-query.png) !important;
+}
+.icon-project-horizontal-censor, .icon-project-horizontal-censor-start, .icon-project-horizontal-censor-end
+{
+	background-image: url(../images/icon/project-horizontal-censor.png) !important;
+}
+
+.icon-project-vertical, .icon-project-vertical-list
+{
+	background-image: url(../images/icon/project-vertical.png) !important;
+}
+.icon-project-vertical-new
+{
+	background-image: url(../images/icon/project-vertical-new.png) !important;
+}
+.icon-project-vertical-query
+{
+	background-image: url(../images/icon/project-vertical-query.png) !important;
+}
+.icon-project-vertical-censor, .icon-project-vertical-censor-start, .icon-project-vertical-censor-end
+{
+	background-image: url(../images/icon/project-vertical-censor.png) !important;
+}
+
+.icon-project-pay-plan-item
+{
+	background-image: url(../images/icon/pay-plan-item.png) !important;
+}
+.icon-project-contract
+{
+	background-image: url(../images/icon/contract.png) !important;
+}
+.icon-project-document
+{
+	background-image: url(../images/icon/document.png) !important;
+}
+
+.icon-expert-project-new
+{
+	background-image: url(../images/icon/project-new.png) !important;
+}
+
+.icon-project-my-project-principal
+{
+	background-image: url(../images/icon/project-my-project-principal.png) !important;
+}
+.icon-project-my-project-delegate
+{
+	background-image: url(../images/icon/project-my-project-delegate.png) !important;
+}
+.icon-project-my-project-join
+{
+	background-image: url(../images/icon/project-my-project-join.png) !important;
+}
+
+.icon-submit-start
+{
+	background-image: url(../images/icon/pass.png) !important;
+}
+.icon-submit-end
+{
+	background-image: url(../images/icon/pass.png) !important;
+}
+.icon-undo-start
+{
+	background-image: url(../images/icon/reject.png) !important;
+}
+.icon-undo-end
+{
+	background-image: url(../images/icon/reject.png) !important;
+}
+.icon-terminate
+{
+	background-image: url(../images/icon/project-terminate.png) !important;
+}
+.icon-withDraw
+{
+	background-image: url(../images/icon/project-withdraw.png) !important;
+}
+
+.icon-set-delegate-principal
+{
+	background-image: url(../images/icon/delegate-principal.png) !important;
+}
+.icon-clear-delegate-principal
+{
+	background-image: url(../images/icon/delegate-principal-cancel.png) !important;
+}
+
+.icon-project-horizontal-censor-fund-descend, icon-project-vertical-censor-fund-descend
+{
+	background-image: url(../images/icon/fund-censor.png) !important;
+}
+.icon-clear-project-account-book-number
+{
+	background-image: url(../images/icon/clear-project-account-book-number.png) !important;
+}
+

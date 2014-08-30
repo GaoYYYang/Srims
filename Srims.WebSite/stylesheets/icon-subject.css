@@ -1,0 +1,21 @@
+﻿.icon-subject, .icon-subject-list
+{
+	background-image: url(../images/icon/subject.png) !important;
+}
+
+.icon-subject-level-first, .icon-subject-level-first-list
+{
+	background-image: url(../images/icon/subject-level-first.png) !important;
+}
+.icon-subject-level-second, .icon-subject-level-second-list
+{
+	background-image: url(../images/icon/subject-level-second.png) !important;
+}
+.icon-subject-firstLevel-new, .icon-subject-secondlevel-new
+{
+	background-image: url(../images/icon/new.png) !important;
+}
+.icon-subject-firstLevel-edit, .icon-subject-secondlevel-edit
+{
+	background-image: url(../images/icon/edit.png) !important;
+}

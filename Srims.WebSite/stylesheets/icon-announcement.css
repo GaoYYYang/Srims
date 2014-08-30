@@ -1,0 +1,25 @@
+﻿.icon-announcement, .icon-announcement-list
+{
+	background-image: url(../images/icon/announcement.png) !important;
+}
+
+.icon-announcement-new
+{
+	background-image: url(../images/icon/announcement-new.png) !important;
+}
+.icon-announcement-settop
+{
+	background-image: url(../images/icon/settop.png) !important;
+}
+.icon-announcement-canceltop
+{
+	background-image: url(../images/icon/canceltop.png) !important;
+}
+.icon-announcement-setoverdue
+{
+	background-image: url(../images/icon/reject.png) !important;
+}
+.icon-announcement-canceloverdue
+{
+	background-image: url(../images/icon/pass.png) !important;
+}

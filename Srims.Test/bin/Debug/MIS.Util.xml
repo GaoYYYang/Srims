@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MIS.Util</name>
+    </assembly>
+    <members>
+        <member name="T:MIS.Util.DebuggerWriter">
+            <summary>
+            Implements a <see cref="T:System.IO.TextWriter"/> for writing information to the debugger log.
+            </summary>
+            <seealso cref="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)"/>
+        </member>
+        <member name="M:MIS.Util.DebuggerWriter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MIS.Util.DebuggerWriter"/> class.
+            </summary>
+        </member>
+        <member name="M:MIS.Util.DebuggerWriter.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MIS.Util.DebuggerWriter"/> class with the specified level and category.
+            </summary>
+            <param name="level">A description of the importance of the messages.</param>
+            <param name="category">The category of the messages.</param>
+        </member>
+        <member name="M:MIS.Util.DebuggerWriter.#ctor(System.Int32,System.String,System.IFormatProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MIS.Util.DebuggerWriter"/> class with the specified level, category and format provider.
+            </summary>
+            <param name="level">A description of the importance of the messages.</param>
+            <param name="category">The category of the messages.</param>
+            <param name="formatProvider">An <see cref="T:System.IFormatProvider"/> object that controls formatting.</param>
+        </member>
+        <member name="M:MIS.Util.DebuggerWriter.Dispose(System.Boolean)">
+            <summary>
+            Dispose
+            </summary>
+            <param name="disposing">disposing</param>
+        </member>
+        <member name="M:MIS.Util.DebuggerWriter.Write(System.Char)">
+            <summary>
+            Write
+            </summary>
+            <param name="value">char value</param>
+        </member>
+        <member name="M:MIS.Util.DebuggerWriter.Write(System.String)">
+            <summary>
+            Write
+            </summary>
+            <param name="value">string value</param>
+        </member>
+        <member name="M:MIS.Util.DebuggerWriter.Write(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Write
+            </summary>
+            <param name="buffer">buffer</param>
+            <param name="index">index</param>
+            <param name="count">count</param>
+        </member>
+        <member name="P:MIS.Util.DebuggerWriter.Encoding">
+            <summary>
+            Get the encoding of the writer
+            </summary>
+        </member>
+        <member name="P:MIS.Util.DebuggerWriter.Level">
+            <summary>
+            Get the level of the writer
+            </summary>
+        </member>
+        <member name="P:MIS.Util.DebuggerWriter.Category">
+            <summary>
+            Get the category of the writer
+            </summary>
+        </member>
+        <member name="T:MIS.Util.Data.LinqGenerater.LinqMappingXmlGenerater">
+            <summary>
+            用于生成Linq的外部映射文件
+            </summary>
+        </member>
+        <member name="M:MIS.Util.Data.LinqGenerater.LinqMappingXmlGenerater.#ctor(System.String,System.String,System.String)">
+            <summary>
+            用于生成Linq的外部映射文件
+            </summary>
+            <param name="userName">执行该构造的系统用户名，通常指定为该机器的管理员（Administrator）</param>
+            <param name="password">对应用户的密码</param>
+            <param name="connectionString">数据库的连接字符串</param>
+        </member>
+        <member name="M:MIS.Util.Data.LinqGenerater.LinqMappingXmlGenerater.BuildMappingXml(System.Type[],System.String)">
+            <summary>
+            构造Xml映射文件
+            </summary>
+            <param name="typeList">要被构造的类型集合。</param>
+            <param name="outputFileName">生成文件保存的路径及文件名</param>
+        </member>
+        <member name="T:MIS.Util.Deploy.Deployer">
+            <summary>
+            部署器
+            </summary>
+        </member>
+        <member name="M:MIS.Util.Deploy.Deployer.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+             构造部署器
+            </summary>
+            <param name="solutionPath">解决方案所在路径</param>
+            <param name="releaseBasePath">发布版本所在基路径</param>
+            <param name="entityXmlFilePath">实体XML文件路径</param>
+            <param name="developConnectionString">部署的连接字符串</param>
+            <param name="deployConnectionString">开发连接字符串</param>
+        </member>
+        <member name="M:MIS.Util.Deploy.Deployer.Deploy(System.String)">
+            <summary>
+            发布
+            </summary>
+            <param name="version">要发布的版本</param>
+        </member>
+        <member name="T:MIS.Util.Data.EntityPrase.Entity">
+            <summary>
+            实体
+            </summary>
+        </member>
+        <member name="P:MIS.Util.Data.EntityPrase.Entity.Name">
+            <summary>
+            取得或设置实体名称
+            </summary>
+        </member>
+        <member name="P:MIS.Util.Data.EntityPrase.Entity.Title">
+            <summary>
+            取得或设置实体标题
+            </summary>
+        </member>
+        <member name="P:MIS.Util.Data.EntityPrase.Entity.Module">
+            <summary>
+            取得或设置实体所属的模块
+            </summary>
+        </member>
+        <member name="P:MIS.Util.Data.EntityPrase.Entity.ItemList">
+            <summary>
+            实体所包含内容的集合
+            </summary>
+        </member>
+        <member name="T:MIS.Util.Deploy.WebApplicationDeployer">
+            <summary>
+            This simple task open the web application project file and find all the files considered as
+            content and copy all of them in the destination path in order to publish the application.
+            </summary>
+        </member>
+        <member name="M:MIS.Util.Deploy.WebApplicationDeployer.Deploy">
+            <summary>
+            发布
+            </summary>
+        </member>
+        <member name="M:MIS.Util.Deploy.WebApplicationDeployer.CopyBin">
+            <summary>
+            Copy the whole bin directory
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MIS.Util.Deploy.WebApplicationDeployer.WebAppRoot">
+            <summary>
+            设置或取得Web项目的路径
+            </summary>
+        </member>
+        <member name="P:MIS.Util.Deploy.WebApplicationDeployer.WebAppDestination">
+            <summary>
+            设置或取得发布到的位置
+            </summary>
+        </member>
+        <member name="T:MIS.Util.Data.EntityPrase.Item">
+            <summary>
+            实体项
+            </summary>
+        </member>
+        <member name="P:MIS.Util.Data.EntityPrase.Item.Name">
+            <summary>
+            取得或设置项的名称
+            </summary>
+        </member>
+        <member name="P:MIS.Util.Data.EntityPrase.Item.Title">
+            <summary>
+            取得或设置项的标题
+            </summary>
+        </member>
+        <member name="P:MIS.Util.Data.EntityPrase.Item.EntityName">
+            <summary>
+            取得或设置项对应的实体类型，当项的类型为实体时有效
+            </summary>
+        </member>
+        <member name="P:MIS.Util.Data.EntityPrase.Item.EnumName">
+            <summary>
+            取得或设置项对应的枚举类型，当项的类型为枚举时有效
+            </summary>
+        </member>
+        <member name="P:MIS.Util.Data.EntityPrase.Item.ItemType">
+            <summary>
+            取得或设置项的数据类型
+            </summary>
+        </member>
+        <member name="P:MIS.Util.Data.EntityPrase.Item.PropertyType">
+            <summary>
+            取得或设置生成属性的类型
+            </summary>
+        </member>
+        <member name="P:MIS.Util.Data.EntityPrase.Item.Require">
+            <summary>
+            取得或设置项是否必填
+            </summary>
+        </member>
+        <member name="P:MIS.Util.Data.EntityPrase.Item.Description">
+            <summary>
+            取得或设置项的描述
+            </summary>
+        </member>
+        <member name="T:MIS.Util.Data.DatabaseScriptGenerater.MsSqlServerScriptBuilder">
+            <summary>
+            Sql数据库建库脚本生成器
+            </summary>
+        </member>
+        <member name="M:MIS.Util.Data.DatabaseScriptGenerater.MsSqlServerScriptBuilder.GetSqlScript(MIS.Util.Data.EntityPrase.Entity[])">
+            <summary>
+            生成建库脚本，包含删除对象的脚本
+            </summary>
+            <param name="entityList">要被生成的实体集合</param>
+            <returns>生成的脚本</returns>
+        </member>
+        <member name="M:MIS.Util.Data.DatabaseScriptGenerater.MsSqlServerScriptBuilder.GetSqlScript(MIS.Util.Data.EntityPrase.Entity[],System.Boolean)">
+            <summary>
+            生成建库脚本
+            </summary>
+            <param name="entityList">要被生成的实体集合</param>
+            <param name="isIncludeTableDrop">是否生成对象的删除脚本</param>
+            <returns>生成的脚本</returns>
+        </member>
+        <member name="T:MIS.Util.Data.EntityPrase.EntityXmlParser">
+            <summary>
+            Xml实体解析器
+            </summary>
+        </member>
+        <member name="M:MIS.Util.Data.EntityPrase.EntityXmlParser.ParseXml(System.Xml.XmlDocument)">
+            <summary>
+            解析Xml
+            </summary>
+            <param name="document">要解析的Xml文档</param>
+            <returns>对应的实体集合</returns>
+        </member>
+        <member name="T:MIS.Util.Data.EntityPrase.PropertyType">
+            <summary>
+            生成属性的方式
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.PropertyType.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.PropertyType.Get">
+            <summary>
+            只有Get
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.PropertyType.Set">
+            <summary>
+            只有Set
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.PropertyType.Both">
+            <summary>
+            Set和Get
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.PropertyType.None">
+            <summary>
+            忽略
+            </summary>
+        </member>
+        <member name="T:MIS.Util.Data.EntityPrase.ItemType">
+            <summary>
+            实体的成员类型
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.ItemType.Unknown">
+            <summary>
+            未知类型
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.ItemType.Int">
+            <summary>
+            整型
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.ItemType.Long">
+            <summary>
+            长整型
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.ItemType.Enum">
+            <summary>
+            枚举
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.ItemType.Text">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.ItemType.LongText">
+            <summary>
+            长文本
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.ItemType.DateTime">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.ItemType.Bool">
+            <summary>
+            布尔
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.ItemType.Bytes">
+            <summary>
+            二进制流
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.ItemType.Guid">
+            <summary>
+            全球统一表示
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.ItemType.PrimaryKey">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="F:MIS.Util.Data.EntityPrase.ItemType.ForeignKey">
+            <summary>
+            外键
+            </summary>
+        </member>
+        <member name="T:MIS.Util.Data.LinqGenerater.LinqEntityCodeGenerater">
+            <summary>
+            Ling的实体类代码生成器
+            </summary>
+        </member>
+        <member name="M:MIS.Util.Data.LinqGenerater.LinqEntityCodeGenerater.Generate(System.String,System.String,MIS.Util.Data.EntityPrase.Entity[],System.String[],System.Boolean)">
+            <summary>
+            生成Linq的实体代码
+            </summary>
+            <param name="path">路径</param>
+            <param name="baseNameSpace">基于的命名空间</param>
+            <param name="entities">要生成的实体</param>
+            <param name="usingNameSpaces">需要附加的命名空间</param>
+            <param name="overwriteMainCode">是否覆盖已有的主代码文件</param>
+        </member>
+    </members>
+</doc>

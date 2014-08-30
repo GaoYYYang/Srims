@@ -1,0 +1,120 @@
+﻿
+if (!Srims.data) 
+    Ext.namespace('Srims.data');
+if (!Srims.patents) 
+    Ext.namespace("Srims.patents");
+
+Srims.patents.Patent = Ext.data.Record.create([{
+    name: 'id',
+    type: 'int',
+    mapping: 'ID'
+}, {
+    name: 'name',
+    type: 'string',
+    mapping: 'Name'
+}, {
+    name: 'lawState',
+    type: 'string',
+    mapping: 'LawState'
+}, {
+    name: 'lawStateTime',
+    type: 'date',
+    mapping: 'LawStateTime'
+}, {
+    name: 'level',
+    type: 'string',
+    mapping: 'Level'
+}, {
+    name: 'mainCategoryNumber',
+    type: 'string',
+    mapping: 'MainCategoryNumber'
+}, {
+    name: 'allCategoryNumber',
+    type: 'string',
+    mapping: 'AllCategoryNumber'
+}, {
+    name: 'number',
+    type: 'string',
+    mapping: 'Number'
+}, {
+    name: 'remark',
+    type: 'string',
+    mapping: 'Remark'
+}, {
+    name: 'type',
+    type: 'string',
+    mapping: 'Type'
+}, {
+    name: 'applicationDateTime',
+    type: 'date',
+    mapping: 'ApplicationDateTime'
+}, {
+    name: 'authorizeDateTime',
+    type: 'date',
+    mapping: 'AuthorizeDateTime'
+}, {
+    name: 'category',
+    type: 'string',
+    mapping: 'Category'
+}, {
+    name: 'country',
+    type: 'string',
+    mapping: 'Country'
+}, {
+    name: 'introduction',
+    type: 'string',
+    mapping: 'Introduction'
+}, {
+    name: 'collegeName',
+    type: 'string',
+    mapping: 'CollegeName'
+}, {
+    name: 'collegeID',
+    type: 'int',
+    mapping: 'CollegeID'
+}, {
+    name: 'patentInventersName',
+    type: 'string',
+    mapping: 'PatentInventersName'
+}, {
+    name: 'patentPrincipalName',
+    type: 'string',
+    mapping: 'PatentPrincipalName'
+}, {
+    name: 'hasPermission_ShowPatent',
+    type: 'boolean',
+    mapping: 'HasPermission_ShowPatent',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_EditPatent',
+    type: 'boolean',
+    mapping: 'HasPermission_EditPatent',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canShowPatent',
+    type: 'boolean',
+    mapping: 'CanShowPatent',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canEditPatent',
+    type: 'boolean',
+    mapping: 'CanEditPatent',
+    convert: Boolean.toBoolean
+}, {
+    name: 'agencyName',
+    type: 'string',
+    mapping: 'AgencyName'
+}, {
+    name: 'agencyID',
+    type: 'int',
+    mapping: 'AgencyID'
+}, {
+    name: 'agent',
+    type: 'string',
+    mapping: 'Agent'
+}, {
+    name: 'contract',
+    type: 'string',
+    mapping: 'Contract'
+}]);
+Srims.data.Entity.apply(Srims.patents.Patent);

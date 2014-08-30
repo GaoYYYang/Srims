@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84B31ACF-9B29-45DA-96DC-D35E5762B4DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Srims.Tools.DataImport</RootNamespace>
+    <AssemblyName>Srims.Tools.DataImport</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IImporter.cs" />
+    <Compile Include="Importer\Awards\AwardImporter.cs" />
+    <Compile Include="Importer\Awards\AwardWinnerImporter.cs" />
+    <Compile Include="Importer\Bases\BaseImporter.cs" />
+    <Compile Include="Importer\Common\AnnouncementImporter.cs" />
+    <Compile Include="Importer\Common\CountImporter.cs" />
+    <Compile Include="Importer\Common\LogImporter.cs" />
+    <Compile Include="Importer\Common\NoticeTextImporter.cs" />
+    <Compile Include="Importer\Common\SubjectFirstLevelImporter.cs" />
+    <Compile Include="Importer\Common\SubjectSecondLevelImporter.cs" />
+    <Compile Include="Importer\Common\SystemSettingImporter.cs" />
+    <Compile Include="Importer\Documents\ContractImporter.cs" />
+    <Compile Include="Importer\Documents\DocumentImporter.cs" />
+    <Compile Include="Importer\Experts\DepartmentImporter.cs" />
+    <Compile Include="Importer\Experts\ExpertImporter.cs" />
+    <Compile Include="Importer\Fund\AccountBookNumberCountImporter.cs" />
+    <Compile Include="Importer\Fund\FinanceBakImporter.cs" />
+    <Compile Include="Importer\Fund\FinanceImporter.cs" />
+    <Compile Include="Importer\Fund\FundAllocationImporter.cs" />
+    <Compile Include="Importer\Fund\FundAllocationStateHistoryImporter.cs" />
+    <Compile Include="Importer\Fund\FundDescendImporter.cs" />
+    <Compile Include="Importer\Fund\FundDescendStateHistoryImporter.cs" />
+    <Compile Include="Importer\Fund\FundMemberImporter.cs" />
+    <Compile Include="Importer\Fund\PayPlanItemImporter.cs" />
+    <Compile Include="Importer\Fund\ProjectInfo_FundImporter.cs" />
+    <Compile Include="Importer\Fund\VoucherImporter.cs" />
+    <Compile Include="Importer\Fund\VoucherOutImporter.cs" />
+    <Compile Include="Importer\Fund\VoucherStateHistoryimporter.cs" />
+    <Compile Include="Importer\ImporterBase.cs" />
+    <Compile Include="Importer\Papers\MagazineImporter.cs" />
+    <Compile Include="Importer\Papers\MagazineInformationImporter.cs" />
+    <Compile Include="Importer\Papers\MagazineSubjectClassimporter.cs" />
+    <Compile Include="Importer\Papers\PaperAuthorImporter.cs" />
+    <Compile Include="Importer\Papers\PaperImporter.cs" />
+    <Compile Include="Importer\Papers\PaperIndexedImporter.cs" />
+    <Compile Include="Importer\Papers\SubjectClassChineseEnglishImporter.cs" />
+    <Compile Include="Importer\Patents\PatentAgencyImporter.cs" />
+    <Compile Include="Importer\Patents\PatentImporter.cs" />
+    <Compile Include="Importer\Patents\PatentInventerImporter.cs" />
+    <Compile Include="Importer\Projects\ProjectImporter.cs" />
+    <Compile Include="Importer\Projects\ProjectMemberImporter.cs" />
+    <Compile Include="Importer\Projects\ProjectStateHistoryImporter.cs" />
+    <Compile Include="Importer\Type\ProjectInfo_TypeImporter.cs" />
+    <Compile Include="Importer\Type\ProjectRankImporter.cs" />
+    <Compile Include="Importer\Type\ProjectSupportCategoryImporter.cs" />
+    <Compile Include="Importer\Type\ProjectSupportFieldImporter.cs" />
+    <Compile Include="Importer\Type\ProjectSupportSubFieldImporter.cs" />
+    <Compile Include="Importer\Type\ProjectTypeImporter.cs" />
+    <Compile Include="Importer\Users\UserImporter.cs" />
+    <Compile Include="Importer\Users\UserRoleImporter.cs" />
+    <Compile Include="ImportManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SrimsV4.cs">
+      <DependentUpon>SrimsV4.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="SrimsV4.designer.cs">
+      <DependentUpon>SrimsV4.dbml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="SrimsV4.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SrimsV4.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SrimsV4.dbml.layout">
+      <DependentUpon>SrimsV4.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MIS.Common\MIS.Common.csproj">
+      <Project>{6362C727-4A13-4688-9EF6-E6DB9D3D8F9C}</Project>
+      <Name>MIS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Srims.Server.Business\Srims.Server.Business.csproj">
+      <Project>{CFA3CC51-A1EB-4090-81AB-7F17AD5AF305}</Project>
+      <Name>Srims.Server.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Srims.Server.DataAccess\Srims.Server.DataAccess.csproj">
+      <Project>{978AD13F-E64A-4130-88ED-3E17F7F88EEC}</Project>
+      <Name>Srims.Server.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

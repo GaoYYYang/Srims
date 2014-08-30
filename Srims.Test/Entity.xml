@@ -1,0 +1,855 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://it.ouc.edu.cn/DatabaseDescription/V2">
+  <Entity title="提示文本" name="NoticeText" module="Common">
+    <Item title="值" name="Value" type="text" description="标题即提示文本的内容" />
+    <Item title="缩写" name="ValueSpell" type="text" description="拼音首字母" />
+    <Item title="提示文本类型" name="Type" type="enum" enumName="NoticeTextType" />
+  </Entity>
+  <Entity title="资源" name="Resource" module="Common">
+    <Item title="Guid" name="Guid" type="guid"/>
+    <Item title="类型" name="Type" type="text" description="文件扩展名"/>
+    <Item title="内容" name="Content" type="bytes" require="false"/>
+  </Entity>
+  <Entity title="日志" name="Log" module="Common">
+    <Item title="时间" name="DateTime" type="datetime" require="true"/>
+    <Item title="用户" name="User" type="text" require="true"/>
+    <Item title="用户IP" name="UserIP" type="text" require="true"/>
+    <Item title="操作" name="Action" type="text" require="true"/>
+    <Item title="描述" name="Description" type="longtext" require="false"/>
+  </Entity>
+  <Entity title="事件" name="Event" module="Common">
+    <Item title="Guid" name="Guid" type="guid"/>
+    <Item title="类型" name="Type" type="enum" enumName="EventType" />
+    <Item title="参数" name="Parameter" type="text" />
+    <Item title="创建用户" name="CreateUser" type="text"/>
+    <Item title="创建时间" name="CreateDateTime" type="datetime"/>
+    <Item title="是否已完成" name="IsComplete" type="bool" />
+    <Item title="完成用户" name="CompleteUser" type="text" require="false"/>
+    <Item title="完成时间" name="CompleteDateTime" type="datetime" require="false"/>
+    <Item title="描述" name="Description" type="longtext"/>
+  </Entity>
+  <Entity title="系统设置" name="SystemSetting" module="Common">
+    <Item title="外协经费在总经费中最大比例" name="FundOutRatio" type="int" description="表示百分比" require="false"/>
+    <Item title="横向凭单数目" name="HorizontalVoucher" type="int"/>
+    <Item title="纵向凭单数目" name="VerticalVoucher" type="int"/>
+    <Item title="横向绩效凭单数目" name="HorizontalPerformanceVoucher" type="int"/>
+    <Item title="纵向绩效凭单数目" name="VPV" type="int"/>
+    <Item title="默认横向校内管理费率" name="DefaultOverheadExpenseInRateHorizonal" type="int" description="表示百分比" require="true"></Item>
+    <Item title="默认横向校外管理费率" name="DefaultOverheadExpenseOutRateHorizonal" type="int" description="表示百分比" require="true"></Item>
+    <Item title="默认纵向校内管理费率（非预算制）" name="DefaultOverheadExpenseInRateVertical" type="int" description="表示百分比" require="true"></Item>
+    <Item title="默认纵向校外管理费率（非预算制）" name="DefaultOverheadExpenseOutRateVertical" type="int" description="表示百分比" require="true"></Item>
+    <Item title="日志类型" name="LogType" type="longtext" description="以逗号为分隔，描述不同的日志类型" require="false"/>
+    <Item title="邮件地址" name="EmailAddress" type="text" require="false"/>
+    <Item title="SMTP域" name="SmtpHost" type="text" require="false"/>
+    <Item title="SMTP端口" name="SmtpPort" type="int" require="false"/>
+    <Item title="SMTP密码" name="SmtpPassword" type="text" require="false"/>
+    <Item title="SMTP用户名" name="SmtpUsername" type="text" require="false"/>
+    <Item title="财务处网址" name="FinanceWebAddress" type="text" require="false"/>
+    <Item title="人事处网址" name="ExpertWebAddress" type="text" require="false"/>
+    <Item title="Windows服务类型" name="WindowsServiceType" type="text" require="false" description="以逗号隔开，表示不同的日志类型"/>
+    <Item title="论文库说明文字" name="PaperDescription" type="text" require="true"/>
+  </Entity>
+  <Entity title="通知" name="Announcement" module="Common">
+    <Item title="标题" name="Title" type="text" require="true"/>
+    <Item title="时间" name="DateTime" type="datetime" require="true"/>
+    <Item title="发布人" name="UserName" type="text" require="true"/>
+    <Item title="内容" name="Content" type="longtext" require="false"/>
+    <Item title="状态" name="State" type="enum" enumName="AnnouncementState" require="true" />
+  </Entity>
+  <Entity title="分年份计数器" name="Count" module="Common">
+    <Item title="年份" name="Year" type="int"/>
+    <Item title="年度横向项目数目" name="HorizontalProject" type="int"/>
+    <Item title="年度合同数目" name="Contract" type="int"/>
+    <Item title="专家数序码计数器" name="ExpertSerialCodeCount" type="int" require="true"/>
+  </Entity>
+  <Entity title="一级学科" name ="SubjectFirstLevel" module="Common">
+    <Item title="名称" name="Name" type="text" require="true"/>
+    <Item title="代码" name="Code" type="text" require="true"/>
+  </Entity>
+  <Entity title="二级学科" name="SubjectSecondLevel" module="Common">
+    <Item title="名称" name="Name" type="text" require="true"/>
+    <Item title="一级学科" name="SubjectFirstLevel" type="entity" entityName="SubjectFirstLevel" require="true"/>
+    <Item title="子代码" name="ChildCode" type="text" require="true"/>
+    <Item title="代码" name="Code" type="text" require="true"/>
+  </Entity>
+  <Entity title="视图" name="View" module="Common">
+    <Item title="名称" name="Name" type="text"/>
+    <Item title="视图类型" name="Type" type="enum" enumName="ViewType"/>
+    <Item title="定义" name="Definition" type="longtext"/>
+    <Item title="顺序" name="Order" type="int"/>
+    <Item title="是否公开" name="IsPublic" type="bool"/>
+    <Item title="用户" name="User" type="entity" entityName="User" require="false"/>
+  </Entity>
+  <Entity title="用户角色" name="UserRole" module="Users">
+    <Item title="名称" name="Name" type="text" />
+    <Item title="类型" name="Type" type="enum" enumName="UserRoleType" description="管理员、专家、企业"/>
+  </Entity>
+  <Entity title="用户" name="User" module="Users">
+    <Item title="用户角色" name="UserRole" type="entity" entityName="UserRole"/>
+    <Item title="登录名" name="LoginID" type="text"/>
+    <Item title="用户名" name="Name" type="text"/>
+    <Item title="用户名拼音首字母" name="NameSpell" type="text"/>
+    <Item title="密码" name="Password" type="text"/>
+    <Item title="电子邮件" name="Email" type="text" require="false"/>
+    <Item title="家庭电话" name="HomePhone" type="text" require="false"/>
+    <Item title="办公电话" name="OfficePhone" type="text" require="false"/>
+    <Item title="移动电话" name="MobilePhone" type="text" require="false"/>
+    <Item title="传真" name="Fax" type="text" require="false"/>
+    <Item title="是否超级用户" name="IsSuper" type="bool" />
+    <Item title="是否允许多人登陆" name="AllowMultiLogin" type="bool"/>
+    <Item title="是否自定义权限" name="IsCustomPermission" type="bool"/>
+    <Item title="Ext客户端状态" name="ExtClientState" type="longtext" require="false"/>
+  </Entity>
+  <Entity title="用户登录记录" name="UserLoginLog" module="Users">
+    <Item title="对应用户" name="User" type="entity" entityName="User"/>
+    <Item title="令牌" name="Token" type="guid"/>
+    <Item title="登陆IP" name="LoingIP" type="text"/>
+    <Item title="登陆时间" name="LoginTime" type="datetime" />
+    <Item title="最后活动时间" name="LastActiveTime" type="datetime"/>
+    <Item title="是否已退出登陆" name="IsLogout" type="bool"/>
+  </Entity>
+  <Entity title="用户锁定记录" name="UserLockLog" module="Users">
+    <Item title="对应用户" name="User" type="entity" entityName="User"/>
+    <Item title="开始时间" name="StartTime" type="datetime" require="true"/>
+    <Item title="截止时间" name="EndTime" type="datetime" require="false"/>
+    <Item title="操作人" name="Operator" type="text" require="true" />
+    <Item title="操作时间" name="OperateDateTime" type="datetime" require="true"/>
+    <Item title="锁定原因" name="Reason" type="text"/>
+  </Entity>
+  <Entity title="权限" name="Permission" module="Users">
+    <Item title="权限分类" name="PermissionItem" type ="enum" enumName="PermissionItem"/>
+    <Item title="权限操作" name="PermissionOperation" type="enum" enumName="PermissionOperation" require="false"/>
+    <Item title="参数" name="Params" type="int" require="false" description="当权限类型为院系管理员（枚举值为3）时，参数值为学院的ID，否则为项目类型的ID" />
+    <Item title="授权时间" name="AccreditDateTime" type="datetime"/>
+    <Item title="终止时间" name="EndDateTime" type="datetime" require="false"/>
+  </Entity>
+  <Entity title="权限_用户" name="UserPermission" module="Users">
+    <Item title="对应用户" name="User" type="entity"  entityName="User" />
+    <Item title="对应权限" name="Permission" type ="entity" entityName="Permission"/>
+  </Entity>
+  <Entity title="权限_角色" name="UserRolePermission" module="Users">
+    <Item title="对应用户角色" name="UserRole" type="entity"  entityName="UserRole" />
+    <Item title="对应权限" name="Permission" type ="entity" entityName="Permission"/>
+  </Entity>
+  <Entity title="短消息" name="Message" module="Users">
+    <Item title="发送人" name="Sender" type="entity" entityName="User" require="false"/>
+    <Item title="收信人" name="Receiver" type="entity" entityName="User" />
+    <Item title="标题" name="Title" type="text" require="true"/>
+    <Item title="内容" name="Content" type="longtext" require="false" />
+    <Item title="发送时间" name="DateTime" type="datetime" require="true"/>
+    <Item title="是否已读" name="IsRead" type="bool" require="true"/>
+  </Entity>
+
+  <Entity title="部门" name="Department" module="Experts">
+    <Item title="名称" name="Name" type="text" require="true"/>
+    <Item title="名称拼音首字母缩写" name="NameSpell" type="text" require="true"/>
+    <Item title="简称" name="ShortName" type="text" require="false"/>
+    <Item title="代码" name="Code" type="text" require="true"/>
+    <Item title="是否是学院" name="IsCollege" type="bool" require="true"/>
+  </Entity>
+  <Entity title="专家" name="Expert" module="Experts">
+    <Item title="对应用户" name="User" type="entity" entityName="User"/>
+    <Item title="职工号" name="Number" type="text"/>
+    <Item title="姓名" name="Name" type="text"/>
+    <Item title="姓名拼音缩写" name="NameSpell" type="text"/>
+    <Item title="性别" name="Sex" type="enum" enumName="SexType" description="男、女"/>
+    <Item title="出生日期" name="Birthday" type="datetime" require="false"/>
+    <Item title="民族" name="Nation" type="text"/>
+    <Item title="政治面貌" name="Policy" type="text"/>
+    <Item title="所学专业代码" name="MajorCode" type="entity" entityName="SubjectSecondLevel" require="false"/>
+    <Item title="身份证号" name="IDCardNumber" type="text" description="增加校验"/>
+    <Item title="来校年月" name="ComeDate" type="datetime" require="false"/>
+    <Item title="档案号" name="FileNumber" type="text"/>
+    <Item title="学历" name="AcademyDegree" type="text" />
+    <Item title="旧版本职称" name="PostOld" type="text"/>
+    <Item title="新版本职称" name="PostNew" type="text"/>
+    <Item title="职称等级" name="PostLevel" type="int" require="false"/>
+    <Item title="职务" name="Occupation" type="text"/>
+    <Item title="职业等级" name="VocationLevel" type="int" require="false" description="1-14"/>
+    <Item title="是否博导" name="IsDoctorDirector" type="bool" require="false"/>
+    <Item title="是否在职" name="IsOnjob" type="bool" require="false"/>
+    <Item title="是否中国籍" name="IsChinese" type="bool" require="false"/>
+    <Item title="移动电话" name="MobilePhone" type="text"/>
+    <Item title="办公电话" name="OfficePhone" type="text"/>
+    <Item title="家庭电话" name="HomePhone" type="text"/>
+    <Item title="传真" name="Fax" type="text"/>
+    <Item title="通讯地址" name="Address" type="text"/>
+    <Item title="邮政编码" name="Zip" type="text"/>
+    <Item title="电子邮件" name="Email" type="text"/>
+    <Item title="所在学院" name="College" type="entity" entityName="Department" require="false"/>
+    <Item title="双聘单位" name="College2" type="entity" entityName="Department" require="false"/>
+    <Item title="所在部门" name="Department" type="entity" entityName="Department" require="false"/>
+    <Item title="专长" name="Specialty" type="text"/>
+    <Item title="照片资源" name="Photo" type="guid" require="false"/>
+    <Item title="从事专业代码1" name="ResearchCode1" type="entity" entityName="SubjectSecondLevel" require="false"/>
+    <Item title="从事专业代码2" name="ResearchCode2" type="entity" entityName="SubjectSecondLevel" require="false"/>
+    <Item title="从事专业代码3" name="ResearchCode3" type="entity" entityName="SubjectSecondLevel" require="false"/>
+    <Item title="外语语种1" name="Language1" type="text"/>
+    <Item title="熟练程度1" name="LanguageLevel1" type="text"/>
+    <Item title="外语语种2" name="Language2" type="text"/>
+    <Item title="熟练程度2" name="LanguageLevel2" type="text"/>
+    <Item title="社会兼职" name="SocietyPost" type="text"/>
+    <Item title="工作简历" name="WorkExperience" type="longtext"/>
+    <Item title="科研简历" name="ResearchExperience" type="longtext"/>
+    <Item title="是否同意用户协议" name="IsAgreeLicence" type="bool" require="true"/>
+    <Item title="用户协议时间" name="AgreeLicenceDateTime" type="datetime" require="false" />
+    <Item title="用户协议时所用IP" name="AgreeLicenceIP" type="text" require="false"/>
+    <Item title="是否已删除" name="IsDeleted" type="bool" />
+  </Entity>
+  <Entity title="专家信息历史" name="ExpertInfoHistory" module="Experts">
+    <Item title="对应专家" name="Expert" type="entity" entityName="Expert"/>
+    <Item title="属性名称" name="PropertyName" type ="text"/>
+    <Item title="属性值类型" name="PropertyValueType" type ="enum" enumName="ExpertInfoHistoryPropertyValueType"/>
+    <Item title="属性字符串值" name="PropertyStringValue" type="text"/>
+    <Item title="属性整型值" name="PropertyIntValue" type="int" require="false"/>
+    <Item title="属性日期值" name="PropertyDateTimeValue" type="datetime" require="false"/>
+    <Item title="属性唯一标识符值" name="PropertyGuildValue" type="guid" require="false"/>
+    <Item title="属性布尔值" name="PropertyBooleanValue" type="bool" require="false"/>
+    <Item title="属性长字符串值" name="PropertyLongStringValue" type="longtext"/>
+    <Item title="提交时间" name="SubmitTime" type="datetime"/>
+    <Item title="提交人" name="SubmitOperator" type="text"/>
+    <Item title="审核时间" name="CensorTime" type="datetime" require="false"/>
+    <Item title="审核人" name="CensorOperator" type="text" require="false"/>
+    <Item title="审核状态" name="CensorState" type ="enum" enumName="CensorState" require="false"/>
+  </Entity>
+  <Entity title="专家成果统计" name="ExpertAchieveStatistic" module="Experts">
+    <Item title="对应专家" name="Expert" type="entity" entityName="Expert"/>
+    <Item title="经费总额" name="FundTotal" type="long" require="false"/>
+    <Item title="项目数目" name="ProjectCount" type="int" require="false"/>
+    <Item title="论文数目" name="PaperCount" type="int" require="false"/>
+    <Item title="专利数目" name="PatentCount" type="int" require="false"/>
+    <Item title="奖励数目" name="AwardCount" type="int" require="false"/>
+  </Entity>
+  <Entity title="基地" name="Base" module="Bases">
+    <Item title="名称" name="Name" type="text" require="true" />
+    <Item title="地址" name="Address" type="text" require="false"/>
+    <Item title="邮编" name="Zip" type="text" require="false"/>
+    <Item title="电话" name="Phone" type="text" require="false"/>
+    <Item title="传真" name="Fax" type="text" require="false"/>
+    <Item title="主管部门" name="Administration" type="text" require="false"/>
+    <Item title="级别" name="Rank" type="text" require="false"/>
+    <Item title="负责人" name="Director" type="entity" entityName="Expert" require="false"/>
+    <Item title="负责人姓名" name="DirectorName" type="text" />
+    <Item title="学术负责人" name="AcademyDirector" type="entity" entityName="Expert" require="false"/>
+    <Item title="学术负责人姓名" name="AcademyDirectorName" type="text" />
+  </Entity>
+  <Entity title="项目" name="Project" module="Projects">
+    <Item title="项目分类信息" name="Type" type="entity" entityName="ProjectInfo_Type" require="false" />
+    <Item title="项目经费信息" name="Fund" type="entity" entityName="ProjectInfo_Fund" require="false" />
+    <Item title="项目编号" name="Number" type="text"/>
+    <Item title="项目流水号" name="SerialNumber" type="text" require="false" description="上一版本中的信息，仅保留"/>
+    <Item title="项目名称" name="Name" type="text"/>
+    <Item title="项目名称拼音首字母" name="NameSpell" type="text"/>
+    <Item title="项目负责人" name="Principal" type="entity" entityName="Expert" />
+    <Item title="双聘单位" name="IsPrincipalSecondCollege" type ="bool" require ="false"/>
+    <Item title="委托负责人" name="PrincipalDelegate" type="entity" entityName="Expert" require="false"/>
+    <Item title="项目质量负责人" name="PrincipalQuality" type="entity" entityName="Expert" require="false"/>
+    <Item title="项目分级" name="Level" type="enum" enumName="ProjectLevel" description="主持、副主持、参加、附加"/>
+    <Item title="一级学科" name="FirstLevelSubject" type="entity" entityName="SubjectFirstLevel" require="false"/>
+    <Item title="二级学科" name="SecondLevelSubject" type="entity" entityName="SubjectSecondLevel" require="false"/>
+    <Item title="研究属性" name="ResearchType" type="text"/>
+    <Item title="是否保密" name="IsSecret" type="bool"/>
+    <Item title="起始年月" name="StartDate" type="datetime" require="false"/>
+    <Item title="终止年月" name="EndDate" type="datetime" require="false"/>
+    <Item title="合作方式" name="CooperationType" type="text"/>
+    <Item title="基地" name="Base" type="entity" entityName="Base" require="false"/>
+    <Item title="任务来源" name="TaskComingFrom" type="text" description="横向项目使用"/>
+    <Item title="公司所在地" name="CorporationPlace" type="text" description="横向项目使用"/>
+    <Item title="当前状态" name="CurrentState" type="entity" entityName="ProjectStateHistory" require="false"/>
+    <Item title="建立人" name="Creator" type="text"/>
+    <Item title="建立时间" name="CreateDate" type="datetime" require="false"/>
+    <Item title="备注" name="Remark" type="text"/>
+    <Item title="原系统ID" name="OldID" type="int" require="false"/>
+    <Item title="追缴标示" name="IsAdjust" type="bool" require="false"/>
+  </Entity>
+  <Entity title="项目状态历史" name="ProjectStateHistory" module="Projects">
+    <Item title="对应项目" name="Project" type="entity" entityName="Project"/>
+    <Item title="状态" name="State" type="enum" enumName="ProjectState"/>
+    <Item title="操作人" name="Operator" type="text" />
+    <Item title="操作时间" name="DateTime" type="datetime"/>
+    <Item title="备注" name="Remark" type="text"/>
+  </Entity>
+  <Entity title="项目质量负责人" name="ProjectQualityPrincipal" module="Projects">
+    <Item title="对应项目" name="Project" type="entity" entityName="Project" description="只针对横向的环评类和海域类项目"/>
+    <Item title="对应专家" name="Expert" type="entity" entityName="Expert" />
+  </Entity>
+  <Entity title="项目成员" name="ProjectMember" module="Projects">
+    <Item title="对应项目" name="Project" type="entity" entityName="Project"/>
+    <Item title="对应专家" name="Expert" type="entity" entityName="Expert" />
+    <Item title="双聘单位" name="IsExpertSecondCollege" type ="bool" require ="false"/>
+    <Item title="位次" name="Order" type="int" />
+    <Item title="子课题号" name="TaskNo" type="text"/>
+    <Item title="子课题名称" name="TaskName" type="text"/>
+  </Entity>
+  <Entity title="项目信息—分类" name="ProjectInfo_Type" module="Type">
+    <Item title="对应的项目" name="Project" type="entity" entityName="Project"/>
+    <Item title="项目级别" name="Rank" type="entity" entityName="ProjectRank" />
+    <Item title="项目类别" name="Type" type="entity" entityName="ProjectType" />
+    <Item title="资助领域" name="SupportField" type="entity" entityName="ProjectSupportField" require="false"/>
+    <Item title="资助子领域" name="SupportSubField" type="entity" entityName="ProjectSupportSubField" require="false"/>
+    <Item title="资助类别" name="SupportCategory" type="entity" entityName="ProjectSupportCategory" require="false"/>
+  </Entity>
+  <Entity title="项目级别" name="ProjectRank" module="Type">
+    <Item title="级别名称" name="Name" type="text"/>
+    <Item title="是否横向项目" name="IsHorizontal" type="bool"/>
+    <Item title="是否有效" name="IsAvailable" type="bool"/>
+  </Entity>
+  <Entity title="项目类别" name="ProjectType" module="Type">
+    <Item title="对应级别" name="ProjectRank" type="entity" entityName="ProjectRank"/>
+    <Item title="类别名称" name="Name" type="text"/>
+    <Item title="类别名称拼音缩写" name="NameSpell" type="text"/>
+    <Item title="类别简称" name="ShortName" type="text"/>
+    <Item title="专管部门" name="Administration" type="text"/>
+    <Item title="分类代码" name="Code" type="text"/>
+    <Item title="原来代码" name="PerCode" type ="text" />
+    <Item title="分类备用代码" name="BakCode" type="text" require="false"/>
+    <Item title="对应项目来源" name="ProjectComingFrom" type="enum" require="true" enumName="ProjectFrom"/>
+    <Item title="是否预算制" name="IsBudget" type="bool" require="true"/>
+    <Item title="是否是开发类项目（横向）" name="IsExploit" type="bool" require="true"/>
+    <Item title="校内管理费率" name="OverheadExpenseInRate" type="int" require="true"/>
+    <Item title="外协管理费率" name="OverheadExpenseOutRate" type="int" require="true"/>
+    <Item title ="学科性质" name="SubjectNature" type="enum" enumName="SubjectNature" require="true"/>
+    <Item title="管理费收取类别" name="ManagementFeesType" type="text" require="false"/>
+    <Item title="是否有效" name="IsAvailable" type="bool"/>
+  </Entity>
+  <Entity title="管理费比例" name="ManagementFees" module="Type">
+    <Item title="管理费收取类别" name="Type" type="text" require="true"/>
+    <Item title="经费额度" name="FundTotal" type="long" require="true"/>
+    <Item title="上缴学校管理费" name="Fee" type="int" require="true"/>
+    <Item title="绩效工资" name="PerformancePay" type="int" require="true"/>
+    <Item title="备注" name="Remark" type="text" require="false"/>
+  </Entity>
+  <Entity title="项目资助类别" name="ProjectSupportCategory" module="Type">
+    <Item title="对应类别" name="ProjectType" type="entity" entityName="ProjectType"/>
+    <Item title="资助类别名称" name="Name" type="text"/>
+    <Item title="是否收取管理费" name="IsGetOverheadExpense" type="bool"/>
+    <Item title="是否有效" name="IsAvailable" type="bool"/>
+  </Entity>
+  <Entity title="项目资助领域" name="ProjectSupportField" module="Type">
+    <Item title="对应类别" name="ProjectType" type="entity" entityName="ProjectType"/>
+    <Item title="资助领域名称" name="Name" type="text"/>
+    <Item title="是否有效" name="IsAvailable" type="bool"/>
+  </Entity>
+  <Entity title="项目资助子领域" name="ProjectSupportSubField" module="Type">
+    <Item title="对应资助领域" name="ProjectSupportField" type="entity" entityName="ProjectSupportField"/>
+    <Item title="资助子领域名称" name="Name" type="text"/>
+    <Item title="是否有效" name="IsAvailable" type="bool"/>
+  </Entity>
+  <Entity title="项目付款计划" name="PayPlanItem" module="Fund">
+    <Item title="对应项目经费" name="ProjectInfo_Fund" type="entity" entityName="ProjectInfo_Fund"/>
+    <Item title="到款时间" name="DateTime" type="datetime"/>
+    <Item title="到款数额" name="Amount" type="long"/>
+  </Entity>
+  <Entity title="经费到账记录(暂存)" name="Finance" module="Fund">
+    <Item title="描述" name="Abstract" type="text"/>
+    <Item title="到款日期" name="ReceivedDate" type="datetime"/>
+    <Item title="凭单号" name="VoucherNumber" type="text"/>
+    <Item title="到款金额" name="Amount" type="long"/>
+    <Item title="已下拨经费" name="DescendAmount" type="long"/>
+    <Item title="是否已开发票" name="IsInvoiced" type="bool"/>
+    <Item title="发票类型" name="InvoiceType" type="text" require="false"/>
+    <Item title="发票号" name="InvoiceNumber" type="text" require="false"/>
+    <Item title="开发票日期" name="InvoiceTime" type="datetime" require="false"/>
+    <Item title="原系统ID" name="OldID" type="int" require="false"/>
+    <Item title="备注" name="Remarks" type="text" require="false"/>
+  </Entity>
+  <Entity title="经费到账记录副本" name="FinanceBak" module="Fund">
+    <Item title="描述" name="Abstract" type="text"/>
+    <Item title="到款日期" name="ReceivedDate" type="datetime"/>
+    <Item title="凭单号" name="VoucherNumber" type="text"/>
+    <Item title="到款金额" name="Amount" type="long"/>
+    <Item title="备注" name="Remarks" type="text" require="false"/>
+  </Entity>
+  <Entity title="项目信息—经费" name="ProjectInfo_Fund" module="Fund">
+    <Item title="对应的项目" name="Project" type="entity" entityName="Project"/>
+    <Item title="账本号" name="AccountBookNumber" type="text" description="账本号的6-12位" require="false"/>
+    <Item title="账本号计数器" name="AccountBookNumberCount" type="int" description="表示成员的账本号中，顺序号（最后一位）最大的一个"/>
+    <Item title="绩效账本号" name="PerformanceAccountBookNumber" type="text" description="绩效对应账本号的6-12位" require="false"/>
+    <Item title="绩效账本号计数器" name="PerformanceAccountBookNumberCount" type="int" description="表示绩效对应成员的账本号中，顺序号（最后一位）最大的一个" />
+    <Item title="资金来源" name="FundFrom" type="text"/>
+    <Item title="来款单位" name="FundFromUnit" type="text"/>
+    <Item title="来款单位地址" name="FundFromUnitAddress" type="text"/>
+    <Item title="合同额" name="FundContract" type="long"/>
+    <Item title="总经费（到校经费）" name="FundTotal" type="long"/>
+    <Item title="计划外拨经费" name="FundPlanOut" type="long" />
+    <Item title="计划硬件费" name="FundPlanHardware" type="long" />
+    <Item title="项目间接费" name="IndirectCosts" type="long" require="false" />
+    <Item title="已到经费" name="FundReceived" type="long"/>
+    <Item title="已校内分配" name="FundAlreadyIn" type="long"/>
+    <Item title="已外拨经费" name="FundAlreadyOut" type="long"/>
+    <Item title="已分配硬件费" name="FundAlreadyHardware" type="long"/>
+    <Item title="校内间接费用" name="CampusIndirectCosts" type="long" require="true"/>
+    <Item title="学校管理费总额" name="OverheadExpenseInTotal" type="long" require="true"/>
+    <Item title="学院管理费总额" name="OverheadExpenseMiddleTotal" type="long" require="true"/>
+    <Item title="课题组管理费总额" name="OverheadExpenseExpertTotal" type="long" require="true"/>
+    <Item title="外协管理费总额" name="OverheadExpenseOutTotal" type="long" require="true"/>
+    <Item title="已收校内管理费" name="OverheadExpensesAlreadyIn" type="long"/>
+    <Item title="已收学院管理费" name="OverheadExpensesAlreadyMiddle" type="long"/>
+    <Item title="已收外协管理费" name="OverheadExpensesAlreadyOut" type="long"/>
+    <Item title="借款金额" name="BorrowAmount" type="long"/>
+    <Item title="还款金额" name="ReturnAmount" type="long"/>
+    <Item title="国家规定管理费比例" name="FundManageProportion" type="int"/>
+    <Item title="项目绩效" name="ProjectPerformancePay" type="long" require="false"/>
+    <Item title="校内绩效" name="PerformancePay" type="long" />
+    <Item title="已分配校内绩效" name="PerformancePayAlready" type="long"/>
+    <Item title="调节费" name="FundAdjust" type="long" description="国家规定预算扣除学校管理费以及绩效工资后的余额"/>
+    <Item title="设备购置费" name="EquipmentCost" type="long" require="false"/>
+    <Item title="校内基准间接费" name="OverHeadExpenseInStandard" type="long" require="false"/>
+    <Item title="校内基准绩效" name="PerformanceInStandard" type="long" require="false"/>
+  </Entity>
+  <Entity title="项目经费成员" name="FundMember" module="Fund">
+    <Item title="对应项目经费信息" name="ProjectInfo_Fund" type="entity" entityName="ProjectInfo_Fund" require="false" />
+    <Item title="对应专家" name="Expert" type="entity" entityName="Expert" require="false"/>
+    <Item title="双聘单位" name="IsExpertSecondCollege" type ="bool" require ="false"/>
+    <Item title="帐本号" name="AccountBookNumber" type="text"/>
+    <Item title="原系统ID" name="OldID" type="int" require="false"/>
+  </Entity>
+  <Entity title="下拨经费" name="FundDescend" module="Fund">
+    <Item title="对应项目" name="ProjectInfo_Fund" type="entity" entityName="ProjectInfo_Fund"/>
+    <Item title="下拨时间" name="DescendDateTime" type="datetime"/>
+    <Item title="下拨金额" name="Amount" type="long"/>
+    <Item title="实到金额" name="ReceivedAmount" type="long"/>
+    <Item title="下拨人" name="Operator" type="text"/>
+    <Item title="当前状态" name="CurrentState" type="entity" entityName="FundDescendStateHistory" require="false"/>
+    <Item title="原系统ID" name="OldID" type="int" require="false"/>
+  </Entity>
+  <Entity title="到帐下拨关联" name="FinanceFundDescend" module="Fund">
+    <Item title="对应经费到帐" name="Finance" type="entity" entityName="Finance"/>
+    <Item title="对应经费下拨" name="FundDescend" type="entity" entityName="FundDescend"/>
+    <Item title="金额" name="Amount" type="long"/>
+    <Item title="是否作为还款记录" name="IsReturn" type="bool"/>
+    <Item title="操作时间" name="OperateDateTime" type="datetime"/>
+    <Item title="操作人" name="Operator" type="text"/>
+  </Entity>
+  <Entity title="经费下拨状态历史" name="FundDescendStateHistory" module="Fund">
+    <Item title="对应下拨经费" name="FundDescend" type="entity" entityName="FundDescend"/>
+    <Item title="状态" name="State" type="enum" enumName="FundDescendState"/>
+    <Item title="操作人" name="Operator" type="text" />
+    <Item title="操作时间" name="DateTime" type="datetime"/>
+    <Item title="备注" name="Remark" type="text"/>
+  </Entity>
+  <Entity title="经费分配" name="FundAllocation" module="Fund">
+    <Item title="对应经费下拨" name="FundDescend" type="entity" entityName="FundDescend"/>
+    <Item title="校内分配" name="AllocationIn" type="long"/>
+    <Item title="外协已分配" name="AllocationOut" type="long"/>
+    <Item title="外协欲分配" name="AllocationWantOut" type="long" require="false"/>
+    <Item title="硬件费" name="AllocationHardware" type="long"/>
+    <Item title="已分课题组管理费" name="PerformancePay" type="long"/>
+    <Item title="学校管理费" name="OverheadExpensesIn" type="long"/>
+    <Item title="学院管理费" name="OverheadExpensesMiddle" type="long"/>
+    <Item title="课题组管理费" name="OverheadExpensesExpert" type="long"/>
+    <Item title="外协分配管理费" name="OverheadExpensesOut" type="long"/>
+    <Item title="绩效" name="OverheadPerformancePay" type="long"/>
+    <Item title="当前状态" name="CurrentState" type="entity" entityName="FundAllocationStateHistory" require="false"/>
+    <Item title="原系统ID" name="OldID" type="int" require="false"/>
+  </Entity>
+  <Entity title="经费分配状态历史" name="FundAllocationStateHistory" module="Fund">
+    <Item title="对应经费分配" name="FundAllocation" type="entity" entityName="FundAllocation"/>
+    <Item title="状态" name="State" type="enum" enumName="FundAllocationState"/>
+    <Item title="操作人" name="Operator" type="text" />
+    <Item title="操作时间" name="DateTime" type="datetime"/>
+    <Item title="备注" name="Remark" type="text"/>
+  </Entity>
+  <Entity title="经费凭单" name="Voucher" module="Fund">
+    <Item title="对应经费分配" name="FundAllocation" type="entity" entityName="FundAllocation" require="false"/>
+    <Item title="对应经费成员" name="FundMember" type="entity" entityName="FundMember"/>
+    <Item title="凭单号" name="VoucherNumber" type="text"/>
+    <Item title="账本号" name="AccountBookNumber" type="text"/>
+    <Item title="校内分配" name="AllocationIn" type="long"/>
+    <Item title="外协分配" name="AllocationOut" type="long"/>
+    <Item title="硬件费" name="AllocationHardware" type="long"/>
+    <Item title="绩效管理费(系统中没用)" name="PerformancePay" type="long"/>
+    <Item title="绩效账本号" name="PerformanceAccountBookNumber" type="text"/>
+    <Item title="学校管理费" name="OverheadExpensesIn" type="long"/>
+    <Item title="学院管理费" name="OverheadExpensesMiddle" type="long"/>
+    <Item title="课题组管理费" name="OverheadExpensesExpert" type="long"/>
+    <Item title="外协分配管理费" name="OverheadExpensesOut" type="long"/>
+    <Item title="绩效" name="OverheadPerformancePay" type="long"/>
+    <Item title="是否已查看" name="IsRead" type="bool" require="true"/>
+    <Item title="当前状态" name="CurrentState" type="entity" entityName="VoucherStateHistory" require="false"/>
+    <Item title="财务制单号" name="FinanceNumber" type="text" require="false"/>
+    <Item title="财务分配时间" name="FinanceAllocateDateTime" type="datetime" require="false"/>
+    <Item title="原系统ID" name="OldID" type="int" require="false"/>
+  </Entity>
+  <Entity title="经费凭单状态历史" name="VoucherStateHistory" module="Fund">
+    <Item title="对应经费凭单" name="Voucher" type="entity" entityName="Voucher"/>
+    <Item title="状态" name="State" type="enum" enumName="VoucherState"/>
+    <Item title="操作人" name="Operator" type="text" />
+    <Item title="操作时间" name="DateTime" type="datetime"/>
+    <Item title="备注" name="Remark" type="text"/>
+  </Entity>
+  <Entity title="项目-外协" name="ProjectOut" module="Fund">
+    <Item title="对应项目" name="Project" type="entity" entityName="Project"/>
+    <Item title="数额" name="Amount" type="long"/>
+    <Item title="外协" name="Outsourcing" type="entity" entityName="Outsourcing" />
+  </Entity>
+  <Entity title="凭单项目-外协分配" name="VoucherOut" module="Fund">
+    <Item title="对应凭单" name="Voucher" type="entity" entityName="Voucher"/>
+    <Item title="数额" name="Amount" type="long"/>
+    <Item title="企业名称" name="Corporation" type="text"/>
+    <Item title="外协" name="Outsourcing" type="entity" entityName="Outsourcing" require="false"/>
+  </Entity>
+  <Entity title="账本号计数器" name="AccountBookNumberCount" module="Fund">
+    <Item title="特征码" name="CharacterNumber" type="text" require="true" description="账本号的6-10位"/>
+    <Item title="数目" name="Count" type="int" require="true"/>
+  </Entity>
+  <Entity title="合同" name="Contract" module="Documents">
+    <Item title="对应项目" name="Project" type="entity" entityName="Project"/>
+    <Item title="合同编号" name="ContractNumber" type="text"/>
+    <Item title="合同类型" name="Type" type="enum" enumName="ContractType"/>
+    <Item title="提交人" name="Author" type="text"/>
+    <Item title="提交日期" name="SubmitDateTime" type="datetime" require="false"/>
+    <Item title="状态" name="State" type="enum" enumName="CensorState"/>
+    <Item title="审核人" name="Censor" type="text"/>
+    <Item title="审核日期" name="CensorDateTime" type="datetime" require="false"/>
+    <Item title="合同资源" name="ContractResource" type="guid" require="false"/>
+  </Entity>
+  <Entity title="文档" name="Document" module="Documents">
+    <Item title="对应项目" name="Project" type="entity" entityName="Project"/>
+    <Item title="文档名称" name="Name" type="text"/>
+    <Item title="提交人" name="Author" type="text"/>
+    <Item title="提交日期" name="SubmitDateTime" type="datetime" require="false"/>
+    <Item title="截止日期" name="Deadline" type="datetime" require="false"/>
+    <Item title="状态" name="State" type="enum" enumName="CensorState"/>
+    <Item title="审核人" name="Censor" type="text"/>
+    <Item title="审核日期" name="CensorDateTime" type="datetime" require="false"/>
+    <Item title="是否必须" name="IsRequire" type="bool"/>
+    <Item title="文档资源" name="DocumentResource" type="guid" require="false"/>
+  </Entity>
+  <Entity title="文档模型" name="DocumentModel" module="Documents">
+    <Item title="对应项目类型" name="ProjectType" type="entity" entityName="ProjectType" require="true"></Item>
+    <Item title="文档模板名称" name="Name" type="text"/>
+    <Item title="文档模板资源" name="Resource" type="guid" require="true"/>
+  </Entity>
+  <Entity title="论文" name="Paper" module="Papers">
+    <Item title="名称" name="Name" type="text" require="true"/>
+    <Item title="发表杂志" name="Magazine" type="entity" entityName="Magazine" require="false"/>
+    <Item title="来源名称" name="ResourceName" type="text"/>
+    <Item title="文章类型" name="Type" type="enum" enumName="PaperType" require="true" />
+    <Item title="被引频次" name="CiteFrequency" type="int" require="false"/>
+    <Item title="发表年份" name="PublishDateYear" type="int" require="false"/>
+    <Item title="发表日期" name="PublishDate" type="text" require="false"/>
+    <Item title="期次" name="DocumentNumber" type="text" require="false"/>
+    <Item title="卷号" name="Volume" type="text" require="false"/>
+    <Item title="起始页码" name="StartPage" type="int" require="false"/>
+    <Item title="终止页码" name="EndPage" type="int" require="false"/>
+    <Item title="页数" name="Pages" type="int" require="false"/>
+    <Item title="分区" name="SubAirer" type="int" require="false"/>
+    <Item title="影响因子" name="InfluenceFactor" type="int" require="false"/>
+    <Item title="作者关键词" name="AuthorKeyWord" type="text" require="false"/>
+    <Item title="关键词" name="KeyWord" type="text" require="false"/>
+    <Item title="摘要" name="Abstract" type="longtext" require="false"/>
+    <Item title="通讯作者地址" name="LinkManAddress" type="longtext" require="false"/>
+    <Item title="通讯作者Email" name="LinkManEmail" type="text" require="false"/>
+    <Item title="通讯作者署名单位" name="LinkManSignUnit" type="enum" enumName="SignUnit" require="true" />
+    <Item title="第一作者署名单位" name="FirstAuthorSignUnit" type="enum" enumName="SignUnit" require="true"/>
+    <Item title="我校署名位次" name="SignOrder" type="int" require="false"/>
+    <Item title="所属院系" name="College" type="entity" entityName="Department" require="false" />
+    <Item title="所属实验室" name="Lab" type="text" require="false"/>
+    <Item title="ISIUniqueArticleIdentifier" name="ISIUniqueArticleIdentifier" type="text" require="false"/>
+    <Item title="备注" name="Remark" type="longtext" require="false"/>
+    <Item title="原系统ID" name="OldID" type="int" require="false"/>
+  </Entity>
+  <Entity title="论文(文科)" name="LiberalArtsPaper" module="Papers">
+    <Item title="发表年" name="PublishDateYear" type="int" require="true"/>
+    <Item title="序列号" name="SerialNumbe" type="text"  />
+    <Item title="成果名" name="ResultsName" type="text" require="true"/>
+    <Item title="成果类别" name="Type" type="enum" enumName="ResultsType" require="true"/>
+    <Item title="英文篇名" name="EnglishName" type="text"/>
+    <Item title="文章等级" name ="Degree" type ="text" require="false"/>
+    <Item title="成果形式" name="ResultsForm" type="text" require="false" />
+    <Item title="基金" name="Fund" type="text" require="false"  />
+    <Item title="期刊名或出版社" name="Publisher" type="text" require="true"/>
+    <Item title="ISSN" name="ISSN" type="text" require="false" />
+    <Item title="第一机构" name="FirstOrganization" type="text" require="false" />
+    <Item title="我校署名位次" name="OurSchoolSignRank" type="int" require="false" />
+    <Item title="机构名称" name="OrganizationName" type="text" require="false" />
+    <Item title="地区" name="Region" type="text" require="false" />
+    <Item title="学科分类" name="SubjectClass" type="text" require="false" />
+    <Item title="所属院系" name="College" type="entity" entityName="Department" require="false" />
+    <Item title="期刊代码" name="CODEN" type="text" require="false" />
+    <Item title="年代卷期" name="IssuesDate" type="text" require="false" />
+    <Item title="关键词" name="KeyWord" type="text" require="false"/>
+    <Item title="标志" name="Mark" type="text" require="false"/>
+    <Item title="学位分类" name="DegreeType" type="text" require="false"/>
+    <Item title="基金类别" name="FundType" type="text" require="false"/>
+    <Item title="参考文献" name="References" type="longtext" require="false"/>
+    <Item title="总被引次数" name="CiteTime" type="int"  require="false"/>
+  </Entity>
+  <Entity title="论文收录信息" name="PaperIndexed" module="Papers">
+    <Item title="论文" name="Paper" type="entity" entityName="Paper" require="true"/>
+    <Item title="收录" name="Indexed" type="enum" enumName="PaperIndexedType" require="true"/>
+  </Entity>
+  <Entity title="杂志" name="Magazine" module="Papers">
+    <Item title="全称" name="FullName" type="text" require="true" />
+    <Item title="简称" name="ShortName" type="text" require="false"/>
+    <Item title="ISSN" name="ISSN" type="text" require="true"/>
+    <Item title="学科等级" name="SubjectRank" type="text" require="false"/>
+    <Item title="出版类型" name="PublishType" type="enum" enumName="PublishType" />
+    <Item title="语种" name="Language" type="enum" enumName="Language" require="true" />
+    <Item title="出版社" name="PublishCompany" type="text" require="false"/>
+    <Item title="出版社地址" name="PublishCompanyAddress" type="text" require="false"/>
+    <Item title="出版社所在城市" name="PublishCompanyCity" type="text" require="false"/>
+    <Item title="是否删除" name="IsDelete" type="bool" require="true"/>
+  </Entity>
+  <Entity title="杂志信息" name="MagazineInformation" module="Papers">
+    <Item title="杂志" name="Magazine" type="entity" entityName="Magazine" require="true"/>
+    <Item title="年份" name="Year" type="int" require="false"/>
+    <Item title="分区" name="SubAirer" type="int" require="false"/>
+    <Item title="影响因子" name="InfluenceFactor" type="int" require="false"/>
+    <Item title="被引频次" name="CiteFrequency" type="int" require="false"/>
+    <Item title="即时指数" name="InstantExponent" type="int" require="false"/>
+    <Item title="论文数" name="PaperCount" type="int" require="false"/>
+    <Item title="引用半衰期" name="CiteHalfLife" type="text" require="false"></Item>
+  </Entity>
+  <Entity title="杂志任职" name="MagazineOccupation" module="Papers">
+    <Item title="杂志" name="Magazine" type="entity" entityName="Magazine" require="true"/>
+    <Item title="专家" name="Expert" type="entity" entityName="Expert" require="true"/>
+    <Item title="职务" name="Occupation" type="text" require="true"/>
+    <Item title="聘任起始年份" name="EngageStartYear" type="int" require="false"/>
+    <Item title="聘任终止年份" name="EngageEndYear" type="text" require="false"/>
+  </Entity>
+  <Entity title="杂志学科分类信息" name="MagazineSubjectClass" module="Papers">
+    <Item title="杂志" name="Magazine" type="entity" entityName="Magazine" require="true"/>
+    <Item title="学科分类" name="SubjectClass" type="text" require="true"/>
+  </Entity>
+  <Entity title="论文作者" name="PaperAuthor" module="Papers" >
+    <Item title="对应论文" name="Paper" type="entity" entityName="Paper" require="true"/>
+    <Item title="对应专家" name="Expert" type="entity" entityName="Expert" require="false"/>
+    <Item title="姓名" name="Name" type="text" require="false"/>
+    <Item title="英文名" name="EnglishName" type="text" require="true"/>
+    <Item title="位次" name="Order" type="int" require="true"/>
+    <Item title="是否是通讯作者" name="IsLinkMan" type="bool" require ="true"/>
+  </Entity>
+  <Entity title="文科论文作者" name="LiberalArtsPaperAuthor" module="Papers" >
+    <Item title="对应论文" name="LiberalArtsPaper" type="entity" entityName="LiberalArtsPaper" require="true"/>
+    <Item title="对应专家" name="Expert" type="entity" entityName="Expert" require="false"/>
+    <Item title="姓名" name="Name" type="text" require="false"/>
+    <Item title="英文名" name="EnglishName" type="text" require="false"/>
+    <Item title="位次" name="Order" type="int" require="true"/>
+    <Item title="是否是通讯作者" name="IsLinkMan" type="bool" require="true"/>
+  </Entity>
+  <Entity title="学科分类中英文对照表" name="SubjectClassChineseEnglish" module="Papers" >
+    <Item title="中文名" name="ChineseName" type="text"/>
+    <Item title="英文名" name="EnglishName" type="text"/>
+  </Entity>
+  <Entity title="专利" name="Patent" module="Patents">
+    <Item title="专利号" name="Number" type="text" require="true"/>
+    <Item title="名称" name="Name" type="text" require="true"/>
+    <Item title="所属院系" name="College" type="entity" entityName="Department" require="false" description="缓存负责人所属院系"/>
+    <Item title="申请时间" name="ApplicationDateTime" type="datetime" require="false"/>
+    <Item title="授权时间" name="AuthorizeDateTime" type="datetime" require="false"/>
+    <Item title="法律状态" name="LawState" type="enum" enumName="PatentLawState" require="true"/>
+    <Item title="法律状态时间" name="LawStateTime" type="datetime" require="false"/>
+    <Item title="国别" name="Country" type="text" require="true"/>
+    <Item title="专利分类" name="Category" type="text" require="false"/>
+    <Item title="主分类号" name="MainCategoryNumber" type="text" require="false"/>
+    <Item title="全部分类号" name="AllCategoryNumber" type="text" require="false"/>
+    <Item title="类型" name="Type" type="enum" enumName="PatentType" require="true"/>
+    <Item title="级别" name="Level" type="enum" enumName="PatentLevel" />
+    <Item title="简介" name="Introduction" type="longtext" require="false"/>
+    <Item title="代理机构" name="Agency" type="entity" entityName="PatentAgency" require="false"/>
+    <Item title="代理人" name="Agent" type="text"/>
+    <Item title="备注" name="Remark" type="longtext" require="false"/>
+    <Item title="原系统ID" name="OldID" type="int" require="false"/>
+  </Entity>
+  <Entity title="专利发明人" name="PatentInventer" module="Patents" >
+    <Item title="对应专利" name="Patent" type="entity" entityName="Patent" require="true"/>
+    <Item title="对应专家" name="Expert" type="entity" entityName="Expert" require="false"/>
+    <Item title="姓名" name="Name" type="text" require="true" />
+    <Item title="位次" name="Order" type="int" require="true"/>
+    <Item title="是否负责人" name="IsPrincipal" type="bool" require="true"/>
+  </Entity>
+  <Entity title="专利代理机构" name="PatentAgency" module="Patents">
+    <Item title="名称" name="Name" type="text"/>
+    <Item title="联系方式" name="Contract" type="text" require="false"/>
+  </Entity>
+  <Entity title="获奖情况" name="Award" module="Awards">
+    <Item title="奖项名称" name="Name" type="text" require="true" />
+    <Item title="获奖年份" name="Year" type="int" require="false"/>
+    <Item title="级别" name="Rank" type="text" require="false"/>
+    <Item title="所属学院" name="College" type="entity" entityName="Department" require="false"/>
+    <Item title="第一获奖人" name="FirstWinner" type="entity" entityName="AwardWinner" require="false"/>
+    <Item title="等级" name="Class" type="text" require="false"/>
+    <Item title="参与类型" name="AttendType" type="text" require="true"/>
+    <Item title="对应项目" name="Project" type="text"  require="false"/>
+    <Item title="简介" name="Introduction" type="longtext" require="false"/>
+    <Item title="授奖单位" name="AuthorisedUnit" type="text" require="false"/>
+    <Item title="获奖种类" name ="Classification" type="text" require="false"/>
+    <Item title ="学科性质" name="SubjectNature" type="enum" enumName="SubjectNature" require="true"/>
+    <Item title="备注" name="Remark" type="longtext" require="false"/>
+    <Item title="原系统ID" name="OldID" type="int" require="false"/>
+  </Entity>
+  <Entity title="获奖人" name="AwardWinner" module="Awards" >
+    <Item title="对应奖励" name="Award" type="entity" entityName="Award" require="true"/>
+    <Item title="对应专家" name="Expert" type="entity" entityName="Expert" require="false"/>
+    <Item title="姓名" name="Name" type="text" require="true" />
+    <Item title="位次" name="Order" type="int" require="true"/>
+  </Entity>
+  <Entity title="奖励文档" name="AwardDocument" module="Documents">
+    <Item title="文档名称" name="Name" type="text"/>
+    <Item title="对应奖励" name="Award" type="entity" entityName="Award"/>
+    <Item title="提交人" name="Author" type="entity" entityName="User"/>
+    <Item title="提交日期" name="SubmitDateTime" type="datetime" require="false"/>
+    <Item title="审核状态" name="State" type="enum" enumName="CensorState"/>
+    <Item title="审核人" name="Censor" type="text"/>
+    <Item title="审核日期" name="CensorDateTime" type="datetime" require="false"/>
+    <Item title="奖励文档资源" name="Resource" type="guid" require="true"/>
+  </Entity>
+  <Entity title="文印申请" name="StampApplication" module="Stamps">
+    <Item title="文印申请类型" name="StampApplicationType" type="entity" entityName="StampApplicationType" require="false"/>
+    <Item title="用印材料来源" name="StampStuffFrom" type="entity" entityName="Project" require="false"/>
+    <Item title="用印材料来源名称" name="StampStuffFromName" type="text"/>
+    <Item title="用印材料份数" name="StuffNumber" type="int"/>
+    <Item title="盖章事由" name="StampReason" type="text"/>
+    <Item title="关键词" name="KeyWord" type="text"/>
+    <Item title="经办人" name="Manager" type="text"/>
+    <Item title="经办人联系电话" name="ManagerPhone" type="text"/>
+    <Item title="经办人邮箱" name="ManagerEmail" type="text"/>
+    <Item title="责任人" name="Principal" type="entity" entityName="Expert"/>
+    <Item title="双面打印" name="IsDuplexPrint" type="bool" require="true"/>
+    <Item title="骑缝章" name="SealPerforation" type="bool" require="true"/>
+    <Item title="专家自己打印" name="ExpertPrint" type="bool" require="true"/>
+    <Item title="当前状态" name="CurrentState" type="entity" entityName="StampStateHistory" require="false"/>
+  </Entity>
+  <Entity title="文印申请类型" name="StampApplicationType" module="Stamps">
+    <Item title="名称" name="Name" type="text"/>
+    <Item title="对应组" name="StampApplicationTypeGroup" type="entity" entityName="StampApplicationTypeGroup" />
+    <Item title="是否二级审核" name="IsTwiceCancer" type="bool" require="true"/>
+    <Item title="是否与项目相关" name="IsProjectRelated" type="bool" require="true"/>
+  </Entity>
+  <Entity title="文印申请类型组" name="StampApplicationTypeGroup" module="Stamps">
+    <Item title="名称" name="Name" type="text"/>
+  </Entity>
+  <Entity title="一级审核管理员" name="StampApplicationFirstAdmin" module="Stamps">
+    <Item title="文印类型" name="StampApplicationType"  type="entity" entityName="StampApplicationType"/>
+    <Item title="拥有者" name="User" type="entity" entityName="User"/>
+  </Entity>
+  <Entity title="二级审核管理员" name="StampApplicationSecondAdmin" module="Stamps">
+    <Item title="文印类型" name="StampApplicationType"  type="entity" entityName="StampApplicationType"/>
+    <Item title="拥有者" name="User" type="entity" entityName="User"/>
+  </Entity>
+  <Entity title="盖章材料" name="Stuff" module="Stamps">
+    <Item title="文印申请" name="StampApplication" type="entity" entityName="StampApplication"/>
+    <Item title="材料名称" name="StuffName" type="text"/>
+    <Item title="材料类型" name="StuffType" type="text"/>
+    <Item title="材料文档" name="StuffDocument" type="guid" require="true"/>
+  </Entity>
+  <Entity title="材料章型" name="StuffStamp" module="Stamps">
+    <Item title="盖章材料" name="Stuff" type="entity" entityName="Stuff"/>
+    <Item title="图章" name="Stamp" type="entity" entityName="Stamp"/>
+    <Item title="数量" name="Number" type="int"/>
+    <Item title="盖章页" name="Pagination" type="text" require="true"/>
+    <Item title="已盖章" name="IsStamped" type="bool" require="true"/>
+  </Entity>
+  <Entity title="印章" name="Stamp" module="Stamps">
+    <Item title="章型" name="Type" type="text"/>
+    <Item title="拥有者" name="Owner" type="entity" entityName="User"/>
+    <Item title="是否删除" name="IsDelete" type="bool" require="true"/>
+  </Entity>
+  <Entity title="文印状态历史" name="StampStateHistory" module="Stamps">
+    <Item title="文印申请" name="StampApplication" type="entity" entityName="StampApplication"/>
+    <Item title="状态" name="State" type="enum" enumName="StampState"/>
+    <Item title="操作人" name="Operator" type="text" require="false"/>
+    <Item title="状态时间" name="DateTime" type="datetime" require="false"/>
+    <Item title="备注" name="Remark" type="text"/>
+  </Entity>
+  <Entity title="专家职称和等级" name="ExpertPostAndLevel" module="Experts">
+    <Item title="职称名称" name="PostName" type="text"/>
+    <Item title="职称等级" name="PostLevel" type="int"/>
+  </Entity>
+  <Entity title="外协单位" name="Outsourcing" module="Common">
+    <Item title="单位名称" name="Name" type="text" require="true"/>
+    <Item title="法定代表人姓名" name="LegalRepresentativeName" type="text"/>
+    <Item title="组册资本" name="RegisteredCapital" type="text"/>
+    <Item title="注册号" name="RegisteredCardNumber" type="text"/>
+    <Item title="组织代码" name="OrganizationCode" type="text"/>
+    <Item title="税号" name="TaxNumber" type="text" require="false"/>
+    <Item title="公司类型" name="CompanyType" type="text" />
+    <Item title="管理类别" name="ManagementType" type="text" />
+    <Item title="经营范围" name="BusinessScope" type="longtext" require="false"/>
+    <Item title="成立时间" name="CreateDateTime" type="datetime" require="false"/>
+    <Item title="营业期限开始" name="DealDateTimeStart" type="datetime" require="false"/>
+    <Item title="营业期限结束" name="DealDateTimeEnd" type="datetime" require="false"/>
+    <Item title="是否已审核" name="IsVerify" type="text" />
+    <Item title="企业法人证书" name="CompanyCard" type="text"/>
+    <Item title="组织机构代码证" name="GroupCard" type="text"/>
+    <Item title="税务登记证" name="TaxCard" type="text"/>
+    <Item title="添加人" name="Adder" type="entity" entityName="Expert" require="false"/>
+    <Item title="省市" name="Address" type="text" require="false"/>
+    <Item title="备注" name="Remark" type="longtext" require="false"/>
+  </Entity>
+  <Entity title="项目外协预算" name="ProjectOutsourcingBudget" module="Fund">
+    <Item title="项目" name="Project" type="entity" entityName="Project" require="true"/>
+    <Item title="外协单位" name="Outsourcing" type="entity" entityName="Outsourcing" require="true" />
+    <Item title="预拨金额" name="Amount" type="long" require="true"/>
+  </Entity>
+  <Entity title="绩效" name="Performance" module="Performances">
+    <Item title="对应经费分配" name="FundAllocation" type="entity" entityName="FundAllocation" require="false"/>
+    <Item title="对应项目" name="Project" type="entity" entityName="Project" description="本次数据导入绩效需要跟项目直接关联，不跟FundAllocation关联，从而不影响项目数据的准确性。之后的绩效生成时，需要跟FundAllocation关联。"/>
+    <Item title="对应调整单" name="Recovery" type="entity" entityName="Recovery" require="false"/>
+    <Item title="已到课题组间接费用及绩效" name="ArrivedPerformance" type="long"/>
+    <Item title="已下拨课题组间接费用及绩效" name="DescendPerformance" type="long" />
+    <Item title="是否分配完成" name="IsAllocated" type="bool" />
+    <Item title="是否作废" name="IsCancel" type ="bool"/>
+    <Item title="产生时间" name="FoundationTime" type="datetime"/>
+    <Item title="备注" name="Remark" type="text"/>
+  </Entity>
+  <Entity title="绩效分配" name="PerformanceAllocation" module="Performances">
+    <Item title="对应绩效" name="Performance" type="entity" entityName="Performance" require="true"/>
+    <Item title="下达绩效" name="ArrivedPerformance" type="long"/>
+    <Item title="下达课题组间接费用及绩效" name="ArrivedOverheadexpensesExpert" type="long"/>
+    <Item title="是否可分配" name="CanAllocate" type="bool"/>
+    <Item title="当前状态" name="CurrentState" type="entity" entityName="PerformanceAllocationStateHistory" require="false"/>
+  </Entity>
+  <Entity title="绩效分配状态历史" name="PerformanceAllocationStateHistory" module="Performances">
+    <Item title="对应绩效" name="PerformanceAllocation" type="entity" entityName="PerformanceAllocation"/>
+    <Item title="状态" name="State" type="enum" enumName="PerformanceAllocationState"/>
+    <Item title="操作人" name="Operator" type="text" />
+    <Item title="操作时间" name="DateTime" type="datetime"/>
+    <Item title="备注" name="Remark" type="text"/>
+  </Entity>
+  <Entity title="绩效凭单" name="PerformanceVoucher" module="Performances">
+    <Item title="对应绩效分配" name="PerformanceAllocation" type="entity" entityName="PerformanceAllocation" />
+    <Item title="对应经费成员" name="FundMember" type="entity" entityName="FundMember"/>
+    <Item title="凭单号" name="VoucherNumber" type="text"/>
+    <Item title="账本号" name="AccountBookNumber" type="text"/>
+    <Item title="绩效金额" name="PerformancePay" type="long"/>
+    <Item title="课题组间接费用金额" name="OverheadExpensesExpert" type="long" require="false"/>
+    <Item title="是否已查看" name="IsRead" type="bool" require="true"/>
+    <Item title="当前状态" name="CurrentState" type="entity" entityName="PerformanceVoucherStateHistory" require="false"/>
+    <Item title="财务制单号" name="FinanceNumber" type="text" require="false"/>
+    <Item title="财务分配时间" name="FinanceAllocateDateTime" type="datetime" require="false"/>
+    <Item title="备注" name="Remark" type="text"/>
+  </Entity>
+  <Entity title="绩效凭单状态历史" name="PerformanceVoucherStateHistory" module="Performances">
+    <Item title="对应绩效凭单" name="PerformanceVoucher" type="entity" entityName="PerformanceVoucher"/>
+    <Item title="状态" name="State" type="enum" enumName="PerformanceVoucherState"/>
+    <Item title="操作人" name="Operator" type="text" />
+    <Item title="操作时间" name="DateTime" type="datetime"/>
+    <Item title="备注" name="Remark" type="text"/>
+  </Entity>
+  <Entity title="追缴单" name="Recovery" module="Fund">
+    <Item title="项目" name="Project" type="entity" entityName="Project"/>
+    <Item title="凭单号" name="VoucherNumber" type="text" />
+    <Item title="调整前已收学校间接费用（系统算的）" name="ReceivedOverheadExpensesIn" type="long"/>
+    <Item title="调整后应收学校间接费用" name="PlanedOverheadExpensesIn" type="long"/>
+    <Item title="调整前应收二级单位间接费用" name="ReceivedOverheadExpensesMiddle" type="long"/>
+    <Item title="调整后应收二级单位间接费用" name="PlanedOverheadExpensesMiddle" type="long"/>
+    <Item title="调整前已发放的课题组间接费用及绩效" name="ReceivedPerformancePay" type="long" require="false"/>
+    <Item title="调整后应发放的课题组间接费用及绩效" name="PlanedPerformancePay" type="long" require="false"/>
+    <Item title="调整前项目学校间接费用" name="OldOverheadExpensesIn" type="long" require="false"/>
+    <Item title="调整后项目学校间接费用" name="NewOverheadExpensesIn" type="long" require="false"/>
+    <Item title="调整前项目课题组管理费" name="OldPerformancePay" type="long" require="false"/>
+    <Item title="调整后项目课题组管理费" name="NewPerformancePay" type="long" require="false"/>
+    <Item title="调整前校内计划分配" name="OldFundPlanIn" type="long" require="false"/>
+    <Item title="调整后校内计划分配" name="NewFundPlanIn" type="long" require="false"/>
+    <Item title="调整时项目已分配校内经费" name="CurrentAllocationIn" type="long" require="false"/>
+    <Item title="调整时间" name="OperateTime" type="datetime" require="false"/>
+    <Item title="打印日期" name="PrintDateTime" type="datetime" require="false"/>
+    <Item title="操作人" name="Operator" type="text" require="false"/>
+    <Item title="是否打印" name="IsPrint" type="bool"  require="true"/>
+    <Item title="是否作废" name="IsCanceled" type="bool"  require="false"/>
+    <Item title="备注" name="Remark" type="longtext" require="false"/>
+  </Entity>
+</Entities>

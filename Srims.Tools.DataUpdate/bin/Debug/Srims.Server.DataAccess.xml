@@ -1,0 +1,503 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Srims.Server.DataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:Srims.Server.DataAccess.Database">
+            <summary>
+            数据库
+            </summary>
+        </member>
+        <member name="M:Srims.Server.DataAccess.Database.New(System.String)">
+            <summary>
+            构造新的数据库
+            </summary>
+            <param name="connectionString">数据库连接字符串</param>
+            <returns>数据库实例</returns>
+        </member>
+        <member name="M:Srims.Server.DataAccess.Database.New">
+            <summary>
+            根据配置文件，构造新数据库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.DataAccess.Database.Execute(System.String,System.Object[])">
+            <summary>
+            执行Sql语句
+            </summary>
+            <param name="command">Sql命令</param>
+            <param name="parameters">参数</param>
+            <returns>受影响的条数</returns>
+        </member>
+        <member name="M:Srims.Server.DataAccess.Database.Statistic(System.String,System.Int32[],Srims.Server.Business.Statistics.Dimension,Srims.Server.Business.Statistics.Dimension)">
+            <summary>
+            统计
+            </summary>
+            <param name="statisticItem">统计项目</param>
+            <param name="IDArray">筛选ID</param>
+            <param name="columnDimension">列维度</param>
+            <param name="rowDimension">行维度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.DataAccess.Database.GetDataAccess``1">
+            <summary>
+            取得某一个实体的数据访问
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <returns>该实体的数据访问</returns>
+        </member>
+        <member name="M:Srims.Server.DataAccess.Database.Submit">
+            <summary>
+            提交数据库变更
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.NoticeTexts">
+            <summary>
+            取得提示文本数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Announcements">
+            <summary>
+            取得通知数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.SystemSettings">
+            <summary>
+            取得系统设置数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Counts">
+            <summary>
+            取得计数器设置数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Logs">
+            <summary>
+            取得日志数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.OutsourcingUnits">
+            <summary>
+            取得外协单位数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Outsourcings">
+            <summary>
+            取得外协单位数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.SubjectFirstLevels">
+            <summary>
+            取得一级学科数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.SubjectSecondLevels">
+            <summary>
+            取得二级学科数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Events">
+            <summary>
+            取得事件数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Resources">
+            <summary>
+            取得资源数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Messages">
+            <summary>
+            取得短信息数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Views">
+            <summary>
+            取得视图的数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Bases">
+            <summary>
+            取得基地数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Users">
+            <summary>
+            取得用户数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.UserRoles">
+            <summary>
+            取得用户角色数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.UserLoginLogs">
+            <summary>
+            取得用户登陆日志数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.UserLockLogs">
+            <summary>
+            取得用户锁定日志数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Permissions">
+            <summary>
+            取得权限数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.UserPermissions">
+             <summary>
+            取得用户权限访问
+             </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.UserRolePermissions">
+             <summary>
+            取得用户角色权限访问
+             </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Departments">
+            <summary>
+            取得部门数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Experts">
+            <summary>
+            取得专家数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ExpertCensorInfos">
+            <summary>
+            取得专家信息历史访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ExpertAchieveStatistics">
+            <summary>
+            取得专家统计信息
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Projects">
+            <summary>
+            取得项目数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ProjectStateHistories">
+            <summary>
+            取得项目状态历史数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ProjectMemebers">
+            <summary>
+            取得项目成员数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ProjectQualityPrincipals">
+            <summary>
+            取得项目成员数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Recovery">
+            <summary>
+            取得追缴单数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ProjectInfo_Types">
+            <summary>
+            取得项目分类信息数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ProjectRanks">
+            <summary>
+            取得项目等级数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ProjectTypes">
+            <summary>
+            取得项目分类数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ProjectSupportCategories">
+            <summary>
+            取得项目资助类型数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ProjectSupportFields">
+            <summary>
+            取得项目资助领域数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ProjectSupportSubFields">
+            <summary>
+            取得项目资助子领域数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ManagementFees">
+            <summary>
+            取得管理费比例数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Recoverys">
+            <summary>
+            取得追缴单信息数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Finances">
+            <summary>
+            取得经费到帐信息数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.FinanceBaks">
+            <summary>
+            取得经费到帐信息副本数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ProjectInfo_Funds">
+            <summary>
+            取得项目经费信息数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.AccountBookNumberCounts">
+            <summary>
+            取得账本号计数器数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.PayPlanItems">
+            <summary>
+            取得付款计划项目数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.FundMembers">
+            <summary>
+            取得经费成员数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.FundDescends">
+            <summary>
+            取得经费下拨数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.FundDescendStateHistories">
+            <summary>
+            取得经费下拨历史状态数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.FundAllocations">
+            <summary>
+            取得经费分配数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.FundAllocationStateHistories">
+            <summary>
+            取得经费下拨历史状态数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Vouchers">
+            <summary>
+            取得凭单数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.VoucherStateHistories">
+            <summary>
+            取得经费下拨历史状态数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ProjectOuts">
+            <summary>
+            取得项目-外协数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.VoucherOuts">
+            <summary>
+            取得凭单项目-外协分配数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.FinanceFundDescends">
+            <summary>
+            取得经费到帐信息--经费下拨
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.ProjectOutsourcingBudgets">
+            <summary>
+            取得项目外拨预算
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Contracts">
+            <summary>
+            取得合同数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Documents">
+            <summary>
+            取得文档数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.DocumentModels">
+            <summary>
+            取得文档数据模板访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Awards">
+            <summary>
+            取得奖励数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.AwardWinners">
+            <summary>
+            取得获奖人数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.AwardDocuments">
+            <summary>
+            取得获奖文档数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Patents">
+            <summary>
+            取得专利数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.PatentInventers">
+            <summary>
+            取得专利发明人数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.PatentAgencys">
+            <summary>
+            取得专利代理机构
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Performances">
+            <summary>
+            取得绩效数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.PerformanceAllocations">
+            <summary>
+            取得绩效分配数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.PerformanceAllocationStateHistories">
+            <summary>
+            取得绩效分配状态历史数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.PerformanceVouchers">
+            <summary>
+            取得绩效数凭单数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.PerformanceVoucherStateHistories">
+            <summary>
+            取得绩效数凭单状态历史数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Papers">
+            <summary>
+            取得论文数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.LiberalArtsPapers">
+            <summary>
+            取得文科论文数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.PaperAuthors">
+            <summary>
+            取得论文作者数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.LiberalArtsPaperAuthors">
+            <summary>
+            取得文科论文作者数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.PaperIndexeds">
+            <summary>
+            取得论文收录的数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Magazines">
+            <summary>
+            取得杂志对应的数据访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.MagazineInformations">
+            <summary>
+            取得论文杂志信息
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.MagazineSubjectClasses">
+            <summary>
+            取得论文杂志的学科分类信息
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.SubjectClassChineseEnglishs">
+            <summary>
+            取得论文杂志的学科分类的中英文对照表
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.MagazineOccupations">
+            <summary>
+            取得杂志任职
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Stamps">
+            <summary>
+            取得图章信息
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.StampStateHistories">
+            <summary>
+            取得文印状态历史信息
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.Stuffs">
+            <summary>
+            取得文印材料信息
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.StuffStamps">
+            <summary>
+            取得文印材料盖章类型信息
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.StampApplications">
+            <summary>
+            取得图章信息
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.StampApplicationTypes">
+            <summary>
+            取得文印申请类型
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.StampApplicationTypeGroups">
+            <summary>
+            取得文印申请类型组
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.StampApplicationFirstAdmins">
+            <summary>
+            取得文印申请审核一级权限
+            </summary>
+        </member>
+        <member name="P:Srims.Server.DataAccess.Database.StampApplicationSecondAdmins">
+            <summary>
+            取得文印申请审核2级权限
+            </summary>
+        </member>
+        <member name="T:Srims.Server.DataAccess.EntityDataAccessAdapter`1">
+            <summary>
+            实体数据访问的代理
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Srims.Server.DataAccess.EntityDataAccessAdapter`1.#ctor(Srims.Server.DataAccess.Database)">
+            <summary>
+            构造代理类
+            </summary>
+            <param name="database">数据库</param>
+        </member>
+    </members>
+</doc>

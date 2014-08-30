@@ -1,0 +1,79 @@
+
+if (!Srims.common) 
+    Ext.namespace("Srims.common");
+
+Srims.common.SystemSetting = Ext.data.Record.create([{
+    name: 'id',
+    type: 'int',
+    mapping: 'ID'
+}, {
+    name: 'fundOutRatio',
+    type: 'int',
+    mapping: 'FundOutRatio'
+}, {
+    name: 'horizontalVoucher',
+    type: 'int',
+    mapping: 'HorizontalVoucher'
+}, {
+    name: 'verticalVoucher',
+    type: 'int',
+    mapping: 'VerticalVoucher'
+}, {
+    name: 'defaultOverheadExpenseInRateHorizonal',
+    type: 'int',
+    mapping: 'DefaultOverheadExpenseInRateHorizonal'
+}, {
+    name: 'defaultOverheadExpenseOutRateHorizonal',
+    type: 'int',
+    mapping: 'DefaultOverheadExpenseOutRateHorizonal'
+}, {
+    name: 'defaultOverheadExpenseInRateVertical',
+    type: 'int',
+    mapping: 'DefaultOverheadExpenseInRateVertical'
+}, {
+    name: 'defaultOverheadExpenseOutRateVertical',
+    type: 'int',
+    mapping: 'DefaultOverheadExpenseOutRateVertical'
+}, {
+    name: 'logType',
+    type: 'string',
+    mapping: 'LogType'
+}, {
+    name: 'emailAddress',
+    type: 'string',
+    mapping: 'EmailAddress'
+}, {
+    name: 'smtpHost',
+    type: 'string',
+    mapping: 'SmtpHost'
+}, {
+    name: 'smtpPort',
+    type: 'string',
+    mapping: 'SmtpPort'
+}, {
+    name: 'smtpPassword',
+    type: 'string',
+    mapping: 'SmtpPassword'
+}, {
+    name: 'smtpUsername',
+    type: 'string',
+    mapping: 'SmtpUsername'
+}, {
+    name: 'financeWebAddress',
+    type: 'string',
+    mapping: 'FinanceWebAddress'
+}, {
+    name: 'expertWebAddress',
+    type: 'string',
+    mapping: 'ExpertWebAddress'
+}, {
+    name: 'windowsServiceType',
+    type: 'string',
+    mapping: 'WindowsServiceType'
+}, {
+    name: 'paperDescription',
+    type: 'string',
+    mapping: 'PaperDescription'
+}]);
+Srims.data.Entity.apply(Srims.common.SystemSetting);
+

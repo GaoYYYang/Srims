@@ -1,0 +1,321 @@
+
+if (!Srims.data)
+    Ext.namespace('Srims.data');
+if (!Srims.experts)
+    Ext.namespace('Srims.experts');
+
+Srims.experts.Expert = Ext.data.Record.create([{
+    name: 'id',
+    type: 'int',
+    mapping: 'ID'
+}, {
+    name: 'userID',
+    type: 'int',
+    mapping: 'UserID'
+}, {
+    name: 'number',
+    type: 'string',
+    mapping: 'Number'
+}, {
+    name: 'name',
+    type: 'string',
+    mapping: 'Name'
+}, {
+    name: 'nameSpell',
+    type: 'string',
+    mapping: 'NameSpell'
+}, {
+    name: 'sex',
+    type: 'string',
+    mapping: 'Sex'
+}, {
+    name: 'birthday',
+    type: 'date',
+    mapping: 'Birthday'
+}, {
+    name: 'nation',
+    type: 'string',
+    mapping: 'Nation'
+}, {
+    name: 'policy',
+    type: 'string',
+    mapping: 'Policy'
+}, {
+    name: 'majorCodeID',
+    type: 'int',
+    mapping: 'MajorCodeID'
+}, {
+    name: 'majorCode',
+    type: 'string',
+    mapping: 'MajorCode'
+}, {
+    name: 'idCardNumber',
+    type: 'string',
+    mapping: 'IDCardNumber'
+}, {
+    name: 'comeDate',
+    type: 'date',
+    mapping: 'ComeDate'
+}, {
+    name: 'fileNumber',
+    type: 'string',
+    mapping: 'FileNumber'
+}, {
+    name: 'academyDegree',
+    type: 'string',
+    mapping: 'AcademyDegree'
+}, {
+    name: 'post',
+    type: 'string',
+    mapping: 'PostNew'
+}, {
+    name: 'postLevel',
+    type: 'int',
+    mapping: 'PostLevel'
+}, {
+    name: 'occupation',
+    type: 'string',
+    mapping: 'Occupation'
+}, {
+    name: 'vocationLevel',
+    type: 'int',
+    mapping: 'VocationLevel'
+}, {
+    name: 'isDoctorDirector',
+    type: 'boolean',
+    mapping: 'IsDoctorDirector',
+    convert: Boolean.toNullEnableBoolean
+}, {
+    name: 'isAcademician',
+    type: 'boolean',
+    mapping: 'IsAcademician',
+    convert: Boolean.toNullEnableBoolean
+}, {
+    name: 'isOnjob',
+    type: 'boolean',
+    mapping: 'IsOnjob',
+    convert: Boolean.toNullEnableBoolean
+}, {
+    name: 'isChinese',
+    type: 'boolean',
+    mapping: 'IsChinese',
+    convert: Boolean.toNullEnableBoolean
+}, {
+    name: 'mobilePhone',
+    type: 'string',
+    mapping: 'MobilePhone'
+}, {
+    name: 'officePhone',
+    type: 'string',
+    mapping: 'OfficePhone'
+}, {
+    name: 'homePhone',
+    type: 'string',
+    mapping: 'HomePhone'
+}, {
+    name: 'fax',
+    type: 'string',
+    mapping: 'Fax'
+}, {
+    name: 'address',
+    type: 'string',
+    mapping: 'Address'
+}, {
+    name: 'zip',
+    type: 'string',
+    mapping: 'Zip'
+}, {
+    name: 'email',
+    type: 'string',
+    mapping: 'Email'
+}, {
+    name: 'collegeID',
+    type: 'int',
+    mapping: 'CollegeID'
+}, {
+    name: 'college',
+    type: 'string',
+    mapping: 'College'
+    }, {
+    name: 'college2ID',
+    type: 'int',
+    mapping: 'College2ID'
+}, {
+    name: 'college2',
+    type: 'string',
+    mapping: 'College2'  
+}, {
+    name: 'departmentID',
+    type: 'int',
+    mapping: 'DepartmentID'
+}, {
+    name: 'department',
+    type: 'string',
+    mapping: 'Department'
+}, {
+    name: 'specialty',
+    type: 'string',
+    mapping: 'Specialty'
+}, {
+    name: 'photo',
+    type: 'string',
+    mapping: 'Photo'
+}, {
+    name: 'researchSubjectFirstLevel1ID',
+    type: 'int',
+    mapping: 'ResearchSubjectFirstLevel1ID'
+}, {
+    name: 'researchSubjectFirstLevel1Name',
+    type: 'string',
+    mapping: 'ResearchSubjectFirstLevel1Name'
+}, {
+    name: 'researchSubjectSecondLevel1ID',
+    type: 'int',
+    mapping: 'ResearchSubjectSecondLevel1ID'
+}, {
+    name: 'researchSubjectSecondLevel1Name',
+    type: 'string',
+    mapping: 'ResearchSubjectSecondLevel1Name'
+}, {
+    name: 'researchSubjectFirstLevel2ID',
+    type: 'int',
+    mapping: 'ResearchSubjectFirstLevel2ID'
+}, {
+    name: 'researchSubjectFirstLevel2Name',
+    type: 'string',
+    mapping: 'ResearchSubjectFirstLevel2Name'
+}, {
+    name: 'researchSubjectSecondLevel2ID',
+    type: 'int',
+    mapping: 'ResearchSubjectSecondLevel2ID'
+}, {
+    name: 'researchSubjectSecondLevel2Name',
+    type: 'string',
+    mapping: 'ResearchSubjectSecondLevel2Name'
+}, {
+    name: 'researchSubjectFirstLevel3ID',
+    type: 'int',
+    mapping: 'ResearchSubjectFirstLevel3ID'
+}, {
+    name: 'researchSubjectFirstLevel3Name',
+    type: 'string',
+    mapping: 'ResearchSubjectFirstLevel3Name'
+}, {
+    name: 'researchSubjectSecondLevel3ID',
+    type: 'int',
+    mapping: 'ResearchSubjectSecondLevel3ID'
+}, {
+    name: 'researchSubjectSecondLevel3Name',
+    type: 'string',
+    mapping: 'ResearchSubjectSecondLevel3Name'
+}, {
+    name: 'majorSubejctFirstLevelID',
+    type: 'int',
+    mapping: 'MajorSubejctFirstLevelID'
+}, {
+    name: 'majorSubejctFirstLevelName',
+    type: 'string',
+    mapping: 'MajorSubejctFirstLevelName'
+}, {
+    name: 'majorSubjectSecondLevelID',
+    type: 'int',
+    mapping: 'MajorSubjectSecondLevelID'
+}, {
+    name: 'majorSubjectSecondLevelName',
+    type: 'string',
+    mapping: 'MajorSubjectSecondLevelName'
+}, {
+    name: 'language1',
+    type: 'string',
+    mapping: 'Language1'
+}, {
+    name: 'languageLevel1',
+    type: 'string',
+    mapping: 'LanguageLevel1'
+}, {
+    name: 'language2',
+    type: 'string',
+    mapping: 'Language2'
+}, {
+    name: 'languageLevel2',
+    type: 'string',
+    mapping: 'LanguageLevel2'
+}, {
+    name: 'societyPost',
+    type: 'string',
+    mapping: 'SocietyPost'
+}, {
+    name: 'workExperience',
+    type: 'string',
+    mapping: 'WorkExperience'
+}, {
+    name: 'researchExperience',
+    type: 'string',
+    mapping: 'ResearchExperience'
+}, {
+    name: 'isAgreeLicence',
+    type: 'boolean',
+    mapping: 'IsAgreeLicence',
+    convert: Boolean.toBoolean
+}, {
+    name: 'agreeLicenceDateTime',
+    type: 'date',
+    mapping: 'AgreeLicenceDateTime'
+}, {
+    name: 'agreeLicenceIP',
+    type: 'string',
+    mapping: 'AgreeLicenceIP'
+}, {
+    name: 'isDeleted',
+    type: 'boolean',
+    mapping: 'IsDeleted',
+    convert: Boolean.toBoolean
+}, {
+    name: 'projectCount',
+    type: 'int',
+    mapping: 'ProjectCount'
+}, {
+    name: 'paperCount',
+    type: 'int',
+    mapping: 'PaperCount'
+}, {
+    name: 'patentCount',
+    type: 'int',
+    mapping: 'PatentCount'
+}, {
+    name: 'awardCount',
+    type: 'int',
+    mapping: 'AwardCount'
+}, {
+    name: 'hasPermission_ShowExpert',
+    type: 'boolean',
+    mapping: 'HasPermission_ShowExpert',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_EditExpert',
+    type: 'boolean',
+    mapping: 'HasPermission_EditExpert',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_EditExpertLinkWay',
+    type: 'boolean',
+    mapping: 'HasPermission_EditExpertLinkWay',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canShowExpert',
+    type: 'boolean',
+    mapping: 'CanShowExpert',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canEditExpert',
+    type: 'boolean',
+    mapping: 'CanEditExpert',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canEditExpertLinkWay',
+    type: 'boolean',
+    mapping: 'CanEditExpertLinkWay',
+    convert: Boolean.toBoolean
+}])
+Srims.data.Entity.apply(Srims.experts.Expert);
+

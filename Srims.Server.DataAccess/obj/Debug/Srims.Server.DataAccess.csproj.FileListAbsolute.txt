@@ -1,0 +1,12 @@
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.DataAccess\bin\Debug\Srims.Server.DataAccess.dll
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.DataAccess\bin\Debug\Srims.Server.DataAccess.pdb
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.DataAccess\bin\Debug\MIS.Common.dll
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.DataAccess\bin\Debug\Srims.Server.Business.dll
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.DataAccess\bin\Debug\Interop.jmail.dll
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.DataAccess\bin\Debug\MIS.Common.pdb
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.DataAccess\bin\Debug\MIS.Common.xml
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.DataAccess\bin\Debug\Srims.Server.Business.pdb
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.DataAccess\bin\Debug\Srims.Server.Business.xml
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.DataAccess\obj\Debug\ResolveAssemblyReference.cache
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.DataAccess\obj\Debug\Srims.Server.DataAccess.dll
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.DataAccess\obj\Debug\Srims.Server.DataAccess.pdb

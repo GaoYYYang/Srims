@@ -1,0 +1,92 @@
+
+if (!Srims.experts) 
+    Ext.namespace('Srims.experts');
+
+Srims.experts.ExpertGridPanel_ColumnModel = function(store){
+    Srims.experts.ExpertGridPanel_ColumnModel.superclass.constructor.call(this, [{
+        header: 'id',
+        hidden: true,
+        hideable: false
+    }, {
+        header: '工作证号',
+        dataIndex: 'number',
+        hidden: false,
+        sortable: true
+    }, {
+        header: '姓名',
+        dataIndex: 'name',
+        hidden: false
+    }, {
+        header: '职称',
+        dataIndex: 'post',
+        hidden: false,
+        sortable: true
+    }, {
+        header: '所在学院',
+        dataIndex: 'college',
+        hidden: false
+        }, {
+        header: '双聘单位',
+        dataIndex: 'college2',
+        hidden: false
+    }, {
+        header: '家庭电话',
+        dataIndex: 'homePhone',
+        hidden: false
+    }, {
+        header: '办公电话',
+        dataIndex: 'officePhone',
+        hidden: false
+    }, {
+        header: '手机',
+        dataIndex: 'mobilePhone',
+        hidden: false
+    }, {
+        header: 'Email',
+        dataIndex: 'email',
+        hidden: false
+    }, {
+        header: '所在部门',
+        dataIndex: 'department',
+        hidden: true
+    }, {
+        header: '民族',
+        dataIndex: 'nation',
+        hidden: true
+    }, {
+        header: '政治面貌',
+        dataIndex: 'policy',
+        hidden: true
+    }, {
+        header: '外语语种1',
+        dataIndex: 'language1',
+        hidden: true
+    }, {
+        header: '是否在职',
+        dataIndex: 'isOnjob',
+        hidden: false,
+        renderer: Boolean.nullAbleRender
+    }, {
+        header: '项目数目',
+        dataIndex: 'projectCount',
+        hidden: true,
+        sortable: true
+    }, {
+        header: '论文数目',
+        dataIndex: 'paperCount',
+        hidden: true,
+        sortable: true
+    }, {
+        header: '专利数目',
+        dataIndex: 'patentCount',
+        hidden: true,
+        sortable: true
+    }, {
+        header: '奖励数目',
+        dataIndex: 'awardCount',
+        hidden: true,
+        sortable: true
+    }]);
+    this.defaultSortable = false;
+};
+Ext.extend(Srims.experts.ExpertGridPanel_ColumnModel, Ext.grid.ColumnModel);

@@ -1,0 +1,226 @@
+﻿*
+{
+	font-size: 12px;
+}
+
+body
+{
+	text-align: center;
+	height: 100%;
+	font-size: 12px;
+}
+
+strong
+{
+	font-weight: bold;
+}
+.ext-strict .ext-safari .x-small-editor .x-form-text
+{
+	height: 18px !important;
+}
+.ext-safari .x-form-field-wrap .x-form-trigger
+{
+	position: static;
+	top: auto;
+	vertical-align: top;
+}
+.searchTable td
+{
+	text-align: left;
+	padding-left: 10px;
+}
+#DivWrapper
+{
+	margin-top: 200px;
+	top: 200px;
+	text-align: left;
+}
+#DivAnnouncement
+{
+	font-size: 14px;
+	width: 100%;
+	height: 54px;
+	text-align: center;
+	overflow: hidden;
+	margin-top: 5px;
+	padding: 0px;
+}
+#DivCopyRight
+{
+	font-family: "Courier New";
+	font-size: 12px;
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+}
+#DivBrowserRecommand
+{
+	font-family: "Courier New";
+	font-size: 12px;
+	position: absolute;
+	left: 15px;
+	bottom: 10px;
+}
+#DivPanelMenu .x-panel
+{
+	margin-bottom: 3px;
+	margin-right: 0;
+}
+#DivPanelMenu .x-panel-body
+{
+	border: 0 none;
+}
+#DivPanelMenu .x-panel-body li
+{
+	margin: 3px;
+}
+#DivPanelMenu .x-panel-body li img
+{
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin-right: 2px;
+	margin-bottom: 2px;
+}
+#DivPanelMenu .x-panel-body li a
+{
+	text-decoration: none;
+	color: #3764A0;
+}
+#DivPanelMenu .x-panel-body li a:hover
+{
+	text-decoration: underline;
+	color: #15428b;
+}
+#DivPanelMenu .x-panel-body li a.hasItem
+{
+	font-weight: bold;
+}
+
+#TopBar
+{
+	overflow: hidden;
+	line-height: 18px;
+	height: 18px;
+	vertical-align: middle;
+}
+#TopBar a
+{
+	text-decoration: none;
+	color: #15428B;
+	margin-right: 15px;
+}
+#TopBar div
+{
+	overflow: hidden;
+}
+#TopBar img
+{
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin-right: 4px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+#DivExpertNavigatePanel a, #DivExpertNavigatePanel a:hover, #DivExpertNavigatePanel a:visited, #DivMyAchieveViewNavigatePanel a
+{
+	text-decoration: none;
+	color: Black;
+}
+
+.searchComboBoxTrigger
+{
+	visibility: hidden;
+}
+.announcement
+{
+	width: 100%;
+	line-height: 18px;
+	height: 18px;
+}
+.announcement.top
+{
+	color: Red;
+}
+.ext-mb-content
+{
+	text-align: left;
+}
+.x-grid3-header
+{
+	background: #f9f9f9 url(../images/hrow.gif) repeat-x left top;
+}
+.srims-checkboxGroup .x-form-check-wrap
+{
+	width: 100px;
+}
+.srims-checkboxGroup-export-Column .x-form-check-wrap
+{
+	width: 110px;
+}
+.srims-checkboxGroup-documentName .x-form-check-wrap
+{
+	width: 140px;
+}
+.srims-checkboxGroup-expert .x-form-check-wrap
+{
+	width: 100px;
+}
+.srims-checkboxGroup-signUnit .x-form-check-wrap
+{
+	width: 140px;
+}
+.srims-checkboxGroup-paperType .x-form-check-wrap
+{
+	width: 180px;
+}
+.srims-checkboxGroup-userPermission .x-form-check-wrap
+{
+	width: 130px;
+}
+.srims-checkboxGroup, .srims-checkboxGroup-expert, .srims-checkboxGroup-signUnit.srims-checkboxGroup-userPermission
+{
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	border-bottom-width: 0px;
+}
+.message_unread
+{
+	font-weight: bold;
+}
+
+.expert-guide-description
+{
+	margin: 10px;
+	line-height: 18px;
+	text-align: left;
+	float: left;
+}
+.expert-guide-complete-description
+{
+	text-align: left;
+}
+.expert-guide-complete-image
+{
+	margin: 10px;
+	line-height: 18px;
+	float: left;
+}
+.combox-set-delegate
+{
+	margin: 15px 0 10px 20px;
+}
+.form_componnent_hidden
+{
+	display: none;
+}
+.form_componnent_visible
+{
+	display: block;
+}
+.base_is_school_expert_checkbox
+{
+	margin: 5px 0 0 10px;
+}

@@ -1,0 +1,24 @@
+﻿.icon-statistic
+{
+	background-image: url(../images/icon/statistic.png) !important;
+}
+.icon-statistic-project-count, .icon-statistic-fund-total
+{
+	background-image: url(../images/icon/statistic-project.png) !important;
+}
+.icon-statistic-fund-descend, .icon-statistic-voucher
+{
+	background-image: url(../images/icon/statistic-fund.png) !important;
+}
+.icon-statistic-paper
+{
+	background-image: url(../images/icon/statistic-paper.png) !important;
+}
+.icon-statistic-award
+{
+	background-image: url(../images/icon/statistic-award.png) !important;
+}
+.icon-statistic-patent
+{
+	background-image: url(../images/icon/statistic-patent.png) !important;
+}

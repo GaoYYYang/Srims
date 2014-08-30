@@ -1,0 +1,2131 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7694249F-96F5-4E87-A33E-28EDB297887E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Srims.WebSite</RootNamespace>
+    <AssemblyName>Srims.WebSite</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HorizonVoucherPrint.aspx.cs">
+      <DependentUpon>HorizonVoucherPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HorizonVoucherPrint.aspx.designer.cs">
+      <DependentUpon>HorizonVoucherPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceVoucherPrint.aspx.cs">
+      <DependentUpon>PerformanceVoucherPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformanceVoucherPrint.aspx.designer.cs">
+      <DependentUpon>PerformanceVoucherPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecoveryPrint.aspx.cs">
+      <DependentUpon>RecoveryPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecoveryPrint.aspx.designer.cs">
+      <DependentUpon>RecoveryPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Awards\Award.asmx.cs">
+      <DependentUpon>Award.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Awards\AwardWinner.asmx.cs">
+      <DependentUpon>AwardWinner.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Bases\Base.asmx.cs">
+      <DependentUpon>Base.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Common\Announcement.asmx.cs">
+      <DependentUpon>Announcement.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Common\Email.asmx.cs">
+      <DependentUpon>Email.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Common\Log.asmx.cs">
+      <DependentUpon>Log.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Common\NoticeText.asmx.cs">
+      <DependentUpon>NoticeText.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Common\Outsourcing.asmx.cs">
+      <DependentUpon>Outsourcing.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Common\OutsourcingUnit.asmx.cs">
+      <DependentUpon>OutsourcingUnit.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Common\Subject.asmx.cs">
+      <DependentUpon>Subject.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Common\SystemSetting.asmx.cs">
+      <DependentUpon>SystemSetting.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Common\View.asmx.cs">
+      <DependentUpon>View.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Common\Performance.asmx.cs">
+      <DependentUpon>Performance.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Documents\AwardDocument.asmx.cs">
+      <DependentUpon>AwardDocument.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Documents\Contract.asmx.cs">
+      <DependentUpon>Contract.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Documents\Document.asmx.cs">
+      <DependentUpon>Document.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Documents\DocumentModel.asmx.cs">
+      <DependentUpon>DocumentModel.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Experts\Department.asmx.cs">
+      <DependentUpon>Department.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Experts\Expert.asmx.cs">
+      <DependentUpon>Expert.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Experts\ExpertInfoHistory.asmx.cs">
+      <DependentUpon>ExpertInfoHistory.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Export.asmx.cs">
+      <DependentUpon>Export.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Fund\Finance.asmx.cs">
+      <DependentUpon>Finance.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Fund\FinanceBak.asmx.cs">
+      <DependentUpon>FinanceBak.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Fund\FinanceFundDescend.asmx.cs">
+      <DependentUpon>FinanceFundDescend.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Fund\FundAllocation.asmx.cs">
+      <DependentUpon>FundAllocation.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Fund\FundAllocationStateHistory.asmx.cs">
+      <DependentUpon>FundAllocationStateHistory.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Fund\FundDescend.asmx.cs">
+      <DependentUpon>FundDescend.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Fund\FundDescendStateHistory.asmx.cs">
+      <DependentUpon>FundDescendStateHistory.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Fund\FundMember.asmx.cs">
+      <DependentUpon>FundMember.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Fund\PayPlanItem.asmx.cs">
+      <DependentUpon>PayPlanItem.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Fund\Voucher.asmx.cs">
+      <DependentUpon>Voucher.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Fund\VoucherOut.asmx.cs">
+      <DependentUpon>VoucherOut.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Fund\VoucherStateHistory.asmx.cs">
+      <DependentUpon>VoucherStateHistory.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Papers\LiberalArtsPaper.asmx.cs">
+      <DependentUpon>LiberalArtsPaper.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Papers\LiberalArtsPaperAuthor.asmx.cs">
+      <DependentUpon>LiberalArtsPaperAuthor.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Papers\Magazine.asmx.cs">
+      <DependentUpon>Magazine.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Papers\MagazineInformation.asmx.cs">
+      <DependentUpon>MagazineInformation.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Papers\MagazineOccupation.asmx.cs">
+      <DependentUpon>MagazineOccupation.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Papers\Paper.asmx.cs">
+      <DependentUpon>Paper.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Papers\PaperAuthor.asmx.cs">
+      <DependentUpon>PaperAuthor.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Patents\Patent.asmx.cs">
+      <DependentUpon>Patent.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Patents\PatentAgency.asmx.cs">
+      <DependentUpon>PatentAgency.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Patents\PatentInventer.asmx.cs">
+      <DependentUpon>PatentInventer.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Performance\Performance.asmx.cs">
+      <DependentUpon>Performance.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Performance\PerformanceAllocationStateHistory.asmx.cs">
+      <DependentUpon>PerformanceAllocationStateHistory.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Performance\PerformanceAllocation.asmx.cs">
+      <DependentUpon>PerformanceAllocation.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Performance\PerformanceVoucher.asmx.cs">
+      <DependentUpon>PerformanceVoucher.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Performance\PerformanceVoucherStateHistory.asmx.cs">
+      <DependentUpon>PerformanceVoucherStateHistory.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Projects\Project.asmx.cs">
+      <DependentUpon>Project.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Projects\ProjectMember.asmx.cs">
+      <DependentUpon>ProjectMember.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Projects\ProjectStateHistory.asmx.cs">
+      <DependentUpon>ProjectStateHistory.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Resource.asmx.cs">
+      <DependentUpon>Resource.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Stamps\StampApplicationFirstAdmin.asmx.cs">
+      <DependentUpon>StampApplicationFirstAdmin.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Stamps\StampApplication.asmx.cs">
+      <DependentUpon>StampApplication.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Stamps\StampApplicationSecondAdmin.asmx.cs">
+      <DependentUpon>StampApplicationSecondAdmin.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Stamps\StampApplicationType.asmx.cs">
+      <DependentUpon>StampApplicationType.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Stamps\StampApplicationTypeGroup.asmx.cs">
+      <DependentUpon>StampApplicationTypeGroup.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Stamps\StampStateHistory.asmx.cs">
+      <DependentUpon>StampStateHistory.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Stamps\Stamp.asmx.cs">
+      <DependentUpon>Stamp.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Stamps\Stuff.asmx.cs">
+      <DependentUpon>Stuff.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Stamps\StuffStamp.asmx.cs">
+      <DependentUpon>StuffStamp.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Statistics\Statistics.asmx.cs">
+      <DependentUpon>Statistics.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Type\ManagementFees.asmx.cs">
+      <DependentUpon>ManagementFees.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Type\ProjectRank.asmx.cs">
+      <DependentUpon>ProjectRank.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Type\ProjectSupportCategory.asmx.cs">
+      <DependentUpon>ProjectSupportCategory.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Type\ProjectSupportField.asmx.cs">
+      <DependentUpon>ProjectSupportField.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Type\ProjectSupportSubField.asmx.cs">
+      <DependentUpon>ProjectSupportSubField.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Type\ProjectType.asmx.cs">
+      <DependentUpon>ProjectType.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Users\Message.asmx.cs">
+      <DependentUpon>Message.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service\Users\User.asmx.cs">
+      <DependentUpon>User.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VoucherPrint.aspx.cs">
+      <DependentUpon>VoucherPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VoucherPrint.aspx.designer.cs">
+      <DependentUpon>VoucherPrint.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="images\default\box\corners-blue.gif" />
+    <Content Include="images\default\box\corners.gif" />
+    <Content Include="images\default\box\l-blue.gif" />
+    <Content Include="images\default\box\l.gif" />
+    <Content Include="images\default\box\r-blue.gif" />
+    <Content Include="images\default\box\r.gif" />
+    <Content Include="images\default\box\tb-blue.gif" />
+    <Content Include="images\default\box\tb.gif" />
+    <Content Include="images\default\button\btn-arrow.gif" />
+    <Content Include="images\default\button\btn-sprite.gif" />
+    <Content Include="images\default\dd\drop-add.gif" />
+    <Content Include="images\default\dd\drop-no.gif" />
+    <Content Include="images\default\dd\drop-yes.gif" />
+    <Content Include="images\default\editor\tb-sprite.gif" />
+    <Content Include="images\default\form\checkbox.gif" />
+    <Content Include="images\default\form\clear-trigger.gif" />
+    <Content Include="images\default\form\date-trigger.gif" />
+    <Content Include="images\default\form\error-tip-corners.gif" />
+    <Content Include="images\default\form\exclamation.gif" />
+    <Content Include="images\default\form\radio.gif" />
+    <Content Include="images\default\form\search-trigger.gif" />
+    <Content Include="images\default\form\text-bg.gif" />
+    <Content Include="images\default\form\trigger-tpl.gif" />
+    <Content Include="images\default\form\trigger.gif" />
+    <Content Include="images\default\gradient-bg.gif" />
+    <Content Include="images\default\grid\arrow-left-white.gif" />
+    <Content Include="images\default\grid\arrow-right-white.gif" />
+    <Content Include="images\default\grid\col-move-bottom.gif" />
+    <Content Include="images\default\grid\col-move-top.gif" />
+    <Content Include="images\default\grid\columns.gif" />
+    <Content Include="images\default\grid\dirty.gif" />
+    <Content Include="images\default\grid\done.gif" />
+    <Content Include="images\default\grid\drop-no.gif" />
+    <Content Include="images\default\grid\drop-yes.gif" />
+    <Content Include="images\default\grid\footer-bg.gif" />
+    <Content Include="images\default\grid\grid-blue-hd.gif" />
+    <Content Include="images\default\grid\grid-blue-split.gif" />
+    <Content Include="images\default\grid\grid-hrow.gif" />
+    <Content Include="images\default\grid\grid-loading.gif" />
+    <Content Include="images\default\grid\grid-split.gif" />
+    <Content Include="images\default\grid\grid-vista-hd.gif" />
+    <Content Include="images\default\grid\grid3-hd-btn.gif" />
+    <Content Include="images\default\grid\grid3-hrow-over.gif" />
+    <Content Include="images\default\grid\grid3-hrow.gif" />
+    <Content Include="images\default\grid\grid3-special-col-bg.gif" />
+    <Content Include="images\default\grid\grid3-special-col-sel-bg.gif" />
+    <Content Include="images\default\grid\group-by.gif" />
+    <Content Include="images\default\grid\group-expand-sprite.gif" />
+    <Content Include="images\default\grid\hd-pop.gif" />
+    <Content Include="images\default\grid\hmenu-asc.gif" />
+    <Content Include="images\default\grid\hmenu-desc.gif" />
+    <Content Include="images\default\grid\hmenu-lock.gif" />
+    <Content Include="images\default\grid\hmenu-lock.png" />
+    <Content Include="images\default\grid\hmenu-unlock.gif" />
+    <Content Include="images\default\grid\hmenu-unlock.png" />
+    <Content Include="images\default\grid\invalid_line.gif" />
+    <Content Include="images\default\grid\loading.gif" />
+    <Content Include="images\default\grid\mso-hd.gif" />
+    <Content Include="images\default\grid\nowait.gif" />
+    <Content Include="images\default\grid\page-first-disabled.gif" />
+    <Content Include="images\default\grid\page-first.gif" />
+    <Content Include="images\default\grid\page-last-disabled.gif" />
+    <Content Include="images\default\grid\page-last.gif" />
+    <Content Include="images\default\grid\page-next-disabled.gif" />
+    <Content Include="images\default\grid\page-next.gif" />
+    <Content Include="images\default\grid\page-prev-disabled.gif" />
+    <Content Include="images\default\grid\page-prev.gif" />
+    <Content Include="images\default\grid\pick-button.gif" />
+    <Content Include="images\default\grid\refresh.gif" />
+    <Content Include="images\default\grid\row-check-sprite.gif" />
+    <Content Include="images\default\grid\row-expand-sprite.gif" />
+    <Content Include="images\default\grid\row-over.gif" />
+    <Content Include="images\default\grid\row-sel.gif" />
+    <Content Include="images\default\grid\sort_asc.gif" />
+    <Content Include="images\default\grid\sort_desc.gif" />
+    <Content Include="images\default\grid\wait.gif" />
+    <Content Include="images\default\layout\collapse.gif" />
+    <Content Include="images\default\layout\expand.gif" />
+    <Content Include="images\default\layout\gradient-bg.gif" />
+    <Content Include="images\default\layout\mini-bottom.gif" />
+    <Content Include="images\default\layout\mini-left.gif" />
+    <Content Include="images\default\layout\mini-right.gif" />
+    <Content Include="images\default\layout\mini-top.gif" />
+    <Content Include="images\default\layout\ns-collapse.gif" />
+    <Content Include="images\default\layout\ns-expand.gif" />
+    <Content Include="images\default\layout\panel-close.gif" />
+    <Content Include="images\default\layout\panel-title-bg.gif" />
+    <Content Include="images\default\layout\panel-title-light-bg.gif" />
+    <Content Include="images\default\layout\stick.gif" />
+    <Content Include="images\default\layout\stuck.gif" />
+    <Content Include="images\default\layout\tab-close-on.gif" />
+    <Content Include="images\default\layout\tab-close.gif" />
+    <Content Include="images\default\menu\checked.gif" />
+    <Content Include="images\default\menu\group-checked.gif" />
+    <Content Include="images\default\menu\item-over.gif" />
+    <Content Include="images\default\menu\menu-parent.gif" />
+    <Content Include="images\default\menu\menu.gif" />
+    <Content Include="images\default\menu\unchecked.gif" />
+    <Content Include="images\default\panel\corners-sprite.gif" />
+    <Content Include="images\default\panel\left-right.gif" />
+    <Content Include="images\default\panel\light-hd.gif" />
+    <Content Include="images\default\panel\tool-sprite-tpl.gif" />
+    <Content Include="images\default\panel\tool-sprites.gif" />
+    <Content Include="images\default\panel\tools-sprites-trans.gif" />
+    <Content Include="images\default\panel\top-bottom.gif" />
+    <Content Include="images\default\panel\top-bottom.png" />
+    <Content Include="images\default\panel\white-corners-sprite.gif" />
+    <Content Include="images\default\panel\white-left-right.gif" />
+    <Content Include="images\default\panel\white-top-bottom.gif" />
+    <Content Include="images\default\progress\progress-bg.gif" />
+    <Content Include="images\default\qtip\bg.gif" />
+    <Content Include="images\default\qtip\close.gif" />
+    <Content Include="images\default\qtip\tip-sprite.gif" />
+    <Content Include="images\default\s.gif" />
+    <Content Include="images\default\shadow-c.png" />
+    <Content Include="images\default\shadow-lr.png" />
+    <Content Include="images\default\shadow.png" />
+    <Content Include="images\default\shared\blue-loading.gif" />
+    <Content Include="images\default\shared\calendar.gif" />
+    <Content Include="images\default\shared\glass-bg.gif" />
+    <Content Include="images\default\shared\hd-sprite.gif" />
+    <Content Include="images\default\shared\large-loading.gif" />
+    <Content Include="images\default\shared\left-btn.gif" />
+    <Content Include="images\default\shared\loading-balls.gif" />
+    <Content Include="images\default\shared\right-btn.gif" />
+    <Content Include="images\default\shared\warning.gif" />
+    <Content Include="images\default\sizer\e-handle-dark.gif" />
+    <Content Include="images\default\sizer\e-handle.gif" />
+    <Content Include="images\default\sizer\ne-handle-dark.gif" />
+    <Content Include="images\default\sizer\ne-handle.gif" />
+    <Content Include="images\default\sizer\nw-handle-dark.gif" />
+    <Content Include="images\default\sizer\nw-handle.gif" />
+    <Content Include="images\default\sizer\s-handle-dark.gif" />
+    <Content Include="images\default\sizer\s-handle.gif" />
+    <Content Include="images\default\sizer\se-handle-dark.gif" />
+    <Content Include="images\default\sizer\se-handle.gif" />
+    <Content Include="images\default\sizer\square.gif" />
+    <Content Include="images\default\sizer\sw-handle-dark.gif" />
+    <Content Include="images\default\sizer\sw-handle.gif" />
+    <Content Include="images\default\slider\slider-bg.png" />
+    <Content Include="images\default\slider\slider-thumb.png" />
+    <Content Include="images\default\slider\slider-v-bg.png" />
+    <Content Include="images\default\slider\slider-v-thumb.png" />
+    <Content Include="images\default\tabs\scroll-left.gif" />
+    <Content Include="images\default\tabs\scroll-right.gif" />
+    <Content Include="images\default\tabs\scroller-bg.gif" />
+    <Content Include="images\default\tabs\tab-btm-inactive-left-bg.gif" />
+    <Content Include="images\default\tabs\tab-btm-inactive-right-bg.gif" />
+    <Content Include="images\default\tabs\tab-btm-left-bg.gif" />
+    <Content Include="images\default\tabs\tab-btm-right-bg.gif" />
+    <Content Include="images\default\tabs\tab-close.gif" />
+    <Content Include="images\default\tabs\tab-strip-bg.gif" />
+    <Content Include="images\default\tabs\tab-strip-bg.png" />
+    <Content Include="images\default\tabs\tab-strip-btm-bg.gif" />
+    <Content Include="images\default\tabs\tabs-sprite.gif" />
+    <Content Include="images\default\toolbar\bg.gif" />
+    <Content Include="images\default\toolbar\btn-arrow-light.gif" />
+    <Content Include="images\default\toolbar\btn-arrow.gif" />
+    <Content Include="images\default\toolbar\btn-over-bg.gif" />
+    <Content Include="images\default\toolbar\gray-bg.gif" />
+    <Content Include="images\default\toolbar\tb-bg.gif" />
+    <Content Include="images\default\toolbar\tb-btn-sprite.gif" />
+    <Content Include="images\default\tree\arrows.gif" />
+    <Content Include="images\default\tree\drop-add.gif" />
+    <Content Include="images\default\tree\drop-between.gif" />
+    <Content Include="images\default\tree\drop-no.gif" />
+    <Content Include="images\default\tree\drop-over.gif" />
+    <Content Include="images\default\tree\drop-under.gif" />
+    <Content Include="images\default\tree\drop-yes.gif" />
+    <Content Include="images\default\tree\elbow-end-minus-nl.gif" />
+    <Content Include="images\default\tree\elbow-end-minus.gif" />
+    <Content Include="images\default\tree\elbow-end-plus-nl.gif" />
+    <Content Include="images\default\tree\elbow-end-plus.gif" />
+    <Content Include="images\default\tree\elbow-end.gif" />
+    <Content Include="images\default\tree\elbow-line.gif" />
+    <Content Include="images\default\tree\elbow-minus-nl.gif" />
+    <Content Include="images\default\tree\elbow-minus.gif" />
+    <Content Include="images\default\tree\elbow-plus-nl.gif" />
+    <Content Include="images\default\tree\elbow-plus.gif" />
+    <Content Include="images\default\tree\elbow.gif" />
+    <Content Include="images\default\tree\folder-open.gif" />
+    <Content Include="images\default\tree\folder.gif" />
+    <Content Include="images\default\tree\leaf.gif" />
+    <Content Include="images\default\tree\loading.gif" />
+    <Content Include="images\default\tree\s.gif" />
+    <Content Include="images\default\window\icon-error.gif" />
+    <Content Include="images\default\window\icon-info.gif" />
+    <Content Include="images\default\window\icon-question.gif" />
+    <Content Include="images\default\window\icon-warning.gif" />
+    <Content Include="images\default\window\left-corners.png" />
+    <Content Include="images\default\window\left-right.png" />
+    <Content Include="images\default\window\right-corners.png" />
+    <Content Include="images\default\window\top-bottom.png" />
+    <Content Include="images\gray\button\btn-arrow.gif" />
+    <Content Include="images\gray\button\btn-sprite.gif" />
+    <Content Include="images\gray\gradient-bg.gif" />
+    <Content Include="images\gray\panel\corners-sprite.gif" />
+    <Content Include="images\gray\panel\left-right.gif" />
+    <Content Include="images\gray\panel\light-hd.gif" />
+    <Content Include="images\gray\panel\tool-sprite-tpl.gif" />
+    <Content Include="images\gray\panel\tool-sprites.gif" />
+    <Content Include="images\gray\panel\tools-sprites-trans.gif" />
+    <Content Include="images\gray\panel\top-bottom.gif" />
+    <Content Include="images\gray\panel\top-bottom.png" />
+    <Content Include="images\gray\panel\white-corners-sprite.gif" />
+    <Content Include="images\gray\panel\white-left-right.gif" />
+    <Content Include="images\gray\panel\white-top-bottom.gif" />
+    <Content Include="images\gray\qtip\bg.gif" />
+    <Content Include="images\gray\qtip\close.gif" />
+    <Content Include="images\gray\qtip\tip-sprite.gif" />
+    <Content Include="images\gray\s.gif" />
+    <Content Include="images\gray\tabs\scroll-left.gif" />
+    <Content Include="images\gray\tabs\scroll-right.gif" />
+    <Content Include="images\gray\tabs\scroller-bg.gif" />
+    <Content Include="images\gray\tabs\tab-btm-inactive-left-bg.gif" />
+    <Content Include="images\gray\tabs\tab-btm-inactive-right-bg.gif" />
+    <Content Include="images\gray\tabs\tab-btm-left-bg.gif" />
+    <Content Include="images\gray\tabs\tab-btm-right-bg.gif" />
+    <Content Include="images\gray\tabs\tab-close.gif" />
+    <Content Include="images\gray\tabs\tab-strip-bg.gif" />
+    <Content Include="images\gray\tabs\tab-strip-bg.png" />
+    <Content Include="images\gray\tabs\tab-strip-btm-bg.gif" />
+    <Content Include="images\gray\tabs\tabs-sprite.gif" />
+    <Content Include="images\gray\toolbar\bg.gif" />
+    <Content Include="images\gray\toolbar\btn-arrow-light.gif" />
+    <Content Include="images\gray\toolbar\btn-arrow.gif" />
+    <Content Include="images\gray\toolbar\btn-over-bg.gif" />
+    <Content Include="images\gray\toolbar\gray-bg.gif" />
+    <Content Include="images\gray\toolbar\tb-bg.gif" />
+    <Content Include="images\gray\toolbar\tb-btn-sprite.gif" />
+    <Content Include="images\gray\window\icon-error.gif" />
+    <Content Include="images\gray\window\icon-info.gif" />
+    <Content Include="images\gray\window\icon-question.gif" />
+    <Content Include="images\gray\window\icon-warning.gif" />
+    <Content Include="images\gray\window\left-corners.png" />
+    <Content Include="images\gray\window\left-right.png" />
+    <Content Include="images\gray\window\right-corners.png" />
+    <Content Include="images\gray\window\top-bottom.png" />
+    <Content Include="images\grid-filter\bullet_purple.png" />
+    <Content Include="images\grid-filter\equals.png" />
+    <Content Include="images\grid-filter\find.png" />
+    <Content Include="images\grid-filter\greater_then.png" />
+    <Content Include="images\grid-filter\less_then.png" />
+    <Content Include="images\hrow.gif" />
+    <Content Include="images\icon\achievement.png" />
+    <Content Include="images\icon\announcement-new.png" />
+    <Content Include="images\icon\announcement.png" />
+    <Content Include="images\icon\award-expert-match.png" />
+    <Content Include="images\icon\award-new.png" />
+    <Content Include="images\icon\award-query.png" />
+    <Content Include="images\icon\award.png" />
+    <Content Include="images\icon\canceltop.png" />
+    <Content Include="images\icon\contract.png" />
+    <Content Include="images\icon\delete.png" />
+    <Content Include="images\icon\department.png" />
+    <Content Include="images\icon\document.png" />
+    <Content Include="images\icon\edit.png" />
+    <Content Include="images\icon\expert-search.png" />
+    <Content Include="images\icon\expert.png" />
+    <Content Include="images\icon\export.png" />
+    <Content Include="images\icon\fund-allocation.png" />
+    <Content Include="images\icon\fund-censor.png" />
+    <Content Include="images\icon\fund-descend.png" />
+    <Content Include="images\icon\fund-finance.png" />
+    <Content Include="images\icon\fund-lent.png" />
+    <Content Include="images\icon\fund.png" />
+    <Content Include="images\icon\help.png" />
+    <Content Include="images\icon\log-setting.png" />
+    <Content Include="images\icon\log.png" />
+    <Content Include="images\icon\logout.png" />
+    <Content Include="images\icon\magazine-new.png" />
+    <Content Include="images\icon\magazine-query.png" />
+    <Content Include="images\icon\magazine.png" />
+    <Content Include="images\icon\member-manage.png" />
+    <Content Include="images\icon\message-markasread.png" />
+    <Content Include="images\icon\message-send.png" />
+    <Content Include="images\icon\message.png" />
+    <Content Include="images\icon\new.png" />
+    <Content Include="images\icon\notice-text.png" />
+    <Content Include="images\icon\paper-expert-match.png" />
+    <Content Include="images\icon\paper-new.png" />
+    <Content Include="images\icon\paper-query.png" />
+    <Content Include="images\icon\paper.png" />
+    <Content Include="images\icon\pass.png" />
+    <Content Include="images\icon\patent-agenda.png" />
+    <Content Include="images\icon\patent-expert-match.png" />
+    <Content Include="images\icon\patent-new.png" />
+    <Content Include="images\icon\patent-query.png" />
+    <Content Include="images\icon\patent.png" />
+    <Content Include="images\icon\pay-plan-item.png" />
+    <Content Include="images\icon\project-export.png" />
+    <Content Include="images\icon\project-horizontal-censor.png" />
+    <Content Include="images\icon\project-horizontal-new.png" />
+    <Content Include="images\icon\project-horizontal-query.png" />
+    <Content Include="images\icon\project-horizontal.png" />
+    <Content Include="images\icon\project-my-project-delegate.png" />
+    <Content Include="images\icon\project-my-project-join.png" />
+    <Content Include="images\icon\project-my-project-principal.png" />
+    <Content Include="images\icon\project-new.png" />
+    <Content Include="images\icon\project-vertical-censor.png" />
+    <Content Include="images\icon\project-vertical-new.png" />
+    <Content Include="images\icon\project-vertical-query.png" />
+    <Content Include="images\icon\project-vertical.png" />
+    <Content Include="images\icon\project.png" />
+    <Content Include="images\icon\query.png" />
+    <Content Include="images\icon\reject.png" />
+    <Content Include="images\icon\setting.png" />
+    <Content Include="images\icon\settop.png" />
+    <Content Include="images\icon\show.png" />
+    <Content Include="images\icon\srims.png" />
+    <Content Include="images\icon\subject-level-first.png" />
+    <Content Include="images\icon\subject-level-second.png" />
+    <Content Include="images\icon\subject.png" />
+    <Content Include="images\icon\task.png" />
+    <Content Include="images\icon\type-rank.png" />
+    <Content Include="images\icon\type-support-category.png" />
+    <Content Include="images\icon\type-support-field.png" />
+    <Content Include="images\icon\type-support-sub-field.png" />
+    <Content Include="images\icon\type-type.png" />
+    <Content Include="images\icon\type.png" />
+    <Content Include="images\icon\user-power.png" />
+    <Content Include="images\icon\user.png" />
+    <Content Include="images\icon\voucher.png" />
+    <Content Include="images\index_loading.gif" />
+    <Content Include="images\s.gif" />
+    <Content Include="images\vista\basic-dialog\bg-center.gif" />
+    <Content Include="images\vista\basic-dialog\bg-left.gif" />
+    <Content Include="images\vista\basic-dialog\bg-right.gif" />
+    <Content Include="images\vista\basic-dialog\close.gif" />
+    <Content Include="images\vista\basic-dialog\collapse.gif" />
+    <Content Include="images\vista\basic-dialog\dlg-bg.gif" />
+    <Content Include="images\vista\basic-dialog\e-handle.gif" />
+    <Content Include="images\vista\basic-dialog\expand.gif" />
+    <Content Include="images\vista\basic-dialog\hd-sprite.gif" />
+    <Content Include="images\vista\basic-dialog\s-handle.gif" />
+    <Content Include="images\vista\basic-dialog\se-handle.gif" />
+    <Content Include="images\vista\basic-dialog\w-handle.gif" />
+    <Content Include="images\vista\gradient-bg.gif" />
+    <Content Include="images\vista\grid\grid-split.gif" />
+    <Content Include="images\vista\grid\grid-vista-hd.gif" />
+    <Content Include="images\vista\layout\collapse.gif" />
+    <Content Include="images\vista\layout\expand.gif" />
+    <Content Include="images\vista\layout\gradient-bg.gif" />
+    <Content Include="images\vista\layout\ns-collapse.gif" />
+    <Content Include="images\vista\layout\ns-expand.gif" />
+    <Content Include="images\vista\layout\panel-close.gif" />
+    <Content Include="images\vista\layout\panel-title-bg.gif" />
+    <Content Include="images\vista\layout\panel-title-light-bg.gif" />
+    <Content Include="images\vista\layout\stick.gif" />
+    <Content Include="images\vista\layout\tab-close-on.gif" />
+    <Content Include="images\vista\layout\tab-close.gif" />
+    <Content Include="images\vista\qtip\bg.gif" />
+    <Content Include="images\vista\qtip\tip-sprite.gif" />
+    <Content Include="images\vista\s.gif" />
+    <Content Include="images\vista\sizer\e-handle-dark.gif" />
+    <Content Include="images\vista\sizer\e-handle.gif" />
+    <Content Include="images\vista\sizer\ne-handle-dark.gif" />
+    <Content Include="images\vista\sizer\ne-handle.gif" />
+    <Content Include="images\vista\sizer\nw-handle-dark.gif" />
+    <Content Include="images\vista\sizer\nw-handle.gif" />
+    <Content Include="images\vista\sizer\s-handle-dark.gif" />
+    <Content Include="images\vista\sizer\s-handle.gif" />
+    <Content Include="images\vista\sizer\se-handle-dark.gif" />
+    <Content Include="images\vista\sizer\se-handle.gif" />
+    <Content Include="images\vista\sizer\sw-handle-dark.gif" />
+    <Content Include="images\vista\sizer\sw-handle.gif" />
+    <Content Include="images\vista\tabs\tab-btm-inactive-left-bg.gif" />
+    <Content Include="images\vista\tabs\tab-btm-inactive-right-bg.gif" />
+    <Content Include="images\vista\tabs\tab-btm-left-bg.gif" />
+    <Content Include="images\vista\tabs\tab-btm-right-bg.gif" />
+    <Content Include="images\vista\tabs\tab-sprite.gif" />
+    <Content Include="images\vista\toolbar\gray-bg.gif" />
+    <Content Include="images\vista\toolbar\tb-btn-sprite.gif" />
+    <Content Include="Index.html" />
+    <Content Include="stylesheets\ext-all.css" />
+    <Content Include="stylesheets\icon-announcement.css" />
+    <Content Include="stylesheets\icon-award.css" />
+    <Content Include="stylesheets\icon-fund.css" />
+    <Content Include="stylesheets\icon-message.css" />
+    <Content Include="stylesheets\icon-paper.css" />
+    <Content Include="stylesheets\icon-patent.css" />
+    <Content Include="stylesheets\icon-project.css" />
+    <Content Include="stylesheets\icon-setting.css" />
+    <Content Include="stylesheets\icon-subject.css" />
+    <Content Include="stylesheets\icon-type.css" />
+    <Content Include="stylesheets\icon-user.css" />
+    <Content Include="stylesheets\icon.css" />
+    <Content Include="stylesheets\srims.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\default\form\clear-trigger.psd" />
+    <None Include="images\default\form\date-trigger.psd" />
+    <None Include="images\default\form\search-trigger.psd" />
+    <None Include="images\default\form\trigger.psd" />
+    <None Include="images\default\window\left-corners.psd" />
+    <None Include="images\default\window\left-right.psd" />
+    <None Include="images\default\window\right-corners.psd" />
+    <None Include="images\default\window\top-bottom.psd" />
+    <None Include="images\gray\window\left-corners.pspimage" />
+    <None Include="Web.config" />
+    <Content Include="HorizonVoucherPrint.aspx" />
+    <Content Include="images\expert-navigate\achieve-view.png" />
+    <Content Include="images\expert-navigate\advice.png" />
+    <Content Include="images\expert-navigate\change-password.png" />
+    <Content Include="images\expert-navigate\complete.png" />
+    <Content Include="images\expert-navigate\expert-simple-query.png" />
+    <Content Include="images\expert-navigate\fund-allocate.png" />
+    <Content Include="images\expert-navigate\fund-allocation\allocate-unfinished.png" />
+    <Content Include="images\expert-navigate\fund-allocation\allocate.png" />
+    <Content Include="images\expert-navigate\fund-allocation\complete-unfinished.png" />
+    <Content Include="images\expert-navigate\fund-allocation\complete.png" />
+    <Content Include="images\expert-navigate\fund-allocation\confirm-unfinished.png" />
+    <Content Include="images\expert-navigate\fund-allocation\confirm.png" />
+    <Content Include="images\expert-navigate\fund-allocation\fund-select-unfinished.png" />
+    <Content Include="images\expert-navigate\fund-allocation\fund-select.png" />
+    <Content Include="images\expert-navigate\fund-descend\amount-edit-unfinished.png" />
+    <Content Include="images\expert-navigate\fund-descend\amount-edit.png" />
+    <Content Include="images\expert-navigate\fund-descend\complete-unfinished.png" />
+    <Content Include="images\expert-navigate\fund-descend\complete.png" />
+    <Content Include="images\expert-navigate\fund-descend\confirm-unfinished.png" />
+    <Content Include="images\expert-navigate\fund-descend\confirm.png" />
+    <Content Include="images\expert-navigate\fund-descend\finance-select-unfinished.png" />
+    <Content Include="images\expert-navigate\fund-descend\finance-select.png" />
+    <Content Include="images\expert-navigate\fund-descend\project-select-unfinished.png" />
+    <Content Include="images\expert-navigate\fund-descend\project-select.png" />
+    <Content Include="images\expert-navigate\help.png" />
+    <Content Include="images\expert-navigate\prefect-stuff.png" />
+    <Content Include="images\expert-navigate\project-delegate.png" />
+    <Content Include="images\expert-navigate\project-new.png" />
+    <Content Include="images\expert-navigate\project-new\basic-unfinished.png" />
+    <Content Include="images\expert-navigate\project-new\basic.png" />
+    <Content Include="images\expert-navigate\project-new\complete-unfinished.png" />
+    <Content Include="images\expert-navigate\project-new\complete.png" />
+    <Content Include="images\expert-navigate\project-new\confirm-unfinished.png" />
+    <Content Include="images\expert-navigate\project-new\confirm.png" />
+    <Content Include="images\expert-navigate\project-new\contract-unfinished.png" />
+    <Content Include="images\expert-navigate\project-new\contract.png" />
+    <Content Include="images\expert-navigate\project-new\document-unfinished.png" />
+    <Content Include="images\expert-navigate\project-new\document.png" />
+    <Content Include="images\expert-navigate\project-new\member-unfinished.png" />
+    <Content Include="images\expert-navigate\project-new\member.png" />
+    <Content Include="images\expert-navigate\project-new\pay-plan-unfinished.png" />
+    <Content Include="images\expert-navigate\project-new\pay-play.png" />
+    <Content Include="images\expert-navigate\project-new\select-or-new-unfinished.png" />
+    <Content Include="images\expert-navigate\project-new\select-or-new.png" />
+    <Content Include="images\expert-navigate\stamp-apply.png" />
+    <Content Include="images\expert-navigate\stamp-apply\complete-unfinished.png" />
+    <Content Include="images\expert-navigate\stamp-apply\complete.png" />
+    <Content Include="images\expert-navigate\stamp-apply\confirm-unfinished.png" />
+    <Content Include="images\expert-navigate\stamp-apply\confirm.png" />
+    <Content Include="images\expert-navigate\stamp-apply\edit-basic-unfinished.png" />
+    <Content Include="images\expert-navigate\stamp-apply\edit-basic.png" />
+    <Content Include="images\expert-navigate\stamp-apply\edit-stuff-unfinished.png" />
+    <Content Include="images\expert-navigate\stamp-apply\edit-stuff.png" />
+    <Content Include="images\expert-navigate\step-sepereter-unfinished.png" />
+    <Content Include="images\expert-navigate\step-sepereter.png" />
+    <Content Include="images\icon\base.png" />
+    <Content Include="images\icon\base-new.png" />
+    <Content Include="images\icon\change-password.png" />
+    <Content Include="images\icon\clear-project-account-book-number.png" />
+    <Content Include="images\icon\contract-censor.png" />
+    <Content Include="images\icon\correctDateTime.png" />
+    <Content Include="images\icon\delegate-principal-cancel.png" />
+    <Content Include="images\icon\delegate-principal.png" />
+    <Content Include="images\icon\document-censor.png" />
+    <Content Include="images\icon\document-require.png" />
+    <Content Include="images\icon\document-upload.png" />
+    <Content Include="images\icon\expert-edit-censor.png" />
+    <Content Include="images\icon\expert-new.png" />
+    <Content Include="images\icon\finance-auto-import.png" />
+    <Content Include="images\icon\finance.png" />
+    <Content Include="images\icon\import.png" />
+    <Content Include="images\icon\invoice-delete.png" />
+    <Content Include="images\icon\invoice-edit.png" />
+    <Content Include="images\icon\invoice-new.png" />
+    <Content Include="images\icon\invoice.png" />
+    <Content Include="images\icon\ok.png" />
+    <Content Include="images\icon\outsourcing-new.png" />
+    <Content Include="images\icon\outsourcing.png" />
+    <Content Include="images\icon\permission.png" />
+    <Content Include="images\icon\print-reset.png" />
+    <Content Include="images\icon\print.png" />
+    <Content Include="images\icon\reset-password.png" />
+    <Content Include="images\icon\reset.png" />
+    <Content Include="images\icon\stamp-censor.png" />
+    <Content Include="images\icon\stamp-new.png" />
+    <Content Include="images\icon\stamp.png" />
+    <Content Include="images\icon\statistic-award.png" />
+    <Content Include="images\icon\statistic-fund.png" />
+    <Content Include="images\icon\statistic-paper.png" />
+    <Content Include="images\icon\statistic-patent.png" />
+    <Content Include="images\icon\statistic-project.png" />
+    <Content Include="images\icon\statistic.png" />
+    <Content Include="images\icon\project-terminate.png" />
+    <Content Include="images\icon\support.png" />
+    <Content Include="images\icon\upload.png" />
+    <Content Include="images\icon\user-new.png" />
+    <Content Include="images\icon\project-withdraw.png" />
+    <Content Include="images\icon\user-online.png" />
+    <Content Include="images\expert-my-achieve\award.png" />
+    <Content Include="images\expert-my-achieve\paper.png" />
+    <Content Include="images\expert-my-achieve\patent.png" />
+    <Content Include="images\expert-my-achieve\project-delegate.png" />
+    <Content Include="images\expert-my-achieve\project-member.png" />
+    <Content Include="images\expert-my-achieve\project-principal.png" />
+    <Content Include="images\expert-my-achieve\voucher.png" />
+    <Content Include="images\smallsoftware.png" />
+    <Content Include="javascript\Array.js" />
+    <Content Include="javascript\Boolean.js" />
+    <Content Include="javascript\Cookies.js" />
+    <Content Include="javascript\Date.js" />
+    <Content Include="javascript\ExpenseRate.js" />
+    <Content Include="javascript\ext\ext-all-2.2.1.js" />
+    <Content Include="javascript\ext\ext-all-2.2.js" />
+    <Content Include="javascript\ext\ext-all.js" />
+    <Content Include="javascript\ext\ext-base.js" />
+    <Content Include="javascript\ext\ext-lang-zh_CN.js" />
+    <Content Include="javascript\ext\form\FileUploadField.js" />
+    <Content Include="javascript\ext\grid\filter\BooleanFilter.js" />
+    <Content Include="javascript\ext\grid\filter\DateFilter.js" />
+    <Content Include="javascript\ext\grid\filter\Filter.js" />
+    <Content Include="javascript\ext\grid\filter\ListFilter.js" />
+    <Content Include="javascript\ext\grid\filter\NumericFilter.js" />
+    <Content Include="javascript\ext\grid\filter\StringFilter.js" />
+    <Content Include="javascript\ext\grid\GridFilters.js" />
+    <Content Include="javascript\ext\menu\EditableItem.js" />
+    <Content Include="javascript\ext\menu\RangeMenu.js" />
+    <Content Include="javascript\ext\grid\CheckColumn.js" />
+    <Content Include="javascript\ext\RowExpander.js" />
+    <Content Include="javascript\ext\ux\StringBuilder.js" />
+    <Content Include="javascript\NewProvinces.js" />
+    <Content Include="javascript\Object.js" />
+    <Content Include="javascript\srims\awards\AwardShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\common\OutsourcingAllocationStore.js" />
+    <Content Include="javascript\srims\common\OutsourcingAllocationXmlReader.js" />
+    <Content Include="javascript\srims\common\OutsourcingCensorRejectWindow.js" />
+    <Content Include="javascript\srims\common\OutsourcingCompanyManageType.js" />
+    <Content Include="javascript\srims\common\OutsourcingCompanyManageTypeStore.js" />
+    <Content Include="javascript\srims\common\OutsourcingCompanyManageTypeXmlReader.js" />
+    <Content Include="javascript\srims\common\OutsourcingCompanyType.js" />
+    <Content Include="javascript\srims\common\OutsourcingEditPanel.js" />
+    <Content Include="javascript\srims\common\OutsourcingEditPanel_Basic.js" />
+    <Content Include="javascript\srims\common\OutsourcingEditPanel_Document.js" />
+    <Content Include="javascript\srims\common\OutsourcingEditPanel_FileUpLoad2.js" />
+    <Content Include="javascript\srims\common\OutsourcingEditPanel_FileUpLoad3.js" />
+    <Content Include="javascript\srims\common\OutsourcingEditPanel_newToolBar.js" />
+    <Content Include="javascript\srims\common\OutsourcingEditPanel_tabDocument.js" />
+    <Content Include="javascript\srims\common\OutsourcingEditPanel_ToolBar.js" />
+    <Content Include="javascript\srims\common\OutsourcingInquiryGridPanel.js" />
+    <Content Include="javascript\srims\common\OutsourcingInquiryGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\common\OutsourcingInquiryPanel.js" />
+    <Content Include="javascript\srims\common\OutsourcingInquiryPanel_Basic.js" />
+    <Content Include="javascript\srims\common\OutsourcingIsExistWindow.js" />
+    <Content Include="javascript\srims\common\OutsourcingIsExistWindow_InForm.js" />
+    <Content Include="javascript\srims\common\OutsourcingProvinceCities.js" />
+    <Content Include="javascript\srims\common\OutsourcingProvinceStore.js" />
+    <Content Include="javascript\srims\common\OutsourcingProvinceXmlReader.js" />
+    <Content Include="javascript\srims\common\OutsourcingShowPanel_AllocationInfo.js" />
+    <Content Include="javascript\srims\common\OutsourcingShowPanel_AllocationInfo_ColumnModel.js" />
+    <Content Include="javascript\srims\common\OutsourcingShowPanel_AllocationInfo_GridFilters.js" />
+    <Content Include="javascript\srims\common\OutsourcingShowPanel_AllocationInfo_QueryWindow.js" />
+    <Content Include="javascript\srims\common\OutsourcingShowPanel_AllocationInfo_QueryWindow_BasicPanel.js" />
+    <Content Include="javascript\srims\common\OutsourcingShowPanel_AllocationInfo_QueryWindow_FundPanel.js" />
+    <Content Include="javascript\srims\common\OutsourcingShowPanel_AllocationInfo_QueryWindow_TypePanel.js" />
+    <Content Include="javascript\srims\common\OutsourcingShowPanel_AllocationInfo_ToolBar.js" />
+    <Content Include="javascript\srims\common\OutsourcingUnit.js" />
+    <Content Include="javascript\srims\common\OutsourcingUnitAction.js" />
+    <Content Include="javascript\srims\common\OutsourcingUnitEditPanel.js" />
+    <Content Include="javascript\srims\common\OutsourcingUnitEditPanel_Basic.js" />
+    <Content Include="javascript\srims\common\OutsourcingUnitExpertEditPanel_Basic.js" />
+    <Content Include="javascript\srims\common\OutsourcingUnitGridPanel.js" />
+    <Content Include="javascript\srims\common\OutsourcingUnitGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\common\OutsourcingUnitGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\common\OutsourcingUnitGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\common\OutsourcingUnitShowPanel.js" />
+    <Content Include="javascript\srims\common\OutsourcingUnitShowPanel_Basic.js" />
+    <Content Include="javascript\srims\common\OutsourcingUnitShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\common\OutsourcingUnitStore.js" />
+    <Content Include="javascript\srims\common\OutsourcingUnitXmlReader.js" />
+    <Content Include="javascript\srims\common\OutsourcingVerfiyPanel.js" />
+    <Content Include="javascript\srims\common\EmailEditWindow.js" />
+    <Content Include="javascript\srims\common\LogQueryWindow.js" />
+    <Content Include="javascript\srims\common\LogQueryWindow_InforPanel.js" />
+    <Content Include="javascript\srims\common\LogSetPanel.js" />
+    <Content Include="javascript\srims\common\LogSetPanel_CommonForm.js" />
+    <Content Include="javascript\srims\common\LogSetPanel_AwardForm.js" />
+    <Content Include="javascript\srims\common\LogSetPanel_BaseForm.js" />
+    <Content Include="javascript\srims\common\LogSetPanel_StampForm.js" />
+    <Content Include="javascript\srims\common\LogSetPanel_ExpertsForm.js" />
+    <Content Include="javascript\srims\common\LogSetPanel_FundForm.js" />
+    <Content Include="javascript\srims\common\LogSetPanel_PaperForm.js" />
+    <Content Include="javascript\srims\common\LogSetPanel_PatentForm.js" />
+    <Content Include="javascript\srims\common\LogSetPanel_ProjectForm.js" />
+    <Content Include="javascript\srims\common\LogSetPanel_TextForm.js" />
+    <Content Include="javascript\srims\common\LogSetPanel_TypeForm.js" />
+    <Content Include="javascript\srims\common\LogSetPanel_UserForm.js" />
+    <Content Include="javascript\srims\common\LogShowPanel.js" />
+    <Content Include="javascript\srims\common\NoticeTextInforManage.js" />
+    <Content Include="javascript\srims\common\NoticeTextInforManageForAddText.js" />
+    <Content Include="javascript\srims\common\NoticeTextManage.js" />
+    <Content Include="javascript\srims\common\NoticeTextManagePanel.js" />
+    <Content Include="javascript\srims\common\NoticeTextTypeStore.js" />
+    <Content Include="javascript\srims\common\Outsourcing.js" />
+    <Content Include="javascript\srims\common\OutsourcingAction.js" />
+    <Content Include="javascript\srims\common\OutsourcingGridPanel.js" />
+    <Content Include="javascript\srims\common\OutsourcingGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\common\OutsourcingGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\common\OutsourcingGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\common\OutsourcingShowPanel.js" />
+    <Content Include="javascript\srims\common\OutsourcingShowPanel_Basic.js" />
+    <Content Include="javascript\srims\common\OutsourcingShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\common\OutsourcingStore.js" />
+    <Content Include="javascript\srims\common\OutsourcingXmlReader.js" />
+    <Content Include="javascript\srims\common\OutsourcingEditPanel_FileUpLoad.js" />
+    <Content Include="javascript\srims\component\AdministratorSearch.js" />
+    <Content Include="javascript\srims\fund\FundAllocationOutWindow.js" />
+    <Content Include="javascript\srims\common\OutsourcingAllocation.js" />
+    <Content Include="javascript\srims\fund\FundAllocationPerformanceWindow.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationGridPanel.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationWindow.js" />
+    <Content Include="javascript\srims\performance\PerformanceDescendManageWindow.js" />
+    <Content Include="javascript\srims\performance\PerformanceDescendManageWindow_PerformanceAllocationPanel.js" />
+    <Content Include="javascript\srims\performance\PerformanceDescendManageWindow_PerformanceInfoPanel.js" />
+    <Content Include="javascript\srims\performance\PerformanceDescendManageWindow_PerformanceInfoPanel_ToolBar.js" />
+    <Content Include="javascript\srims\performance\PerformanceDescendWindow.js" />
+    <Content Include="javascript\srims\performance\PerformanceQueryWindow_InforPanel.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherGridPanel.js" />
+    <Content Include="javascript\srims\projects\ExpertGuideProjectOutGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\projects\ExpertGuideProjectOutGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\projects\ProjectEditPanel_ProjectOutForm.js" />
+    <Content Include="javascript\srims\projects\ProjectOutStore.js" />
+    <Content Include="javascript\srims\projects\ProjectOutXmlReader.js" />
+    <Content Include="javascript\srims\performance\Performance.js" />
+    <Content Include="javascript\srims\performance\PerformanceAction.js" />
+    <Content Include="javascript\srims\performance\PerformanceGridPanel.js" />
+    <Content Include="javascript\srims\performance\PerformanceGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\performance\PerformanceGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\performance\PerformanceGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\performance\PerformanceQueryWindow.js" />
+    <Content Include="javascript\srims\performance\PerformanceShowPanel.js" />
+    <Content Include="javascript\srims\performance\PerformanceShowPanel_BasicForm.js" />
+    <Content Include="javascript\srims\performance\PerformanceShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\performance\PerformanceStore.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherAction.js" />
+    <Content Include="javascript\srims\performance\PerformanceXmlReader.js" />
+    <Content Include="javascript\srims\common\SystemSettingStore.js" />
+    <Content Include="javascript\srims\common\SystemSettingWindowsServiceStore.js" />
+    <Content Include="javascript\srims\common\SystemSettingWindow_PaperDescriptionForm.js" />
+    <Content Include="javascript\srims\common\SystemSettingXmlReader.js" />
+    <Content Include="javascript\srims\common\UserStore.js" />
+    <Content Include="javascript\srims\common\View.js" />
+    <Content Include="javascript\srims\common\ViewAction.js" />
+    <Content Include="javascript\srims\common\ViewDefineWindow.js" />
+    <Content Include="javascript\srims\common\ViewGridPanel.js" />
+    <Content Include="javascript\srims\common\ViewGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\common\ViewGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\common\ViewShowWindow.js" />
+    <Content Include="javascript\srims\common\ViewStore.js" />
+    <Content Include="javascript\srims\common\ViewTypeStore.js" />
+    <Content Include="javascript\srims\common\ViewXmlReader.js" />
+    <Content Include="javascript\srims\component\AwardSearch.js" />
+    <Content Include="javascript\srims\component\FileUploadWindow.js" />
+    <Content Include="javascript\srims\component\EmailEditWindow.js" />
+    <Content Include="javascript\srims\component\ExportWindow.js" />
+    <Content Include="javascript\srims\component\ExportWindow_EntityColumnsForm.js" />
+    <Content Include="javascript\srims\component\FileUploadField.js" />
+    <Content Include="javascript\ext\tree\CheckColumn.js" />
+    <Content Include="javascript\srims\component\FinanceSearch.js" />
+    <Content Include="javascript\srims\component\GetAllManagementFeesComboBox.js" />
+    <Content Include="javascript\srims\component\ImportWindow.js" />
+    <Content Include="javascript\srims\component\MagazineSearch.js" />
+    <Content Include="javascript\srims\component\OutsourcingSearch.js" />
+    <Content Include="javascript\srims\component\PercentField.js" />
+    <Content Include="javascript\srims\component\ProjectSearch.js" />
+    <Content Include="javascript\srims\component\RadioGroup.js" />
+    <Content Include="javascript\srims\documents\AwardDocument.js" />
+    <Content Include="javascript\srims\documents\AwardDocumentCensorRejectWindow.js" />
+    <Content Include="javascript\srims\documents\AwardDocumentGridPanel.js" />
+    <Content Include="javascript\srims\documents\AwardDocumentGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\documents\AwardDocumentGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\documents\AwardDocumentManageWindow.js" />
+    <Content Include="javascript\srims\documents\AwardDocumentStore.js" />
+    <Content Include="javascript\srims\documents\AwardDocumentUploadWindow.js" />
+    <Content Include="javascript\srims\documents\AwardDocumentXmlReader.js" />
+    <Content Include="javascript\srims\documents\Contract.js" />
+    <Content Include="javascript\srims\documents\ContractCensorGridPanel.js" />
+    <Content Include="javascript\srims\documents\ContractCensorGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\documents\ContractCensorGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\documents\ContractCensorRejectWindow.js" />
+    <Content Include="javascript\srims\documents\ContractGridPanel.js" />
+    <Content Include="javascript\srims\documents\ContractGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\documents\ContractGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\documents\ContractUploadWindow.js" />
+    <Content Include="javascript\srims\documents\ContractWindow.js" />
+    <Content Include="javascript\srims\documents\DocumentCensorGridPanel.js" />
+    <Content Include="javascript\srims\documents\DocumentCensorGridPanel_columnModel.js" />
+    <Content Include="javascript\srims\documents\DocumentCensorGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\documents\DocumentCensorRejectWindow.js" />
+    <Content Include="javascript\srims\documents\DocumentGridPanel.js" />
+    <Content Include="javascript\srims\documents\DocumentGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\documents\DocumentGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\documents\DocumentModel.js" />
+    <Content Include="javascript\srims\documents\DocumentModelEditWindow.js" />
+    <Content Include="javascript\srims\documents\DocumentModelEditWindow_documentTypeModelPanel.js" />
+    <Content Include="javascript\srims\documents\DocumentModelEditWindow_documentTypeSelectForm.js" />
+    <Content Include="javascript\srims\documents\DocumentModelEditWindow_projectTypeSelectForm.js" />
+    <Content Include="javascript\srims\documents\DocumentModelGridPanel.js" />
+    <Content Include="javascript\srims\documents\DocumentModelGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\documents\DocumentModelGridPanel_Toolbar.js" />
+    <Content Include="javascript\srims\documents\DocumentModelManageWindow.js" />
+    <Content Include="javascript\srims\documents\DocumentModelStore.js" />
+    <Content Include="javascript\srims\documents\DocumentModelUploadWindow.js" />
+    <Content Include="javascript\srims\documents\DocumentModelXmlReader.js" />
+    <Content Include="javascript\srims\documents\DocumentMyUnsubmitDocumentGridPanel.js" />
+    <Content Include="javascript\srims\documents\DocumentMyUnsubmitDocumentGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\documents\DocumentMyUnsubmitDocumentGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\documents\DocumentRequireWindow.js" />
+    <Content Include="javascript\srims\documents\DocumentUploadWindow.js" />
+    <Content Include="javascript\srims\documents\DocumentWindow.js" />
+    <Content Include="javascript\srims\documents\DocumentWindow_RequireMessage.js" />
+    <Content Include="javascript\srims\EmailAction.js" />
+    <Content Include="javascript\srims\expertGuide\ExpertGuideAction.js" />
+    <Content Include="javascript\srims\expertGuide\ProcessDescriptionStore.js" />
+    <Content Include="javascript\srims\expertGuide\ProcessesShowForm.js" />
+    <Content Include="javascript\srims\expertGuide\SingleProcessOperatePanel.js" />
+    <Content Include="javascript\srims\ExpertNavigatePanel.js" />
+    <Content Include="javascript\srims\experts\DepartmentAction.js" />
+    <Content Include="javascript\srims\experts\DepartmentEditWindow.js" />
+    <Content Include="javascript\srims\experts\DepartmentGridPanel.js" />
+    <Content Include="javascript\srims\experts\DepartmentGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\experts\DepartmentGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\experts\DepartmentGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\experts\DepartmentList.js" />
+    <Content Include="javascript\srims\experts\EexpertEditPanel.js" />
+    <Content Include="javascript\srims\experts\ExpertEditPanel.js" />
+    <Content Include="javascript\srims\experts\ExpertAction.js" />
+    <Content Include="javascript\srims\experts\ExpertAward.js" />
+    <Content Include="javascript\srims\experts\ExpertAwardStore.js" />
+    <Content Include="javascript\srims\experts\ExpertAwardXmlReader.js" />
+    <Content Include="javascript\srims\experts\ExpertEditPanel_Basic.js" />
+    <Content Include="javascript\srims\experts\ExpertEditPanel_MessagePanel.js" />
+    <Content Include="javascript\srims\experts\ExpertEdit_Administrator_ComboBox.js" />
+    <Content Include="javascript\srims\experts\ExpertEdit_Administrator_DateField.js" />
+    <Content Include="javascript\srims\experts\ExpertEdit_Administrator_EntityComboBox.js" />
+    <Content Include="javascript\srims\experts\ExpertEdit_Administrator_Label.js" />
+    <Content Include="javascript\srims\experts\ExpertEdit_Administrator_LanguageNoticeTextComboBox.js" />
+    <Content Include="javascript\srims\experts\ExpertEdit_Administrator_LinkedEntityComboBox.js" />
+    <Content Include="javascript\srims\experts\ExpertEdit_Administrator_NoticeTextComboBox.js" />
+    <Content Include="javascript\srims\experts\ExpertEdit_Administrator_NumberField.js" />
+    <Content Include="javascript\srims\experts\ExpertEdit_Administrator_TextArea.js" />
+    <Content Include="javascript\srims\experts\ExpertEdit_Administrator_TextField.js" />
+    <Content Include="javascript\srims\experts\ExpertExport_Column.js" />
+    <Content Include="javascript\srims\experts\ExpertGridPanel.js" />
+    <Content Include="javascript\srims\experts\ExpertGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\experts\ExpertGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\experts\ExpertGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\experts\ExpertInfoHistory.js" />
+    <Content Include="javascript\srims\experts\ExpertInfoHistoryGridPanel.js" />
+    <Content Include="javascript\srims\experts\ExpertInfoHistoryGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\experts\ExpertInfoHistoryGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\experts\ExpertInfoHistoryPropertyValueType.js" />
+    <Content Include="javascript\srims\experts\ExpertInfoHistoryShowWindow.js" />
+    <Content Include="javascript\srims\experts\ExpertInfoHistoryStore.js" />
+    <Content Include="javascript\srims\experts\ExpertInfoHistoryXmlReader.js" />
+    <Content Include="javascript\srims\experts\ExpertLiberalArtsPaper.js" />
+    <Content Include="javascript\srims\experts\ExpertLiberalArtsPaperStore.js" />
+    <Content Include="javascript\srims\experts\ExpertLiberalArtsPaperXmlReader.js" />
+    <Content Include="javascript\srims\experts\ExpertLinkWayEditWindow.js" />
+    <Content Include="javascript\srims\experts\ExpertLinkWayWindow_LinkWayForm.js" />
+    <Content Include="javascript\srims\experts\ExpertPaper.js" />
+    <Content Include="javascript\srims\experts\ExpertPaperStore.js" />
+    <Content Include="javascript\srims\experts\ExpertPaperXmlReader.js" />
+    <Content Include="javascript\srims\experts\ExpertPatent.js" />
+    <Content Include="javascript\srims\experts\ExpertPatentStore.js" />
+    <Content Include="javascript\srims\experts\ExpertPatentXmlReader.js" />
+    <Content Include="javascript\srims\experts\ExpertProject.js" />
+    <Content Include="javascript\srims\experts\ExpertProjectStore.js" />
+    <Content Include="javascript\srims\experts\ExpertProjectXmlReader.js" />
+    <Content Include="javascript\srims\experts\ExpertQueryPanel.js" />
+    <Content Include="javascript\srims\experts\ExpertQueryPanel_Award.js" />
+    <Content Include="javascript\srims\experts\ExpertQueryPanel_Basic.js" />
+    <Content Include="javascript\srims\experts\ExpertQueryPanel_Paper.js" />
+    <Content Include="javascript\srims\experts\ExpertQueryPanel_Patent.js" />
+    <Content Include="javascript\srims\experts\ExpertQueryPanel_Project.js" />
+    <Content Include="javascript\srims\experts\ExpertQueryPanel_Project_Basic.js" />
+    <Content Include="javascript\srims\experts\ExpertQueryPanel_Project_Fund.js" />
+    <Content Include="javascript\srims\experts\ExpertQueryPanel_Project_Type.js" />
+    <Content Include="javascript\srims\experts\ExpertQueryPanel_Relation.js" />
+    <Content Include="javascript\srims\experts\ExpertQueryPanel_Statistic.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel_Awards.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel_Awards_ColumnModel.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel_Basic.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel_ChargeProjects.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel_ChargeProjects_ColumnModel.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel_LiberalArtsPapers.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel_LiberalArtsPapers_ColumnModel.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel_Papers.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel_Papers_ColumnModel.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel_ParticipantProjects.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel_ParticipantProjects_ColumnModel.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel_Patents.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel_Patents_ColumnModel.js" />
+    <Content Include="javascript\srims\experts\ExpertShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\experts\GetHelp.js" />
+    <Content Include="javascript\srims\experts\GetHelpWindow.js" />
+    <Content Include="javascript\srims\experts\GetHelpWindow_BasicPanel.js" />
+    <Content Include="javascript\srims\experts\GetHelpWindow_BasicPanelAchieve.js" />
+    <Content Include="javascript\srims\experts\GetHelpWindow_BasicPanelBase.js" />
+    <Content Include="javascript\srims\experts\GetHelpWindow_BasicPanelexploit.js" />
+    <Content Include="javascript\srims\experts\GetHelpWindow_BasicPanelImportSpecial.js" />
+    <Content Include="javascript\srims\experts\GetHelpWindow_BasicPanelPlan.js" />
+    <Content Include="javascript\srims\experts\GetHelpWindow_BasicPanelScience.js" />
+    <Content Include="javascript\srims\experts\MyAchieveView.js" />
+    <Content Include="javascript\srims\experts\MyAchieveViewWindow.js" />
+    <Content Include="javascript\srims\experts\MyAchieveViewWindow_BasicPanel.js" />
+    <Content Include="javascript\srims\experts\SexType.js" />
+    <Content Include="javascript\srims\ExportAction.js" />
+    <Content Include="javascript\srims\finance\FinanceAction.js" />
+    <Content Include="javascript\srims\finance\FinanceBak.js" />
+    <Content Include="javascript\srims\finance\FinanceBakExport_Column.js" />
+    <Content Include="javascript\srims\finance\FinanceBakGridPanel.js" />
+    <Content Include="javascript\srims\finance\FinanceBakGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\finance\FinanceBakGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\finance\FinanceBakStore.js" />
+    <Content Include="javascript\srims\finance\FinanceBakXmlReader.js" />
+    <Content Include="javascript\srims\finance\FinanceInvoiceEditWindow.js" />
+    <Content Include="javascript\srims\finance\VoucherExport_Column.js" />
+    <Content Include="javascript\srims\finance\VoucherFinanceAllocatieWindow.js" />
+    <Content Include="javascript\srims\fund\ExpertGuidFundAllocationPanel.js" />
+    <Content Include="javascript\srims\fund\ExpertGuidFundDescendPanel.js" />
+    <Content Include="javascript\srims\fund\ExpertGuidFundDescendPanel_ExpertFundDescendAmountPanel.js" />
+    <Content Include="javascript\srims\fund\ExpertGuidFundDescendPanel_ExpertFundDescendConfirmPanel.js" />
+    <Content Include="javascript\srims\fund\ExpertGuidFundDescendPanel_MyFundDescendProjectSelectGridPanel.js" />
+    <Content Include="javascript\srims\fund\ExpertGuidFundDescendPanel_MyFundDescendProjectSelectGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\fund\FinanceAction.js" />
+    <Content Include="javascript\srims\fund\FinanceEditWindow.js" />
+    <Content Include="javascript\srims\fund\FinanceFundDescend.js" />
+    <Content Include="javascript\srims\fund\FinanceFundDescendGridPanel.js" />
+    <Content Include="javascript\srims\fund\FinanceFundDescendGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\fund\FinanceFundDescendGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\fund\FinanceFundDescendStore.js" />
+    <Content Include="javascript\srims\fund\FinanceFundDescendXmlReader.js" />
+    <Content Include="javascript\srims\fund\FinanceQueryWindow.js" />
+    <Content Include="javascript\srims\fund\FinanceQueryWindow_InforPanel.js" />
+    <Content Include="javascript\srims\fund\FinanceSelectGridPanel.js" />
+    <Content Include="javascript\srims\fund\FinanceSelectGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\fund\FinanceSelectPanel.js" />
+    <Content Include="javascript\srims\fund\FinanceSelectPanel_QueryPanel.js" />
+    <Content Include="javascript\srims\fund\FinanceShowForm.js" />
+    <Content Include="javascript\srims\fund\FinanceVouchersShowWindow.js" />
+    <Content Include="javascript\srims\fund\FinannceVouchersShowWindow_VoucherGridPanel.js" />
+    <Content Include="javascript\srims\fund\FinannceVouchersShowWindow_VoucherGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\fund\FinannceVouchersShowWindow_VoucherGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\fund\FundAllocationAction.js" />
+    <Content Include="javascript\srims\fund\FundAllocationCensorWindow.js" />
+    <Content Include="javascript\srims\fund\FundAllocationCorrectDateTimeWindow.js" />
+    <Content Include="javascript\srims\fund\FundAllocationCorrectWindow.js" />
+    <Content Include="javascript\srims\fund\FundAllocationGridPanel.js" />
+    <Content Include="javascript\srims\fund\FundAllocationGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\fund\FundAllocationQueryWindow.js" />
+    <Content Include="javascript\srims\fund\FundAllocationShowPanel.js" />
+    <Content Include="javascript\srims\fund\FundAllocationShowPanel_BasicForm.js" />
+    <Content Include="javascript\srims\fund\FundAllocationShowPanel_FundDescendStateHistoryForm.js" />
+    <Content Include="javascript\srims\fund\FundAllocationShowPanel_FundMemberForm.js" />
+    <Content Include="javascript\srims\fund\FundAllocationShowPanel_ProjectInforForm.js" />
+    <Content Include="javascript\srims\fund\FundAllocationShowPanel_StateHistoryForm.js" />
+    <Content Include="javascript\srims\fund\FundAllocationShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\fund\FundAllocationShowPanel_VoucherForm.js" />
+    <Content Include="javascript\srims\fund\FundAllocationStateHistory.js" />
+    <Content Include="javascript\srims\fund\FundAllocationStateHistoryGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\fund\FundAllocationStateHistoryStore.js" />
+    <Content Include="javascript\srims\fund\FundAllocationStateHistoryXmlReader.js" />
+    <Content Include="javascript\srims\fund\FundBatchDescendWindow.js" />
+    <Content Include="javascript\srims\fund\FundBatchDescendWindow_EditGridPanel.js" />
+    <Content Include="javascript\srims\fund\FundBatchDescendWindow_EditGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\fund\FundBatchDescendWindow_ProjectSimpleQueryPanel.js" />
+    <Content Include="javascript\srims\fund\FundDescend.js" />
+    <Content Include="javascript\srims\fund\FundDescendAction.js" />
+    <Content Include="javascript\srims\fund\FundDescendCensorRejectWindow.js" />
+    <Content Include="javascript\srims\fund\FundDescendGridPanel.js" />
+    <Content Include="javascript\srims\fund\FundDescendGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\fund\FundDescendGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\fund\FundDescendManageWindow.js" />
+    <Content Include="javascript\srims\fund\FundDescendManageWindow_FinanceInfoPanel.js" />
+    <Content Include="javascript\srims\fund\FundDescendManageWindow_FinanceInfoPanel_ToolBar.js" />
+    <Content Include="javascript\srims\fund\FundDescendManageWindow_FundDescendPanel.js" />
+    <Content Include="javascript\srims\fund\FundDescendManageWindow_FundReturnPanel.js" />
+    <Content Include="javascript\srims\fund\FundDescendManageWindow_MessagePanel.js" />
+    <Content Include="javascript\srims\fund\FundDescendQueryWindow.js" />
+    <Content Include="javascript\srims\fund\FundDescendState.js" />
+    <Content Include="javascript\srims\fund\FundDescendStateHistory.js" />
+    <Content Include="javascript\srims\fund\FundDescendStateHistoryGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\fund\FundDescendStateHistoryStore.js" />
+    <Content Include="javascript\srims\fund\FundDescendStateHistoryXmlReader.js" />
+    <Content Include="javascript\srims\fund\FundDescendStore.js" />
+    <Content Include="javascript\srims\fund\FundDescendWindow.js" />
+    <Content Include="javascript\srims\fund\FundDescendXmlReader.js" />
+    <Content Include="javascript\srims\fund\FundDescend_ExpertWindow.js" />
+    <Content Include="javascript\srims\fund\FundDescend_ReturnWindow.js" />
+    <Content Include="javascript\srims\fund\FundMember.js" />
+    <Content Include="javascript\srims\fund\FundMemberGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\fund\FundMemberStore.js" />
+    <Content Include="javascript\srims\fund\FundMemberXmlReader.js" />
+    <Content Include="javascript\srims\fund\MyWaitingAllocationFundDescendGridPanel.js" />
+    <Content Include="javascript\srims\fund\MyWaitingAllocationFundDescendGridPanel_Column.js" />
+    <Content Include="javascript\srims\fund\VoucherAction.js" />
+    <Content Include="javascript\srims\fund\VoucherEditAccountBookNumberWindow.js" />
+    <Content Include="javascript\srims\fund\VoucherEditAccountBookNumberWindow_InforPanel.js" />
+    <Content Include="javascript\srims\fund\VoucherEditWindow.js" />
+    <Content Include="javascript\srims\fund\VoucherEditWindow_InForm.js" />
+    <Content Include="javascript\srims\fund\VoucherEditWindow_Out_EditorGridPanel.js" />
+    <Content Include="javascript\srims\fund\VoucherEditWindow_Out_EditorGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\fund\VoucherEditWindow_Out_EditorGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\fund\VoucherGridPanel.js" />
+    <Content Include="javascript\srims\fund\VoucherGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\fund\VoucherGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\fund\VoucherOut.js" />
+    <Content Include="javascript\srims\fund\VoucherOutColumnModel.js" />
+    <Content Include="javascript\srims\fund\VoucherOutStore.js" />
+    <Content Include="javascript\srims\fund\VoucherOutXmlReader.js" />
+    <Content Include="javascript\srims\fund\VoucherPrintWindow.js" />
+    <Content Include="javascript\srims\fund\VoucherQueryWindow.js" />
+    <Content Include="javascript\srims\fund\VoucherQueryWindow_InforPanel.js" />
+    <Content Include="javascript\srims\fund\VoucherShowPanel.js" />
+    <Content Include="javascript\srims\fund\VoucherShowPanel_BasicForm.js" />
+    <Content Include="javascript\srims\fund\VoucherShowPanel_FinanceForm.js" />
+    <Content Include="javascript\srims\fund\VoucherShowPanel_FundAllocationForm.js" />
+    <Content Include="javascript\srims\fund\VoucherShowPanel_StateHistoryForm.js" />
+    <Content Include="javascript\srims\fund\VoucherShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\fund\VoucherShowPanel_VoucherOutForm.js" />
+    <Content Include="javascript\srims\fund\VoucherState.js" />
+    <Content Include="javascript\srims\fund\VoucherStateHistory.js" />
+    <Content Include="javascript\srims\fund\VoucherStateHistoryColumnModel.js" />
+    <Content Include="javascript\srims\fund\VoucherStateHistoryStore.js" />
+    <Content Include="javascript\srims\fund\VoucherStateHistoryXmlReader.js" />
+    <Content Include="javascript\srims\fund\VoucherStore.js" />
+    <Content Include="javascript\srims\fund\VoucherXmlReader.js" />
+    <Content Include="javascript\srims\MessageAction.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaper.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperAuhtorEditWindow.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperAuthor.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperAuthorGridPanel.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperAuthorGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperAuthorGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperAuthorStore.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperAuthorWindow.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperAuthorXmlReader.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperEditPanel.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperEditPanel_AbstractForm.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperEditPanel_BasicForm.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperEditPanel_MessagePanel.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperEditPanel_OtherBasicForm.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperExport_Column.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperGridPanel.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperQueryWindow.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperQueryWindow_BasicPanel.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperQueryWindow_ExpertPanel.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperQueryWindow_OtherPanel.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperStore.js" />
+    <Content Include="javascript\srims\papers\ResultsType.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperShowPanel.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperShowPanel_AbstractForm.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperShowPanel_AuthorForm.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperShowPanel_BaisicForm.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperShowPanel_OtherBasicForm.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\papers\LiberalArtsPaperXmlReader.js" />
+    <Content Include="javascript\srims\papers\MagazineInformationEditPanel.js" />
+    <Content Include="javascript\srims\papers\MagazineOccupation.js" />
+    <Content Include="javascript\srims\papers\MagazineOccupationEditPanel.js" />
+    <Content Include="javascript\srims\papers\MagazineOccupationEditWindow.js" />
+    <Content Include="javascript\srims\papers\MagazineOccupationGridPanel.js" />
+    <Content Include="javascript\srims\papers\MagazineOccupationGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\papers\MagazineOccupationGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\papers\MagazineOccupationManageGridPanel.js" />
+    <Content Include="javascript\srims\papers\MagazineOccupationStore.js" />
+    <Content Include="javascript\srims\papers\MagazineOccupationWindow.js" />
+    <Content Include="javascript\srims\papers\MagazineOccupationXmlReader.js" />
+    <Content Include="javascript\srims\papers\MagazineShowPanel_OccupationForm.js" />
+    <Content Include="javascript\srims\papers\MagazineShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\papers\PaperEditPanel_MessagePanel.js" />
+    <Content Include="javascript\srims\papers\PaperExport_Column.js" />
+    <Content Include="javascript\srims\papers\PaperShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\papers\ResultsType.js" />
+    <Content Include="javascript\srims\papers\StampStuffManageWindow.js" />
+    <Content Include="javascript\srims\patents\Patent.js" />
+    <Content Include="javascript\srims\patents\PatentAction.js" />
+    <Content Include="javascript\srims\patents\PatentAgency.js" />
+    <Content Include="javascript\srims\patents\PatentAgencyAction.js" />
+    <Content Include="javascript\srims\patents\PatentAgencyEditWindow.js" />
+    <Content Include="javascript\srims\patents\PatentAgencyGridPanel.js" />
+    <Content Include="javascript\srims\patents\PatentAgencyGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\patents\PatentAgencyGridPanel_GridFilter.js" />
+    <Content Include="javascript\srims\patents\PatentAgencyGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\patents\PatentAgencyReader.js" />
+    <Content Include="javascript\srims\patents\PatentAgencyStore.js" />
+    <Content Include="javascript\srims\patents\PatentEditWindow.js" />
+    <Content Include="javascript\srims\patents\PatentEditWindow_BasicForm.js" />
+    <Content Include="javascript\srims\patents\PatentEditWindow_BasicForm_MustWrite.js" />
+    <Content Include="javascript\srims\patents\PatentExport_Columns.js" />
+    <Content Include="javascript\srims\patents\PatentGridPanel.js" />
+    <Content Include="javascript\srims\patents\PatentGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\patents\PatentGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\patents\PatentInventer.js" />
+    <Content Include="javascript\srims\patents\PatentInventerFormPanel.js" />
+    <Content Include="javascript\srims\patents\PatentInventerGridPanel.js" />
+    <Content Include="javascript\srims\patents\PatentInventerGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\patents\PatentInventerManageWindow.js" />
+    <Content Include="javascript\srims\patents\PatentInventerManageWindow_AddInventer.js" />
+    <Content Include="javascript\srims\patents\PatentInventerGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\patents\PatentInventerReader.js" />
+    <Content Include="javascript\srims\patents\PatentInventerStore.js" />
+    <Content Include="javascript\srims\patents\PatentLawState.js" />
+    <Content Include="javascript\srims\patents\PatentLevel.js" />
+    <Content Include="javascript\srims\patents\PatentQueryWindow.js" />
+    <Content Include="javascript\srims\patents\PatentQueryWindow_BasicPanel.js" />
+    <Content Include="javascript\srims\patents\PatentQueryWindow_ExpertPanel.js" />
+    <Content Include="javascript\srims\patents\PatentQueryWindow_OtherPanel.js" />
+    <Content Include="javascript\srims\patents\PatentReader.js" />
+    <Content Include="javascript\srims\patents\PatentShowPanel.js" />
+    <Content Include="javascript\srims\patents\PatentShowPanel_BasicForm.js" />
+    <Content Include="javascript\srims\patents\PatentShowPanel_IntroductionForm.js" />
+    <Content Include="javascript\srims\patents\PatentStore.js" />
+    <Content Include="javascript\srims\patents\PatentType.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocation.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationAction.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationCensorWindow.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationCorrectDateTimeWindow.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationCorrectWindow.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationQueryWindow.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationShowPanel.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationShowPanel_BasicForm.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationShowPanel_FundMemberForm.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationShowPanel_StateHistoryForm.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationShowPanel_VoucherForm.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationState.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationStateHistory.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationStateHistoryGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationStateHistoryStore.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationStateHistoryXmlReader.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationStore.js" />
+    <Content Include="javascript\srims\performance\PerformanceAllocationXmlReader.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucher.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherStore.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherXmlReader.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherEditWindow.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherEditWindow_InForm.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherPrintWindow.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherQueryWindow_InforPanel.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherShowPanel.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherShowPanel_BasicForm.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherShowPanel_FinanceForm.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherShowPanel_FundAllocationForm.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherShowPanel_StateHistoryForm.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherState.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherStateHistory.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherStateHistoryColumnModel.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherStateHistoryStore.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherStateHistoryXmlReader.js" />
+    <Content Include="javascript\srims\performance\PerformanceVoucherQueryWindow.js" />
+    <Content Include="javascript\srims\projects\ExpertGuideProjectContractGridPanel.js" />
+    <Content Include="javascript\srims\projects\ExpertGuideProjectContractGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\projects\ExpertGuideProjectDocumentGridPanel.js" />
+    <Content Include="javascript\srims\projects\ExpertGuideProjectDocumentGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\projects\ExpertGuideProjectEditPanel.js" />
+    <Content Include="javascript\srims\projects\ExpertGuideProjectMemberGridPanel.js" />
+    <Content Include="javascript\srims\projects\ExperGuideProjectMemberGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\projects\ExpertGuideProjectOutGridPanel.js" />
+    <Content Include="javascript\srims\projects\ExpertGuideProjectPayPlanItemGridPanel.js" />
+    <Content Include="javascript\srims\projects\ExpertGuideProjectPayPlanItemGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\projects\MyUnsubmitProjectsGridPanel.js" />
+    <Content Include="javascript\srims\projects\MyUnsubmitProjectsGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\projects\ProjectClearAccountBookNumberWindow.js" />
+    <Content Include="javascript\srims\projects\ProjectClearAccountBookNumberWindow_WarningPanel.js" />
+    <Content Include="javascript\srims\projects\ProjectCompleteInWindow.js" />
+    <Content Include="javascript\srims\projects\ProjectExport_Column.js" />
+    <Content Include="javascript\srims\projects\ProjectOut.js" />
+    <Content Include="javascript\srims\projects\ProjectRankSelectWindow.js" />
+    <Content Include="javascript\srims\projects\ProjectSetDelegateGridPanel.js" />
+    <Content Include="javascript\srims\projects\ProjectSetDelegateGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\projects\ProjectSetDelegateGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_FundBorrowForm.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_FundReturnForm.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_PerformanceAllocationForm.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_ProjectOutForm.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_RecoveryForm.js" />
+    <Content Include="javascript\srims\projects\ProjectWaitingSetDelegateWindow.js" />
+    <Content Include="javascript\srims\projects\Recovery.js" />
+    <Content Include="javascript\srims\projects\RecoveryProjectGridPanel.js" />
+    <Content Include="javascript\srims\projects\RecoveryProjectGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\projects\RecoveryProjectGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\projects\RecoveryProjectGridPanel_ShowColumnModel.js" />
+    <Content Include="javascript\srims\projects\RecoveryProjectGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\projects\RecoveryProjectShowPanel.js" />
+    <Content Include="javascript\srims\projects\RecoveryProjectShowPanel_FundForm.js" />
+    <Content Include="javascript\srims\projects\RecoveryProjectShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\projects\RecoveryProjectStore.js" />
+    <Content Include="javascript\srims\projects\RecoveryProjectXmlReader.js" />
+    <Content Include="javascript\srims\release\announcement.js" />
+    <Content Include="javascript\srims\release\award.js" />
+    <Content Include="javascript\srims\release\base.js" />
+    <Content Include="javascript\srims\release\department.js" />
+    <Content Include="javascript\srims\release\expert.js" />
+    <Content Include="javascript\srims\release\finance.js" />
+    <Content Include="javascript\srims\release\fund.js" />
+    <Content Include="javascript\srims\release\log.js" />
+    <Content Include="javascript\srims\release\main.js" />
+    <Content Include="javascript\srims\release\message.js" />
+    <Content Include="javascript\srims\release\noticeText.js" />
+    <Content Include="javascript\srims\release\Outsourcing.js" />
+    <Content Include="javascript\srims\release\paper.js" />
+    <Content Include="javascript\srims\release\patent.js" />
+    <Content Include="javascript\srims\release\Performance.js" />
+    <Content Include="javascript\srims\release\project.js" />
+    <Content Include="javascript\srims\release\stamps.js" />
+    <Content Include="javascript\srims\release\statistic.js" />
+    <Content Include="javascript\srims\release\subject.js" />
+    <Content Include="javascript\srims\release\systemSetting.js" />
+    <Content Include="javascript\srims\release\typeManage.js" />
+    <Content Include="javascript\srims\release\user.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeGroupGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeGroup.js" />
+    <Content Include="javascript\srims\stamps\Stamp.js" />
+    <Content Include="javascript\srims\stamps\StampAction.js" />
+    <Content Include="javascript\srims\stamps\StampAdminMember.js" />
+    <Content Include="javascript\srims\stamps\StampAdminMemberEditWindow.js" />
+    <Content Include="javascript\srims\stamps\StampAdminMemberGridPanel.js" />
+    <Content Include="javascript\srims\stamps\StampAdminMemberGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\stamps\StampAdminMemberGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\stamps\StampAdminMemberStore.js" />
+    <Content Include="javascript\srims\stamps\StampAdminMemberWindow.js" />
+    <Content Include="javascript\srims\stamps\StampAdminMemberXmlReader.js" />
+    <Content Include="javascript\srims\stamps\StampApplication.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationEditPanel.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationEditPanel_BasicForm.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationEditPanel_ShowPanel.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationEditPanel_StuffGridForm.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationEditPanel_StuffPanel.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationEditPanel_StuffStampEditGridPanel.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationEditPanel_StuffStampEditGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationEditPanel_StuffStampForm.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationEditWindow.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationEditWindow_InforForm.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationGridPanel.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationQueryWindow.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationQueryWindow_BasicPanel.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationQueryWindow_PrincipalPanel.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationShowPanel.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationShowPanel_BasicForm.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationShowPanel_StateHistoryForm.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationShowPanel_StuffForm.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationStore.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationType.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeAction.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeEditWindow.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeGridPanel.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeGroupEditWindow.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeGroupGridPanel.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeGroupGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeGroupStore.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeGroupXmlReader.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeShowWindow.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeStore.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeStoreForGroup.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationTypeXmlReader.js" />
+    <Content Include="javascript\srims\stamps\StampApplicationXmlReader.js" />
+    <Content Include="javascript\srims\stamps\StampCensorRejectWindow.js" />
+    <Content Include="javascript\srims\stamps\StampEditWindow.js" />
+    <Content Include="javascript\srims\stamps\StampGridPanel.js" />
+    <Content Include="javascript\srims\stamps\StampGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\stamps\StampGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\stamps\StampManageWindow.js" />
+    <Content Include="javascript\srims\stamps\StampState.js" />
+    <Content Include="javascript\srims\stamps\StampStateHistory.js" />
+    <Content Include="javascript\srims\stamps\StampStateHistoryGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\stamps\StampStateHistoryStore.js" />
+    <Content Include="javascript\srims\stamps\StampStateHistoryXmlReader.js" />
+    <Content Include="javascript\srims\stamps\StampStore.js" />
+    <Content Include="javascript\srims\stamps\StampXmlReader.js" />
+    <Content Include="javascript\srims\stamps\Stuff.js" />
+    <Content Include="javascript\srims\stamps\StuffEditWindow.js" />
+    <Content Include="javascript\srims\stamps\StuffGridPanel.js" />
+    <Content Include="javascript\srims\stamps\StuffGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\stamps\StuffGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\stamps\StuffManageWindow.js" />
+    <Content Include="javascript\srims\stamps\StuffStamp.js" />
+    <Content Include="javascript\srims\stamps\StuffStampEditWindow.js" />
+    <Content Include="javascript\srims\stamps\StuffStampGridPanel.js" />
+    <Content Include="javascript\srims\stamps\StuffStampGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\stamps\StuffStampGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\stamps\StuffStampManageWindow.js" />
+    <Content Include="javascript\srims\stamps\StuffStampStore.js" />
+    <Content Include="javascript\srims\stamps\StuffStampXmlReader.js" />
+    <Content Include="javascript\srims\stamps\StuffStore.js" />
+    <Content Include="javascript\srims\stamps\StuffXmlReader.js" />
+    <Content Include="javascript\srims\statistic\AwardStatisticWindow.js" />
+    <Content Include="javascript\srims\statistic\DateTimeForm.js" />
+    <Content Include="javascript\srims\statistic\DimensionSelectForm.js" />
+    <Content Include="javascript\srims\statistic\FundDescendDateTimeForm.js" />
+    <Content Include="javascript\srims\statistic\FundDescendStatisticWindow.js" />
+    <Content Include="javascript\srims\statistic\FundTotalStatisticWindow.js" />
+    <Content Include="javascript\srims\statistic\PaperStatisticWindow.js" />
+    <Content Include="javascript\srims\statistic\PatentStatisticWindow.js" />
+    <Content Include="javascript\srims\statistic\ProjectCountStatisticWindow.js" />
+    <Content Include="javascript\srims\statistic\ProjectStatisticWindow.js" />
+    <Content Include="javascript\srims\statistic\StatisticAction.js" />
+    <Content Include="javascript\srims\statistic\StatisticViewGridPanel.js" />
+    <Content Include="javascript\srims\statistic\StatisticViewGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\statistic\StatisticViewGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\statistic\StatisticViewWindow.js" />
+    <Content Include="javascript\srims\statistic\Store.js" />
+    <Content Include="javascript\srims\statistic\VoucherStatisticWindow.js" />
+    <Content Include="javascript\srims\SubjectNature.js" />
+    <Content Include="javascript\srims\type\ManagementFeesEditWindow.js" />
+    <Content Include="javascript\srims\type\ManagementFeesEditWindow_BasicForm.js" />
+    <Content Include="javascript\srims\type\ManagementFeesGridPanel.js" />
+    <Content Include="javascript\srims\type\ManagementFeesGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\type\ManagementFeesGridPanel_GridFilter.js" />
+    <Content Include="javascript\srims\type\ManagementFeesGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\type\ManagementFeesShowPanel.js" />
+    <Content Include="javascript\srims\type\ManagementFeesShowPanel_BasicForm.js" />
+    <Content Include="javascript\srims\type\ManagementFeesShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\type\ManagementFeesXmlReader.js" />
+    <Content Include="javascript\srims\type\MangementFees.js" />
+    <Content Include="javascript\srims\type\MangementFeesStore.js" />
+    <Content Include="javascript\srims\type\ProjectForm.js" />
+    <Content Include="javascript\srims\type\ProjectSubjectNature.js" />
+    <Content Include="javascript\srims\type\ProjectSupportCategoryEditWindow.js" />
+    <Content Include="javascript\srims\type\ProjectSupportCategoryGridPanel.js" />
+    <Content Include="javascript\srims\type\ProjectSupportCategoryGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\type\ProjectSupportCategoryGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\type\ProjectSupportCategoryManageWindow.js" />
+    <Content Include="javascript\srims\type\ProjectSupportFieldEditWindow.js" />
+    <Content Include="javascript\srims\type\ProjectSupportFieldGridPanel.js" />
+    <Content Include="javascript\srims\type\ProjectSupportFieldGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\type\ProjectSupportFieldGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\type\ProjectSupportFieldManageWindow.js" />
+    <Content Include="javascript\srims\type\ProjectSupportSubFieldEditWindow.js" />
+    <Content Include="javascript\srims\type\ProjectSupportSubFieldGridPanel.js" />
+    <Content Include="javascript\srims\type\ProjectSupportSubFieldGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\type\ProjectSupportSubFieldGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\type\ProjectSupportSubFieldManageWindow.js" />
+    <Content Include="javascript\srims\type\ProjectTypeEditWindow.js" />
+    <Content Include="javascript\srims\type\ProjectTypeEditWindow_BasicForm.js" />
+    <Content Include="javascript\srims\type\ProjectTypeGridPanel.js" />
+    <Content Include="javascript\srims\type\ProjectTypeGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\type\ProjectTypeGridPanel_Filter.js" />
+    <Content Include="javascript\srims\type\ProjectTypeGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\type\ProjectTypeQueryWindow.js" />
+    <Content Include="javascript\srims\type\ProjectTypeQueryWindow_InforPanel.js" />
+    <Content Include="javascript\srims\type\ProjectTypeShowPanel.js" />
+    <Content Include="javascript\srims\type\ProjectTypeShowPanel_BasicForm.js" />
+    <Content Include="javascript\srims\type\ProjectTypeShowPanel_ProjectSupportCategoryForm.js" />
+    <Content Include="javascript\srims\type\ProjectTypeShowPanel_ProjectSupportFieldForm.js" />
+    <Content Include="javascript\srims\type\ProjectTypeShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\type\TypeAction.js" />
+    <Content Include="javascript\srims\users\ActiveUsersGridPanel.js" />
+    <Content Include="javascript\srims\users\ActiveUsersGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\users\AppointCollegeAdministrator.js" />
+    <Content Include="javascript\srims\users\ChangePassword.js" />
+    <Content Include="javascript\srims\users\ChangePasswordWindow.js" />
+    <Content Include="javascript\srims\users\Message.js" />
+    <Content Include="javascript\srims\users\MessageAction.js" />
+    <Content Include="javascript\srims\users\MessageEditWindow.js" />
+    <Content Include="javascript\srims\users\MessageEditWindow_BasicForm.js" />
+    <Content Include="javascript\srims\users\MessageEditWindow_ContentForm.js" />
+    <Content Include="javascript\srims\users\MessageGridPanel.js" />
+    <Content Include="javascript\srims\users\MessageGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\users\MessageGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\users\MessageShowWindow.js" />
+    <Content Include="javascript\srims\users\MessageShowWindow_BasicForm.js" />
+    <Content Include="javascript\srims\users\MessageShowWindow_ContentForm.js" />
+    <Content Include="javascript\srims\users\MessageStore.js" />
+    <Content Include="javascript\srims\users\MessageXmlReader.js" />
+    <Content Include="javascript\srims\users\User.js" />
+    <Content Include="javascript\srims\users\UserAction.js" />
+    <Content Include="javascript\srims\users\UserAppointCollegeAdministratorGridPanel.js" />
+    <Content Include="javascript\srims\users\UserBasicInformationEditWindow.js" />
+    <Content Include="javascript\srims\users\UserGridPanel.js" />
+    <Content Include="javascript\srims\users\UserGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\users\UserGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\users\UserGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\users\UserLockEditWindow.js" />
+    <Content Include="javascript\srims\users\UserPermissionEditPanel.js" />
+    <Content Include="javascript\srims\users\UserPermissionEditPanel_CustomPermission.js" />
+    <Content Include="javascript\srims\users\UserPermissionEditPanel_CustomPermission_PermissionByType.js" />
+    <Content Include="javascript\srims\users\UserPermissionEditPanel_CustomPermission_PermissionByType_Edit.js" />
+    <Content Include="javascript\srims\users\UserPermissionEditPanel_CustomPermission_PermissionByType_Show.js" />
+    <Content Include="javascript\srims\users\UserPermissionEditPanel_CustomPermission_PermissionNormal.js" />
+    <Content Include="javascript\srims\users\UserPermissionEditPanel_PermisssionManage.js" />
+    <Content Include="javascript\srims\users\UserPermissionItem.js" />
+    <Content Include="javascript\srims\users\UserRetractTemporaryAuthorizationGridPanel.js" />
+    <Content Include="javascript\srims\users\UserRetractTemporaryAuthorizationGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\users\UserRetractTemporaryAuthorizationGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\users\UserRole.js" />
+    <Content Include="javascript\srims\users\UserRoleStore.js" />
+    <Content Include="javascript\srims\users\UserRoleType.js" />
+    <Content Include="javascript\srims\users\UserRoleXmlReader.js" />
+    <Content Include="javascript\srims\users\UserStore.js" />
+    <Content Include="javascript\srims\users\UserTemporaryAuthorizationPanel.js" />
+    <Content Include="javascript\srims\users\UserTemporaryAuthorizationPanel_EndDate.js" />
+    <Content Include="javascript\srims\users\UserTemporaryAuthorizationPanel_ManageProjectsByType.js" />
+    <Content Include="javascript\srims\users\UserTemporaryAuthorizationPanel_ManageProjectsByType_Edit.js" />
+    <Content Include="javascript\srims\users\UserTemporaryAuthorizationPanel_ManageProjectsByType_Show.js" />
+    <Content Include="javascript\srims\users\UserTemporaryAuthorizationPanel_NormalPermission.js" />
+    <Content Include="javascript\srims\users\UserTemporaryPermission.js" />
+    <Content Include="javascript\srims\users\UserTemporaryPermissionStore.js" />
+    <Content Include="javascript\srims\users\UserTemporaryPermissionXmlReader.js" />
+    <Content Include="javascript\srims\users\UserXmlReader.js" />
+    <Content Include="PerformanceVoucherPrint.aspx" />
+    <Content Include="Province.txt" />
+    <Content Include="RecoveryPrint.aspx" />
+    <Content Include="Service\Common\Email.asmx" />
+    <Content Include="Service\Common\Outsourcing.asmx" />
+    <Content Include="Service\Common\OutsourcingUnit.asmx" />
+    <Content Include="Service\Common\SystemSetting.asmx" />
+    <Content Include="Service\Common\View.asmx" />
+    <Content Include="Service\Common\Performance.asmx" />
+    <Content Include="Service\Documents\AwardDocument.asmx" />
+    <Content Include="Service\Documents\DocumentModel.asmx" />
+    <Content Include="Service\Experts\Department.asmx" />
+    <Content Include="Service\Experts\ExpertInfoHistory.asmx" />
+    <Content Include="Service\Export.asmx" />
+    <Content Include="javascript\srims\documents\DocumentWindow_RequireMessage.js" />
+    <Content Include="javascript\srims\documents\DocumentXmlReader.js" />
+    <Content Include="javascript\srims\documents\ResourceAction.js" />
+    <Content Include="javascript\srims\finance\FinanceAction.js" />
+    <Content Include="javascript\srims\fund\Finance.js" />
+    <Content Include="javascript\srims\fund\FinanceGridPanel.js" />
+    <Content Include="javascript\srims\fund\FinanceGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\fund\FinanceGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\fund\FinanceGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\fund\FinanceStore.js" />
+    <Content Include="javascript\srims\fund\FinanceXmlReader.js" />
+    <Content Include="javascript\srims\papers\PaperColumnStore.js" />
+    <Content Include="javascript\srims\projects\ProjectEmailGridPanel.js" />
+    <Content Include="javascript\srims\projects\ProjectEmailGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\projects\ProjectEmailGridPanel_ToolBar.js" />
+    <Content Include="Service\Fund\Finance.asmx" />
+    <Content Include="Service\Fund\FinanceBak.asmx" />
+    <Content Include="Service\Fund\FinanceFundDescend.asmx" />
+    <Content Include="Service\Fund\FundAllocationStateHistory.asmx" />
+    <Content Include="Service\Fund\FundDescend.asmx" />
+    <Content Include="Service\Fund\FundDescendStateHistory.asmx" />
+    <Content Include="Service\Fund\FundMember.asmx" />
+    <Content Include="Service\Fund\Voucher.asmx" />
+    <Content Include="Service\Fund\VoucherOut.asmx" />
+    <Content Include="Service\Fund\VoucherStateHistory.asmx" />
+    <Content Include="Service\Papers\LiberalArtsPaper.asmx" />
+    <Content Include="Service\Papers\LiberalArtsPaperAuthor.asmx" />
+    <Content Include="Service\Papers\MagazineOccupation.asmx" />
+    <Content Include="Service\Patents\Patent.asmx" />
+    <Content Include="Service\Patents\PatentAgency.asmx" />
+    <Content Include="Service\Patents\PatentInventer.asmx" />
+    <Content Include="Service\Performance\Performance.asmx" />
+    <Content Include="Service\Performance\PerformanceAllocationStateHistory.asmx" />
+    <Content Include="Service\Performance\PerformanceAllocation.asmx" />
+    <Content Include="Service\Performance\PerformanceVoucher.asmx" />
+    <Content Include="Service\Performance\PerformanceVoucherStateHistory.asmx" />
+    <Content Include="Service\Resource.asmx" />
+    <Content Include="Service\Stamps\StampApplicationFirstAdmin.asmx" />
+    <Content Include="Service\Stamps\StampApplication.asmx" />
+    <Content Include="Service\Stamps\StampApplicationSecondAdmin.asmx" />
+    <Content Include="Service\Stamps\StampApplicationType.asmx" />
+    <Content Include="Service\Stamps\StampApplicationTypeGroup.asmx" />
+    <Content Include="Service\Stamps\StampStateHistory.asmx" />
+    <Content Include="Service\Stamps\Stamp.asmx" />
+    <Content Include="Service\Stamps\Stuff.asmx" />
+    <Content Include="Service\Stamps\StuffStamp.asmx" />
+    <Content Include="Service\Type\ManagementFees.asmx" />
+    <Content Include="Service\Type\ProjectRank.asmx" />
+    <Content Include="Service\Type\ProjectSupportCategory.asmx" />
+    <Content Include="Service\Type\ProjectSupportField.asmx" />
+    <Content Include="Service\Type\ProjectSupportSubField.asmx" />
+    <Content Include="Service\Type\ProjectType.asmx" />
+    <Content Include="Service\Users\Message.asmx" />
+    <Content Include="Service\Users\User.asmx" />
+    <Content Include="stylesheets\column-tree.css" />
+    <Content Include="javascript\ext\tree\ColumnNodeUI.js" />
+    <Content Include="javascript\ext\tree\TreeCheckNodeUI.js" />
+    <Content Include="javascript\InfluenceFactor.js" />
+    <Content Include="javascript\Money.js" />
+    <Content Include="javascript\Number.js" />
+    <Content Include="javascript\Provinces.js" />
+    <Content Include="javascript\Srims.js" />
+    <Content Include="javascript\srims\Action.js" />
+    <Content Include="javascript\srims\AnnouncementIndexRender.js" />
+    <Content Include="javascript\srims\awards\Award.js" />
+    <Content Include="javascript\srims\awards\AwardAction.js" />
+    <Content Include="javascript\srims\awards\AwardExportColumns.js" />
+    <Content Include="javascript\srims\awards\AwardEditWindow.js" />
+    <Content Include="javascript\srims\awards\AwardEditWindow_BasicForm.js" />
+    <Content Include="javascript\srims\awards\AwardGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\awards\AwardGridPanel.js" />
+    <Content Include="javascript\srims\awards\AwardGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\awards\AwardGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\awards\AwardQueryWindow.js" />
+    <Content Include="javascript\srims\awards\AwardQueryWindow_BasicPanel.js" />
+    <Content Include="javascript\srims\awards\AwardQueryWindow_OtherPanel.js" />
+    <Content Include="javascript\srims\awards\AwardQueryWindow_ExpertPanel.js" />
+    <Content Include="javascript\srims\awards\AwardShowPanel.js" />
+    <Content Include="javascript\srims\awards\AwardShowPanel_BasicForm.js" />
+    <Content Include="javascript\srims\awards\AwardShowPanel_IntroductionForm.js" />
+    <Content Include="javascript\srims\awards\AwardStore.js" />
+    <Content Include="javascript\srims\awards\AwardWinner.js" />
+    <Content Include="javascript\srims\awards\AwardWinnerGridPanel.js" />
+    <Content Include="javascript\srims\awards\AwardWinnerGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\awards\AwardWinnerFormPanel.js" />
+    <Content Include="javascript\srims\awards\AwardWinnerManageWindow.js" />
+    <Content Include="javascript\srims\awards\AwardWinnerManageWindow_AddWinner.js" />
+    <Content Include="javascript\srims\awards\AwardWinnerManageWindow_ToolBar.js" />
+    <Content Include="javascript\srims\awards\AwardWinnerStore.js" />
+    <Content Include="javascript\srims\awards\AwardWinnerReader.js" />
+    <Content Include="javascript\srims\awards\AwardReader.js" />
+    <Content Include="javascript\srims\bases\Base.js" />
+    <Content Include="javascript\srims\bases\BaseStore.js" />
+    <Content Include="javascript\srims\bases\BaseXmlReader.js" />
+    <Content Include="javascript\srims\CensorState.js" />
+    <Content Include="javascript\srims\common\Announcement.js" />
+    <Content Include="javascript\srims\common\AnnouncementAction.js" />
+    <Content Include="javascript\srims\common\AnnouncementEditWindow.js" />
+    <Content Include="javascript\srims\common\AnnouncementEditWindow_BasicForm.js" />
+    <Content Include="javascript\srims\common\AnnouncementEditWindow_ContentForm.js" />
+    <Content Include="javascript\srims\common\AnnouncementGridPanel.js" />
+    <Content Include="javascript\srims\common\AnnouncementGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\common\AnnouncementGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\common\AnnouncementGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\common\AnnouncementShowWindow.js" />
+    <Content Include="javascript\srims\common\AnnouncementShowWindow_BasicForm.js" />
+    <Content Include="javascript\srims\common\AnnouncementShowWindow_ContentForm.js" />
+    <Content Include="javascript\srims\common\AnnouncementState.js" />
+    <Content Include="javascript\srims\common\AnnouncementStore.js" />
+    <Content Include="javascript\srims\common\LogAction.js" />
+    <Content Include="javascript\srims\common\LogcheckBoxGroupModelStore.js" />
+    <Content Include="javascript\srims\common\LogGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\common\SubjectAction.js" />
+    <Content Include="javascript\srims\common\SubjectSecondLevelGridPanel.js" />
+    <Content Include="javascript\srims\common\SubjectSecondLevelGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\common\SubjectSecondLevelGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\common\SubjectSecondLevelGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\common\SubjectSecondLevelList.js" />
+    <Content Include="javascript\srims\common\SubjectSecondLevelStore.js" />
+    <Content Include="javascript\srims\common\SubjectSecondLevelXmlReader.js" />
+    <Content Include="javascript\srims\common\Log.js" />
+    <Content Include="javascript\srims\common\SubjectFirstLevelGridPanel.js" />
+    <Content Include="javascript\srims\common\SubjectFirstLevelGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\common\SubjectFirstLevelGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\common\SubjectFirstLevelGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\common\SubjectFirstLevelList.js" />
+    <Content Include="javascript\srims\common\SubjectFirstLevelStore.js" />
+    <Content Include="javascript\srims\common\SubjectFirstLevelXmlReader.js" />
+    <Content Include="javascript\srims\common\SubjectSecondEditWindow.js" />
+    <Content Include="javascript\srims\common\SubjectSecondLevel.js" />
+    <Content Include="javascript\srims\common\LogGridPanel.js" />
+    <Content Include="javascript\srims\common\LogGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\common\LogGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\common\LogList.js" />
+    <Content Include="javascript\srims\common\LogStore.js" />
+    <Content Include="javascript\srims\common\LogXmlReader.js" />
+    <Content Include="javascript\srims\common\SubjectFirstLevel.js" />
+    <Content Include="javascript\srims\common\SubjectFirstLevelEditWindow.js" />
+    <Content Include="javascript\srims\common\AnnouncementXmlReader.js" />
+    <Content Include="javascript\srims\common\NoticeText.js" />
+    <Content Include="javascript\srims\common\NoticeTextStore.js" />
+    <Content Include="javascript\srims\common\NoticeTextXmlReader.js" />
+    <Content Include="javascript\srims\common\Subject.js" />
+    <Content Include="javascript\srims\common\SystemSetting.js" />
+    <Content Include="javascript\srims\common\SystemSettingAction.js" />
+    <Content Include="javascript\srims\common\SystemSettingWindow.js" />
+    <Content Include="javascript\srims\common\SystemSettingWindow_AdminRateForm.js" />
+    <Content Include="javascript\srims\common\SystemSettingWindow_FundForm.js" />
+    <Content Include="javascript\srims\common\SystemSettingWindow_SendMaillForm.js" />
+    <Content Include="javascript\srims\common\SystemSettingWindow_WindowsServerForm.js" />
+    <Content Include="javascript\srims\component\CheckboxGroup.js" />
+    <Content Include="javascript\srims\component\EntityComboBox.js" />
+    <Content Include="javascript\srims\component\EntitySearch.js" />
+    <Content Include="javascript\srims\component\ExpertSearch.js" />
+    <Content Include="javascript\srims\component\GridPanel.js" />
+    <Content Include="javascript\srims\component\MoneyField.js" />
+    <Content Include="javascript\srims\component\NoticeTextComboBox.js" />
+    <Content Include="javascript\srims\component\NoticeTextSearchBox.js" />
+    <Content Include="javascript\srims\component\ProvinceCityPanel.js" />
+    <Content Include="javascript\srims\component\QueryWindow_MemberPanel.js" />
+    <Content Include="javascript\srims\component\ThousandPercentField.js" />
+    <Content Include="javascript\srims\component\UserSearch.js" />
+    <Content Include="javascript\srims\data\Entity.js" />
+    <Content Include="javascript\srims\data\IDValueRecord.js" />
+    <Content Include="javascript\srims\data\XmlReader.js" />
+    <Content Include="javascript\srims\data\XmlStore.js" />
+    <Content Include="javascript\srims\documents\Contract.js" />
+    <Content Include="javascript\srims\documents\ContractStore.js" />
+    <Content Include="javascript\srims\documents\ContractType.js" />
+    <Content Include="javascript\srims\documents\ContractXmlReader.js" />
+    <Content Include="javascript\srims\documents\Document.js" />
+    <Content Include="javascript\srims\documents\DocumentStore.js" />
+    <Content Include="javascript\srims\documents\DocumentXmlReader.js" />
+    <Content Include="javascript\srims\experts\Department.js" />
+    <Content Include="javascript\srims\experts\DepartmentStore.js" />
+    <Content Include="javascript\srims\experts\DepartmentXmlReader.js" />
+    <Content Include="javascript\srims\experts\Expert.js" />
+    <Content Include="javascript\srims\experts\ExpertSimpleQuery.js" />
+    <Content Include="javascript\srims\experts\ExpertStore.js" />
+    <Content Include="javascript\srims\experts\ExpertXmlReader.js" />
+    <Content Include="javascript\srims\FormLogin.js" />
+    <Content Include="javascript\srims\fund\FundAllocation.js" />
+    <Content Include="javascript\srims\fund\FundAllocationGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\fund\FundAllocationState.js" />
+    <Content Include="javascript\srims\fund\FundAllocationStore.js" />
+    <Content Include="javascript\srims\fund\FundAllocationXmlReader.js" />
+    <Content Include="javascript\srims\fund\PayPlanItem.js" />
+    <Content Include="javascript\srims\fund\PayPlanItemEditWindow.js" />
+    <Content Include="javascript\srims\fund\PayPlanItemGridPanel.js" />
+    <Content Include="javascript\srims\fund\PayPlanItemGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\fund\PayPlanItemGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\fund\PayPlanItemStore.js" />
+    <Content Include="javascript\srims\fund\PayPlanItemWindow.js" />
+    <Content Include="javascript\srims\fund\PayPlanItemXmlReader.js" />
+    <Content Include="javascript\srims\fund\voucher.js" />
+    <Content Include="javascript\srims\Load.js" />
+    <Content Include="javascript\srims\Login.js" />
+    <Content Include="javascript\srims\Main.js" />
+    <Content Include="javascript\srims\MenuBar.js" />
+    <Content Include="javascript\srims\papers\Language.js" />
+    <Content Include="javascript\srims\papers\Magazine.js" />
+    <Content Include="javascript\srims\papers\MagazineAction.js" />
+    <Content Include="javascript\srims\papers\MagazineEditPanel.js" />
+    <Content Include="javascript\srims\papers\MagazineEditPanel_BasicForm.js" />
+    <Content Include="javascript\srims\papers\MagazineGridPanel.js" />
+    <Content Include="javascript\srims\papers\MagazineGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\papers\MagazineGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\papers\MagazineGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\papers\MagazineInformation.js" />
+    <Content Include="javascript\srims\papers\MagazineInformationEditWindow.js" />
+    <Content Include="javascript\srims\papers\MagazineInformationGridPanel.js" />
+    <Content Include="javascript\srims\papers\MagazineInformationGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\papers\MagazineInformationGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\papers\MagazineInformationStore.js" />
+    <Content Include="javascript\srims\papers\MagazineInformationWindow.js" />
+    <Content Include="javascript\srims\papers\MagazineInformationXmlReader.js" />
+    <Content Include="javascript\srims\papers\MagazineQueryWindow.js" />
+    <Content Include="javascript\srims\papers\MagazineQueryWindow_InforPanel.js" />
+    <Content Include="javascript\srims\papers\MagazineShowPanel.js" />
+    <Content Include="javascript\srims\papers\MagazineShowPanel_BasicForm.js" />
+    <Content Include="javascript\srims\papers\MagazineShowPanel_YearInforForm.js" />
+    <Content Include="javascript\srims\papers\MagazineStore.js" />
+    <Content Include="javascript\srims\papers\MagazineXmlReader.js" />
+    <Content Include="javascript\srims\papers\Paper.js" />
+    <Content Include="javascript\srims\papers\PaperAction.js" />
+    <Content Include="javascript\srims\papers\PaperAuhtorEditWindow.js" />
+    <Content Include="javascript\srims\papers\PaperAuthor.js" />
+    <Content Include="javascript\srims\papers\PaperAuthorGridPanel.js" />
+    <Content Include="javascript\srims\papers\PaperAuthorGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\papers\PaperAuthorGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\papers\PaperAuthorStore.js" />
+    <Content Include="javascript\srims\papers\PaperAuthorWindow.js" />
+    <Content Include="javascript\srims\papers\PaperAuthorXmlReader.js" />
+    <Content Include="javascript\srims\papers\PaperEditPanel.js" />
+    <Content Include="javascript\srims\papers\PaperEditPanel_AbstractForm.js" />
+    <Content Include="javascript\srims\papers\PaperEditPanel_BasicForm.js" />
+    <Content Include="javascript\srims\papers\PaperEditPanel_OtherBasicForm.js" />
+    <Content Include="javascript\srims\papers\PaperGridPanel.js" />
+    <Content Include="javascript\srims\papers\PaperGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\papers\PaperGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\papers\PaperGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\papers\PaperIndexedType.js" />
+    <Content Include="javascript\srims\papers\PaperQueryWindow.js" />
+    <Content Include="javascript\srims\papers\PaperQueryWindow_BasicPanel.js" />
+    <Content Include="javascript\srims\papers\PaperQueryWindow_ExpertPanel.js" />
+    <Content Include="javascript\srims\papers\PaperQueryWindow_MagazinePanel.js" />
+    <Content Include="javascript\srims\papers\PaperQueryWindow_OtherPanel.js" />
+    <Content Include="javascript\srims\papers\PaperShowPanel.js" />
+    <Content Include="javascript\srims\papers\PaperShowPanel_AbstractForm.js" />
+    <Content Include="javascript\srims\papers\PaperShowPanel_AuthorForm.js" />
+    <Content Include="javascript\srims\papers\PaperShowPanel_BaisicForm.js" />
+    <Content Include="javascript\srims\papers\PaperShowPanel_MagazineForm.js" />
+    <Content Include="javascript\srims\papers\PaperShowPanel_MagazineYearInforForm.js" />
+    <Content Include="javascript\srims\papers\PaperShowPanel_OtherBasicForm.js" />
+    <Content Include="javascript\srims\papers\PaperStore.js" />
+    <Content Include="javascript\srims\papers\PaperType.js" />
+    <Content Include="javascript\srims\papers\PaperXmlReader.js" />
+    <Content Include="javascript\srims\papers\PublishType.js" />
+    <Content Include="javascript\srims\papers\SignUnit.js" />
+    <Content Include="javascript\srims\Poll.js" />
+    <Content Include="javascript\srims\projects\Project.js" />
+    <Content Include="javascript\srims\projects\ProjectAction.js" />
+    <Content Include="javascript\srims\projects\ProjectCensorRejectWindow.js" />
+    <Content Include="javascript\srims\projects\ProjectComponentID.js" />
+    <Content Include="javascript\srims\projects\ProjectEditPanel.js" />
+    <Content Include="javascript\srims\projects\ProjectEditPanel_BasicForm.js" />
+    <Content Include="javascript\srims\projects\ProjectEditPanel_FundForm.js" />
+    <Content Include="javascript\srims\projects\ProjectEditPanel_RemarkForm.js" />
+    <Content Include="javascript\srims\projects\ProjectEditPanel_SecretProjectMessagePanel.js" />
+    <Content Include="javascript\srims\projects\ProjectEditPanel_TypeForm.js" />
+    <Content Include="javascript\srims\projects\ProjectGridPanel.js" />
+    <Content Include="javascript\srims\projects\ProjectGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\projects\ProjectGridPanel_GridFilters.js" />
+    <Content Include="javascript\srims\projects\ProjectGridPanel_MyJoinProject_ColumnModel.js" />
+    <Content Include="javascript\srims\projects\ProjectGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\projects\ProjectHistoryState.js" />
+    <Content Include="javascript\srims\projects\ProjectHistoryStateStore.js" />
+    <Content Include="javascript\srims\projects\ProjectHistoryStateXmlReader.js" />
+    <Content Include="javascript\srims\projects\ProjectLevel.js" />
+    <Content Include="javascript\srims\projects\ProjectMember.js" />
+    <Content Include="javascript\srims\projects\ProjectMemberEditWindow.js" />
+    <Content Include="javascript\srims\projects\ProjectMemberGridPanel.js" />
+    <Content Include="javascript\srims\projects\ProjectMemberGridPanel_ColumnModel.js" />
+    <Content Include="javascript\srims\projects\projectMemberGridPanel_ToolBar.js" />
+    <Content Include="javascript\srims\projects\ProjectMemberStore.js" />
+    <Content Include="javascript\srims\projects\ProjectMemberWindow.js" />
+    <Content Include="javascript\srims\projects\ProjectMemberXmlReader.js" />
+    <Content Include="javascript\srims\projects\ProjectQueryWindow.js" />
+    <Content Include="javascript\srims\projects\ProjectQueryWindow_BasicPanel.js" />
+    <Content Include="javascript\srims\projects\ProjectQueryWindow_FundPanel.js" />
+    <Content Include="javascript\srims\projects\ProjectQueryWindow_TypePanel.js" />
+    <Content Include="javascript\srims\projects\ProjectSetDelegatePrincipalWindow.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_BasicForm.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_ContractForm.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_DocumentForm.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_FundAllocationForm.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_FundForm.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_MemberForm.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_PayPlanItemForm.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_RemarkForm.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_StateHistoryForm.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_SystemForm.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_ToolBar.js" />
+    <Content Include="javascript\srims\projects\ProjectShowPanel_TypeForm.js" />
+    <Content Include="javascript\srims\projects\ProjectState.js" />
+    <Content Include="javascript\srims\projects\ProjectStore.js" />
+    <Content Include="javascript\srims\projects\ProjectXmlReader.js" />
+    <Content Include="javascript\srims\Provider.js" />
+    <Content Include="javascript\srims\SetQueryParams.js" />
+    <Content Include="javascript\srims\TopBar.js" />
+    <Content Include="javascript\srims\type\ProjectRank.js" />
+    <Content Include="javascript\srims\type\ProjectRankStore.js" />
+    <Content Include="javascript\srims\type\ProjectRankXmlReader.js" />
+    <Content Include="javascript\srims\type\ProjectSupportCategory.js" />
+    <Content Include="javascript\srims\type\ProjectSupportCategoryStore.js" />
+    <Content Include="javascript\srims\type\ProjectSupportCategoryXmlReader.js" />
+    <Content Include="javascript\srims\type\ProjectSupportField.js" />
+    <Content Include="javascript\srims\type\ProjectSupportFieldStore.js" />
+    <Content Include="javascript\srims\type\ProjectSupportFieldXmlReader.js" />
+    <Content Include="javascript\srims\type\ProjectSupportSubField.js" />
+    <Content Include="javascript\srims\type\ProjectSupportSubFieldStore.js" />
+    <Content Include="javascript\srims\type\ProjectSupportSubFieldXmlReader.js" />
+    <Content Include="javascript\srims\type\ProjectType.js" />
+    <Content Include="javascript\srims\type\ProjectTypeStore.js" />
+    <Content Include="javascript\srims\type\ProjectTypeXmlReader.js" />
+    <Content Include="javascript\srims\WorkSpace.js" />
+    <Content Include="javascript\String.js" />
+    <Content Include="Service\Awards\Award.asmx" />
+    <Content Include="Service\Awards\AwardWinner.asmx" />
+    <Content Include="Service\Bases\Base.asmx" />
+    <Content Include="Service\Common\Announcement.asmx" />
+    <Content Include="Service\Common\Log.asmx" />
+    <Content Include="Service\Common\NoticeText.asmx" />
+    <Content Include="Service\Common\Subject.asmx" />
+    <Content Include="Service\Documents\Contract.asmx" />
+    <Content Include="Service\Documents\Document.asmx" />
+    <Content Include="Service\Experts\Expert.asmx" />
+    <Content Include="Service\Fund\FundAllocation.asmx" />
+    <Content Include="Service\Fund\PayPlanItem.asmx" />
+    <Content Include="Service\Papers\Magazine.asmx" />
+    <Content Include="Service\Papers\MagazineInformation.asmx" />
+    <Content Include="Service\Papers\Paper.asmx" />
+    <Content Include="Service\Papers\PaperAuthor.asmx" />
+    <Content Include="Service\Projects\Project.asmx" />
+    <Content Include="Service\Projects\ProjectMember.asmx" />
+    <Content Include="Service\Projects\ProjectStateHistory.asmx" />
+    <Content Include="Service\Statistics\Statistics.asmx" />
+    <Content Include="stylesheets\icon-base.css" />
+    <Content Include="stylesheets\icon-outsourcing.css" />
+    <Content Include="stylesheets\icon-performance.css" />
+    <Content Include="stylesheets\icon-stamp.css" />
+    <Content Include="stylesheets\icon-expert.css" />
+    <Content Include="stylesheets\icon-finance.css" />
+    <Content Include="stylesheets\ext-fileUploadField.css" />
+    <Content Include="stylesheets\icon-document.css" />
+    <Content Include="stylesheets\icon-statistic.css" />
+    <Content Include="VoucherPrint.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MIS.Common\MIS.Common.csproj">
+      <Project>{6362C727-4A13-4688-9EF6-E6DB9D3D8F9C}</Project>
+      <Name>MIS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Srims.Server.Business\Srims.Server.Business.csproj">
+      <Project>{CFA3CC51-A1EB-4090-81AB-7F17AD5AF305}</Project>
+      <Name>Srims.Server.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Srims.Server.DataAccess\Srims.Server.DataAccess.csproj">
+      <Project>{978AD13F-E64A-4130-88ED-3E17F7F88EEC}</Project>
+      <Name>Srims.Server.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Srims.Server.DataExchange\Srims.Server.DataExchange.csproj">
+      <Project>{0FF72B4D-05DE-4ABF-AF75-EB87ED019529}</Project>
+      <Name>Srims.Server.DataExchange</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Srims.Server.UI\Srims.Server.UI.csproj">
+      <Project>{911DCFA2-D9E4-4021-8A07-85BBCEFC6D9A}</Project>
+      <Name>Srims.Server.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SrimsDocument\" />
+  </ItemGroup>
+  <!--
+  <ItemGroup>
+    <Folder Include="javascript\srims\fund\" />
+    <Folder Include="javascript\srims\release\" />
+  </ItemGroup>
+-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>13661</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

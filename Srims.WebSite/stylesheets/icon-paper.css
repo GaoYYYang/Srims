@@ -1,0 +1,33 @@
+﻿.icon-paper, .icon-liberalartspaper, .icon-liberalartspaper-list,.icon-paper-list,.icon-expert-my-paper
+{
+    background-image: url(../images/icon/paper.png) !important;
+}
+.icon-paper-new,.icon-liberalartspaper-new
+{
+    background-image: url(../images/icon/paper-new.png) !important;
+}
+.icon-paper-query,.icon-liberalartspaper-query
+{
+    background-image: url(../images/icon/paper-query.png) !important;
+}
+.icon-paper-expert-match
+{
+    background-image: url(../images/icon/paper-expert-match.png) !important;
+}
+.icon-magazine, .icon-magazine-list
+{
+    background-image: url(../images/icon/magazine.png) !important;
+}
+.icon-magazine-query
+{
+    background-image: url(../images/icon/magazine-query.png) !important;
+}
+.icon-magazine-new
+{
+    background-image: url(../images/icon/magazine-new.png) !important;
+}
+.icon-magazine-Occupation
+{
+    background-image: url(../images/icon/expert.png) !important;
+}
+

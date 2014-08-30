@@ -1,0 +1,105 @@
+
+if (!Srims.papers) 
+    Ext.namespace("Srims.papers");
+
+Srims.papers.Magazine = Ext.data.Record.create([{
+    name: 'id',
+    type: 'int',
+    mapping: 'ID'
+}, {
+    name: 'fullName',
+    type: 'string',
+    mapping: 'FullName'
+}, {
+    name: 'shortName',
+    type: 'string',
+    mapping: 'ShortName'
+}, {
+    name: 'isDelete',
+    type: 'boolean',
+    mapping: 'IsDelete',
+    convert: Boolean.toBoolean
+}, {
+    name: 'issn',
+    type: 'string',
+    mapping: 'ISSN'
+}, {
+    name: 'language',
+    type: 'string',
+    mapping: 'Language'
+}, {
+    name: 'publishCompany',
+    type: 'string',
+    mappping: 'PublishCompany'
+}, {
+    name: 'publishCompanyAddress',
+    type: 'string',
+    mapping: 'PublishCompanyAddress'
+}, {
+    name: 'publishCompanyCity',
+    type: 'string',
+    mapping: 'PublishCompanyCity'
+}, {
+    name: 'publishType',
+    type: 'string',
+    mapping: 'PublishType'
+}, {
+    name: 'subjectRank',
+    type: 'string',
+    mapping: 'SubjectRank'
+}, {
+    name: 'subjectClass',
+    type: 'string',
+    mapping: 'SubjectClass'
+}, {
+    name: 'hasPermission_Show',
+    type: 'boolean',
+    mapping: 'HasPermission_Show',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_Edit',
+    type: 'boolean',
+    mapping: 'HasPermission_Edit',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canEdit',
+    type: 'boolean',
+    mapping: 'CanEdit',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canShow',
+    type: 'boolean',
+    mapping: 'CanShow',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_ShowMagazineInformation',
+    type: 'boolean',
+    mapping: 'HasPermission_ShowMagazineInformation',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_EditMagazineInformation',
+    type: 'boolean',
+    mapping: 'HasPermission_EditMagazineInformation',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canEdit_MagazineInformation',
+    type: 'boolean',
+    mapping: 'CanEdit_MagazineInformation',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canShow_MagazineInformation',
+    type: 'boolean',
+    mapping: 'CanShow_MagazineInformation',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_EditMagazineOccupation',
+    type: 'boolean',
+    mapping: 'HasPermission_EditMagazineOccupation',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canEdit_MagazineOccupation',
+    type: 'boolean',
+    mapping: 'CanEdit_MagazineOccupation',
+    convert: Boolean.toBoolean
+}]);
+Srims.data.Entity.apply(Srims.papers.Magazine);

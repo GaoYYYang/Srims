@@ -1,0 +1,15 @@
+D:\member\gaoyang\科技处\Solution\5.2\MIS.Util\bin\Debug\MIS.Util.dll
+D:\member\gaoyang\科技处\Solution\5.2\MIS.Util\bin\Debug\MIS.Util.pdb
+D:\member\gaoyang\科技处\Solution\5.2\MIS.Util\obj\Debug\ResolveAssemblyReference.cache
+D:\member\gaoyang\科技处\Solution\5.2\MIS.Util\obj\Debug\MIS.Util.dll
+D:\member\gaoyang\科技处\Solution\5.2\MIS.Util\obj\Debug\MIS.Util.pdb
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Util\bin\Debug\MIS.Util.dll
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Util\bin\Debug\MIS.Util.pdb
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Util\obj\Debug\ResolveAssemblyReference.cache
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Util\obj\Debug\MIS.Util.dll
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Util\obj\Debug\MIS.Util.pdb
+D:\member\wangyiguo\Srims\Solution\5.3\MIS.Util\bin\Debug\MIS.Util.dll
+D:\member\wangyiguo\Srims\Solution\5.3\MIS.Util\bin\Debug\MIS.Util.pdb
+D:\member\wangyiguo\Srims\Solution\5.3\MIS.Util\obj\Debug\ResolveAssemblyReference.cache
+D:\member\wangyiguo\Srims\Solution\5.3\MIS.Util\obj\Debug\MIS.Util.dll
+D:\member\wangyiguo\Srims\Solution\5.3\MIS.Util\obj\Debug\MIS.Util.pdb

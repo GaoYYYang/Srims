@@ -1,0 +1,812 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="SrimsV0.4.28" Class="SrimsV4DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.;Initial Catalog=SrimsV0.4.28;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SubjectFirstLevel" Member="SubjectFirstLevel_Olds">
+    <Type Name="SubjectFirstLevel_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="SubjectFirstLevel_Old_SubjectSecondLevel_Old" Member="SubjectSecondLevel_Olds" ThisKey="ID" OtherKey="SubjectFirstLevelID" Type="SubjectSecondLevel_Old" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SubjectSecondLevel" Member="SubjectSecondLevel_Olds">
+    <Type Name="SubjectSecondLevel_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectFirstLevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ChildCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="SubjectSecondLevel_Old_Project_Old" Member="Project_Olds" ThisKey="ID" OtherKey="SubjectCodeID" Type="Project_Old" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old" Member="Experts" ThisKey="ID" OtherKey="MajorCodeID" Type="Expert_Old" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old1" Member="Experts1" ThisKey="ID" OtherKey="ResearchCode1ID" Type="Expert_Old" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old2" Member="Experts2" ThisKey="ID" OtherKey="ResearchCode2ID" Type="Expert_Old" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old3" Member="Experts3" ThisKey="ID" OtherKey="ResearchCode3ID" Type="Expert_Old" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old4" Member="Experts4" ThisKey="ID" OtherKey="MajorCodeID" Type="Expert_Old" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old5" Member="Experts5" ThisKey="ID" OtherKey="ResearchCode1ID" Type="Expert_Old" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old6" Member="Experts6" ThisKey="ID" OtherKey="ResearchCode2ID" Type="Expert_Old" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old7" Member="Expert_Olds" ThisKey="ID" OtherKey="ResearchCode3ID" Type="Expert_Old" />
+      <Association Name="SubjectFirstLevel_Old_SubjectSecondLevel_Old" Member="SubjectFirstLevel_Old" ThisKey="SubjectFirstLevelID" OtherKey="ID" Type="SubjectFirstLevel_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SystemSetting" Member="SystemSetting_Olds">
+    <Type Name="SystemSetting_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FundOutRatio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OverheadExpenseOutRateHorizonal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpenseInRateHorizonal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpenseInRateVertical" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpenseOutRateVertical" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LogType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SmtpHost" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SmtpPort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SmtpPassword" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SmtpUsername" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NoticeText" Member="NoticeText_Olds">
+    <Type Name="NoticeText_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ShortKey" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Log]" Member="Log_Olds">
+    <Type Name="Log_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[User]" Member="User" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Action" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Count" Member="Count_Olds">
+    <Type Name="Count_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HorizontalProject" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExpertSerialCodeCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Project" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Contract" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HorizontalVoucher" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VerticalVoucher" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserRole" Member="UserRole_Olds">
+    <Type Name="UserRole_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PowerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="UserRole_Old_User_Old" Member="User_Olds" ThisKey="ID" OtherKey="UserRoleID" Type="User_Old" />
+      <Association Name="Power_Old_UserRole_Old" Member="Power_Old" ThisKey="PowerID" OtherKey="ID" Type="Power_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Project" Member="Project_Olds">
+    <Type Name="Project_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FundID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SerialNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Number" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NameSpell" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PrincipalID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrincipalName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PrincipalNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PrincipalDelegateID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsHorizontal" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BaseID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubjectCodeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResearchType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IsSecret" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CooperationType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Unit" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TaskComingFrom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CorporationPlace" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Creator" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Project_Old_ProjectMember_Old" Member="ProjectMember_Olds" ThisKey="ID" OtherKey="ProjectID" Type="ProjectMember_Old" />
+      <Association Name="Project_Old_Contract_Old" Member="Contract_Olds" ThisKey="ID" OtherKey="ProjectID" Type="Contract_Old" />
+      <Association Name="Project_Old_Document_Old" Member="Document_Olds" ThisKey="ID" OtherKey="ProjectID" Type="Document_Old" />
+      <Association Name="Project_Old_ProjectInfo_Type_Old" Member="ProjectInfo_Type_Olds" Storage="_ProjectInfo_Types" ThisKey="ID" OtherKey="ProjectID" Type="ProjectInfo_Type_Old" />
+      <Association Name="Project_Old_ProjectInfo_Fund_Old" Member="ProjectInfo_Fund_Olds" ThisKey="ID" OtherKey="ProjectID" Type="ProjectInfo_Fund_Old" />
+      <Association Name="SubjectSecondLevel_Old_Project_Old" Member="SubjectSecondLevel_Old" ThisKey="SubjectCodeID" OtherKey="ID" Type="SubjectSecondLevel_Old" IsForeignKey="true" />
+      <Association Name="ProjectInfo_Type_Old_Project_Old" Member="ProjectInfo_Type" ThisKey="TypeID" OtherKey="ID" Type="ProjectInfo_Type_Old" IsForeignKey="true" />
+      <Association Name="ProjectInfo_Fund_Old_Project_Old" Member="ProjectInfo_Fund" ThisKey="FundID" OtherKey="ID" Type="ProjectInfo_Fund_Old" IsForeignKey="true" />
+      <Association Name="Base_Old_Project_Old" Member="Base_Old" ThisKey="BaseID" OtherKey="ID" Type="Base_Old" IsForeignKey="true" />
+      <Association Name="Expert_Old_Project_Old" Member="Expert" ThisKey="PrincipalID" OtherKey="ID" Type="Expert_Old" IsForeignKey="true" />
+      <Association Name="Expert_Old_Project_Old1" Member="Expert_Old" ThisKey="PrincipalDelegateID" OtherKey="ID" Type="Expert_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectMember" Member="ProjectMember_Olds">
+    <Type Name="ProjectMember_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExpertID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ExpertNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TaskNo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TaskName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Project_Old_ProjectMember_Old" Member="Project_Old" ThisKey="ProjectID" OtherKey="ID" Type="Project_Old" IsForeignKey="true" />
+      <Association Name="Expert_Old_ProjectMember_Old" Member="Expert_Old" ThisKey="ExpertID" OtherKey="ID" Type="Expert_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contract" Member="Contract_Olds">
+    <Type Name="Contract_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ContractNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FileType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubmitDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.Byte[]" DbType="Image NOT NULL" CanBeNull="false" IsDelayLoaded="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Project_Old_Contract_Old" Member="Project_Old" ThisKey="ProjectID" OtherKey="ID" Type="Project_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Document" Member="Document_Olds">
+    <Type Name="Document_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FileType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubmitDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SubmitEndDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Content" Type="System.Byte[]" DbType="Image" CanBeNull="true" IsDelayLoaded="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Censor" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CensorDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRequire" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Project_Old_Document_Old" Member="Project_Old" ThisKey="ProjectID" OtherKey="ID" Type="Project_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectRank" Member="ProjectRank_Olds">
+    <Type Name="ProjectRank_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IsHorizontal" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="ProjectRank_Old_ProjectInfo_Type_Old" Member="ProjectInfo_Type_Olds" Storage="_ProjectInfo_Types" ThisKey="ID" OtherKey="RankID" Type="ProjectInfo_Type_Old" />
+      <Association Name="ProjectRank_Old_ProjectType_Old" Member="ProjectType_Olds" ThisKey="ID" OtherKey="ProjectRankID" Type="ProjectType_Old" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectSupportField" Member="ProjectSupportField_Olds">
+    <Type Name="ProjectSupportField_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="ProjectSupportField_Old_ProjectSupportSubField_Old" Member="ProjectSupportSubField_Olds" Storage="_ProjectSupportSubFields" ThisKey="ID" OtherKey="ProjectSupportFieldID" Type="ProjectSupportSubField_Old" />
+      <Association Name="ProjectSupportField_Old_ProjectInfo_Type_Old" Member="ProjectInfo_Type_Olds" Storage="_ProjectInfo_Types" ThisKey="ID" OtherKey="SupportFieldID" Type="ProjectInfo_Type_Old" />
+      <Association Name="ProjectType_Old_ProjectSupportField_Old" Member="ProjectType_Old" ThisKey="ProjectTypeID" OtherKey="ID" Type="ProjectType_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectSupportSubField" Member="ProjectSupportSubField_Olds">
+    <Type Name="ProjectSupportSubField_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectSupportFieldID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="ProjectSupportSubField_Old_ProjectInfo_Type_Old" Member="ProjectInfo_Type_Olds" Storage="_ProjectInfo_Types" ThisKey="ID" OtherKey="SupportSubFieldID" Type="ProjectInfo_Type_Old" />
+      <Association Name="ProjectSupportField_Old_ProjectSupportSubField_Old" Member="ProjectSupportField_Old" Storage="_ProjectSupportField" ThisKey="ProjectSupportFieldID" OtherKey="ID" Type="ProjectSupportField_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectInfo_Type" Member="ProjectInfo_Type_Olds">
+    <Type Name="ProjectInfo_Type_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RankID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SupportFieldID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SupportSubFieldID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SupportCategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RankName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SupportFieldName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SupportSubFieldName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SupportCategoryName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="ProjectInfo_Type_Old_Project_Old" Member="Project_Olds" ThisKey="ID" OtherKey="TypeID" Type="Project_Old" />
+      <Association Name="Project_Old_ProjectInfo_Type_Old" Member="Project_Old" ThisKey="ProjectID" OtherKey="ID" Type="Project_Old" IsForeignKey="true" />
+      <Association Name="ProjectRank_Old_ProjectInfo_Type_Old" Member="ProjectRank_Old" Storage="_ProjectRank" ThisKey="RankID" OtherKey="ID" Type="ProjectRank_Old" IsForeignKey="true" />
+      <Association Name="ProjectSupportField_Old_ProjectInfo_Type_Old" Member="ProjectSupportField_Old" Storage="_ProjectSupportField" ThisKey="SupportFieldID" OtherKey="ID" Type="ProjectSupportField_Old" IsForeignKey="true" />
+      <Association Name="ProjectSupportSubField_Old_ProjectInfo_Type_Old" Member="ProjectSupportSubField_Old" Storage="_ProjectSupportSubField" ThisKey="SupportSubFieldID" OtherKey="ID" Type="ProjectSupportSubField_Old" IsForeignKey="true" />
+      <Association Name="ProjectSupportCategory_Old_ProjectInfo_Type_Old" Member="ProjectSupportCategory_Old" ThisKey="SupportCategoryID" OtherKey="ID" Type="ProjectSupportCategory_Old" IsForeignKey="true" />
+      <Association Name="ProjectType_Old_ProjectInfo_Type_Old" Member="ProjectType_Old" ThisKey="TypeID" OtherKey="ID" Type="ProjectType_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FundDescend" Member="FundDescend_Olds">
+    <Type Name="FundDescend_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FinanceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectInfo_FundID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DescendDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Operator" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsAllocated" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="FundDescend_Old_FundAllocation_Old" Member="FundAllocation_Olds" ThisKey="ID" OtherKey="FundDescendID" Type="FundAllocation_Old" />
+      <Association Name="ProjectInfo_Fund_Old_FundDescend_Old" Member="ProjectInfo_Fund_Old" ThisKey="ProjectInfo_FundID" OtherKey="ID" Type="ProjectInfo_Fund_Old" IsForeignKey="true" />
+      <Association Name="Finance_Old_FundDescend_Old" Member="Finance_Old" ThisKey="FinanceID" OtherKey="ID" Type="Finance_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectInfo_Fund" Member="ProjectInfo_Fund_Olds">
+    <Type Name="ProjectInfo_Fund_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AccountBookNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FundMemberCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FundFrom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FundFromUnit" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FundFromUnitAddress" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FundTotal" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="FundContract" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="FundPlanOutTotal" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FundPlanOversea" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FundPlanHardware" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FundReceived" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="FundAlreadyIn" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="FundAlreadyOut" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="FundAlreadyOversea" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="FundAlreadyHardware" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpensesIn" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpensesOut" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpensesOversea" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpensesHardware" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpenseInTotal" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpenseOutTotal" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="ProjectInfo_Fund_Old_Project_Old" Member="Project_Olds" ThisKey="ID" OtherKey="FundID" Type="Project_Old" />
+      <Association Name="ProjectInfo_Fund_Old_FundDescend_Old" Member="FundDescend_Olds" ThisKey="ID" OtherKey="ProjectInfo_FundID" Type="FundDescend_Old" />
+      <Association Name="ProjectInfo_Fund_Old_PayPlanItem_Old" Member="PayPlanItem_Olds" ThisKey="ID" OtherKey="ProjectInfo_FundID" Type="PayPlanItem_Old" />
+      <Association Name="ProjectInfo_Fund_Old_FundMember_Old" Member="FundMember_Olds" ThisKey="ID" OtherKey="ProjectInfo_FundID" Type="FundMember_Old" />
+      <Association Name="Project_Old_ProjectInfo_Fund_Old" Member="Project_Old" ThisKey="ProjectID" OtherKey="ID" Type="Project_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FundAllocation" Member="FundAllocation_Olds">
+    <Type Name="FundAllocation_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FundDescendID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AllocationIn" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AllocationOut" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AllocationOversea" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AllocationHardware" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpensesIn" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpensesOut" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpensesHardware" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpensesOversea" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="SubmitDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Principle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CensorState" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Censor" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CensorDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CensorRemark" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="FundAllocation_Old_Voucher_Old" Member="Voucher_Olds" ThisKey="ID" OtherKey="FundAllocationID" Type="Voucher_Old" />
+      <Association Name="FundDescend_Old_FundAllocation_Old" Member="FundDescend_Old" ThisKey="FundDescendID" OtherKey="ID" Type="FundDescend_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VoucherItemHardware" Member="VoucherItemHardware_Olds">
+    <Type Name="VoucherItemHardware_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VoucherID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpenses" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Voucher_Old_VoucherItemHardware_Old" Member="Voucher_Old" ThisKey="VoucherID" OtherKey="ID" Type="Voucher_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VoucherItemOversea" Member="VoucherItemOversea_Olds">
+    <Type Name="VoucherItemOversea_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VoucherID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpenses" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Voucher_Old_VoucherItemOversea_Old" Member="Voucher_Old" ThisKey="VoucherID" OtherKey="ID" Type="Voucher_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VoucherItemIn" Member="VoucherItemIn_Olds">
+    <Type Name="VoucherItemIn_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VoucherID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpenses" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Voucher_Old_VoucherItemIn_Old" Member="Voucher_Old" ThisKey="VoucherID" OtherKey="ID" Type="Voucher_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VoucherItemOut" Member="VoucherItemOut_Olds">
+    <Type Name="VoucherItemOut_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VoucherID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpenses" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Corporation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Voucher_Old_VoucherItemOut_Old" Member="Voucher_Old" ThisKey="VoucherID" OtherKey="ID" Type="Voucher_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AccountBookNumberCount" Member="AccountBookNumberCount_Olds">
+    <Type Name="AccountBookNumberCount_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CharacterNumber" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PayPlanItem" Member="PayPlanItem_Olds">
+    <Type Name="PayPlanItem_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectInfo_FundID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="ProjectInfo_Fund_Old_PayPlanItem_Old" Member="ProjectInfo_Fund_Old" ThisKey="ProjectInfo_FundID" OtherKey="ID" Type="ProjectInfo_Fund_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FundMember" Member="FundMember_Olds">
+    <Type Name="FundMember_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectInfo_FundID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExpertID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExpertName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ExpertNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AccountBookNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="FundMember_Old_Voucher_Old" Member="Voucher_Olds" ThisKey="ID" OtherKey="FundMemberID" Type="Voucher_Old" />
+      <Association Name="ProjectInfo_Fund_Old_FundMember_Old" Member="ProjectInfo_Fund_Old" ThisKey="ProjectInfo_FundID" OtherKey="ID" Type="ProjectInfo_Fund_Old" IsForeignKey="true" />
+      <Association Name="Expert_Old_FundMember_Old" Member="Expert_Old" ThisKey="ExpertID" OtherKey="ID" Type="Expert_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Department" Member="Department_Olds">
+    <Type Name="Department_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="IsCollege" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Department_Old_Expert_Old" Member="Experts" ThisKey="ID" OtherKey="CollegeID" Type="Expert_Old" />
+      <Association Name="Department_Old_Expert_Old1" Member="Experts1" ThisKey="ID" OtherKey="DepartmentID" Type="Expert_Old" />
+      <Association Name="Department_Old_Expert_Old2" Member="Expert_Olds" ThisKey="ID" OtherKey="CollegeID" Type="Expert_Old" />
+      <Association Name="Department_Old_Award_Old" Member="Award_Olds" ThisKey="ID" OtherKey="CollegeID" Type="Award_Old" />
+      <Association Name="Department_Old_Patent_Old" Member="Patent_Olds" ThisKey="ID" OtherKey="CollegeID" Type="Patent_Old" />
+      <Association Name="Department_Old_Paper_Old" Member="Paper_Olds" ThisKey="ID" OtherKey="CollegeID" Type="Paper_Old" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Announcement" Member="Announcement_Olds">
+    <Type Name="Announcement_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="Text" CanBeNull="true" />
+      <Column Name="IsTop" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Base" Member="Base_Olds">
+    <Type Name="Base_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Administration" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Rank" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DirectorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DirectorName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DirectorNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AcademyDirectorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AcademyDirectorName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AcademyDirectorNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Base_Old_Project_Old" Member="Project_Olds" ThisKey="ID" OtherKey="BaseID" Type="Project_Old" />
+      <Association Name="Expert_Old_Base_Old" Member="Expert_Old" ThisKey="DirectorID" OtherKey="ID" Type="Expert_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Expert" Member="Expert_Olds">
+    <Type Name="Expert_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NameSpell" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Nation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Policy" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IDCardNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AcademyDegree" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Specialty" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Post" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IsDoctorDirector" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsAcademician" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Occupation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CollegeName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CollegeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DepartmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="College2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Department2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MobilePhone" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="OfficePhone" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="HomePhone" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MajorCodeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResearchCode1ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResearchCode2ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResearchCode3ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Language1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Language2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LanguageLevel1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LanguageLevel2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SocietyPost" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="WorkExperience" Type="System.String" DbType="Text" CanBeNull="true" />
+      <Column Name="ResearchExperience" Type="System.String" DbType="Text" CanBeNull="true" />
+      <Column Name="Image" Type="System.Byte[]" DbType="Image" CanBeNull="true" IsDelayLoaded="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PostBak" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PostLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Expert_Old_Project_Old" Member="Project_Olds" ThisKey="ID" OtherKey="PrincipalID" Type="Project_Old" />
+      <Association Name="Expert_Old_Project_Old1" Member="Project_Olds1" ThisKey="ID" OtherKey="PrincipalDelegateID" Type="Project_Old" />
+      <Association Name="Expert_Old_ProjectMember_Old" Member="ProjectMember_Olds" ThisKey="ID" OtherKey="ExpertID" Type="ProjectMember_Old" />
+      <Association Name="Expert_Old_FundMember_Old" Member="FundMember_Olds" ThisKey="ID" OtherKey="ExpertID" Type="FundMember_Old" />
+      <Association Name="Expert_Old_Base_Old" Member="Base_Olds" ThisKey="ID" OtherKey="DirectorID" Type="Base_Old" />
+      <Association Name="Expert_Old_AwardWinner_Old" Member="AwardWinner_Olds" ThisKey="ID" OtherKey="ExpertID" Type="AwardWinner_Old" />
+      <Association Name="Expert_Old_PatentInventer_Old" Member="PatentInventer_Olds" ThisKey="ID" OtherKey="ExpertID" Type="PatentInventer_Old" />
+      <Association Name="Expert_Old_PaperAuthor_Old" Member="PaperAuthor_Olds" ThisKey="ID" OtherKey="ExpertID" Type="PaperAuthor_Old" />
+      <Association Name="Department_Old_Expert_Old" Member="Department_Old" ThisKey="CollegeID" OtherKey="ID" Type="Department_Old" IsForeignKey="true" />
+      <Association Name="Department_Old_Expert_Old1" Member="Department_Old1" ThisKey="DepartmentID" OtherKey="ID" Type="Department_Old" IsForeignKey="true" />
+      <Association Name="Department_Old_Expert_Old2" Member="Department_Old2" ThisKey="CollegeID" OtherKey="ID" Type="Department_Old" IsForeignKey="true" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old" Member="SubjectSecondLevel_Old" ThisKey="MajorCodeID" OtherKey="ID" Type="SubjectSecondLevel_Old" IsForeignKey="true" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old1" Member="SubjectSecondLevel_Old1" ThisKey="ResearchCode1ID" OtherKey="ID" Type="SubjectSecondLevel_Old" IsForeignKey="true" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old2" Member="SubjectSecondLevel_Old2" ThisKey="ResearchCode2ID" OtherKey="ID" Type="SubjectSecondLevel_Old" IsForeignKey="true" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old3" Member="SubjectSecondLevel_Old3" ThisKey="ResearchCode3ID" OtherKey="ID" Type="SubjectSecondLevel_Old" IsForeignKey="true" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old4" Member="SubjectSecondLevel_Old4" ThisKey="MajorCodeID" OtherKey="ID" Type="SubjectSecondLevel_Old" IsForeignKey="true" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old5" Member="SubjectSecondLevel_Old5" ThisKey="ResearchCode1ID" OtherKey="ID" Type="SubjectSecondLevel_Old" IsForeignKey="true" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old6" Member="SubjectSecondLevel_Old6" ThisKey="ResearchCode2ID" OtherKey="ID" Type="SubjectSecondLevel_Old" IsForeignKey="true" />
+      <Association Name="SubjectSecondLevel_Old_Expert_Old7" Member="SubjectSecondLevel_Old7" ThisKey="ResearchCode3ID" OtherKey="ID" Type="SubjectSecondLevel_Old" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="User_Old_Expert_Old" Member="User_Old" ThisKey="UserID" OtherKey="ID" Type="User_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="User_Olds">
+    <Type Name="User_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserRoleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoginID" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NameSpell" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="HomePhone" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="OfficePhone" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MobilePhone" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IsSuper" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsCustomPower" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PowerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsProtocolAccept" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="User_Old_Expert_Old" Member="Expert_Olds" ThisKey="ID" OtherKey="UserID" Type="Expert_Old" />
+      <Association Name="UserRole_Old_User_Old" Member="UserRole_Old" ThisKey="UserRoleID" OtherKey="ID" Type="UserRole_Old" IsForeignKey="true" />
+      <Association Name="Power_Old_User_Old" Member="Power_Old" ThisKey="PowerID" OtherKey="ID" Type="Power_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Voucher" Member="Voucher_Olds">
+    <Type Name="Voucher_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FundAllocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FundMemberID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VoucherNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AccountBookNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AllocationIn" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AllocationOut" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AllocationHardware" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AllocationOversea" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpensesIn" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpensesOut" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpensesHardware" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpensesOversea" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsPrinted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsRead" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PrintTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FinanceState" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FinanceAllocationDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FinanceNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Voucher_Old_VoucherItemHardware_Old" Member="VoucherItemHardware_Olds" ThisKey="ID" OtherKey="VoucherID" Type="VoucherItemHardware_Old" />
+      <Association Name="Voucher_Old_VoucherItemOversea_Old" Member="VoucherItemOversea_Olds" ThisKey="ID" OtherKey="VoucherID" Type="VoucherItemOversea_Old" />
+      <Association Name="Voucher_Old_VoucherItemIn_Old" Member="VoucherItemIn_Olds" ThisKey="ID" OtherKey="VoucherID" Type="VoucherItemIn_Old" />
+      <Association Name="Voucher_Old_VoucherItemOut_Old" Member="VoucherItemOut_Olds" ThisKey="ID" OtherKey="VoucherID" Type="VoucherItemOut_Old" />
+      <Association Name="FundAllocation_Old_Voucher_Old" Member="FundAllocation_Old" ThisKey="FundAllocationID" OtherKey="ID" Type="FundAllocation_Old" IsForeignKey="true" />
+      <Association Name="FundMember_Old_Voucher_Old" Member="FundMember_Old" ThisKey="FundMemberID" OtherKey="ID" Type="FundMember_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AwardWinner" Member="AwardWinner_Olds">
+    <Type Name="AwardWinner_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AwardID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExpertID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Expert_Old_AwardWinner_Old" Member="Expert_Old" ThisKey="ExpertID" OtherKey="ID" Type="Expert_Old" IsForeignKey="true" />
+      <Association Name="Award_Old_AwardWinner_Old" Member="Award_Old" ThisKey="AwardID" OtherKey="ID" Type="Award_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Award" Member="Award_Olds">
+    <Type Name="Award_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rank" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Class" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AttendType" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ProjectID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProjectName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Introduction" Type="System.String" DbType="Text" CanBeNull="true" />
+      <Column Name="OldID" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AuthorisedUnit" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CollegeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Classification" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="Text" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Award_Old_AwardWinner_Old" Member="AwardWinner_Olds" ThisKey="ID" OtherKey="AwardID" Type="AwardWinner_Old" />
+      <Association Name="Department_Old_Award_Old" Member="Department_Old" ThisKey="CollegeID" OtherKey="ID" Type="Department_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Patent" Member="Patent_Olds">
+    <Type Name="Patent_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Number" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CollegeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ApplicationDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AuthorizeDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LawState" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LawStateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MainCategoryNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AllCategoryNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Introduction" Type="System.String" DbType="Text" CanBeNull="true" />
+      <Column Name="AgencyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="Text" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Patent_Old_PatentInventer_Old" Member="PatentInventer_Olds" ThisKey="ID" OtherKey="PatentID" Type="PatentInventer_Old" />
+      <Association Name="Department_Old_Patent_Old" Member="Department_Old" ThisKey="CollegeID" OtherKey="ID" Type="Department_Old" IsForeignKey="true" />
+      <Association Name="PatentAgency_Old_Patent_Old" Member="PatentAgency_Old" ThisKey="AgencyID" OtherKey="ID" Type="PatentAgency_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PatentAgency" Member="PatentAgency_Olds">
+    <Type Name="PatentAgency_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Agent" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Contract" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="PatentAgency_Old_Patent_Old" Member="Patent_Olds" ThisKey="ID" OtherKey="AgencyID" Type="Patent_Old" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PatentInventer" Member="PatentInventer_Olds">
+    <Type Name="PatentInventer_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExpertID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsPrincipal" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Expert_Old_PatentInventer_Old" Member="Expert_Old" ThisKey="ExpertID" OtherKey="ID" Type="Expert_Old" IsForeignKey="true" />
+      <Association Name="Patent_Old_PatentInventer_Old" Member="Patent_Old" ThisKey="PatentID" OtherKey="ID" Type="Patent_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Paper" Member="Paper_Olds">
+    <Type Name="Paper_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="MagazineID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CiteFrequency" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PublishDateYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PublishDate" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DocumentNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Volume" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="StartPage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EndPage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Pages" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InfluenceFactor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AuthorKeyWord" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="KeyWord" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Abstract" Type="System.String" DbType="Text" CanBeNull="true" />
+      <Column Name="LinkManAddress" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="LinkManEmail" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LinkManSignUnit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstAuthorSignUnit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SignOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CollegeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Lab" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="Text" CanBeNull="true" />
+      <Column Name="ISIUniqueArticleIdentifier" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Paper_Old_PaperAuthor_Old" Member="PaperAuthor_Olds" ThisKey="ID" OtherKey="PaperID" Type="PaperAuthor_Old" />
+      <Association Name="Paper_Old_PaperIndexed_Old" Member="PaperIndexed_Olds" ThisKey="ID" OtherKey="PaperID" Type="PaperIndexed_Old" />
+      <Association Name="Department_Old_Paper_Old" Member="Department_Old" ThisKey="CollegeID" OtherKey="ID" Type="Department_Old" IsForeignKey="true" />
+      <Association Name="Magazine_Old_Paper_Old" Member="Magazine_Old" ThisKey="MagazineID" OtherKey="ID" Type="Magazine_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PaperAuthor" Member="PaperAuthor_Olds">
+    <Type Name="PaperAuthor_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PaperID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExpertID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NameSpell" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EnglishName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsLinkMan" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Expert_Old_PaperAuthor_Old" Member="Expert_Old" ThisKey="ExpertID" OtherKey="ID" Type="Expert_Old" IsForeignKey="true" />
+      <Association Name="Paper_Old_PaperAuthor_Old" Member="Paper_Old" ThisKey="PaperID" OtherKey="ID" Type="Paper_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PaperInfo_Embody" Member="PaperIndexed_Olds">
+    <Type Name="PaperIndexed_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PaperID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Embody" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Paper_Old_PaperIndexed_Old" Member="Paper_Old" ThisKey="PaperID" OtherKey="ID" Type="Paper_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MagazineSubjectClass" Member="MagazineSubjectClass_Olds">
+    <Type Name="MagazineSubjectClass_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MagazineID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectClass" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Magazine_Old_MagazineSubjectClass_Old" Member="Magazine_Old" ThisKey="MagazineID" OtherKey="ID" Type="Magazine_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Magazine" Member="Magazine_Olds">
+    <Type Name="Magazine_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ISSN" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectRank" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PublishType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Language" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PublishCompany" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PublishCompanyAddress" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PublishCompanyCity" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Magazine_Old_Paper_Old" Member="Paper_Olds" ThisKey="ID" OtherKey="MagazineID" Type="Paper_Old" />
+      <Association Name="Magazine_Old_MagazineSubjectClass_Old" Member="MagazineSubjectClass_Olds" ThisKey="ID" OtherKey="MagazineID" Type="MagazineSubjectClass_Old" />
+      <Association Name="Magazine_Old_MagazineInformation_Old" Member="MagazineInformation_Olds" ThisKey="ID" OtherKey="MagazineID" Type="MagazineInformation_Old" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MagazineInformation" Member="MagazineInformation_Olds">
+    <Type Name="MagazineInformation_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MagazineID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubAirer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InfluenceFactor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CiteFrequency" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InstantExponent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PaperCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CiteHalfLife" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Magazine_Old_MagazineInformation_Old" Member="Magazine_Old" ThisKey="MagazineID" OtherKey="ID" Type="Magazine_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Power" Member="Power_Olds">
+    <Type Name="Power_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Powers" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ProjectTypes" Type="System.String" DbType="Text" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Power_Old_UserRole_Old" Member="UserRole_Olds" ThisKey="ID" OtherKey="PowerID" Type="UserRole_Old" />
+      <Association Name="Power_Old_User_Old" Member="User_Olds" ThisKey="ID" OtherKey="PowerID" Type="User_Old" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FinanceBak" Member="FinanceBak_Olds">
+    <Type Name="FinanceBak_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ReceivedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="VoucherNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Finance" Member="Finance_Olds">
+    <Type Name="Finance_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SerialNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ReceivedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="VoucherNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DescendAmount" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsInvoiced" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InvoiceNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="InvoiceTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="Finance_Old_FundDescend_Old" Member="FundDescend_Olds" ThisKey="ID" OtherKey="FinanceID" Type="FundDescend_Old" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectSupportCategory" Member="ProjectSupportCategory_Olds">
+    <Type Name="ProjectSupportCategory_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IsGetOverheadExpense" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="ProjectSupportCategory_Old_ProjectInfo_Type_Old" Member="ProjectInfo_Type_Olds" ThisKey="ID" OtherKey="SupportCategoryID" Type="ProjectInfo_Type_Old" />
+      <Association Name="ProjectType_Old_ProjectSupportCategory_Old" Member="ProjectType_Old" ThisKey="ProjectTypeID" OtherKey="ID" Type="ProjectType_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectType" Member="ProjectType_Olds">
+    <Type Name="ProjectType_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectRankID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ShortName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Administration" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BakCode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PreCode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IsBudget" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsExploit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ProjectComingFrom" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpenseInRate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OverheadExpenseOutRate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="ProjectType_Old_ProjectSupportField_Old" Member="ProjectSupportField_Olds" ThisKey="ID" OtherKey="ProjectTypeID" Type="ProjectSupportField_Old" />
+      <Association Name="ProjectType_Old_ProjectInfo_Type_Old" Member="ProjectInfo_Type_Olds" ThisKey="ID" OtherKey="TypeID" Type="ProjectInfo_Type_Old" />
+      <Association Name="ProjectType_Old_ProjectSupportCategory_Old" Member="ProjectSupportCategory_Olds" ThisKey="ID" OtherKey="ProjectTypeID" Type="ProjectSupportCategory_Old" />
+      <Association Name="ProjectRank_Old_ProjectType_Old" Member="ProjectRank_Old" ThisKey="ProjectRankID" OtherKey="ID" Type="ProjectRank_Old" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CE" Member="SubjectClassChineseEnglish_Olds">
+    <Type Name="SubjectClassChineseEnglish_Old">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Chinese" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Enlish" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

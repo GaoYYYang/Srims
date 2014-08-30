@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{911DCFA2-D9E4-4021-8A07-85BBCEFC6D9A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Srims.Server.UI</RootNamespace>
+    <AssemblyName>Srims.Server.UI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Srims.Server.UI.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TeamSystem.Data.UnitTesting, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Awards\AwardQueryInformationExtension.cs" />
+    <Compile Include="Awards\AwardShowExtension.cs" />
+    <Compile Include="Awards\AwardWinnerExtension.cs" />
+    <Compile Include="Bases\BaseExtension.cs" />
+    <Compile Include="Bases\BaseQueryInformationExtension.cs" />
+    <Compile Include="Common\AnnouncementExtension.cs" />
+    <Compile Include="Common\AnnouncementQueryInformationExtension.cs" />
+    <Compile Include="Common\DatabaseSetup.cs" />
+    <Compile Include="Common\OutsourcingUnitExtension.cs" />
+    <Compile Include="Common\OutsourcingUnitQueryInformationExtension.cs" />
+    <Compile Include="Common\EmailExtension.cs" />
+    <Compile Include="Common\LogExtension.cs" />
+    <Compile Include="Common\LogQueryInformationExtension.cs" />
+    <Compile Include="Common\NoticeTextExtension.cs" />
+    <Compile Include="Fund\ProjectOutExtension.cs" />
+    <Compile Include="Performances\PerformanceAllocationExtension.cs" />
+    <Compile Include="Performances\PerformanceAllocationQueryInformationExtension.cs" />
+    <Compile Include="Performances\PerformanceAllocationStateHistoryExtension.cs" />
+    <Compile Include="Performances\PerformanceExtension.cs" />
+    <Compile Include="Performances\PerformanceQueryInformationExtension.cs" />
+    <Compile Include="Performances\PerformanceVoucherExtension.cs" />
+    <Compile Include="Common\SubjectExtension.cs" />
+    <Compile Include="Common\SubjectFirstLevelQueryInformationExtension.cs" />
+    <Compile Include="Common\SubjectSecondLevelQueryInformationExtension.cs" />
+    <Compile Include="Common\SystemSettingExtension.cs" />
+    <Compile Include="Common\CompanyManageTypeExtension.cs" />
+    <Compile Include="Common\ViewExtension.cs" />
+    <Compile Include="Documents\AwardDoucmentExtension.cs" />
+    <Compile Include="Documents\ContractExtension.cs" />
+    <Compile Include="Documents\DocumentExtension.cs" />
+    <Compile Include="Documents\DocumentModelExtension.cs" />
+    <Compile Include="Experts\DepartmentExtension.cs" />
+    <Compile Include="Experts\DepartmentQueryInformationExtension.cs" />
+    <Compile Include="Experts\ExpertInfoHistoryExtension.cs" />
+    <Compile Include="Fund\FinanceBakExtension.cs" />
+    <Compile Include="Fund\FinanceExtension.cs" />
+    <Compile Include="Fund\FinanceFundDescendExtension.cs" />
+    <Compile Include="Fund\FinanceQueryInformationExtension.cs" />
+    <Compile Include="Fund\FundAllocationExtension.cs" />
+    <Compile Include="Fund\FundAllocationQueryInformationExtension.cs" />
+    <Compile Include="Fund\FundAllocationStateHistoryExtension.cs" />
+    <Compile Include="Fund\FundDescendExtension.cs" />
+    <Compile Include="Fund\FundDescendQueryInformationExtension.cs" />
+    <Compile Include="Fund\FundDescendStateHistoryExtension.cs" />
+    <Compile Include="Fund\FundMemberExtension.cs" />
+    <Compile Include="Fund\PayPlanItemExtension.cs" />
+    <Compile Include="Fund\RecoveryExtension.cs" />
+    <Compile Include="Fund\VoucherExtension.cs" />
+    <Compile Include="Fund\VoucherOutExtension.cs" />
+    <Compile Include="Fund\VoucherQueryInformationExtension.cs" />
+    <Compile Include="Fund\VoucherStateHistoryExtension.cs" />
+    <Compile Include="HttpExtension\JsonResponseExtension.cs" />
+    <Compile Include="MISExtension\EnumToShowExtension.cs" />
+    <Compile Include="MISExtension\HttpPostedFileExtension.cs" />
+    <Compile Include="MISExtension\IsEmptyOrNullExtension.cs" />
+    <Compile Include="Papers\DatabaseSetup.cs" />
+    <Compile Include="Papers\LiberalArtsPaperAuthorExtension.cs" />
+    <Compile Include="Papers\LiberalArtsPaperExtension.cs" />
+    <Compile Include="Papers\LiberalArtsPaperQueryInformationExtension.cs" />
+    <Compile Include="Papers\MagazineExtension.cs" />
+    <Compile Include="Papers\MagazineInformationExtension.cs" />
+    <Compile Include="Papers\MagazineOccupationExtension.cs" />
+    <Compile Include="Papers\MagazineQueryInformationExtension.cs" />
+    <Compile Include="Papers\PaperAuthorExtension.cs" />
+    <Compile Include="Papers\PaperExtension.cs" />
+    <Compile Include="Papers\PaperIndexedExtension.cs" />
+    <Compile Include="Papers\PaperQueryInformationExtension.cs" />
+    <Compile Include="Patents\PatentAgencyExtension.cs" />
+    <Compile Include="Patents\PatentAgencyQueryInformationExtension.cs" />
+    <Compile Include="Patents\PatentInventerExtension.cs" />
+    <Compile Include="Patents\PatentQueryInformationExtension.cs" />
+    <Compile Include="Patents\PatentShowExtension.cs" />
+    <Compile Include="Performances\PerformanceVoucherQueryInformationExtension.cs" />
+    <Compile Include="Performances\PerformanceVoucherStateHistoryExtension.cs" />
+    <Compile Include="Projects\ProjectExtension.cs" />
+    <Compile Include="Projects\ProjectMemberExtension.cs" />
+    <Compile Include="Projects\ProjectQueryInformationExtension.cs" />
+    <Compile Include="Projects\ProjectStateHistoryExtension.cs" />
+    <Compile Include="Projects\RecoveryProjectQueryInformationExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MISExtension\QueryInformationExtension.cs" />
+    <Compile Include="HttpExtension\RequestExtension.cs" />
+    <Compile Include="MISExtension\ShowExtension.cs" />
+    <Compile Include="HttpExtension\TextResponseExtension.cs" />
+    <Compile Include="HttpExtension\TreeLoaderResponseExtension.cs" />
+    <Compile Include="Stamps\StampApplicationSecondAdminExtension.cs" />
+    <Compile Include="Stamps\StampApplicationFirstAdminExtension.cs" />
+    <Compile Include="Stamps\StampApplicationTypeExtension.cs" />
+    <Compile Include="Stamps\StampApplicationTypeGroupExtension.cs" />
+    <Compile Include="Stamps\StampApplicationTypeQueryInformationExtension.cs" />
+    <Compile Include="Stamps\StampApplicationExtension.cs" />
+    <Compile Include="Stamps\StampExtension.cs" />
+    <Compile Include="Stamps\StampQueryInformationExtension.cs" />
+    <Compile Include="Stamps\StampStateHistoryExtension.cs" />
+    <Compile Include="Stamps\StuffExtension.cs" />
+    <Compile Include="Stamps\StuffStampExtension.cs" />
+    <Compile Include="Statistic\DimensionExtension.cs" />
+    <Compile Include="Statistic\StatisticExtension.cs" />
+    <Compile Include="Type\ManagementFeesExtension.cs" />
+    <Compile Include="Type\ProjectRankExtension.cs" />
+    <Compile Include="Type\ProjectSupportCategoryExtension.cs" />
+    <Compile Include="Type\ProjectSupportFieldExtension.cs" />
+    <Compile Include="Type\ProjectSupportSubFieldExtension.cs" />
+    <Compile Include="Type\ProjectTypeExtension.cs" />
+    <Compile Include="Users\DepartmentExtension.cs" />
+    <Compile Include="Experts\ExpertExtension.cs" />
+    <Compile Include="Experts\ExpertQueryInformationExtension.cs" />
+    <Compile Include="Users\LoginResultExtension.cs" />
+    <Compile Include="Users\MessageExtension.cs" />
+    <Compile Include="Users\PermissionExtension.cs" />
+    <Compile Include="Users\UserExtension.cs" />
+    <Compile Include="Users\UserLockLogExtension.cs" />
+    <Compile Include="Users\UserLoginLogExtension.cs" />
+    <Compile Include="Users\UserPermissionExtension.cs" />
+    <Compile Include="Users\UserQueryInformationExtension.cs" />
+    <Compile Include="Users\UserRoleExtension.cs" />
+    <Compile Include="WebServiceBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HttpExtension\XmlResponseExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MIS.Common\MIS.Common.csproj">
+      <Project>{6362C727-4A13-4688-9EF6-E6DB9D3D8F9C}</Project>
+      <Name>MIS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Srims.Server.Business\Srims.Server.Business.csproj">
+      <Project>{CFA3CC51-A1EB-4090-81AB-7F17AD5AF305}</Project>
+      <Name>Srims.Server.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Srims.Server.DataAccess\Srims.Server.DataAccess.csproj">
+      <Project>{978AD13F-E64A-4130-88ED-3E17F7F88EEC}</Project>
+      <Name>Srims.Server.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Srims.Server.DataExchange\Srims.Server.DataExchange.csproj">
+      <Project>{0FF72B4D-05DE-4ABF-AF75-EB87ED019529}</Project>
+      <Name>Srims.Server.DataExchange</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Papers\app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

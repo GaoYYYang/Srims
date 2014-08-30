@@ -1,0 +1,11 @@
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Test\bin\Debug\MIS.Test.dll
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Test\bin\Debug\MIS.Test.pdb
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Test\bin\Debug\MIS.Common.dll
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Test\bin\Debug\Interop.jmail.dll
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Test\bin\Debug\MIS.Common.pdb
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Test\bin\Debug\MIS.Common.xml
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Test\bin\Debug\MIS.Common_Accessor.dll
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Test\bin\Debug\MIS.Common_Accessor.pdb
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Test\obj\Debug\ResolveAssemblyReference.cache
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Test\obj\Debug\MIS.Test.dll
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Test\obj\Debug\MIS.Test.pdb

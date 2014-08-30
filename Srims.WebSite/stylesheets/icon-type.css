@@ -1,0 +1,28 @@
+﻿.icon-type, .icon-type-list
+{
+	background-image: url(../images/icon/type.png) !important;
+}
+.icon-type-rank, .icon-type-rank-list
+{
+	background-image: url(../images/icon/type-rank.png) !important;
+}
+.icon-type-type, .icon-type-type-list
+{
+	background-image: url(../images/icon/type-type.png) !important;
+}
+.icon-type-managementfees, .icon-type-managementfees-list
+{
+	background-image: url(../images/icon/type-type.png) !important;
+}
+.icon-type-support-category, .icon-type-support-category-list
+{
+	background-image: url(../images/icon/type-support-category.png) !important;
+}
+.icon-type-support-field, .icon-type-support-field-list
+{
+	background-image: url(../images/icon/type-support-field.png) !important;
+}
+.icon-type-support-sub-field, .icon-type-support-sub-field-list
+{
+	background-image: url(../images/icon/type-support-sub-field.png) !important;
+}

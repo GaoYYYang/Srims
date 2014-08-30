@@ -1,0 +1,4205 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Srims.Server.UI</name>
+    </assembly>
+    <members>
+        <member name="T:Srims.Server.UI.Type.ProjectSupportFieldExtension">
+            <summary>
+            显示项目资助领域
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportFieldExtension.ShowProjectSupportField(Srims.Server.Business.Type.ProjectSupportField,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示项目资助领域
+            </summary>
+            <param name="ProjectSupportField"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportFieldExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectSupportField},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+             显示项目资助领域列表
+            </summary>
+            <param name="ProjectSupportFieldList"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportFieldExtension.ShowSupportFieldNodeData(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectSupportField},Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            项目资助领域数据
+            </summary>
+            <param name="projectSupportFieldList"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportFieldExtension.GetProjectSupportField(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得资助领域编辑信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportFieldExtension.GetOldProjectSupportField(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Stamps.StampApplicationSecondAdminExtension">
+            <summary>
+            文印申请2级审核权限扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationSecondAdminExtension.ShowStampApplicationSecondAdmin(Srims.Server.Business.Stamps.StampApplicationSecondAdmin,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示
+            </summary>
+            <param name="stampApplication"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationSecondAdminExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Stamps.StampApplicationSecondAdmin},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示扩展
+            </summary>
+            <param name="stampApplicationQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationSecondAdminExtension.GetStampApplicationSecondAdmin(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得编辑信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationSecondAdminExtension.GetOldStampApplicationSecondAdmin(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+             取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.HttpExtension.JsonResponseExtension">
+            <summary>
+            json相应扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.JsonResponseExtension.ShowAsJson(System.Collections.Generic.IList{System.String},System.Web.HttpResponse)">
+            <summary>
+            字符串扩展
+            </summary>
+            <param name="stringList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.JsonResponseExtension.WriteArrayBegin(System.Web.HttpResponse)">
+            <summary>
+            数组头
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.JsonResponseExtension.WriteArrayEnd(System.Web.HttpResponse)">
+            <summary>
+            数组尾
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.JsonResponseExtension.WriteJsonBegin(System.Web.HttpResponse)">
+            <summary>
+            json头
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.JsonResponseExtension.WriteJsonEnd(System.Web.HttpResponse,System.Boolean)">
+            <summary>
+            json尾
+            </summary>
+            <param name="response"></param>
+            <param name="isLast"></param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.JsonResponseExtension.WriteJsonWithValue(System.Web.HttpResponse,System.String,System.String,System.Boolean)">
+            <summary>
+            键值对
+            </summary>
+            <param name="response"></param>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="isLast"></param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.JsonResponseExtension.WriteJosnWithNoValue(System.Web.HttpResponse,System.String)">
+            <summary>
+            键
+            </summary>
+            <param name="response"></param>
+            <param name="key"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.FinanceQueryInformationExtension">
+            <summary>
+            经费查询信息扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FinanceQueryInformationExtension.GetFinanceQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            获得经费查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Experts.DepartmentQueryInformationExtension">
+            <summary>
+            部门查询相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.DepartmentQueryInformationExtension.GetDepartmentQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            部门查询条件显示扩展
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Documents.ContractExtension">
+            <summary>
+            合同的显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Documents.ContractExtension.ShowContract(Srims.Server.Business.Documents.Contract,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            合同的显示扩展
+            </summary>
+            <param name="contract"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Documents.ContractExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Documents.Contract},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            合同列表的显示扩展
+            </summary>
+            <param name="contractList"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Documents.ContractExtension.GetContract(System.Web.HttpRequest,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得合同
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.HttpExtension.XmlResponseExtension">
+            <summary>
+            Xml相应扩展
+            </summary>
+        </member>
+        <member name="F:Srims.Server.UI.HttpExtension.XmlResponseExtension.XML_HEAD">
+            <summary>
+            Xml头
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.XmlResponseExtension.AppendXmlHeader(System.Web.HttpResponse)">
+            <summary>
+            写入Xml响应的头信息
+            </summary>
+            <param name="response">Http响应</param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.XmlResponseExtension.WriteXmlHead(System.Web.HttpResponse)">
+            <summary>
+            写入Xml文件头
+            </summary>
+            <param name="response">Http响应</param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.XmlResponseExtension.WriteTagBegin(System.Web.HttpResponse,System.String)">
+            <summary>
+            写入开始标签
+            </summary>
+            <param name="response">Http响应</param>
+            <param name="tag">标签名称</param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.XmlResponseExtension.WriteTagEnd(System.Web.HttpResponse,System.String)">
+            <summary>
+            写入结束标签
+            </summary>
+            <param name="response">Http响应</param>
+            <param name="tag">标签名称</param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.XmlResponseExtension.WriteTagWithValue(System.Web.HttpResponse,System.String,System.Object)">
+            <summary>
+            写入Xml响应的头信息
+            </summary>
+            <param name="response">Http响应</param>
+            <param name="tag"> 标签名称</param>
+            <param name="value">标签值</param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.LiberalArtsPaperAuthorExtension.ShowInfor(Srims.Server.Business.Papers.LiberalArtsPaperAuthor,System.Web.HttpResponse)">
+            <summary>
+            论文作者列表的显示扩展
+            </summary>
+            <param name="author"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.LiberalArtsPaperAuthorExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Papers.LiberalArtsPaperAuthor},System.Web.HttpResponse)">
+            <summary>
+            论文作者的显示扩展
+            </summary>
+            <param name="authorList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.LiberalArtsPaperAuthorExtension.GetLiberalArtsPaperAuthor(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得论文作者信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.LiberalArtsPaperAuthorExtension.GetOldLiberalArtsPaperAuthor(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空PaperAuthor或者编辑之前的旧PaperAuthor
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.RecoveryExtension.getRecoveryByPID(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            根据projectId取得追缴单
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.FinanceFundDescendExtension">
+            <summary>
+            经费到帐--经费下拨关联信息的相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FinanceFundDescendExtension.ShowFinanceFundDescend(Srims.Server.Business.Fund.FinanceFundDescend,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            经费到帐--经费下拨关联信息的的显示扩展
+            </summary>
+            <param name="financeFundDescend"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FinanceFundDescendExtension.GetFinanceFundDescend(System.Web.HttpRequest,System.Boolean,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得经费到帐--经费下拨关联信息
+            </summary>
+            <param name="request"></param>
+            <param name="isReturn"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Common.CompanyManageTypeExtension">
+            <summary>
+            公司管理类型显示
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.CompanyManageTypeExtension.ShowManageType(System.Web.HttpResponse,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+            <param name="i"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.CompanyManageTypeExtension.Show(Srims.Server.Business.Common.CompanyManangeType,System.Web.HttpResponse)">
+            <summary>
+            
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Performances.PerformanceVoucherExtension">
+            <summary>
+            绩效凭单显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceVoucherExtension.ShowVoucher(Srims.Server.Business.Performances.PerformanceVoucher,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            凭单的显示扩展
+            </summary>
+            <param name="voucher"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceVoucherExtension.Show(Srims.Server.Business.Performances.PerformanceVoucherQueryResult,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            凭单财务查询的显示扩展
+            </summary>
+            <param name="voucherQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceVoucherExtension.GetFinanceAllocatdVoucher(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            获得财务分配的凭单信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceVoucherExtension.GetVoucher(System.Web.HttpRequest,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得凭单（保存）
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <param name="isCorrect"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceVoucherExtension.GetOldVoucher(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Experts.ExpertQueryInformationExtension">
+            <summary>
+            专家查询扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertQueryInformationExtension.GetExpertQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            获得专家的查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertQueryInformationExtension.GetExpertQueryInformation_Basic(System.Web.HttpRequest)">
+            <summary>
+            获得专家的基本查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertQueryInformationExtension.GetExpertQueryInformation_Award(System.Web.HttpRequest)">
+            <summary>
+            获得专家的奖励查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertQueryInformationExtension.GetExpertQueryInformation_Paper(System.Web.HttpRequest)">
+            <summary>
+            获得专家的论文查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertQueryInformationExtension.GetExpertQueryInformation_Patent(System.Web.HttpRequest)">
+            <summary>
+            取得专家的专利查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertQueryInformationExtension.GetExpertQueryInformation_Project(System.Web.HttpRequest)">
+            <summary>
+            取得专家的项目查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertQueryInformationExtension.ShowProjectCount(System.Web.HttpRequest)">
+            <summary>
+            是否显示项目总数
+            </summary>
+            <param name="queryInformation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertQueryInformationExtension.ShowPaperCount(System.Web.HttpRequest)">
+            <summary>
+            是否显示论文总数
+            </summary>
+            <param name="queryInformation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertQueryInformationExtension.ShowPatentCount(System.Web.HttpRequest)">
+            <summary>
+            是否显示专利总数
+            </summary>
+            <param name="queryInformation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertQueryInformationExtension.ShowAwardCount(System.Web.HttpRequest)">
+            <summary>
+            是否显示奖励总数
+            </summary>
+            <param name="queryInformation"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Statistic.StatisticShowExtension">
+            <summary>
+            统计扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Statistic.StatisticShowExtension.ShowAsXml(System.Data.DataTable,System.Web.HttpResponse)">
+            <summary>
+            以XML方式显示
+            </summary>
+            <param name="dataTable"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.RecoveryProjectQueryInformationExtension.GetRecoveryProjectQueryInformation(System.Web.HttpRequest,Srims.Server.Business.Users.User)">
+            <summary>
+            取得项目查询条件
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.HttpExtension.DelegateAddChildrenWithUser`1">
+            <summary>
+            子节点代理（带用户）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="database"></param>
+            <param name="user"></param>
+            <param name="response"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="T:Srims.Server.UI.HttpExtension.DelegateAddChildren`1">
+            <summary>
+            子节点代理
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="database"></param>
+            <param name="response"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="T:Srims.Server.UI.HttpExtension.TreeLoaderResponseExtension">
+            <summary>
+            树的扩展方法
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.TreeLoaderResponseExtension.WriteBegin(System.Web.HttpResponse)">
+            <summary>
+            开始
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.TreeLoaderResponseExtension.WriteEnd(System.Web.HttpResponse)">
+            <summary>
+            结束
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.TreeLoaderResponseExtension.WriteChildBegin(System.Web.HttpResponse)">
+            <summary>
+            节点开始
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.TreeLoaderResponseExtension.WriteChildEnd(System.Web.HttpResponse,System.Boolean)">
+            <summary>
+            节点结束
+            </summary>
+            <param name="response"></param>
+            <param name="isLast"></param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.TreeLoaderResponseExtension.WriteLeaf(System.Web.HttpResponse)">
+            <summary>
+            叶子
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.TreeLoaderResponseExtension.WriteIdAndText(System.Web.HttpResponse,System.String,System.String)">
+            <summary>
+            id和text
+            </summary>
+            <param name="response"></param>
+            <param name="id"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.TreeLoaderResponseExtension.WriteChildrenWithNoValue(System.Web.HttpResponse)">
+            <summary>
+            children（没有值）
+            </summary>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.TreeLoaderResponseExtension.WriteNodeWithValue(System.Web.HttpResponse,System.String,System.String)">
+            <summary>
+            写入键值
+            </summary>
+            <param name="response"></param>
+            <param name="tag"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.TreeLoaderResponseExtension.WriteNodeWithValue(System.Web.HttpResponse,System.String,System.Boolean)">
+            <summary>
+            写入键值
+            </summary>
+            <param name="response"></param>
+            <param name="tag"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Patents.PatentAgencyQueryInformationExtension">
+            <summary>
+            专利代理机构查询扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentAgencyQueryInformationExtension.GetPatentAgencyQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            取得专利代理机构查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Patents.PatentAgencyExtension">
+            <summary>
+            专利代理机构扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentAgencyExtension.ShowPatentAgency(Srims.Server.Business.Patents.PatentAgency,System.Web.HttpResponse)">
+            <summary>
+            专利代理机构列表的显示扩展
+            </summary>
+            <param name="patentAgency"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentAgencyExtension.ShowPatentAgency(Srims.Server.Business.Patents.PatentAgency,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            专利代理机构列表的显示扩展
+            </summary>
+            <param name="patentAgency"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentAgencyExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Patents.PatentAgency},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            专利代理机构的显示扩展
+            </summary>
+            <param name="patentAgencyQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentAgencyExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Patents.PatentAgency},System.Web.HttpResponse)">
+            <summary>
+            专利代理机构的显示扩展
+            </summary>
+            <param name="patentAgencyQueryResult"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentAgencyExtension.GetPatentAgency(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得专利代理机构信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentAgencyExtension.GetOldPatentAgency(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空PatentAgency或者编辑之前的旧PatentAgency
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Experts.DepartmentExtension">
+            <summary>
+            部门相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.DepartmentExtension.ShowDepartment(Srims.Server.Business.Experts.Department,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            部门显示扩展
+            </summary>
+            <param name="department"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.DepartmentExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Experts.Department},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+             显示部门查询结果
+            </summary>
+            <param name="departmentResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.DepartmentExtension.GetDepartment(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得部门
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.DepartmentExtension.GetOldEntity(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+             取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Common.LogExtension">
+            <summary>
+            日志的显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.LogExtension.ShowLog(Srims.Server.Business.Common.Log,System.Web.HttpResponse)">
+            <summary>
+            显示日志
+            </summary>
+            <param name="log">要显示的日志</param>
+            <param name="response">输出</param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.LogExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Common.Log},System.Web.HttpResponse)">
+            <summary>
+            显示日志查询结果
+            </summary>
+            <param name="logResult">日志结果</param>
+            <param name="response">输出</param>
+        </member>
+        <member name="T:Srims.Server.UI.Awards.AwardWinnerExtension">
+            <summary>
+            显示奖励人
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardWinnerExtension.ShowAwardWinner(Srims.Server.Business.Awards.AwardWinner,System.Web.HttpResponse)">
+            <summary>
+            显示获奖者
+            </summary>
+            <param name="awardWinner"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardWinnerExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Awards.AwardWinner},System.Web.HttpResponse)">
+            <summary>
+            显示奖励的获奖人
+            </summary>
+            <param name="awardWinnerList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardWinnerExtension.GetAwardWinner(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            保存奖励的获奖人
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardWinnerExtension.GetOldAwardWinner(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空AwardWinner或者编辑之前的旧AwardWinner
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Users.DepartmentExtension">
+            <summary>
+            部门的相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Users.DepartmentExtension.ShowDepartment(Srims.Server.Business.Experts.Department,System.Web.HttpResponse)">
+            <summary>
+            部门的显示扩展
+            </summary>
+            <param name="department"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Users.DepartmentExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Experts.Department},System.Web.HttpResponse)">
+            <summary>
+            部门列表的显示扩展
+            </summary>
+            <param name="departmentList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Users.DepartmentExtension.ShowDepartmentRelated(Srims.Server.Business.Experts.Department,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            院系权限相关显示
+            </summary>
+            <param name="department"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Users.DepartmentExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Experts.Department},Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            院系权限相关显示
+            </summary>
+            <param name="departmentList"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Type.ManagementFeesExtension">
+            <summary>
+            管理费比例显示
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ManagementFeesExtension.GetManagementFeesQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            取得查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ManagementFeesExtension.ShowManagementFees(Srims.Server.Business.Type.ManagementFees,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示管理费比例信息
+            </summary>
+            <param name="managementFees"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ManagementFeesExtension.ShowRate(System.Int32,System.Web.HttpResponse)">
+            <summary>
+            显示整型数据扩展（管理费率,绩效工资费率）
+            </summary>
+            <param name="rate"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ManagementFeesExtension.ShowQueryResult(MIS.Common.Query.QueryResult{Srims.Server.Business.Type.ManagementFees},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            管理费比例查询的显示扩展
+            </summary>
+            <param name="managementFeesQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ManagementFeesExtension.GetManagementFee(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得管理费收取类型编辑信息
+            </summary>
+            <param name="request"></param>
+            <param name="databse"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ManagementFeesExtension.GetOldManagementFee(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得新建空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Stamps.StampApplicationTypeExtension">
+            <summary>
+            文印申请扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationTypeExtension.ShowStampApplicationType(Srims.Server.Business.Stamps.StampApplicationType,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示文印
+            </summary>
+            <param name="stampApplicationType"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationTypeExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Stamps.StampApplicationType},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            文印查询的显示扩展
+            </summary>
+            <param name="stampApplicationQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationTypeExtension.GetStampApplicationType(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得图章编辑信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationTypeExtension.GetOldStampApplicationType(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+             取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Papers.PaperQueryInformationExtension">
+            <summary>
+            论文查询信息扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperQueryInformationExtension.GetPaperQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            取得论文查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Papers.PaperAuthorExtension">
+            <summary>
+            论文作者的相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperAuthorExtension.ShowInfor(Srims.Server.Business.Papers.PaperAuthor,System.Web.HttpResponse)">
+            <summary>
+            论文作者列表的显示扩展
+            </summary>
+            <param name="author"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperAuthorExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Papers.PaperAuthor},System.Web.HttpResponse)">
+            <summary>
+            论文作者的显示扩展
+            </summary>
+            <param name="authorList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperAuthorExtension.GetPaperAuthor(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得论文作者信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperAuthorExtension.GetOldPaperAuthor(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空PaperAuthor或者编辑之前的旧PaperAuthor
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.VoucherStateHistoryExtension">
+            <summary>
+            凭单状态历史扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.VoucherStateHistoryExtension.Show(Srims.Server.Business.Fund.VoucherStateHistory,System.Web.HttpResponse)">
+            <summary>
+            显示
+            </summary>
+            <param name="voucherStateHistory"></param>
+            <param name="response"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.FinanceBakExtension">
+            <summary>
+            经费备份扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FinanceBakExtension.GetFinanceBakQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            获得经费备份查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FinanceBakExtension.ShowFinanceBak(Srims.Server.Business.Fund.FinanceBak,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            凭单的显示扩展
+            </summary>
+            <param name="financeBak"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FinanceBakExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Fund.FinanceBak},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            凭单财务查询的显示扩展
+            </summary>
+            <param name="financeBakQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Common.OutsourcingUnitQueryInformationExtension">
+            <summary>
+            外协单位查询条件扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.OutsourcingUnitQueryInformationExtension.GetOutsourcingUnitQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Projects.ProjectMemberExtension">
+            <summary>
+            显示项目
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectMemberExtension.ShowProjectMember(Srims.Server.Business.Projects.ProjectMember,System.Web.HttpResponse)">
+            <summary>
+            显示项目成员
+            </summary>
+            <param name="projectMember"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectMemberExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Projects.ProjectMember},System.Web.HttpResponse)">
+            <summary>
+            显示项目成员列表
+            </summary>
+            <param name="projectMemberList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectMemberExtension.GetProjectMember(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得项目成员
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectMemberExtension.GetOldProjectMember(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空ProjectMember或者编辑之前的旧ProjectMember
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Papers.MagazineInformationExtension">
+            <summary>
+            杂志年度信息的相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineInformationExtension.ShowInfor(Srims.Server.Business.Papers.MagazineInformation,System.Web.HttpResponse)">
+            <summary>
+            杂志信息的显示扩展
+            </summary>
+            <param name="infor"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineInformationExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Papers.MagazineInformation},System.Web.HttpResponse)">
+            <summary>
+            杂志信息列表的显示扩展
+            </summary>
+            <param name="inforList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineInformationExtension.GetMagazineInformation(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得杂志信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineInformationExtension.GetOldMagazineInformation(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空MagazineInformation或者编辑之前的旧MagazineInformation
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Papers.MagazineExtension">
+            <summary>
+            杂志的相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineExtension.ShowAsMagazineSearchRecord(Srims.Server.Business.Papers.Magazine,System.Web.HttpResponse)">
+            <summary>
+            显示筛选杂志
+            </summary>
+            <param name="magazine"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineExtension.ShowAsSearchRecord(System.Collections.Generic.IList{Srims.Server.Business.Papers.Magazine},System.Web.HttpResponse)">
+            <summary>
+            显示筛选杂志列表
+            </summary>
+            <param name="list"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineExtension.ShowMagazine(Srims.Server.Business.Papers.Magazine,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            杂志的显示扩展
+            </summary>
+            <param name="magazine"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Papers.Magazine},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            杂志查询的显示扩展
+            </summary>
+            <param name="magazineQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineExtension.GetMagazine(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建或编辑的杂志信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineExtension.GetOldMagazine(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空Magazine或者编辑之前的旧Magazine
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.MISExtension.HttpPostedFileExtension">
+            <summary>
+            上传文档的相关扩展
+            </summary>
+        </member>
+        <member name="F:Srims.Server.UI.MISExtension.HttpPostedFileExtension.POSTED_FILE_ROOT_DIRECTORY">
+            <summary>
+            上传文档保存路径
+            </summary> 
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.HttpPostedFileExtension.Save(System.Web.HttpPostedFile,System.Web.HttpContext,Srims.Server.Business.IDatabase)">
+            <summary>
+            保存上传文件
+            </summary>
+            <param name="postedFile"></param>
+            <param name="context"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.HttpPostedFileExtension.Delete(System.Web.HttpContext,System.Guid,Srims.Server.Business.IDatabase)">
+            <summary>
+            根据guid删除文件
+            </summary>
+            <param name="context"></param>
+            <param name="guid"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.HttpPostedFileExtension.GetFilePath(System.Guid,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得文件路径
+            </summary>
+            <param name="guid"></param>
+            <param name="database"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.FundAllocationQueryInformationExtension">
+            <summary>
+            经费分配查询条件相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FundAllocationQueryInformationExtension.GetFundAllocationQueryInformation(System.Web.HttpRequest,Srims.Server.Business.Users.User)">
+            <summary>
+            取得经费分配查询条件
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Documents.AwardDoucmentExtension">
+            <summary>
+            奖励文档显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Documents.AwardDoucmentExtension.Show(Srims.Server.Business.Documents.AwardDocument,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            奖励文档显示扩展
+            </summary>
+            <param name="response"></param>
+            <param name="awardDoucment"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Documents.AwardDoucmentExtension.GetAwardDocument(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得奖励文档
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Bases.BaseQueryInformationExtension">
+            <summary>
+            基地查询扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Bases.BaseQueryInformationExtension.GetBaseQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            取得基地的查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Users.UserLockLogExtension">
+            <summary>
+            用户锁定日志扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserLockLogExtension.GetUserLockLog(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得用户锁定日志
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Experts.ExpertExtension">
+            <summary>
+            专家显示
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.ShowExpert(Srims.Server.Business.Experts.Expert,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示专家
+            </summary>
+            <param name="expert"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Experts.Expert},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示专家列表
+            </summary>
+            <param name="list"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Experts.Expert},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示专家查询结果
+            </summary>
+            <param name="resultList"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Experts.Expert},System.Web.HttpRequest,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示专家查询结果
+            </summary>
+            <param name="result"></param>
+            <param name="request"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.ShowAsExpertSearchRecord(Srims.Server.Business.Experts.Expert,System.Web.HttpResponse)">
+            <summary>
+            显示筛选专家
+            </summary>
+            <param name="expert"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.ShowAsSearchRecord(System.Collections.Generic.IList{Srims.Server.Business.Experts.Expert},System.Web.HttpResponse)">
+            <summary>
+            显示筛选专家列表
+            </summary>
+            <param name="list"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.ShowAsSimpleQueryRecord(System.Collections.Generic.IList{Srims.Server.Business.Experts.Expert},System.Web.HttpResponse,Srims.Server.Business.Users.User)">
+            <summary>
+            显示查询专家列表
+            </summary>
+            <param name="list"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.ShowAsSimpleQueryRecord(Srims.Server.Business.Experts.Expert,System.Web.HttpResponse,Srims.Server.Business.Users.User)">
+            <summary>
+            显示查询专家
+            </summary>
+            <param name="expert"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.GetExpertById(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            根据ID取得专家
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.GetExpert(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User,System.String)">
+            <summary>
+            管理员编辑专家时，取得该专家
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.GetNewExpert(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得新添加的专家的信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.buildNewExpertHistoryInformation(System.Web.HttpRequest,Srims.Server.Business.Experts.Expert,System.String,System.String,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            管理员新建专家时新建相关字段历史信息
+            </summary>
+            <param name="request"></param>
+            <param name="expert"></param>
+            <param name="propertyName"></param>
+            <param name="newValue"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.GetExpert_Label(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User,System.Guid)">
+            <summary>
+            上传照片时，保存历史信息操作
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.GetWaittingCensoeInfor(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得等待审核的专家历史信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertExtension.GetWaittingCensorExpert(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User,Srims.Server.Business.Experts.ExpertInfoHistory,System.Nullable{System.Boolean})">
+            <summary>
+            取得审核通过的专家历史信息对应的专家
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <param name="infor"></param>
+            <param name="isSubject"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Type.ProjectSupportSubFieldExtension">
+            <summary>
+            显示项目资助子领域
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportSubFieldExtension.ShowProjectSupportSubField(Srims.Server.Business.Type.ProjectSupportSubField,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+             显示项目资助子领域
+            </summary>
+            <param name="ProjectSupportSubField"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportSubFieldExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectSupportSubField},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+             显示项目资助子领域列表
+            </summary>
+            <param name="ProjectSupportSubFieldList"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportSubFieldExtension.ShowSupportSubFieldNodeData(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectSupportSubField},System.Web.HttpResponse)">
+            <summary>
+            项目资助子领域节点数据
+            </summary>
+            <param name="projectSupportSubFieldList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportSubFieldExtension.GetProjectSupportSubField(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得资助子领域编辑信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportSubFieldExtension.GetOldProjectSupportSubField(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得新建的ProjectSupportSubField或者编辑之前的旧ProjectSupportSubField
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Type.ProjectRankExtension">
+            <summary>
+            显示项目等级
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectRankExtension.ShowForFilter(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectRank},System.Web.HttpResponse)">
+            <summary>
+            等级筛选显示
+            </summary>
+            <param name="projectRankList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectRankExtension.ShowProjectRank(Srims.Server.Business.Type.ProjectRank,System.Web.HttpResponse)">
+            <summary>
+            显示项目等级
+            </summary>
+            <param name="ProjectRank"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectRankExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectRank},System.Web.HttpResponse)">
+            <summary>
+            显示项目等级列表
+            </summary>
+            <param name="ProjectRankList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectRankExtension.ShowRankNodeData(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectRank},Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            项目等级数据
+            </summary>
+            <param name="projectRankList"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectRankExtension.ShowAsTreeForPermissionShow(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectRank},Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            项目类型节点（带查看权限）
+            </summary>
+            <param name="projectRankList"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectRankExtension.ShowAsTreeForPermissionEdit(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectRank},Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            项目类型节点（带编辑权限）
+            </summary>
+            <param name="projectRankList"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectRankExtension.ShowAsTreeForUserTemporaryAuthorization(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectRank},Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            项目类型节点（临时授权）
+            </summary>
+            <param name="projectRankList"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Srims.Server.UI.Stamps.StampApplicationTypeGroupExtension.ShowStampApplicationTypeGroup(Srims.Server.Business.Stamps.StampApplicationTypeGroup,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)" -->
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationTypeGroupExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Stamps.StampApplicationTypeGroup},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            文印查询的显示扩展
+            </summary>
+            <param name="stampApplicationQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationTypeGroupExtension.GetStampApplicationTypeGroup(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得图章编辑信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationTypeGroupExtension.GetOldStampApplicationTypeGroup(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+             取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.MISExtension.ShowDelegate`1">
+            <summary>
+            显示代理
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <param name="response"></param>
+        </member>
+        <member name="T:Srims.Server.UI.MISExtension.ShowDelegateWithDatabase`1">
+            <summary>
+            显示代理（带database）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="T:Srims.Server.UI.MISExtension.ShowDelegateWithUser`1">
+            <summary>
+            显示代理（带user）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+        </member>
+        <member name="T:Srims.Server.UI.MISExtension.ShowDelegateWithUserAndDatabase`1">
+            <summary>
+            显示代理（database和User）
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="T:Srims.Server.UI.MISExtension.ShowExtension">
+            <summary>
+            显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.ShowExtension.Show``1(System.Collections.Generic.IList{``0},System.Web.HttpResponse,Srims.Server.UI.MISExtension.ShowDelegate{``0})">
+            <summary>
+            显示实体列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entityList"></param>
+            <param name="response"></param>
+            <param name="showEntity"></param>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.ShowExtension.Show``1(System.Collections.Generic.IList{``0},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.UI.MISExtension.ShowDelegateWithUser{``0})">
+            <summary>
+            显示列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entityList"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="showEntity"></param>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.ShowExtension.Show``1(System.Collections.Generic.IList{``0},System.Web.HttpResponse,Srims.Server.Business.IDatabase,Srims.Server.UI.MISExtension.ShowDelegateWithDatabase{``0})">
+            <summary>
+            显示列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entityList"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+            <param name="showEntity"></param>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.ShowExtension.Show``1(System.Collections.Generic.IList{``0},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,Srims.Server.UI.MISExtension.ShowDelegateWithUserAndDatabase{``0})">
+            <summary>
+            显示实体列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entityList"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <param name="showEntity"></param>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.ShowExtension.ShowInList``1(``0,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,Srims.Server.UI.MISExtension.ShowDelegateWithUserAndDatabase{``0})">
+            <summary>
+            将实体包含在列表中显示
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <param name="showEntity"></param>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.ShowExtension.Show``1(MIS.Common.Query.QueryResult{``0},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,Srims.Server.UI.MISExtension.ShowDelegateWithUserAndDatabase{``0})">
+            <summary>
+            查询显示
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="queryResult"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <param name="showEntity"></param>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.ShowExtension.Show``1(MIS.Common.Query.QueryResult{``0},System.Web.HttpResponse,Srims.Server.Business.IDatabase,Srims.Server.UI.MISExtension.ShowDelegateWithDatabase{``0})">
+            <summary>
+            查询显示
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="queryResult"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+            <param name="showEntity"></param>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.ShowExtension.Show``1(MIS.Common.Query.QueryResult{``0},System.Web.HttpResponse,Srims.Server.UI.MISExtension.ShowDelegate{``0})">
+            <summary>
+            查询显示
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="queryResult"></param>
+            <param name="response"></param>
+            <param name="showEntity"></param>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.ShowExtension.Show(System.Int32,System.Web.HttpResponse)">
+            <summary>
+            对整形的显示扩展
+            </summary>
+            <param name="count"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.ShowExtension.Show(System.String,System.String,System.Web.HttpResponse)">
+            <summary>
+            对字符串的现实扩展
+            </summary>
+            <param name="value"></param>
+            <param name="name"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.ShowExtension.Show(System.Collections.Generic.IList{System.String},System.Web.HttpResponse)">
+            <summary>
+            字符串的显示扩展（IDValue）
+            </summary>
+            <param name="stringList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.ShowExtension.ToString(System.Array,System.String)">
+            <summary>
+            连接数组各个元素构成字符串
+            </summary>
+            <param name="array">要连接的数组</param>
+            <param name="separater">分隔符</param>
+            <returns>连接后组成的字符串</returns>
+        </member>
+        <member name="T:Srims.Server.UI.Patents.PatentInventerExtension">
+            <summary>
+            显示专利发明人
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentInventerExtension.ShowPatentInventer(Srims.Server.Business.Patents.PatentInventer,System.Web.HttpResponse)">
+            <summary>
+            显示发明人
+            </summary>
+            <param name="inventer"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentInventerExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Patents.PatentInventer},System.Web.HttpResponse)">
+            <summary>
+            显示专利的发明人
+            </summary>
+            <param name="inventerList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentInventerExtension.GetPatentInventer(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            保存专利发明人
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentInventerExtension.GetOldPatentInventer(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空PatentInventer或者编辑之前的旧PatentInventer
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Papers.PaperIndexedExtension">
+            <summary>
+            论文收录的相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperIndexedExtension.Show(Srims.Server.Business.Papers.PaperIndexedType)">
+            <summary>
+            论文收录的显示扩展
+            </summary>
+            <param name="indexedType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperIndexedExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Papers.PaperIndexedType})">
+            <summary>
+            取得论文收录情况的显示扩展
+            </summary>
+            <param name="indexedList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperIndexedExtension.ShowStr(System.Collections.Generic.IList{Srims.Server.Business.Papers.PaperIndexedType})">
+            <summary>
+             取得论文收录情况的字符串扩展
+            </summary>
+            <param name="indexedList"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Papers.LiberalArtsPaperExtension">
+            <summary>
+            论文扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.LiberalArtsPaperExtension.ShowPaper(Srims.Server.Business.Papers.LiberalArtsPaper,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            论文显示
+            </summary>
+            <param name="paper"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.LiberalArtsPaperExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Papers.LiberalArtsPaper},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            论文查询的显示扩展
+            </summary>
+            <param name="paperQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.LiberalArtsPaperExtension.Show(System.Collections.Generic.List{Srims.Server.Business.Papers.LiberalArtsPaper},Srims.Server.Business.Users.User,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示论文列表
+            </summary>
+            <param name="list"></param>
+            <param name="user"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.LiberalArtsPaperExtension.GetLiberalArtsPaper(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建或编辑的论文信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.LiberalArtsPaperExtension.GetOldLiberalArtsPaper(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空Paper或者编辑之前的旧Paper
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.LiberalArtsPaperExtension.ShowForExpert(System.Collections.Generic.IList{Srims.Server.Business.Papers.LiberalArtsPaper},Srims.Server.Business.Experts.Expert,Srims.Server.Business.Users.User,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示论文（专家）
+            </summary>
+            <param name="list"></param>
+            <param name="expert"></param>
+            <param name="user"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.LiberalArtsPaperExtension.ShowPaperForExpert(Srims.Server.Business.Papers.LiberalArtsPaper,Srims.Server.Business.Experts.Expert,Srims.Server.Business.Users.User,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示论文（专家）
+            </summary>
+            <param name="paper"></param>
+            <param name="expert"></param>
+            <param name="user"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Users.LoginResultExtension">
+            <summary>
+            登录结果显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Users.LoginResultExtension.Show(Srims.Server.Business.Users.LoginResult,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示登陆结果
+            </summary>
+            <param name="loginResult"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Statistic.DimensionExtension">
+            <summary>
+            维度显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Statistic.DimensionExtension.GetDimension(System.Web.HttpRequest,System.String)">
+            <summary>
+            取得请求中的维度
+            </summary>
+            <param name="request"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Stamps.StampQueryInformationExtension">
+            <summary>
+            文印查询信息扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampQueryInformationExtension.GetStampQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            取得文印查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.HttpExtension.RequestExtension">
+            <summary>
+            查询条件扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetString(System.Web.HttpRequest,System.String)">
+            <summary>
+            取得字符串查询条件
+            </summary>
+            <param name="request">Http请求</param>
+            <param name="name">条件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetInt(System.Web.HttpRequest,System.String)">
+            <summary>
+            取得整数查询条件
+            </summary>
+            <param name="request">Http请求</param>
+            <param name="name">条件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetDateTime(System.Web.HttpRequest,System.String)">
+            <summary>
+            取得日期
+            </summary>
+            <param name="request">Http请求</param>
+            <param name="name">条件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetLong(System.Web.HttpRequest,System.String)">
+            <summary>
+            取得长整数
+            </summary>
+            <param name="request">Http请求</param>
+            <param name="name">条件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetMoney(System.Web.HttpRequest,System.String)">
+            <summary>
+            取得金额
+            </summary>
+            <param name="request">Http请求</param>
+            <param name="name">条件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetGuid(System.Web.HttpRequest,System.String)">
+            <summary>
+            取得guid
+            </summary>
+            <param name="request"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetExportFileName(System.Web.HttpRequest,System.String)">
+            <summary>
+            ..
+            </summary>
+            <param name="request"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetList``1(System.Web.HttpRequest,System.String)">
+            <summary>
+            取得列表查询条件
+            </summary>
+            <param name="request">Http请求</param>
+            <param name="name">条件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetEntity``1(System.Web.HttpRequest,System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            取得实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="request"></param>
+            <param name="query"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetEnum``1(System.Web.HttpRequest,System.String)">
+            <summary>
+            取的枚举查询条件
+            </summary>
+            <param name="request">Http请求</param>
+            <param name="name">条件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetEnumList``1(System.Web.HttpRequest,System.String)">
+            <summary>
+            取的枚举列表查询条件
+            </summary>
+            <param name="request">Http请求</param>
+            <param name="name">条件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetBoolean(System.Web.HttpRequest,System.String)">
+            <summary>
+            取得布尔查询条件
+            </summary>
+            <param name="request">Http请求</param>
+            <param name="name">条件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetDateRange(System.Web.HttpRequest,System.String)">
+            <summary>
+            取得日期区间
+            </summary>
+            <param name="request">Http请求</param>
+            <param name="name">条件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetMoneyRange(System.Web.HttpRequest,System.String)">
+            <summary>
+            取得金钱区间
+            </summary>
+            <param name="request">Http请求</param>
+            <param name="name">条件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetIntRange(System.Web.HttpRequest,System.String)">
+            <summary>
+            取得整形区间
+            </summary>
+            <param name="request"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetRange``1(System.Web.HttpRequest,System.String,System.String)">
+            <summary>
+            取得区间
+            </summary>
+            <param name="request">Http请求</param>
+            <param name="name">条件名称</param>
+            <param name="type">区间的数据类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.RequestExtension.GetHttpFiles(System.Web.HttpRequest)">
+            <summary>
+            取得上传文档
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Projects.ProjectStateHistoryExtension">
+            <summary>
+            项目状态历史相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectStateHistoryExtension.ShowProjectStateHistory(Srims.Server.Business.Projects.ProjectStateHistory,System.Web.HttpResponse)">
+            <summary>
+            项目状态历史的显示扩展
+            </summary>
+            <param name="projectStateHistory"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectStateHistoryExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Projects.ProjectStateHistory},System.Web.HttpResponse)">
+            <summary>
+            项目状态历史列表的显示扩展
+            </summary>
+            <param name="projectStateHistoryList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Patents.PatentShowExtension">
+            <summary>
+            专利的显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentShowExtension.ShowPatent(Srims.Server.Business.Patents.Patent,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示专利
+            </summary>
+            <param name="patent">要显示的专利</param>
+            <param name="response">输出</param>
+            <param name="user">用户</param>
+            <param name="database">数据库</param>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentShowExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Patents.Patent},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            专利显示代理
+            </summary>
+            <param name="patentQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentShowExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Patents.Patent},Srims.Server.Business.Users.User,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示专利列表
+            </summary>
+            <param name="list"></param>
+            <param name="user"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentShowExtension.ShowPatentForExpert(Srims.Server.Business.Patents.Patent,Srims.Server.Business.Experts.Expert,Srims.Server.Business.Users.User,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示专利（专家）
+            </summary>
+            <param name="patent"></param>
+            <param name="expert"></param>
+            <param name="user"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentShowExtension.ShowForExpert(System.Collections.Generic.IList{Srims.Server.Business.Patents.Patent},Srims.Server.Business.Experts.Expert,Srims.Server.Business.Users.User,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示专利（专家）
+            </summary>
+            <param name="list"></param>
+            <param name="expert"></param>
+            <param name="user"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentShowExtension.GetPatent(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            保存专利
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentShowExtension.GetOldPatent(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空Patent或者编辑之前的旧Patent
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.MISExtension.EnumToShowExtension">
+            <summary>
+            枚举显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.EnumToShowExtension.ToShow(Srims.Server.Business.Documents.ContractType)">
+            <summary>
+            合同类型显示扩展
+            </summary>
+            <param name="contractType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.PayPlanItemExtension">
+            <summary>
+            到帐计划的显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.PayPlanItemExtension.ShowPayPlanItem(Srims.Server.Business.Fund.PayPlanItem,System.Web.HttpResponse)">
+            <summary>
+            经费到帐计划的显示扩展
+            </summary>
+            <param name="payPlanItem"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.PayPlanItemExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Fund.PayPlanItem},System.Web.HttpResponse)">
+            <summary>
+            经费到帐计划列表的显示扩展
+            </summary>
+            <param name="payPlanItemList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.PayPlanItemExtension.GetProjectPayPlanItem(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得经费付款计划
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.PayPlanItemExtension.GetOldPayPlanItem(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.FinanceExtension">
+            <summary>
+            经费扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FinanceExtension.ShowFinance(Srims.Server.Business.Fund.Finance,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            经费的显示扩展
+            </summary>
+            <param name="finance"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FinanceExtension.ShowForSearch(Srims.Server.Business.Fund.Finance,System.Web.HttpResponse)">
+            <summary>
+            显示经费到帐信息（检索）
+            </summary>
+            <param name="finance"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FinanceExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Fund.Finance},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示经费列表
+            </summary>
+            <param name="list"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FinanceExtension.Show(Srims.Server.Business.Fund.FinanceQueryResult,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示经费查询结果
+            </summary>
+            <param name="financeQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FinanceExtension.GetFinance(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得新建或编辑经费信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FinanceExtension.GetFinanceWithInvoice(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            获得开发票的经费信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FinanceExtension.GetOldFinance(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Common.SystemSettingExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SystemSettingExtension.ShowSystemSetting(Srims.Server.Business.Common.SystemSetting,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示系统设置
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SystemSettingExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Common.SystemSetting},System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示系统设置
+            </summary>
+            <param name="list"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SystemSettingExtension.GetSystemSetting(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得系统设置
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SystemSettingExtension.GetOldEntity(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+             取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Users.MessageExtension">
+            <summary>
+            消息的显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Users.MessageExtension.ShowMessage(Srims.Server.Business.Users.Message,System.Web.HttpResponse,Srims.Server.Business.Users.User)">
+            <summary>
+            显示短消息
+            </summary>
+            <param name="message"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Users.MessageExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Users.Message},System.Web.HttpResponse,Srims.Server.Business.Users.User)">
+            <summary>
+            显示查询短消息
+            </summary>
+            <param name="result"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Users.MessageExtension.GetMessage(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得短信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.MISExtension.QueryInformationExtension">
+            <summary>
+            查询相关扩展
+            </summary>
+        </member>
+        <member name="F:Srims.Server.UI.MISExtension.QueryInformationExtension.QUERY_CONDITION_DEFAULT_LIMIT">
+            <summary>
+            默认分页大小
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.QueryInformationExtension.GetQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            取得查询信息
+            </summary>
+            <param name="request"> Http请求</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.QueryInformationExtension.GetQueryInformation_Start(System.Web.HttpRequest)">
+            <summary>
+            取得分页起始值
+            </summary>
+            <param name="request"> Http请求</param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.QueryInformationExtension.GetQueryInformation_Limit(System.Web.HttpRequest)">
+            <summary>
+            取得分页大小
+            </summary>
+            <param name="request"> Http请求</param>
+            <returns>如果未定义分页大小，则返回默认值</returns>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.QueryInformationExtension.GetQueryCondition_SortInfo(System.Web.HttpRequest)">
+            <summary>
+            取得排序信息
+            </summary>
+            <param name="request"> Http请求</param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Projects.ProjectShowExtension">
+            <summary>
+            项目扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.Show(Srims.Server.Business.Projects.Project,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示项目
+            </summary>
+            <param name="project"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Projects.Project},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示项目列表
+            </summary>
+            <param name="list"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.Show(Srims.Server.Business.Projects.ProjectQueryResult,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示项目查询结果
+            </summary>
+            <param name="projectQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.RecoveryShow(Srims.Server.Business.Projects.ProjectQueryResult,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示追缴项目查询结果
+            </summary>
+            <param name="projectQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.ShowProjectForEmail(Srims.Server.Business.Projects.Project,System.Web.HttpResponse)">
+            <summary>
+            显示项目（email）
+            </summary>
+            <param name="project"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.ShowProjectForSetDelegate(Srims.Server.Business.Projects.Project,System.Web.HttpResponse)">
+            <summary>
+            显示项目（email）
+            </summary>
+            <param name="project"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.ShowProjectForStamp(Srims.Server.Business.Projects.Project,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示项目（stamp）
+            </summary>
+            <param name="project"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.ShowForFundDescend(Srims.Server.Business.Projects.Project,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示项目（经费下拨）
+            </summary>
+            <param name="project"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.ShowForBase(Srims.Server.Business.Projects.Project,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示项目
+            </summary>
+            <param name="project"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.ShowProjectForExpert(Srims.Server.Business.Projects.Project,Srims.Server.Business.Experts.Expert,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            显示项目（专家相关)
+            </summary>
+            <param name="project"></param>
+            <param name="expert"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.ShowForExpert(System.Collections.Generic.IList{Srims.Server.Business.Projects.Project},Srims.Server.Business.Users.User,Srims.Server.Business.Experts.Expert,Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            显示项目（专家相关）
+            </summary>
+            <param name="list"></param>
+            <param name="user"></param>
+            <param name="expert"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.ShowProjectForOutsourcing(Srims.Server.Business.Projects.Project,System.Int32,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            显示项目（外协相关)carlsirce2013.5.13
+            </summary>
+            <param name="project"></param>
+            <param name="outsourcingID"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.Show(Srims.Server.Business.Projects.ProjectQueryResult,System.Int32,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            显示项目查询结果
+            </summary>
+            <param name="projectQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.ShowForOutsourcing(System.Collections.Generic.IList{Srims.Server.Business.Projects.Project},System.Int32,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            显示项目（外协相关）carlsirce2013.5.13
+            </summary>
+            <param name="list"></param>
+            <param name="outsourcingID"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.GetProject(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            获得项目
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.getProjectByID(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            根据projectId取得项目
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectShowExtension.GetOldProject(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Performances.PerformanceVoucherQueryInformationExtension">
+            <summary>
+            绩效凭单查询信息显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceVoucherQueryInformationExtension.GetPerformanceVoucherQueryInformantion(System.Web.HttpRequest,Srims.Server.Business.Users.User)">
+            <summary>
+            获得绩效凭单查询信息
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.FundDescendQueryInformationExtension">
+            <summary>
+            经费下拨查询条件扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FundDescendQueryInformationExtension.GetFundDescendQueryInformation(System.Web.HttpRequest,Srims.Server.Business.Users.User)">
+            <summary>
+            取得经费下拨查询条件
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Experts.ExpertInfoHistoryExtension">
+            <summary>
+            专家历史信息扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertInfoHistoryExtension.ShowExpertInfoHistory(Srims.Server.Business.Experts.ExpertInfoHistory,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示专家历史信息
+            </summary>
+            <param name="expertInfoHistory"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertInfoHistoryExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Experts.ExpertInfoHistory},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示专家历史信息查询结果
+            </summary>
+            <param name="resultList"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Experts.ExpertInfoHistoryExtension.GetExpertInfoHistoryQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            取得查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Performances.PerformanceAllocationQueryInformationExtension">
+            <summary>
+            绩效分配查询条件相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceAllocationQueryInformationExtension.GetPerformanceAllocationQueryInformation(System.Web.HttpRequest,Srims.Server.Business.Users.User)">
+            <summary>
+            取得绩效分配查询条件
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Common.OutsourcingUnitExtension">
+            <summary>
+            外协单位显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.OutsourcingUnitExtension.MoveOutsourcingFile(Srims.Server.Business.Common.Outsourcing,System.Web.HttpContext)">
+            <summary>
+            移动外协单位证书文件
+            </summary>
+            <param name="outsourcing"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.OutsourcingUnitExtension.ShowOutsourcingUnit(Srims.Server.Business.Common.Outsourcing,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示外协单位
+            </summary>
+            <param name="outsourcing"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.OutsourcingUnitExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Common.Outsourcing},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示外协单位查询结果
+            </summary>
+            <param name="outsourcingResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.OutsourcingUnitExtension.ShowAsOutsourcingSearchRecord(Srims.Server.Business.Common.Outsourcing,System.Web.HttpResponse)">
+            <summary>
+            显示筛选外协
+            </summary>
+            <param name="outsourcing"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.OutsourcingUnitExtension.ShowAsSearchRecord(System.Collections.Generic.IList{Srims.Server.Business.Common.Outsourcing},System.Web.HttpResponse)">
+            <summary>
+            显示筛选外协列表
+            </summary>
+            <param name="list"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.OutsourcingUnitExtension.GetOutsourcingUnit(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得request中外协单位
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Common.OutsourcingUnitExtension.GetOutsourcingUnitByID(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            根据ID取得外协单位
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Common.OutsourcingUnitExtension.GetOldOutsourcingUnit(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得新建的空Outsourcing或编辑之前旧的Outsourcing
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Users.UserQueryInformationExtension">
+            <summary>
+            用户查询相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserQueryInformationExtension.GetUserQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            用户查询条件的显示扩展
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Users.UserLoginLogExtension">
+            <summary>
+            用户登录记录扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserLoginLogExtension.Show(Srims.Server.Business.Users.UserLoginLog,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示用户登陆记录
+            </summary>
+            <param name="userLogin"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.VoucherQueryInformationExtension">
+            <summary>
+            凭单查询扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.VoucherQueryInformationExtension.GetVoucherQueryInformation(System.Web.HttpRequest,Srims.Server.Business.Users.User)">
+            <summary>
+            获得凭单查询信息
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.VoucherExtension">
+            <summary>
+            凭单扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.VoucherExtension.ShowVoucher(Srims.Server.Business.Fund.Voucher,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            凭单的显示扩展
+            </summary>
+            <param name="voucher"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.VoucherExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Fund.Voucher},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            凭单财务查询的显示扩展
+            </summary>
+            <param name="voucherQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.VoucherExtension.GetFinanceAllocatdVoucher(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            获得财务分配的凭单信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.VoucherExtension.GetVoucher(System.Web.HttpRequest,Srims.Server.Business.Users.User,System.Boolean,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得凭单（保存）
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <param name="isCorrect"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.VoucherExtension.GetOldVoucher(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Common.ViewExtension">
+            <summary>
+            视图的相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.ViewExtension.ShowView(Srims.Server.Business.Common.View,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            视图的现实扩展
+            </summary>
+            <param name="view"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.ViewExtension.GetView(System.Web.HttpRequest,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得视图
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Bases.BaseExtension">
+            <summary>
+            基地的相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Bases.BaseExtension.ShowBase(Srims.Server.Business.Bases.Base,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            基地列表扩展
+            </summary>
+            <param name="currentBase"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Bases.BaseExtension.ShowBaseForDropdownList(Srims.Server.Business.Bases.Base,System.Web.HttpResponse)">
+            <summary>
+            用于基地下拉表
+            </summary>
+            <param name="currentBase"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Bases.BaseExtension.GetBase(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得基地
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Bases.BaseExtension.GetOldEntity(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Users.PermissionExtension">
+            <summary>
+            权限扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Users.PermissionExtension.GetPermissions(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得权限
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Users.PermissionExtension.GetCollegeRelatedPermissions(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得学院相关权限
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Users.PermissionExtension.GetTemporaryAuthorizationPermissions(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得临时授权权限
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Performances.PerformanceVoucherStateHistoryExtension">
+            <summary>
+            绩效凭单状态历史扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceVoucherStateHistoryExtension.Show(Srims.Server.Business.Performances.PerformanceVoucherStateHistory,System.Web.HttpResponse)">
+            <summary>
+            显示
+            </summary>
+            <param name="performanceVoucherStateHistory"></param>
+            <param name="response"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Papers.MagazineOccupationExtension">
+            <summary>
+            杂志任职扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineOccupationExtension.GetQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            取得查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineOccupationExtension.ShowInfor(Srims.Server.Business.Papers.MagazineOccupation,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            杂志任职信息显示
+            </summary>
+            <param name="magazineOccupation"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineOccupationExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Papers.MagazineOccupation},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            杂志任职列表显示扩展
+            </summary>
+            <param name="result"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineOccupationExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Papers.MagazineOccupation},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            杂志任职列表显示扩展
+            </summary>
+            <param name="occcupationList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineOccupationExtension.GetMagazineOccupation(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得杂志任职信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.FundMemberExtension">
+            <summary>
+            经费成员的相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FundMemberExtension.Show(Srims.Server.Business.Fund.FundMember,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+             经费成员的显示扩展
+            </summary>
+            <param name="fundmember"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.FundAllocationStateHistoryExtension">
+            <summary>
+            经费分配状态历史的相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FundAllocationStateHistoryExtension.Show(Srims.Server.Business.Fund.FundAllocationStateHistory,System.Web.HttpResponse)">
+            <summary>
+            经费分配状态的显示扩展
+            </summary>
+            <param name="fundAllocationStateHistory"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FundAllocationStateHistoryExtension.GetCorrectFundAllocationHistory(System.Web.HttpRequest,Srims.Server.Business.Users.User,Srims.Server.Business.Fund.FundAllocation,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得经费分配状态历史（经费分配数据纠错时使用）
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <param name="fundAllocation"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.FundAllocationExtension">
+            <summary>
+            经费分配的显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FundAllocationExtension.ShowFundAllocation(Srims.Server.Business.Fund.FundAllocation,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            经费分配的显示扩展
+            </summary>
+            <param name="fundAllocation"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FundAllocationExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Fund.FundAllocation},Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User,System.Web.HttpResponse)">
+            <summary>
+            经费分配列表的显示扩展
+            </summary>
+            <param name="fundAllocationList"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FundAllocationExtension.Get(System.Web.HttpRequest,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得经费分配
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Documents.DocumentModelExtension">
+            <summary>
+            文档模型
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Documents.DocumentModelExtension.ShowDocumentModel(Srims.Server.Business.Documents.DocumentModel,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示项目类型文档模板
+            </summary>
+            <param name="documentModel"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Documents.DocumentModelExtension.Get(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得项目类型文档模板
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Common.SubjectSecondLevelQueryInformationExtension">
+            <summary>
+            二级学科代码查询条件相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SubjectSecondLevelQueryInformationExtension.GetSubjectSecondQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            二级学科代码查询扩展
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Common.EmailExtension">
+            <summary>
+            邮件的相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.EmailExtension.SendMail(System.Web.HttpRequest,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            发送邮件
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.EmailExtension.GetMailDetail(System.Web.HttpRequest)">
+            <summary>
+            取得发送邮件的细节
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Users.UserPermissionExtension">
+            <summary>
+            用户-权限记录扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserPermissionExtension.ShowUserPermission(Srims.Server.Business.Users.UserPermission,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示用户-权限记录
+            </summary>
+            <param name="userPermission"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserPermissionExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Users.UserPermission},System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示用户-权限记录
+            </summary>
+            <param name="list"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Stamps.StuffStampExtension">
+            <summary>
+            文件用印扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StuffStampExtension.ShowStuffStamp(Srims.Server.Business.Stamps.StuffStamp,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示文印材料章型
+            </summary>
+            <param name="stuffStamp"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StuffStampExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Stamps.StuffStamp},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示
+            </summary>
+            <param name="stampTypeList"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StuffStampExtension.GetStuffStamp(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得文件用印编辑信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StuffStampExtension.GetOldStuffStamp(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+             取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Patents.PatentQueryInformationExtension">
+            <summary>
+            专利查询信息扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentQueryInformationExtension.GetPatentQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            取得专利的查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentQueryInformationExtension.getPatentQueryInformation_Basic(System.Web.HttpRequest)">
+            <summary>
+            取得专利的基本查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentQueryInformationExtension.getPatentQueryInformation_Inventer(System.Web.HttpRequest)">
+            <summary>
+            取得专利的发明人查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentQueryInformationExtension.isSetQueryInformation(Srims.Server.Business.Patents.PatentQueryInformation_Basic)">
+            <summary>
+            判断基本查询信息是否不为空
+            </summary>
+            <param name="queryInformation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Patents.PatentQueryInformationExtension.isSetQueryInformation(Srims.Server.Business.Patents.PatentQueryInformation_Inventer)">
+            <summary>
+            判断发明人查询信息是否不为空
+            </summary>
+            <param name="queryInformation"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Papers.PaperExtension">
+            <summary>
+            论文扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperExtension.ShowPaper(Srims.Server.Business.Papers.Paper,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            论文显示
+            </summary>
+            <param name="paper"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Papers.Paper},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            论文查询的显示扩展
+            </summary>
+            <param name="paperQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperExtension.Show(System.Collections.Generic.List{Srims.Server.Business.Papers.Paper},Srims.Server.Business.Users.User,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示论文列表
+            </summary>
+            <param name="list"></param>
+            <param name="user"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperExtension.ShowPaperForExpert(Srims.Server.Business.Papers.Paper,Srims.Server.Business.Experts.Expert,Srims.Server.Business.Users.User,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示论文（专家）
+            </summary>
+            <param name="paper"></param>
+            <param name="expert"></param>
+            <param name="user"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperExtension.ShowForExpert(System.Collections.Generic.IList{Srims.Server.Business.Papers.Paper},Srims.Server.Business.Experts.Expert,Srims.Server.Business.Users.User,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示论文（专家）
+            </summary>
+            <param name="list"></param>
+            <param name="expert"></param>
+            <param name="user"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperExtension.GetPaper(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建或编辑的论文信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperExtension.GetOldPaper(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空Paper或者编辑之前的旧Paper
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.PaperExtension.GetIndexedTypeList(System.Web.HttpRequest)">
+            <summary>
+            取得编辑或新建的论文收录情况
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Documents.DocumentExtension">
+            <summary>
+            文档的显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Documents.DocumentExtension.ShowDocument(Srims.Server.Business.Documents.Document,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            文档的显示扩展
+            </summary>
+            <param name="document"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Documents.DocumentExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Documents.Document},System.Web.HttpResponse,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            文档列表的显示扩展
+            </summary>
+            <param name="documentList"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Documents.DocumentExtension.GetRequireDocuments(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得催缴文档列表
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Documents.DocumentExtension.GetDocument(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得文档
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Documents.DocumentExtension.GetDocumentById(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            根据documentId取得文档
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Common.SubjectFirstLevelQueryInformationExtension">
+            <summary>
+            一级学科查询相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SubjectFirstLevelQueryInformationExtension.GetSubjectFirstQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            一级学科查询条件显示扩展
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Common.SubjectExtension">
+            <summary>
+            学科相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SubjectExtension.ShowSubjectFirstLevel(Srims.Server.Business.Common.SubjectFirstLevel,System.Web.HttpResponse)">
+            <summary>
+            学科显示扩展
+            </summary>
+            <param name="subjectFirstLevel"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SubjectExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Common.SubjectFirstLevel},System.Web.HttpResponse)">
+             <summary>
+            一级学科列表显示扩展
+             </summary>
+             <param name="subjectFirstLevelList"></param>
+             <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SubjectExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Common.SubjectFirstLevel},System.Web.HttpResponse)">
+            <summary>
+            显示一级学科查询结果
+            </summary>
+            <param name="subjectfirstlevelResult">一级学科结果</param>
+            <param name="response">输出</param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SubjectExtension.ShowSubjectSecondLevel(Srims.Server.Business.Common.SubjectSecondLevel,System.Web.HttpResponse)">
+            <summary>
+            二级学科显示扩展
+            </summary>
+            <param name="subjectSecondLevel"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SubjectExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Common.SubjectSecondLevel},System.Web.HttpResponse)">
+            <summary>
+            二级学科列表显示扩展
+            </summary>
+            <param name="subjectSecondLevelList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SubjectExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Common.SubjectSecondLevel},System.Web.HttpResponse)">
+            <summary>
+            显示二级学科的查询结果
+            </summary>
+            <param name="subjectsecondlevelResult">二级学科结果</param>
+            <param name="response">输出</param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SubjectExtension.GetSubjectFirstLevel(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+             <summary>
+            取得一级学科
+             </summary> 
+             <param name="request"></param>
+             <param name="database"></param>
+             <param name="user"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SubjectExtension.GetOldSubjectFirstLevel(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SubjectExtension.GetOldSubjectSecondLevel(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Common.SubjectExtension.GetSubjectSecondLevel(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得二级学科
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.ProjectOutExtension">
+            <summary>
+            外协分配扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.ProjectOutExtension.ShowInfor(Srims.Server.Business.Fund.ProjectOut,System.Web.HttpResponse)">
+            <summary>
+            项目-外协列表的显示扩展
+            </summary>
+            <param name="projectout"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.ProjectOutExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Fund.ProjectOut},System.Web.HttpResponse)">
+            <summary>
+            外协分配的显示扩展
+            </summary>
+            <param name="projectOutList"></param>
+            <param name="response"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.ProjectOutExtension.GetProjectOuts(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            获得项目外协部分
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.WebServiceBase">
+            <summary>
+            WebService基类
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.WebServiceBase.GetToken">
+            <summary>
+            取得该次登陆令牌
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.WebServiceBase.GetUserLoginLog">
+            <summary>
+            取得当前用户登陆记录
+            </summary>
+            <returns>如果当前用户未登陆，返回空</returns>
+        </member>
+        <member name="P:Srims.Server.UI.WebServiceBase.Database">
+            <summary>
+            取得数据库访问
+            </summary>
+        </member>
+        <member name="P:Srims.Server.UI.WebServiceBase.UserIP">
+            <summary>
+            取得当前用户的IP
+            </summary>
+        </member>
+        <member name="P:Srims.Server.UI.WebServiceBase.User">
+            <summary>
+            取得当前登陆的用户，如果当前用户未登陆，返回空
+            </summary>
+        </member>
+        <member name="P:Srims.Server.UI.WebServiceBase.Request">
+            <summary>
+            取得当前的Http请求
+            </summary>
+        </member>
+        <member name="P:Srims.Server.UI.WebServiceBase.Response">
+            <summary>
+            取得当前的Http相应
+            </summary>
+        </member>
+        <member name="T:Srims.Server.UI.Type.ProjectTypeExtension">
+            <summary>
+            项目类别显示
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectTypeExtension.GetProjectTypeQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            取得查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectTypeExtension.ShowProjectType(Srims.Server.Business.Type.ProjectType,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示项目类别
+            </summary>
+            <param name="ProjectType"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectTypeExtension.ShowQueryResult(MIS.Common.Query.QueryResult{Srims.Server.Business.Type.ProjectType},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            项目类别查询的显示扩展
+            </summary>
+            <param name="projectTypeQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectTypeExtension.ShowProjectType(Srims.Server.Business.Type.ProjectType,System.Web.HttpResponse)">
+            <summary>
+            显示项目类别
+            </summary>
+            <param name="ProjectType"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectTypeExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectType},System.Web.HttpResponse)">
+            <summary>
+            显示项目类别列表
+            </summary>
+            <param name="ProjectTypeList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectTypeExtension.ShowTypeNodeData(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectType},Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            项目资助类型节点数据
+            </summary>
+            <param name="projectTypeList"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectTypeExtension.ShowAsTreeForPermissionShow(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectType},Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            显示项目类型节点（带查看权限）
+            </summary>
+            <param name="projectTypeList"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectTypeExtension.ShowAsTreeForPermissionEdit(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectType},Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+             显示项目类型节点（带编辑权限）
+            </summary>
+            <param name="projectTypeList"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectTypeExtension.ShowAsTreeForUserTemporaryAuthorization(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectType},System.Web.HttpResponse)">
+            <summary>
+            显示项目类型节点（临时授权）
+            </summary>
+            <param name="projectTypeList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectTypeExtension.GetProjectType(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得类型编辑信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectTypeExtension.GetOldProjectType(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+             取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Stamps.StampApplicationExtension">
+            <summary>
+            文印申请扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationExtension.ShowStampApplication(Srims.Server.Business.Stamps.StampApplication,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示文印
+            </summary>
+            <param name="stampApplication"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Stamps.StampApplication},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            文印查询的显示扩展
+            </summary>
+            <param name="stampApplicationQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationExtension.GetStampApplication(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得文印编辑信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationExtension.GetOldStampApplication(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Stamps.StampApplicationTypeQueryInformationExtension">
+            <summary>
+            文印查询信息扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationTypeQueryInformationExtension.GetStampApplicationTypeQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            取得文印查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Stamps.StampApplicationFirstAdminExtension">
+            <summary>
+            文印申请一级审核权限扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationFirstAdminExtension.ShowStampApplicationFirstAdmin(Srims.Server.Business.Stamps.StampApplicationFirstAdmin,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示
+            </summary>
+            <param name="stampApplication"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationFirstAdminExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Stamps.StampApplicationFirstAdmin},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示扩展
+            </summary>
+            <param name="stampApplicationQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationFirstAdminExtension.GetStampApplicationFirstAdmin(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得编辑信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampApplicationFirstAdminExtension.GetOldStampApplicationFirstAdmin(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+             取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Projects.ProjectQueryInformationExtension">
+            <summary>
+            项目查询相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Projects.ProjectQueryInformationExtension.GetProjectQueryInformation(System.Web.HttpRequest,Srims.Server.Business.Users.User)">
+            <summary>
+            取得项目查询条件
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Users.UserRoleExtension">
+            <summary>
+            用户角色扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserRoleExtension.ShowUserRole(Srims.Server.Business.Users.UserRole,System.Web.HttpResponse)">
+            <summary>
+            用户角色显示
+            </summary>
+            <param name="userRole"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserRoleExtension.ShowFilterUserRole(Srims.Server.Business.Users.UserRole,System.Web.HttpResponse)">
+            <summary>
+            用户角色显示
+            </summary>
+            <param name="userRole"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserRoleExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Users.UserRole},System.Web.HttpResponse)">
+            <summary>
+            用户角色显示
+            </summary>
+            <param name="userRoleList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserRoleExtension.ShowForFilter(System.Collections.Generic.IList{Srims.Server.Business.Users.UserRole},System.Web.HttpResponse)">
+            <summary>
+            用户角色显示
+            </summary>
+            <param name="userRoleList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Stamps.StampStateHistoryExtension">
+            <summary>
+            文印状态历史扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampStateHistoryExtension.Show(Srims.Server.Business.Stamps.StampStateHistory,System.Web.HttpResponse)">
+            <summary>
+            显示
+            </summary>
+            <param name="stampStateHistory"></param>
+            <param name="response"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Stamps.StampExtension">
+            <summary>
+            图章扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampExtension.Show(Srims.Server.Business.Stamps.Stamp,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示
+            </summary>
+            <param name="stamp"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Stamps.Stamp},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示
+            </summary>
+            <param name="stampList"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampExtension.Show(System.Collections.Generic.List{Srims.Server.Business.Stamps.Stamp},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase,System.Int32)">
+            <summary>
+            显示
+            </summary>
+            <param name="list"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <param name="stuffId"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampExtension.GetStamp(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得图章编辑信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StampExtension.GetOldStamp(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+             取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.MISExtension.IsEmptyOrNullExtension">
+            <summary>
+            判断是否为空的显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.IsEmptyOrNullExtension.IsEmptyOrNull(System.String)">
+            <summary>
+            判断字符串是否是null或者Empty
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.IsEmptyOrNullExtension.IsEmptyOrNull(System.Nullable{System.Boolean})">
+            <summary>
+            判断可空bool是否为空
+            </summary>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.IsEmptyOrNullExtension.IsEmptyOrNull(System.Nullable{System.Int32})">
+            <summary>
+            判断可空整形是否为空
+            </summary>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.IsEmptyOrNullExtension.IsEmptyOrNull(System.Array)">
+            <summary>
+            判断数组是否为Null或Empty
+            </summary>
+            <param name="array"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.MISExtension.IsEmptyOrNullExtension.IsEmptyOrNull``1(MIS.Common.Range{``0})">
+            <summary>
+            判断range是否为null或Empty
+            </summary>
+            <param name="range"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.VoucherOutExtension">
+            <summary>
+            外协分配扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.VoucherOutExtension.ShowInfor(Srims.Server.Business.Fund.VoucherOut,System.Web.HttpResponse)">
+            <summary>
+            外协分配列表的显示扩展
+            </summary>
+            <param name="voucherOut"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.VoucherOutExtension.ShowInforAllocation(Srims.Server.Business.Fund.ProjectOut,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示经费分配的外协 carlsirce2013.2.27
+            </summary>
+            <param name="voucherOut"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.VoucherOutExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Fund.VoucherOut},System.Web.HttpResponse)">
+            <summary>
+            外协分配的显示扩展
+            </summary>
+            <param name="voucherOutList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.VoucherOutExtension.ShowForAllcation(System.Collections.Generic.IList{Srims.Server.Business.Fund.ProjectOut},System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+             <summary>
+            显示经费分配的外协 carlsirce2013.2.27
+             </summary>
+             <param name="voucherOutList"></param>
+             <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.VoucherOutExtension.GetVoucherOuts(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            获得凭单外协部分
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Performances.PerformanceAllocationExtension">
+            <summary>
+            绩效分配显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceAllocationExtension.ShowPerformanceAllocation(Srims.Server.Business.Performances.PerformanceAllocation,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            经费分配的显示扩展
+            </summary>
+            <param name="performanceAllocation"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceAllocationExtension.Show(Srims.Server.Business.Performances.PerformanceAllocationQueryResult,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User,System.Web.HttpResponse)">
+            <summary>
+            经费分配列表的显示扩展
+            </summary>
+            <param name="fundAllocationList"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceAllocationExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Performances.PerformanceAllocation},Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User,System.Web.HttpResponse)">
+            <summary>
+            经费分配列表的显示扩展
+            </summary>
+            <param name="fundAllocationList"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <param name="response"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Common.NoticeTextExtension">
+            <summary>
+            提示文本相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.NoticeTextExtension.ShowNoticeText(Srims.Server.Business.Common.NoticeText,System.Web.HttpResponse)">
+            <summary>
+            提示文本显示扩展
+            </summary>
+            <param name="noticeText"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.NoticeTextExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Common.NoticeText},System.Web.HttpResponse)">
+            <summary>
+            提示文本列表显示扩展
+            </summary>
+            <param name="noticeTextList"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.NoticeTextExtension.ShowTreeNode(System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            提示文本书的显示扩展
+            </summary>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Common.AnnouncementExtension">
+            <summary>
+            通知的显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.AnnouncementExtension.ShowAnnouncement(Srims.Server.Business.Common.Announcement,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示通知
+            </summary>
+            <param name="announcement"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.AnnouncementExtension.ShowAvailableAnnouncement(Srims.Server.Business.Common.Announcement,System.Web.HttpResponse)">
+            <summary>
+            显示通知（登陆页面，不包含权限问题）
+            </summary>
+            <param name="announcement"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.AnnouncementExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Common.Announcement},System.Web.HttpResponse)">
+            <summary>
+            显示通知
+            </summary>
+            <param name="list">要显示的通知列表</param>
+            <param name="response">输出</param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.AnnouncementExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Common.Announcement},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+             显示通知查询结果
+            </summary>
+            <param name="announcementResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Common.AnnouncementExtension.GetAnnouncement(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得通知
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Common.AnnouncementExtension.GetAnnouncementById(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            根据ID取得通知
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Common.AnnouncementExtension.GetOldAnnouncement(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得新建的空Announcement或者编辑之前的旧Announcement
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.HttpExtension.TextResponseExtension">
+            <summary>
+            文本相应扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.HttpExtension.TextResponseExtension.Show(System.Boolean,System.Web.HttpResponse)">
+            <summary>
+            显示Bool类型
+            </summary>
+            <param name="value"></param>
+            <param name="response"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Performances.PerformanceQueryInformationExtension">
+            <summary>
+            绩效查询条件扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceQueryInformationExtension.GetPerformanceQueryInformation(System.Web.HttpRequest,Srims.Server.Business.Users.User)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Common.LogQueryInformationExtension">
+            <summary>
+            日志查询相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.LogQueryInformationExtension.GetLogQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            日志查询条件扩展
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Common.AnnouncementQueryInformationExtension">
+            <summary>
+            通知查询相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Common.AnnouncementQueryInformationExtension.GetAnnouncementQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            通知查询条件扩展
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Awards.AwardShowExtension">
+            <summary>
+            奖励的显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardShowExtension.ShowAward(Srims.Server.Business.Awards.Award,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示奖励
+            </summary>
+            <param name="award">要显示的奖励</param>
+            <param name="response">输出</param>
+            <param name="user">当前用户</param>
+            <param name="database">数据库</param>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardShowExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Awards.Award},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            奖励查询结果显示
+            </summary>
+            <param name="awardQueryResult"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardShowExtension.Show(System.Collections.Generic.List{Srims.Server.Business.Awards.Award},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            奖励列表显示
+            </summary>
+            <param name="list"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardShowExtension.ShowAwardForExpert(Srims.Server.Business.Awards.Award,Srims.Server.Business.Experts.Expert,Srims.Server.Business.Users.User,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示奖励（专家）
+            </summary>
+            <param name="award"></param>
+            <param name="expert"></param>
+            <param name="user"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardShowExtension.ShowForExpert(System.Collections.Generic.IList{Srims.Server.Business.Awards.Award},System.Web.HttpResponse,Srims.Server.Business.IDatabase,Srims.Server.Business.Experts.Expert,Srims.Server.Business.Users.User)">
+            <summary>
+            显示奖励（专家）
+            </summary>
+            <param name="list"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+            <param name="expert"></param>
+            <param name="user"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardShowExtension.GetAward(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            保存奖励时，取得该奖励
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardShowExtension.GetOldEntity(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Fund.FundDescendExtension">
+            <summary>
+            经费下拨的相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FundDescendExtension.ShowFundDescend(Srims.Server.Business.Fund.FundDescend,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            经费下拨的显示扩展
+            </summary>
+            <param name="fundDescend"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FundDescendExtension.GetFundDescend(System.Web.HttpRequest,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得经费下拨
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FundDescendExtension.GetOldFundDescend(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Performances.PerformanceExtension">
+            <summary>
+            绩效显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceExtension.ShowPerformance(Srims.Server.Business.Performances.Performance,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示绩效
+            </summary>
+            <param name="performance"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceExtension.Show(Srims.Server.Business.Performances.PerformanceQueryResult,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            绩效分配列表的显示扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Performances.Performance},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            单个绩效的显示扩展
+            </summary>
+            <param name="list"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceAllocationStateHistoryExtension.Show(Srims.Server.Business.Performances.PerformanceAllocationStateHistory,System.Web.HttpResponse)">
+            <summary>
+            绩效分配状态的显示扩展
+            </summary>
+            <param name="performanceStateHistory"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Performances.PerformanceAllocationStateHistoryExtension.GetCorrectFundAllocationHistory(System.Web.HttpRequest,Srims.Server.Business.Users.User,Srims.Server.Business.Performances.PerformanceAllocation,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得经费分配状态历史（经费分配数据纠错时使用）
+            </summary>
+            <param name="request"></param>
+            <param name="user"></param>
+            <param name="fundAllocation"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Users.UserExtension">
+            <summary>
+            用户扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserExtension.ShowUserRecord(Srims.Server.Business.Users.User,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示用户记录
+            </summary>
+            <param name="user"></param>
+            <param name="response"></param>
+            <param name="userLogin"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserExtension.ShowUser(Srims.Server.Business.Users.User,System.Web.HttpResponse,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示当前登陆用户
+            </summary>
+            <param name="user"></param>
+            <param name="response"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserExtension.ShowAsUserSearchRecord(Srims.Server.Business.Users.User,System.Web.HttpResponse)">
+            <summary>
+            显示查询用户
+            </summary>
+            <param name="user"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserExtension.ShowAsSearchRecord(System.Collections.Generic.IList{Srims.Server.Business.Users.User},System.Web.HttpResponse)">
+            <summary>
+            显示查询用户列表
+            </summary>
+            <param name="list"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserExtension.Show(MIS.Common.Query.QueryResult{Srims.Server.Business.Users.User},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示用户查询结果
+            </summary>
+            <param name="userQueryResult"></param>
+            <param name="response"></param>
+            <param name="userLogin"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserExtension.GetUser(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得用户
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserExtension.GetOldUser(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserExtension.GetUserForPermission(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得用户（用于编辑权限）
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Users.UserExtension.GetUserForCustomPermission(System.Web.HttpRequest,Srims.Server.Business.IDatabase)">
+            <summary>
+            取得用户（用于指定院系管理员）
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Type.ProjectSupportCategoryExtension">
+            <summary>
+            显示项目资助类别
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportCategoryExtension.ShowProjectSupportCategory(Srims.Server.Business.Type.ProjectSupportCategory,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示项目资助领域
+            </summary>
+            <param name="ProjectSupportCategory"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportCategoryExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectSupportCategory},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示项目资助领域列表
+            </summary>
+            <param name="ProjectSupportCategoryList"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportCategoryExtension.ShowSupportNode(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectSupportCategory},System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectSupportField},Srims.Server.Business.IDatabase,System.Web.HttpResponse,System.String)">
+            <summary>
+            项目资助节点
+            </summary>
+            <param name="projectSupportCategoryList"></param>
+            <param name="projectsupportFieldList"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+            <param name="typeName"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportCategoryExtension.ShowSupportCategoryNodeData(System.Collections.Generic.IList{Srims.Server.Business.Type.ProjectSupportCategory},Srims.Server.Business.IDatabase,System.Web.HttpResponse)">
+            <summary>
+            项目资助领域数据
+            </summary>
+            <param name="projectSupportCategoryList"></param>
+            <param name="database"></param>
+            <param name="response"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportCategoryExtension.GetProjectSupportCategory(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得资助类型编辑信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Type.ProjectSupportCategoryExtension.GetOldEntity(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+             取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Stamps.StuffExtension">
+            <summary>
+            文印材料扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StuffExtension.ShowStuff(Srims.Server.Business.Stamps.Stuff,System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示文印材料
+            </summary>
+            <param name="stampStuff"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StuffExtension.Show(System.Collections.Generic.IList{Srims.Server.Business.Stamps.Stuff},System.Web.HttpResponse,Srims.Server.Business.Users.User,Srims.Server.Business.IDatabase)">
+            <summary>
+            显示
+            </summary>
+            <param name="stampStuffList"></param>
+            <param name="response"></param>
+            <param name="user"></param>
+            <param name="database"></param>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StuffExtension.GetStuff(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得用印文件编辑信息
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Stamps.StuffExtension.GetOldStuff(System.Web.HttpRequest,Srims.Server.Business.IDatabase,Srims.Server.Business.Users.User)">
+            <summary>
+            取得新建的空实体或者编辑之前的旧实体
+            </summary>
+            <param name="request"></param>
+            <param name="database"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Srims.Server.UI.Papers.MagazineQueryInformationExtension">
+            <summary>
+            杂志查询信息扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineQueryInformationExtension.GetMagazineQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            取得杂志查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineQueryInformationExtension.getMagazineQueryInformation_Basic(System.Web.HttpRequest)">
+            <summary>
+            取得杂志基本查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineQueryInformationExtension.getMagazineQueryInformation_Infor(System.Web.HttpRequest)">
+            <summary>
+            取得杂志信息查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.MagazineQueryInformationExtension.getMagazineQueryInformation_SubjectClass(System.Web.HttpRequest)">
+            <summary>
+            取得杂志学科分类查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Papers.LiberalArtsPaperQueryInformationExtension.GetLiberalArtsPaperQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            取得论文查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>public
+        </member>
+        <member name="T:Srims.Server.UI.Fund.FundDescendStateHistoryExtension">
+            <summary>
+            经费下拨状态历史相关扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Fund.FundDescendStateHistoryExtension.Show(Srims.Server.Business.Fund.FundDescendStateHistory,System.Web.HttpResponse)">
+            <summary>
+            经费分配状态的显示扩展
+            </summary>
+            <param name="fundDescendStateHistory"></param>
+            <param name="response"></param>
+        </member>
+        <member name="T:Srims.Server.UI.Awards.AwardQueryInformationExtension">
+            <summary>
+            奖励查询信息扩展
+            </summary>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardQueryInformationExtension.GetAwardQueryInformation(System.Web.HttpRequest)">
+            <summary>
+            取得奖励的查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardQueryInformationExtension.getAwardQueryInformation_Basic(System.Web.HttpRequest)">
+            <summary>
+            取得奖励的基本查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardQueryInformationExtension.isSetQueryInformation(Srims.Server.Business.Awards.AwardQueryInformation_Basic)">
+            <summary>
+            判断基本查询信息是否不为空
+            </summary>
+            <param name="queryInformation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardQueryInformationExtension.getAwardQueryInformation_Winner(System.Web.HttpRequest)">
+            <summary>
+            取得奖励的获奖者查询信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Srims.Server.UI.Awards.AwardQueryInformationExtension.isSetQueryInformation(Srims.Server.Business.Awards.AwardQueryInformation_Winner)">
+            <summary>
+            判断获奖者查询信息是否不为空
+            </summary>
+            <param name="queryInformation"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

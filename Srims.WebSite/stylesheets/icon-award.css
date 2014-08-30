@@ -1,0 +1,23 @@
+﻿.icon-award, .icon-award-list, .icon-expert-my-award
+{
+	background-image: url(../images/icon/award.png) !important;
+}
+
+.icon-award-new
+{
+	background-image: url(../images/icon/award-new.png) !important;
+}
+
+.icon-award-query
+{
+	background-image: url(../images/icon/award-query.png) !important;
+}
+.icon-award-expert-match
+{
+	background-image: url(../images/icon/award-expert-match.png) !important;
+}
+.icon-award-document-manage
+{
+	background-image: url(../images/icon/document.png) !important;
+}
+

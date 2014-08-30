@@ -1,0 +1,1429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="SrimsV5PerformanceImport" xmlns="http://schemas.microsoft.com/linqtosql/mapping/2007">
+  <Table Name="dbo.AccountBookNumberCount" Member="AccountBookNumberCount">
+    <Type Name="Srims.Server.Business.Fund.AccountBookNumberCount">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="CharacterNumber" Member="CharacterNumber" Storage="_CharacterNumber" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Count" Member="Count" Storage="_Count" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Announcement" Member="Announcement">
+    <Type Name="Srims.Server.Business.Common.Announcement">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Title" Member="Title" Storage="_Title" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DateTime" Member="DateTime" Storage="_DateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="UserName" Member="UserName" Storage="_UserName" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Content" Member="Content" Storage="_Content" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="State" Member="State" Storage="_State" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Award" Member="Award">
+    <Type Name="Srims.Server.Business.Awards.Award">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Year" Member="Year" Storage="_Year" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Rank" Member="Rank" Storage="_Rank" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CollegeID" Member="CollegeID" Storage="_CollegeID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="FirstWinnerID" Member="FirstWinnerID" Storage="_FirstWinnerID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Class" Member="Class" Storage="_Class" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="AttendType" Member="AttendType" Storage="_AttendType" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Project" Member="Project" Storage="_Project" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Introduction" Member="Introduction" Storage="_Introduction" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="AuthorisedUnit" Member="AuthorisedUnit" Storage="_AuthorisedUnit" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="SubjectNature" Member="SubjectNature" Storage="_SubjectNature" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Classification" Member="Classification" Storage="_Classification" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="OldID" Member="OldID" Storage="_OldID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Award_Department" Member="College" Storage="_College" ThisKey="CollegeID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Award_FirstWinner" Member="FirstWinner" Storage="_FirstWinner" ThisKey="FirstWinnerID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_AwardDocument_Award" Member="AwardDocument" Storage="_AwardDocument" ThisKey="ID" OtherKey="AwardID" DeleteRule="NO ACTION" />
+      <Association Name="FK_AwardWinner_Award" Member="AwardWinner_Award" Storage="_AwardWinner_Award" ThisKey="ID" OtherKey="AwardID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AwardDocument" Member="AwardDocument">
+    <Type Name="Srims.Server.Business.Documents.AwardDocument">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="AwardID" Member="AwardID" Storage="_AwardID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="AuthorID" Member="AuthorID" Storage="_AuthorID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="SubmitDateTime" Member="SubmitDateTime" Storage="_SubmitDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="State" Member="State" Storage="_State" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Censor" Member="Censor" Storage="_Censor" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CensorDateTime" Member="CensorDateTime" Storage="_CensorDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="Resource" Member="Resource" Storage="_Resource" DbType="UniqueIdentifier NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_AwardDocument_Author" Member="Author" Storage="_Author" ThisKey="AuthorID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_AwardDocument_Award" Member="Award" Storage="_Award" ThisKey="AwardID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AwardWinner" Member="AwardWinner">
+    <Type Name="Srims.Server.Business.Awards.AwardWinner">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="AwardID" Member="AwardID" Storage="_AwardID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="ExpertID" Member="ExpertID" Storage="_ExpertID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Order" Member="Order" Storage="_Order" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Award_FirstWinner" Member="Award" Storage="_Award" ThisKey="ID" OtherKey="FirstWinnerID" DeleteRule="NO ACTION" />
+      <Association Name="FK_AwardWinner_Award" Member="Award" Storage="_Award" ThisKey="AwardID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_AwardWinner_Expert" Member="Expert" Storage="_Expert" ThisKey="ExpertID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Base" Member="Base">
+    <Type Name="Srims.Server.Business.Bases.Base">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Address" Member="Address" Storage="_Address" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Zip" Member="Zip" Storage="_Zip" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Phone" Member="Phone" Storage="_Phone" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Fax" Member="Fax" Storage="_Fax" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Administration" Member="Administration" Storage="_Administration" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Rank" Member="Rank" Storage="_Rank" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="DirectorID" Member="DirectorID" Storage="_DirectorID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="DirectorName" Member="DirectorName" Storage="_DirectorName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="AcademyDirectorID" Member="AcademyDirectorID" Storage="_AcademyDirectorID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="AcademyDirectorName" Member="AcademyDirectorName" Storage="_AcademyDirectorName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Base_AcademyDirector" Member="AcademyDirector" Storage="_AcademyDirector" ThisKey="AcademyDirectorID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Base_Director" Member="Director" Storage="_Director" ThisKey="DirectorID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Project_Base" Member="Project" Storage="_Project" ThisKey="ID" OtherKey="BaseID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contract" Member="Contract">
+    <Type Name="Srims.Server.Business.Documents.Contract">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectID" Member="ProjectID" Storage="_ProjectID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="ContractNumber" Member="ContractNumber" Storage="_ContractNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Type" Member="Type" Storage="_Type" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Author" Member="Author" Storage="_Author" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="SubmitDateTime" Member="SubmitDateTime" Storage="_SubmitDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="State" Member="State" Storage="_State" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Censor" Member="Censor" Storage="_Censor" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CensorDateTime" Member="CensorDateTime" Storage="_CensorDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="ContractResource" Member="ContractResource" Storage="_ContractResource" DbType="UniqueIdentifier" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Contract_Project" Member="Project" Storage="_Project" ThisKey="ProjectID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Count" Member="Count">
+    <Type Name="Srims.Server.Business.Common.Count">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Year" Member="Year" Storage="_Year" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="HorizontalProject" Member="HorizontalProject" Storage="_HorizontalProject" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Contract" Member="Contract" Storage="_Contract" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="ExpertSerialCodeCount" Member="ExpertSerialCodeCount" Storage="_ExpertSerialCodeCount" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Department" Member="Department">
+    <Type Name="Srims.Server.Business.Experts.Department">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="NameSpell" Member="NameSpell" Storage="_NameSpell" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ShortName" Member="ShortName" Storage="_ShortName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Code" Member="Code" Storage="_Code" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IsCollege" Member="IsCollege" Storage="_IsCollege" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Award_Department" Member="Award" Storage="_Award" ThisKey="ID" OtherKey="CollegeID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Expert_College" Member="Expert" Storage="_Expert" ThisKey="ID" OtherKey="CollegeID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Expert_College2" Member="Expert_College2" Storage="_Expert_College2" ThisKey="ID" OtherKey="College2ID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Expert_Department" Member="Expert_Department" Storage="_Expert_Department" ThisKey="ID" OtherKey="DepartmentID" DeleteRule="NO ACTION" />
+      <Association Name="FK_LiberalArtsPaper_Department" Member="LiberalArtsPaper" Storage="_LiberalArtsPaper" ThisKey="ID" OtherKey="CollegeID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Paper_College" Member="Paper" Storage="_Paper" ThisKey="ID" OtherKey="CollegeID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Patent_College" Member="Patent" Storage="_Patent" ThisKey="ID" OtherKey="CollegeID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Document" Member="Document">
+    <Type Name="Srims.Server.Business.Documents.Document">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectID" Member="ProjectID" Storage="_ProjectID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Author" Member="Author" Storage="_Author" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="SubmitDateTime" Member="SubmitDateTime" Storage="_SubmitDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="Deadline" Member="Deadline" Storage="_Deadline" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="State" Member="State" Storage="_State" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Censor" Member="Censor" Storage="_Censor" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CensorDateTime" Member="CensorDateTime" Storage="_CensorDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="IsRequire" Member="IsRequire" Storage="_IsRequire" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="DocumentResource" Member="DocumentResource" Storage="_DocumentResource" DbType="UniqueIdentifier" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Document_Project" Member="Project" Storage="_Project" ThisKey="ProjectID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DocumentModel" Member="DocumentModel">
+    <Type Name="Srims.Server.Business.Documents.DocumentModel">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectTypeID" Member="ProjectTypeID" Storage="_ProjectTypeID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Resource" Member="Resource" Storage="_Resource" DbType="UniqueIdentifier NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_DocumentModel_ProjectType" Member="ProjectType" Storage="_ProjectType" ThisKey="ProjectTypeID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Event" Member="Event">
+    <Type Name="Srims.Server.Business.Common.Event">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Guid" Member="Guid" Storage="_Guid" DbType="UniqueIdentifier NOT NULL" UpdateCheck="Never" />
+      <Column Name="Type" Member="Type" Storage="_Type" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Parameter" Member="Parameter" Storage="_Parameter" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CreateUser" Member="CreateUser" Storage="_CreateUser" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CreateDateTime" Member="CreateDateTime" Storage="_CreateDateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsComplete" Member="IsComplete" Storage="_IsComplete" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="CompleteUser" Member="CompleteUser" Storage="_CompleteUser" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CompleteDateTime" Member="CompleteDateTime" Storage="_CompleteDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="Description" Member="Description" Storage="_Description" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Expert" Member="Expert">
+    <Type Name="Srims.Server.Business.Experts.Expert">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="UserID" Member="UserID" Storage="_UserID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Number" Member="Number" Storage="_Number" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="NameSpell" Member="NameSpell" Storage="_NameSpell" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Sex" Member="Sex" Storage="_Sex" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Birthday" Member="Birthday" Storage="_Birthday" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="Nation" Member="Nation" Storage="_Nation" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Policy" Member="Policy" Storage="_Policy" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="MajorCodeID" Member="MajorCodeID" Storage="_MajorCodeID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="IDCardNumber" Member="IDCardNumber" Storage="_IDCardNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="ComeDate" Member="ComeDate" Storage="_ComeDate" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="FileNumber" Member="FileNumber" Storage="_FileNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="AcademyDegree" Member="AcademyDegree" Storage="_AcademyDegree" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="PostOld" Member="PostOld" Storage="_PostOld" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="PostNew" Member="PostNew" Storage="_PostNew" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="PostLevel" Member="PostLevel" Storage="_PostLevel" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Occupation" Member="Occupation" Storage="_Occupation" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="VocationLevel" Member="VocationLevel" Storage="_VocationLevel" DbType="Int" UpdateCheck="Never" />
+      <Column Name="IsDoctorDirector" Member="IsDoctorDirector" Storage="_IsDoctorDirector" DbType="Bit" UpdateCheck="Never" />
+      <Column Name="IsOnjob" Member="IsOnjob" Storage="_IsOnjob" DbType="Bit" UpdateCheck="Never" />
+      <Column Name="IsChinese" Member="IsChinese" Storage="_IsChinese" DbType="Bit" UpdateCheck="Never" />
+      <Column Name="MobilePhone" Member="MobilePhone" Storage="_MobilePhone" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="OfficePhone" Member="OfficePhone" Storage="_OfficePhone" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="HomePhone" Member="HomePhone" Storage="_HomePhone" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Fax" Member="Fax" Storage="_Fax" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Address" Member="Address" Storage="_Address" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Zip" Member="Zip" Storage="_Zip" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Email" Member="Email" Storage="_Email" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CollegeID" Member="CollegeID" Storage="_CollegeID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="DepartmentID" Member="DepartmentID" Storage="_DepartmentID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Specialty" Member="Specialty" Storage="_Specialty" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Photo" Member="Photo" Storage="_Photo" DbType="UniqueIdentifier" UpdateCheck="Never" />
+      <Column Name="ResearchCode1ID" Member="ResearchCode1ID" Storage="_ResearchCode1ID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="ResearchCode2ID" Member="ResearchCode2ID" Storage="_ResearchCode2ID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="ResearchCode3ID" Member="ResearchCode3ID" Storage="_ResearchCode3ID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Language1" Member="Language1" Storage="_Language1" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="LanguageLevel1" Member="LanguageLevel1" Storage="_LanguageLevel1" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Language2" Member="Language2" Storage="_Language2" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="LanguageLevel2" Member="LanguageLevel2" Storage="_LanguageLevel2" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="SocietyPost" Member="SocietyPost" Storage="_SocietyPost" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="WorkExperience" Member="WorkExperience" Storage="_WorkExperience" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="ResearchExperience" Member="ResearchExperience" Storage="_ResearchExperience" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="IsAgreeLicence" Member="IsAgreeLicence" Storage="_IsAgreeLicence" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="AgreeLicenceDateTime" Member="AgreeLicenceDateTime" Storage="_AgreeLicenceDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="AgreeLicenceIP" Member="AgreeLicenceIP" Storage="_AgreeLicenceIP" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="IsDeleted" Member="IsDeleted" Storage="_IsDeleted" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="College2ID" Member="College2ID" Storage="_College2ID" DbType="Int" UpdateCheck="Never" />
+      <Association Name="FK_AwardWinner_Expert" Member="AwardWinner" Storage="_AwardWinner" ThisKey="ID" OtherKey="ExpertID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Base_AcademyDirector" Member="Base" Storage="_Base" ThisKey="ID" OtherKey="AcademyDirectorID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Base_Director" Member="Base_Director" Storage="_Base_Director" ThisKey="ID" OtherKey="DirectorID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Expert_College" Member="College" Storage="_College" ThisKey="CollegeID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Expert_College2" Member="College2" Storage="_College2" ThisKey="College2ID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Expert_Department" Member="Department" Storage="_Department" ThisKey="DepartmentID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Expert_MajorCode" Member="MajorCode" Storage="_MajorCode" ThisKey="MajorCodeID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Expert_ResearchCode1" Member="ResearchCode1" Storage="_ResearchCode1" ThisKey="ResearchCode1ID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Expert_ResearchCode2" Member="ResearchCode2" Storage="_ResearchCode2" ThisKey="ResearchCode2ID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Expert_ResearchCode3" Member="ResearchCode3" Storage="_ResearchCode3" ThisKey="ResearchCode3ID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Expert_User" Member="User" Storage="_User" ThisKey="UserID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_ExpertAchieveStatistic_Expert" Member="ExpertAchieveStatistic" Storage="_ExpertAchieveStatistic" ThisKey="ID" OtherKey="ExpertID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ExpertInfoHistory_Expert" Member="ExpertInfoHistory" Storage="_ExpertInfoHistory" ThisKey="ID" OtherKey="ExpertID" DeleteRule="NO ACTION" />
+      <Association Name="FK_FundMember_Expert" Member="FundMember" Storage="_FundMember" ThisKey="ID" OtherKey="ExpertID" DeleteRule="NO ACTION" />
+      <Association Name="FK_LiberalArtsPaperAuthor_Expert" Member="LiberalArtsPaperAuthor" Storage="_LiberalArtsPaperAuthor" ThisKey="ID" OtherKey="ExpertID" DeleteRule="NO ACTION" />
+      <Association Name="FK_MagazineOccupation_Expert" Member="MagazineOccupation" Storage="_MagazineOccupation" ThisKey="ID" OtherKey="ExpertID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Outsourcing_Expert" Member="Outsourcing" Storage="_Outsourcing" ThisKey="ID" OtherKey="AdderID" DeleteRule="NO ACTION" />
+      <Association Name="FK_PaperAuthor_Expert" Member="PaperAuthor" Storage="_PaperAuthor" ThisKey="ID" OtherKey="ExpertID" DeleteRule="NO ACTION" />
+      <Association Name="FK_PatentInventer_Expert" Member="PatentInventer" Storage="_PatentInventer" ThisKey="ID" OtherKey="ExpertID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Project_Principal" Member="Project" Storage="_Project" ThisKey="ID" OtherKey="PrincipalID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Project_PrincipalDelegate" Member="Project_PrincipalDelegate" Storage="_Project_PrincipalDelegate" ThisKey="ID" OtherKey="PrincipalDelegateID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Project_PrincipalQuality" Member="Project_PrincipalQuality" Storage="_Project_PrincipalQuality" ThisKey="ID" OtherKey="PrincipalQualityID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectMember_Expert" Member="ProjectMember" Storage="_ProjectMember" ThisKey="ID" OtherKey="ExpertID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectQualityPrincipal_Expert" Member="ProjectQualityPrincipal" Storage="_ProjectQualityPrincipal" ThisKey="ID" OtherKey="ExpertID" DeleteRule="NO ACTION" />
+      <Association Name="FK_StampApplication_Principal" Member="StampApplication" Storage="_StampApplication" ThisKey="ID" OtherKey="PrincipalID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExpertAchieveStatistic" Member="ExpertAchieveStatistic">
+    <Type Name="Srims.Server.Business.Experts.ExpertAchieveStatistic">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ExpertID" Member="ExpertID" Storage="_ExpertID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="FundTotal" Member="FundTotal" Storage="_FundTotal" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="ProjectCount" Member="ProjectCount" Storage="_ProjectCount" DbType="Int" UpdateCheck="Never" />
+      <Column Name="PaperCount" Member="PaperCount" Storage="_PaperCount" DbType="Int" UpdateCheck="Never" />
+      <Column Name="PatentCount" Member="PatentCount" Storage="_PatentCount" DbType="Int" UpdateCheck="Never" />
+      <Column Name="AwardCount" Member="AwardCount" Storage="_AwardCount" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_ExpertAchieveStatistic_Expert" Member="Expert" Storage="_Expert" ThisKey="ExpertID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExpertInfoHistory" Member="ExpertInfoHistory">
+    <Type Name="Srims.Server.Business.Experts.ExpertInfoHistory">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ExpertID" Member="ExpertID" Storage="_ExpertID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="PropertyName" Member="PropertyName" Storage="_PropertyName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="PropertyValueType" Member="PropertyValueType" Storage="_PropertyValueType" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="PropertyStringValue" Member="PropertyStringValue" Storage="_PropertyStringValue" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="PropertyIntValue" Member="PropertyIntValue" Storage="_PropertyIntValue" DbType="Int" UpdateCheck="Never" />
+      <Column Name="PropertyDateTimeValue" Member="PropertyDateTimeValue" Storage="_PropertyDateTimeValue" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="PropertyGuildValue" Member="PropertyGuildValue" Storage="_PropertyGuildValue" DbType="UniqueIdentifier" UpdateCheck="Never" />
+      <Column Name="PropertyBooleanValue" Member="PropertyBooleanValue" Storage="_PropertyBooleanValue" DbType="Bit" UpdateCheck="Never" />
+      <Column Name="PropertyLongStringValue" Member="PropertyLongStringValue" Storage="_PropertyLongStringValue" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="SubmitTime" Member="SubmitTime" Storage="_SubmitTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="SubmitOperator" Member="SubmitOperator" Storage="_SubmitOperator" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CensorTime" Member="CensorTime" Storage="_CensorTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="CensorOperator" Member="CensorOperator" Storage="_CensorOperator" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CensorState" Member="CensorState" Storage="_CensorState" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_ExpertInfoHistory_Expert" Member="Expert" Storage="_Expert" ThisKey="ExpertID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Finance" Member="Finance">
+    <Type Name="Srims.Server.Business.Fund.Finance">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Abstract" Member="Abstract" Storage="_Abstract" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="ReceivedDate" Member="ReceivedDate" Storage="_ReceivedDate" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="VoucherNumber" Member="VoucherNumber" Storage="_VoucherNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Amount" Member="Amount" Storage="_Amount" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="DescendAmount" Member="DescendAmount" Storage="_DescendAmount" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsInvoiced" Member="IsInvoiced" Storage="_IsInvoiced" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="InvoiceType" Member="InvoiceType" Storage="_InvoiceType" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="InvoiceNumber" Member="InvoiceNumber" Storage="_InvoiceNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="InvoiceTime" Member="InvoiceTime" Storage="_InvoiceTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="OldID" Member="OldID" Storage="_OldID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Remarks" Member="Remarks" Storage="_Remarks" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_FinanceFundDescend_Finance" Member="FinanceFundDescend" Storage="_FinanceFundDescend" ThisKey="ID" OtherKey="FinanceID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FinanceBak" Member="FinanceBak">
+    <Type Name="Srims.Server.Business.Fund.FinanceBak">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Abstract" Member="Abstract" Storage="_Abstract" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="ReceivedDate" Member="ReceivedDate" Storage="_ReceivedDate" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="VoucherNumber" Member="VoucherNumber" Storage="_VoucherNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Amount" Member="Amount" Storage="_Amount" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="Remarks" Member="Remarks" Storage="_Remarks" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FinanceFundDescend" Member="FinanceFundDescend">
+    <Type Name="Srims.Server.Business.Fund.FinanceFundDescend">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="FinanceID" Member="FinanceID" Storage="_FinanceID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="FundDescendID" Member="FundDescendID" Storage="_FundDescendID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Amount" Member="Amount" Storage="_Amount" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsReturn" Member="IsReturn" Storage="_IsReturn" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="OperateDateTime" Member="OperateDateTime" Storage="_OperateDateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="Operator" Member="Operator" Storage="_Operator" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_FinanceFundDescend_Finance" Member="Finance" Storage="_Finance" ThisKey="FinanceID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_FinanceFundDescend_FundDescend" Member="FundDescend" Storage="_FundDescend" ThisKey="FundDescendID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FundAllocation" Member="FundAllocation">
+    <Type Name="Srims.Server.Business.Fund.FundAllocation">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="FundDescendID" Member="FundDescendID" Storage="_FundDescendID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="AllocationIn" Member="AllocationIn" Storage="_AllocationIn" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="AllocationOut" Member="AllocationOut" Storage="_AllocationOut" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="AllocationHardware" Member="AllocationHardware" Storage="_AllocationHardware" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="OverheadExpensesIn" Member="OverheadExpensesIn" Storage="_OverheadExpensesIn" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="OverheadExpensesOut" Member="OverheadExpensesOut" Storage="_OverheadExpensesOut" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="CurrentStateID" Member="CurrentStateID" Storage="_CurrentStateID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="OldID" Member="OldID" Storage="_OldID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="PerformancePay" Member="PerformancePay" Storage="_PerformancePay" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="OverheadPerformancePay" Member="OverheadPerformancePay" Storage="_OverheadPerformancePay" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="AllocationWantOut" Member="AllocationWantOut" Storage="_AllocationWantOut" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="OverheadExpensesMiddle" Member="OverheadExpensesMiddle" Storage="_OverheadExpensesMiddle" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="OverheadExpensesExpert" Member="OverheadExpensesExpert" Storage="_OverheadExpensesExpert" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Association Name="FK_FundAllocation_CurrentState" Member="CurrentState" Storage="_CurrentState" ThisKey="CurrentStateID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_FundAllocation_FundDescend" Member="FundDescend" Storage="_FundDescend" ThisKey="FundDescendID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_FundAllocationStateHistory_FundAllocation" Member="FundAllocationStateHistory_FundAllocation" Storage="_FundAllocationStateHistory_FundAllocation" ThisKey="ID" OtherKey="FundAllocationID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Performance_FundAllocation" Member="Performance" Storage="_Performance" ThisKey="ID" OtherKey="FundAllocationID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Voucher_FundAllocation" Member="Voucher" Storage="_Voucher" ThisKey="ID" OtherKey="FundAllocationID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FundAllocationStateHistory" Member="FundAllocationStateHistory">
+    <Type Name="Srims.Server.Business.Fund.FundAllocationStateHistory">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="FundAllocationID" Member="FundAllocationID" Storage="_FundAllocationID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="State" Member="State" Storage="_State" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Operator" Member="Operator" Storage="_Operator" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="DateTime" Member="DateTime" Storage="_DateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_FundAllocation_CurrentState" Member="FundAllocation" Storage="_FundAllocation" ThisKey="ID" OtherKey="CurrentStateID" DeleteRule="NO ACTION" />
+      <Association Name="FK_FundAllocationStateHistory_FundAllocation" Member="FundAllocation" Storage="_FundAllocation" ThisKey="FundAllocationID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FundDescend" Member="FundDescend">
+    <Type Name="Srims.Server.Business.Fund.FundDescend">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectInfo_FundID" Member="ProjectInfo_FundID" Storage="_ProjectInfo_FundID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="DescendDateTime" Member="DescendDateTime" Storage="_DescendDateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="Amount" Member="Amount" Storage="_Amount" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="ReceivedAmount" Member="ReceivedAmount" Storage="_ReceivedAmount" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="Operator" Member="Operator" Storage="_Operator" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CurrentStateID" Member="CurrentStateID" Storage="_CurrentStateID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="OldID" Member="OldID" Storage="_OldID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_FinanceFundDescend_FundDescend" Member="FinanceFundDescend" Storage="_FinanceFundDescend" ThisKey="ID" OtherKey="FundDescendID" DeleteRule="NO ACTION" />
+      <Association Name="FK_FundAllocation_FundDescend" Member="FundAllocation" Storage="_FundAllocation" ThisKey="ID" OtherKey="FundDescendID" DeleteRule="NO ACTION" />
+      <Association Name="FK_FundDescend_CurrentState" Member="CurrentState" Storage="_CurrentState" ThisKey="CurrentStateID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_FundDescend_ProjectInfo_Fund" Member="ProjectInfo_Fund" Storage="_ProjectInfo_Fund" ThisKey="ProjectInfo_FundID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_FundDescendStateHistory_FundDescend" Member="FundDescendStateHistory_FundDescend" Storage="_FundDescendStateHistory_FundDescend" ThisKey="ID" OtherKey="FundDescendID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FundDescendStateHistory" Member="FundDescendStateHistory">
+    <Type Name="Srims.Server.Business.Fund.FundDescendStateHistory">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="FundDescendID" Member="FundDescendID" Storage="_FundDescendID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="State" Member="State" Storage="_State" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Operator" Member="Operator" Storage="_Operator" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="DateTime" Member="DateTime" Storage="_DateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_FundDescend_CurrentState" Member="FundDescend" Storage="_FundDescend" ThisKey="ID" OtherKey="CurrentStateID" DeleteRule="NO ACTION" />
+      <Association Name="FK_FundDescendStateHistory_FundDescend" Member="FundDescend" Storage="_FundDescend" ThisKey="FundDescendID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FundMember" Member="FundMember">
+    <Type Name="Srims.Server.Business.Fund.FundMember">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectInfo_FundID" Member="ProjectInfo_FundID" Storage="_ProjectInfo_FundID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="ExpertID" Member="ExpertID" Storage="_ExpertID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="AccountBookNumber" Member="AccountBookNumber" Storage="_AccountBookNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="OldID" Member="OldID" Storage="_OldID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="IsExpertSecondCollege" Member="IsExpertSecondCollege" Storage="_IsExpertSecondCollege" DbType="Bit" UpdateCheck="Never" />
+      <Association Name="FK_FundMember_Expert" Member="Expert" Storage="_Expert" ThisKey="ExpertID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_FundMember_ProjectInfo_Fund" Member="ProjectInfo_Fund" Storage="_ProjectInfo_Fund" ThisKey="ProjectInfo_FundID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_PerformanceVoucher_FundMember" Member="PerformanceVoucher" Storage="_PerformanceVoucher" ThisKey="ID" OtherKey="FundMemberID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Voucher_FundMember" Member="Voucher" Storage="_Voucher" ThisKey="ID" OtherKey="FundMemberID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LiberalArtsPaper" Member="LiberalArtsPaper">
+    <Type Name="Srims.Server.Business.Papers.LiberalArtsPaper">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="PublishDateYear" Member="PublishDateYear" Storage="_PublishDateYear" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="SerialNumbe" Member="SerialNumbe" Storage="_SerialNumbe" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="ResultsName" Member="ResultsName" Storage="_ResultsName" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Type" Member="Type" Storage="_Type" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="EnglishName" Member="EnglishName" Storage="_EnglishName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="ResultsForm" Member="ResultsForm" Storage="_ResultsForm" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Fund" Member="Fund" Storage="_Fund" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Publisher" Member="Publisher" Storage="_Publisher" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ISSN" Member="ISSN" Storage="_ISSN" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="FirstOrganization" Member="FirstOrganization" Storage="_FirstOrganization" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="OurSchoolSignRank" Member="OurSchoolSignRank" Storage="_OurSchoolSignRank" DbType="Int" UpdateCheck="Never" />
+      <Column Name="OrganizationName" Member="OrganizationName" Storage="_OrganizationName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Region" Member="Region" Storage="_Region" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="SubjectClass" Member="SubjectClass" Storage="_SubjectClass" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CollegeID" Member="CollegeID" Storage="_CollegeID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="CODEN" Member="CODEN" Storage="_CODEN" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="IssuesDate" Member="IssuesDate" Storage="_IssuesDate" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="KeyWord" Member="KeyWord" Storage="_KeyWord" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Mark" Member="Mark" Storage="_Mark" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="DegreeType" Member="DegreeType" Storage="_DegreeType" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="FundType" Member="FundType" Storage="_FundType" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="References" Member="References" Storage="_References" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="CiteTime" Member="CiteTime" Storage="_CiteTime" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="Degree" Member="Degree" Storage="_Degree" DbType="NChar(255)" UpdateCheck="Never" />
+      <Association Name="FK_LiberalArtsPaper_Department" Member="College" Storage="_College" ThisKey="CollegeID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_LiberalArtsPaperAuthor_LiberalArtsPaper" Member="LiberalArtsPaperAuthor" Storage="_LiberalArtsPaperAuthor" ThisKey="ID" OtherKey="LiberalArtsPaperID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LiberalArtsPaperAuthor" Member="LiberalArtsPaperAuthor">
+    <Type Name="Srims.Server.Business.Papers.LiberalArtsPaperAuthor">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="LiberalArtsPaperID" Member="LiberalArtsPaperID" Storage="_LiberalArtsPaperID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="ExpertID" Member="ExpertID" Storage="_ExpertID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="EnglishName" Member="EnglishName" Storage="_EnglishName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Order" Member="Order" Storage="_Order" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsLinkMan" Member="IsLinkMan" Storage="_IsLinkMan" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_LiberalArtsPaperAuthor_Expert" Member="Expert" Storage="_Expert" ThisKey="ExpertID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_LiberalArtsPaperAuthor_LiberalArtsPaper" Member="LiberalArtsPaper" Storage="_LiberalArtsPaper" ThisKey="LiberalArtsPaperID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Log" Member="Log">
+    <Type Name="Srims.Server.Business.Common.Log">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="DateTime" Member="DateTime" Storage="_DateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="User" Member="User" Storage="_User" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="UserIP" Member="UserIP" Storage="_UserIP" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Action" Member="Action" Storage="_Action" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Description" Member="Description" Storage="_Description" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Magazine" Member="Magazine">
+    <Type Name="Srims.Server.Business.Papers.Magazine">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="FullName" Member="FullName" Storage="_FullName" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ShortName" Member="ShortName" Storage="_ShortName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="ISSN" Member="ISSN" Storage="_ISSN" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="SubjectRank" Member="SubjectRank" Storage="_SubjectRank" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="PublishType" Member="PublishType" Storage="_PublishType" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Language" Member="Language" Storage="_Language" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="PublishCompany" Member="PublishCompany" Storage="_PublishCompany" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="PublishCompanyAddress" Member="PublishCompanyAddress" Storage="_PublishCompanyAddress" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="PublishCompanyCity" Member="PublishCompanyCity" Storage="_PublishCompanyCity" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="IsDelete" Member="IsDelete" Storage="_IsDelete" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_MagazineInformation_Magazine" Member="MagazineInformation" Storage="_MagazineInformation" ThisKey="ID" OtherKey="MagazineID" DeleteRule="NO ACTION" />
+      <Association Name="FK_MagazineOccupation_Magazine" Member="MagazineOccupation" Storage="_MagazineOccupation" ThisKey="ID" OtherKey="MagazineID" DeleteRule="NO ACTION" />
+      <Association Name="FK_MagazineSubjectClass_Magazine" Member="MagazineSubjectClass" Storage="_MagazineSubjectClass" ThisKey="ID" OtherKey="MagazineID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Paper_Magazine" Member="Paper" Storage="_Paper" ThisKey="ID" OtherKey="MagazineID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MagazineInformation" Member="MagazineInformation">
+    <Type Name="Srims.Server.Business.Papers.MagazineInformation">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="MagazineID" Member="MagazineID" Storage="_MagazineID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Year" Member="Year" Storage="_Year" DbType="Int" UpdateCheck="Never" />
+      <Column Name="SubAirer" Member="SubAirer" Storage="_SubAirer" DbType="Int" UpdateCheck="Never" />
+      <Column Name="InfluenceFactor" Member="InfluenceFactor" Storage="_InfluenceFactor" DbType="Int" UpdateCheck="Never" />
+      <Column Name="CiteFrequency" Member="CiteFrequency" Storage="_CiteFrequency" DbType="Int" UpdateCheck="Never" />
+      <Column Name="InstantExponent" Member="InstantExponent" Storage="_InstantExponent" DbType="Int" UpdateCheck="Never" />
+      <Column Name="PaperCount" Member="PaperCount" Storage="_PaperCount" DbType="Int" UpdateCheck="Never" />
+      <Column Name="CiteHalfLife" Member="CiteHalfLife" Storage="_CiteHalfLife" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_MagazineInformation_Magazine" Member="Magazine" Storage="_Magazine" ThisKey="MagazineID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MagazineOccupation" Member="MagazineOccupation">
+    <Type Name="Srims.Server.Business.Papers.MagazineOccupation">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" AutoSync="OnInsert" />
+      <Column Name="MagazineID" Member="MagazineID" Storage="_MagazineID" DbType="Int NOT NULL" />
+      <Column Name="ExpertID" Member="ExpertID" Storage="_ExpertID" DbType="Int NOT NULL" />
+      <Column Name="Occupation" Member="Occupation" Storage="_Occupation" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="EngageStartYear" Member="EngageStartYear" Storage="_EngageStartYear" DbType="Int" />
+      <Column Name="EngageEndYear" Member="EngageEndYear" Storage="_EngageEndYear" DbType="NVarChar(255)" />
+      <Association Name="FK_MagazineOccupation_Expert" Member="Expert" Storage="_Expert" ThisKey="ExpertID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_MagazineOccupation_Magazine" Member="Magazine" Storage="_Magazine" ThisKey="MagazineID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MagazineSubjectClass" Member="MagazineSubjectClass">
+    <Type Name="Srims.Server.Business.Papers.MagazineSubjectClass">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="MagazineID" Member="MagazineID" Storage="_MagazineID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="SubjectClass" Member="SubjectClass" Storage="_SubjectClass" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_MagazineSubjectClass_Magazine" Member="Magazine" Storage="_Magazine" ThisKey="MagazineID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ManagementFees" Member="ManagementFees">
+    <Type Name="Srims.Server.Business.Type.ManagementFees">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Type" Member="Type" Storage="_Type" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FundTotal" Member="FundTotal" Storage="_FundTotal" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="Fee" Member="Fee" Storage="_Fee" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="PerformancePay" Member="PerformancePay" Storage="_PerformancePay" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Message" Member="Message">
+    <Type Name="Srims.Server.Business.Users.Message">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="SenderID" Member="SenderID" Storage="_SenderID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="ReceiverID" Member="ReceiverID" Storage="_ReceiverID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Title" Member="Title" Storage="_Title" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Content" Member="Content" Storage="_Content" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="DateTime" Member="DateTime" Storage="_DateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsRead" Member="IsRead" Storage="_IsRead" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Message_Receiver" Member="Receiver" Storage="_Receiver" ThisKey="ReceiverID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Message_Sender" Member="Sender" Storage="_Sender" ThisKey="SenderID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NoticeText" Member="NoticeText">
+    <Type Name="Srims.Server.Business.Common.NoticeText">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Value" Member="Value" Storage="_Value" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="ValueSpell" Member="ValueSpell" Storage="_ValueSpell" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Type" Member="Type" Storage="_Type" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Outsourcing" Member="Outsourcing">
+    <Type Name="Srims.Server.Business.Common.Outsourcing">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LegalRepresentativeName" Member="LegalRepresentativeName" Storage="_LegalRepresentativeName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="RegisteredCapital" Member="RegisteredCapital" Storage="_RegisteredCapital" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="RegisteredCardNumber" Member="RegisteredCardNumber" Storage="_RegisteredCardNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="OrganizationCode" Member="OrganizationCode" Storage="_OrganizationCode" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TaxNumber" Member="TaxNumber" Storage="_TaxNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CompanyType" Member="CompanyType" Storage="_CompanyType" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="ManagementType" Member="ManagementType" Storage="_ManagementType" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="BusinessScope" Member="BusinessScope" Storage="_BusinessScope" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="CreateDateTime" Member="CreateDateTime" Storage="_CreateDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="DealDateTimeStart" Member="DealDateTimeStart" Storage="_DealDateTimeStart" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="DealDateTimeEnd" Member="DealDateTimeEnd" Storage="_DealDateTimeEnd" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="IsVerify" Member="IsVerify" Storage="_IsVerify" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CompanyCard" Member="CompanyCard" Storage="_CompanyCard" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="GroupCard" Member="GroupCard" Storage="_GroupCard" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TaxCard" Member="TaxCard" Storage="_TaxCard" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="AdderID" Member="AdderID" Storage="_AdderID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Address" Member="Address" Storage="_Address" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Association Name="FK_Outsourcing_Expert" Member="Adder" Storage="_Adder" ThisKey="AdderID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_ProjectOut_Outsourcing" Member="ProjectOut" Storage="_ProjectOut" ThisKey="ID" OtherKey="OutsourcingID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectOutsourcingBudget_Outsourcing" Member="ProjectOutsourcingBudget" Storage="_ProjectOutsourcingBudget" ThisKey="ID" OtherKey="OutsourcingID" DeleteRule="NO ACTION" />
+      <Association Name="FK_VoucherOut_Outsourcing" Member="VoucherOut" Storage="_VoucherOut" ThisKey="ID" OtherKey="OutsourcingID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Paper" Member="Paper">
+    <Type Name="Srims.Server.Business.Papers.Paper">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="MagazineID" Member="MagazineID" Storage="_MagazineID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="ResourceName" Member="ResourceName" Storage="_ResourceName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Type" Member="Type" Storage="_Type" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="CiteFrequency" Member="CiteFrequency" Storage="_CiteFrequency" DbType="Int" UpdateCheck="Never" />
+      <Column Name="PublishDateYear" Member="PublishDateYear" Storage="_PublishDateYear" DbType="Int" UpdateCheck="Never" />
+      <Column Name="PublishDate" Member="PublishDate" Storage="_PublishDate" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="DocumentNumber" Member="DocumentNumber" Storage="_DocumentNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Volume" Member="Volume" Storage="_Volume" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="StartPage" Member="StartPage" Storage="_StartPage" DbType="Int" UpdateCheck="Never" />
+      <Column Name="EndPage" Member="EndPage" Storage="_EndPage" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Pages" Member="Pages" Storage="_Pages" DbType="Int" UpdateCheck="Never" />
+      <Column Name="SubAirer" Member="SubAirer" Storage="_SubAirer" DbType="Int" UpdateCheck="Never" />
+      <Column Name="InfluenceFactor" Member="InfluenceFactor" Storage="_InfluenceFactor" DbType="Int" UpdateCheck="Never" />
+      <Column Name="AuthorKeyWord" Member="AuthorKeyWord" Storage="_AuthorKeyWord" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="KeyWord" Member="KeyWord" Storage="_KeyWord" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Abstract" Member="Abstract" Storage="_Abstract" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="LinkManAddress" Member="LinkManAddress" Storage="_LinkManAddress" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="LinkManEmail" Member="LinkManEmail" Storage="_LinkManEmail" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="LinkManSignUnit" Member="LinkManSignUnit" Storage="_LinkManSignUnit" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="FirstAuthorSignUnit" Member="FirstAuthorSignUnit" Storage="_FirstAuthorSignUnit" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="SignOrder" Member="SignOrder" Storage="_SignOrder" DbType="Int" UpdateCheck="Never" />
+      <Column Name="CollegeID" Member="CollegeID" Storage="_CollegeID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Lab" Member="Lab" Storage="_Lab" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="ISIUniqueArticleIdentifier" Member="ISIUniqueArticleIdentifier" Storage="_ISIUniqueArticleIdentifier" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="OldID" Member="OldID" Storage="_OldID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Paper_College" Member="College" Storage="_College" ThisKey="CollegeID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Paper_Magazine" Member="Magazine" Storage="_Magazine" ThisKey="MagazineID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_PaperAuthor_Paper" Member="PaperAuthor" Storage="_PaperAuthor" ThisKey="ID" OtherKey="PaperID" DeleteRule="NO ACTION" />
+      <Association Name="FK_PaperIndexed_Paper" Member="PaperIndexed" Storage="_PaperIndexed" ThisKey="ID" OtherKey="PaperID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PaperAuthor" Member="PaperAuthor">
+    <Type Name="Srims.Server.Business.Papers.PaperAuthor">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="PaperID" Member="PaperID" Storage="_PaperID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="ExpertID" Member="ExpertID" Storage="_ExpertID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="EnglishName" Member="EnglishName" Storage="_EnglishName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Order" Member="Order" Storage="_Order" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsLinkMan" Member="IsLinkMan" Storage="_IsLinkMan" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_PaperAuthor_Expert" Member="Expert" Storage="_Expert" ThisKey="ExpertID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_PaperAuthor_Paper" Member="Paper" Storage="_Paper" ThisKey="PaperID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PaperIndexed" Member="PaperIndexed">
+    <Type Name="Srims.Server.Business.Papers.PaperIndexed">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="PaperID" Member="PaperID" Storage="_PaperID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Indexed" Member="Indexed" Storage="_Indexed" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_PaperIndexed_Paper" Member="Paper" Storage="_Paper" ThisKey="PaperID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Patent" Member="Patent">
+    <Type Name="Srims.Server.Business.Patents.Patent">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Number" Member="Number" Storage="_Number" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CollegeID" Member="CollegeID" Storage="_CollegeID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="ApplicationDateTime" Member="ApplicationDateTime" Storage="_ApplicationDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="AuthorizeDateTime" Member="AuthorizeDateTime" Storage="_AuthorizeDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="LawState" Member="LawState" Storage="_LawState" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="LawStateTime" Member="LawStateTime" Storage="_LawStateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="Country" Member="Country" Storage="_Country" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Category" Member="Category" Storage="_Category" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="MainCategoryNumber" Member="MainCategoryNumber" Storage="_MainCategoryNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="AllCategoryNumber" Member="AllCategoryNumber" Storage="_AllCategoryNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Type" Member="Type" Storage="_Type" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Level" Member="Level" Storage="_Level" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Introduction" Member="Introduction" Storage="_Introduction" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="AgencyID" Member="AgencyID" Storage="_AgencyID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Agent" Member="Agent" Storage="_Agent" DbType="NVarChar(50)" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="OldID" Member="OldID" Storage="_OldID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Patent_Agency" Member="Agency" Storage="_Agency" ThisKey="AgencyID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Patent_College" Member="College" Storage="_College" ThisKey="CollegeID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_PatentInventer_Patent" Member="PatentInventer" Storage="_PatentInventer" ThisKey="ID" OtherKey="PatentID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PatentAgency" Member="PatentAgency">
+    <Type Name="Srims.Server.Business.Patents.PatentAgency">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Contract" Member="Contract" Storage="_Contract" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Patent_Agency" Member="Patent" Storage="_Patent" ThisKey="ID" OtherKey="AgencyID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PatentInventer" Member="PatentInventer">
+    <Type Name="Srims.Server.Business.Patents.PatentInventer">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="PatentID" Member="PatentID" Storage="_PatentID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="ExpertID" Member="ExpertID" Storage="_ExpertID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Order" Member="Order" Storage="_Order" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsPrincipal" Member="IsPrincipal" Storage="_IsPrincipal" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_PatentInventer_Expert" Member="Expert" Storage="_Expert" ThisKey="ExpertID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_PatentInventer_Patent" Member="Patent" Storage="_Patent" ThisKey="PatentID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PayPlanItem" Member="PayPlanItem">
+    <Type Name="Srims.Server.Business.Fund.PayPlanItem">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectInfo_FundID" Member="ProjectInfo_FundID" Storage="_ProjectInfo_FundID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="DateTime" Member="DateTime" Storage="_DateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="Amount" Member="Amount" Storage="_Amount" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_PayPlanItem_ProjectInfo_Fund" Member="ProjectInfo_Fund" Storage="_ProjectInfo_Fund" ThisKey="ProjectInfo_FundID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Performance" Member="Performance">
+    <Type Name="Srims.Server.Business.Performances.Performance">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="FundAllocationID" Member="FundAllocationID" Storage="_FundAllocationID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="ArrivedPerformance" Member="ArrivedPerformance" Storage="_ArrivedPerformance" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsAllocated" Member="IsAllocated" Storage="_IsAllocated" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="ProjectID" Member="ProjectID" Storage="_ProjectID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="FoundationTime" Member="FoundationTime" Storage="_FoundationTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsCancel" Member="IsCancel" Storage="_IsCancel" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="DescendPerformance" Member="DescendPerformance" Storage="_DescendPerformance" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="RecoveryID" Member="RecoveryID" Storage="_RecoveryID" DbType="Int" UpdateCheck="Never" />
+      <Association Name="FK_Performance_FundAllocation" Member="FundAllocation" Storage="_FundAllocation" ThisKey="FundAllocationID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Performance_Project" Member="Project" Storage="_Project" ThisKey="ProjectID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Performance_Recovery" Member="Recovery" Storage="_Recovery" ThisKey="RecoveryID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_PerformanceAllocation_Performance" Member="PerformanceAllocation" Storage="_PerformanceAllocation" ThisKey="ID" OtherKey="PerformanceID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PerformanceAllocation" Member="PerformanceAllocation">
+    <Type Name="Srims.Server.Business.Performances.PerformanceAllocation">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="PerformanceID" Member="PerformanceID" Storage="_PerformanceID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="ArrivedPerformance" Member="ArrivedPerformance" Storage="_ArrivedPerformance" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="CurrentStateID" Member="CurrentStateID" Storage="_CurrentStateID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="CanAllocate" Member="CanAllocate" Storage="_CanAllocate" DbType="Bit" UpdateCheck="Never" />
+      <Column Name="ArrivedOverheadexpensesExpert" Member="ArrivedOverheadexpensesExpert" Storage="_ArrivedOverheadexpensesExpert" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Association Name="FK_PerformanceAllocation_Performance" Member="Performance" Storage="_Performance" ThisKey="PerformanceID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_PerformanceAllocation_PerformanceAllocationStateHistory" Member="CurrentState" Storage="_CurrentState" ThisKey="CurrentStateID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_PerformanceAllocationStateHistory_PerformanceAllocation" Member="PerformanceAllocationStateHistory_PerformanceAllocation" Storage="_PerformanceAllocationStateHistory_PerformanceAllocation" ThisKey="ID" OtherKey="PerformanceAllocationID" DeleteRule="NO ACTION" />
+      <Association Name="FK_PerformanceVoucher_PerformanceAllocation" Member="PerformanceVoucher" Storage="_PerformanceVoucher" ThisKey="ID" OtherKey="PerformanceAllocationID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PerformanceAllocationStateHistory" Member="PerformanceAllocationStateHistory">
+    <Type Name="Srims.Server.Business.Performances.PerformanceAllocationStateHistory">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="PerformanceAllocationID" Member="PerformanceAllocationID" Storage="_PerformanceAllocationID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="State" Member="State" Storage="_State" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Operator" Member="Operator" Storage="_Operator" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="DateTime" Member="DateTime" Storage="_DateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_PerformanceAllocation_PerformanceAllocationStateHistory" Member="PerformanceAllocation" Storage="_PerformanceAllocation" ThisKey="ID" OtherKey="CurrentStateID" DeleteRule="NO ACTION" />
+      <Association Name="FK_PerformanceAllocationStateHistory_PerformanceAllocation" Member="PerformanceAllocation" Storage="_PerformanceAllocation" ThisKey="PerformanceAllocationID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PerformanceVoucher" Member="PerformanceVoucher">
+    <Type Name="Srims.Server.Business.Performances.PerformanceVoucher">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="PerformanceAllocationID" Member="PerformanceAllocationID" Storage="_PerformanceAllocationID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="FundMemberID" Member="FundMemberID" Storage="_FundMemberID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="VoucherNumber" Member="VoucherNumber" Storage="_VoucherNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="AccountBookNumber" Member="AccountBookNumber" Storage="_AccountBookNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="PerformancePay" Member="PerformancePay" Storage="_PerformancePay" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsRead" Member="IsRead" Storage="_IsRead" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="CurrentStateID" Member="CurrentStateID" Storage="_CurrentStateID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="FinanceNumber" Member="FinanceNumber" Storage="_FinanceNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="FinanceAllocateDateTime" Member="FinanceAllocateDateTime" Storage="_FinanceAllocateDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="OverheadExpensesExpert" Member="OverheadExpensesExpert" Storage="_OverheadExpensesExpert" DbType="BigInt" UpdateCheck="Never" />
+      <Association Name="FK_PerformanceVoucher_FundMember" Member="FundMember" Storage="_FundMember" ThisKey="FundMemberID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_PerformanceVoucher_PerformanceAllocation" Member="PerformanceAllocation" Storage="_PerformanceAllocation" ThisKey="PerformanceAllocationID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_PerformanceVoucher_PerformanceVoucherStateHistory" Member="CurrentState" Storage="_CurrentState" ThisKey="CurrentStateID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_PerformanceVoucherStateHistory_PerformanceVoucher" Member="PerformanceVoucherStateHistory_PerformanceVoucher" Storage="_PerformanceVoucherStateHistory_PerformanceVoucher" ThisKey="ID" OtherKey="PerformanceVoucherID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PerformanceVoucherStateHistory" Member="PerformanceVoucherStateHistory">
+    <Type Name="Srims.Server.Business.Performances.PerformanceVoucherStateHistory">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="PerformanceVoucherID" Member="PerformanceVoucherID" Storage="_PerformanceVoucherID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="State" Member="State" Storage="_State" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Operator" Member="Operator" Storage="_Operator" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="DateTime" Member="DateTime" Storage="_DateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_PerformanceVoucher_PerformanceVoucherStateHistory" Member="PerformanceVoucher" Storage="_PerformanceVoucher" ThisKey="ID" OtherKey="CurrentStateID" DeleteRule="NO ACTION" />
+      <Association Name="FK_PerformanceVoucherStateHistory_PerformanceVoucher" Member="PerformanceVoucher" Storage="_PerformanceVoucher" ThisKey="PerformanceVoucherID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Permission" Member="Permission">
+    <Type Name="Srims.Server.Business.Users.Permission">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="PermissionItem" Member="PermissionItem" Storage="_PermissionItem" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="PermissionOperation" Member="PermissionOperation" Storage="_PermissionOperation" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Params" Member="Params" Storage="_Params" DbType="Int" UpdateCheck="Never" />
+      <Column Name="AccreditDateTime" Member="AccreditDateTime" Storage="_AccreditDateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="EndDateTime" Member="EndDateTime" Storage="_EndDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_UserPermission_Permission" Member="UserPermission" Storage="_UserPermission" ThisKey="ID" OtherKey="PermissionID" DeleteRule="NO ACTION" />
+      <Association Name="FK_UserRolePermission_Permission" Member="UserRolePermission" Storage="_UserRolePermission" ThisKey="ID" OtherKey="PermissionID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Project" Member="Project">
+    <Type Name="Srims.Server.Business.Projects.Project">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="TypeID" Member="TypeID" Storage="_TypeID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="FundID" Member="FundID" Storage="_FundID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Number" Member="Number" Storage="_Number" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="SerialNumber" Member="SerialNumber" Storage="_SerialNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="NameSpell" Member="NameSpell" Storage="_NameSpell" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="PrincipalID" Member="PrincipalID" Storage="_PrincipalID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="PrincipalDelegateID" Member="PrincipalDelegateID" Storage="_PrincipalDelegateID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="PrincipalQualityID" Member="PrincipalQualityID" Storage="_PrincipalQualityID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Level" Member="Level" Storage="_Level" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="FirstLevelSubjectID" Member="FirstLevelSubjectID" Storage="_FirstLevelSubjectID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="SecondLevelSubjectID" Member="SecondLevelSubjectID" Storage="_SecondLevelSubjectID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="ResearchType" Member="ResearchType" Storage="_ResearchType" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="IsSecret" Member="IsSecret" Storage="_IsSecret" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="StartDate" Member="StartDate" Storage="_StartDate" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="EndDate" Member="EndDate" Storage="_EndDate" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="CooperationType" Member="CooperationType" Storage="_CooperationType" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="BaseID" Member="BaseID" Storage="_BaseID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TaskComingFrom" Member="TaskComingFrom" Storage="_TaskComingFrom" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CorporationPlace" Member="CorporationPlace" Storage="_CorporationPlace" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CurrentStateID" Member="CurrentStateID" Storage="_CurrentStateID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="Creator" Member="Creator" Storage="_Creator" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="CreateDate" Member="CreateDate" Storage="_CreateDate" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="OldID" Member="OldID" Storage="_OldID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="IsPrincipalSecondCollege" Member="IsPrincipalSecondCollege" Storage="_IsPrincipalSecondCollege" DbType="Bit" UpdateCheck="Never" />
+      <Column Name="IsAdjust" Member="IsAdjust" Storage="_IsAdjust" DbType="Bit" UpdateCheck="Never" />
+      <Association Name="FK_Contract_Project" Member="Contract" Storage="_Contract" ThisKey="ID" OtherKey="ProjectID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Document_Project" Member="Document" Storage="_Document" ThisKey="ID" OtherKey="ProjectID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Performance_Project" Member="Performance" Storage="_Performance" ThisKey="ID" OtherKey="ProjectID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Project_Base" Member="Base" Storage="_Base" ThisKey="BaseID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Project_CurrentState" Member="CurrentState" Storage="_CurrentState" ThisKey="CurrentStateID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Project_FirstLevelSubject" Member="FirstLevelSubject" Storage="_FirstLevelSubject" ThisKey="FirstLevelSubjectID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Project_Fund" Member="Fund" Storage="_Fund" ThisKey="FundID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Project_Principal" Member="Principal" Storage="_Principal" ThisKey="PrincipalID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Project_PrincipalDelegate" Member="PrincipalDelegate" Storage="_PrincipalDelegate" ThisKey="PrincipalDelegateID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Project_PrincipalQuality" Member="PrincipalQuality" Storage="_PrincipalQuality" ThisKey="PrincipalQualityID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Project_SecondLevelSubject" Member="SecondLevelSubject" Storage="_SecondLevelSubject" ThisKey="SecondLevelSubjectID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Project_Type" Member="Type" Storage="_Type" ThisKey="TypeID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_ProjectInfo_Fund_Project" Member="ProjectInfo_Fund_Project" Storage="_ProjectInfo_Fund_Project" ThisKey="ID" OtherKey="ProjectID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectInfo_Type_Project" Member="ProjectInfo_Type_Project" Storage="_ProjectInfo_Type_Project" ThisKey="ID" OtherKey="ProjectID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectMember_Project" Member="ProjectMember" Storage="_ProjectMember" ThisKey="ID" OtherKey="ProjectID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectOut_Project" Member="ProjectOut" Storage="_ProjectOut" ThisKey="ID" OtherKey="ProjectID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectOutsourcingBudget_Project" Member="ProjectOutsourcingBudget" Storage="_ProjectOutsourcingBudget" ThisKey="ID" OtherKey="ProjectID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectQualityPrincipal_Project" Member="ProjectQualityPrincipal" Storage="_ProjectQualityPrincipal" ThisKey="ID" OtherKey="ProjectID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectStateHistory_Project" Member="ProjectStateHistory_Project" Storage="_ProjectStateHistory_Project" ThisKey="ID" OtherKey="ProjectID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Recovery_Project" Member="Recovery" Storage="_Recovery" ThisKey="ID" OtherKey="ProjectID" DeleteRule="NO ACTION" />
+      <Association Name="FK_StampApplication_StampStuffFrom" Member="StampApplication" Storage="_StampApplication" ThisKey="ID" OtherKey="StampStuffFromID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectInfo_Fund" Member="ProjectInfo_Fund">
+    <Type Name="Srims.Server.Business.Fund.ProjectInfo_Fund">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectID" Member="ProjectID" Storage="_ProjectID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="AccountBookNumber" Member="AccountBookNumber" Storage="_AccountBookNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="AccountBookNumberCount" Member="AccountBookNumberCount" Storage="_AccountBookNumberCount" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="FundFrom" Member="FundFrom" Storage="_FundFrom" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="FundFromUnit" Member="FundFromUnit" Storage="_FundFromUnit" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="FundFromUnitAddress" Member="FundFromUnitAddress" Storage="_FundFromUnitAddress" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="FundContract" Member="FundContract" Storage="_FundContract" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="FundTotal" Member="FundTotal" Storage="_FundTotal" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="FundPlanOut" Member="FundPlanOut" Storage="_FundPlanOut" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="FundPlanHardware" Member="FundPlanHardware" Storage="_FundPlanHardware" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="FundReceived" Member="FundReceived" Storage="_FundReceived" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="FundAlreadyIn" Member="FundAlreadyIn" Storage="_FundAlreadyIn" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="FundAlreadyOut" Member="FundAlreadyOut" Storage="_FundAlreadyOut" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="FundAlreadyHardware" Member="FundAlreadyHardware" Storage="_FundAlreadyHardware" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="OverheadExpenseInTotal" Member="OverheadExpenseInTotal" Storage="_OverheadExpenseInTotal" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="OverheadExpenseOutTotal" Member="OverheadExpenseOutTotal" Storage="_OverheadExpenseOutTotal" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="OverheadExpensesAlreadyIn" Member="OverheadExpensesAlreadyIn" Storage="_OverheadExpensesAlreadyIn" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="OverheadExpensesAlreadyOut" Member="OverheadExpensesAlreadyOut" Storage="_OverheadExpensesAlreadyOut" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="BorrowAmount" Member="BorrowAmount" Storage="_BorrowAmount" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="ReturnAmount" Member="ReturnAmount" Storage="_ReturnAmount" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="FundManageProportion" Member="FundManageProportion" Storage="_FundManageProportion" DbType="Int" UpdateCheck="Never" />
+      <Column Name="PerformancePay" Member="PerformancePay" Storage="_PerformancePay" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="PerformancePayAlready" Member="PerformancePayAlready" Storage="_PerformancePayAlready" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="FundAdjust" Member="FundAdjust" Storage="_FundAdjust" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="EquipmentCost" Member="EquipmentCost" Storage="_EquipmentCost" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="IndirectCosts" Member="IndirectCosts" Storage="_IndirectCosts" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="ProjectPerformancePay" Member="ProjectPerformancePay" Storage="_ProjectPerformancePay" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="PerformanceAccountBookNumber" Member="PerformanceAccountBookNumber" Storage="_PerformanceAccountBookNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="PerformanceAccountBookNumberCount" Member="PerformanceAccountBookNumberCount" Storage="_PerformanceAccountBookNumberCount" DbType="Int" UpdateCheck="Never" />
+      <Column Name="OverHeadExpenseInStandard" Member="OverHeadExpenseInStandard" Storage="_OverHeadExpenseInStandard" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="PerformanceInStandard" Member="PerformanceInStandard" Storage="_PerformanceInStandard" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="OverheadExpenseMiddleTotal" Member="OverheadExpenseMiddleTotal" Storage="_OverheadExpenseMiddleTotal" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="OverheadExpenseExpertTotal" Member="OverheadExpenseExpertTotal" Storage="_OverheadExpenseExpertTotal" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="CampusIndirectCosts" Member="CampusIndirectCosts" Storage="_CampusIndirectCosts" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="OverheadExpensesAlreadyMiddle" Member="OverheadExpensesAlreadyMiddle" Storage="_OverheadExpensesAlreadyMiddle" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Association Name="FK_FundDescend_ProjectInfo_Fund" Member="FundDescend" Storage="_FundDescend" ThisKey="ID" OtherKey="ProjectInfo_FundID" DeleteRule="NO ACTION" />
+      <Association Name="FK_FundMember_ProjectInfo_Fund" Member="FundMember" Storage="_FundMember" ThisKey="ID" OtherKey="ProjectInfo_FundID" DeleteRule="NO ACTION" />
+      <Association Name="FK_PayPlanItem_ProjectInfo_Fund" Member="PayPlanItem" Storage="_PayPlanItem" ThisKey="ID" OtherKey="ProjectInfo_FundID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Project_Fund" Member="Project" Storage="_Project" ThisKey="ID" OtherKey="FundID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectInfo_Fund_Project" Member="Project" Storage="_Project" ThisKey="ProjectID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectInfo_Type" Member="ProjectInfo_Type">
+    <Type Name="Srims.Server.Business.Type.ProjectInfo_Type">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectID" Member="ProjectID" Storage="_ProjectID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="RankID" Member="RankID" Storage="_RankID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TypeID" Member="TypeID" Storage="_TypeID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="SupportFieldID" Member="SupportFieldID" Storage="_SupportFieldID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="SupportSubFieldID" Member="SupportSubFieldID" Storage="_SupportSubFieldID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="SupportCategoryID" Member="SupportCategoryID" Storage="_SupportCategoryID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Project_Type" Member="Project" Storage="_Project" ThisKey="ID" OtherKey="TypeID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectInfo_Type_Project" Member="Project" Storage="_Project" ThisKey="ProjectID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_ProjectInfo_Type_Rank" Member="Rank" Storage="_Rank" ThisKey="RankID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_ProjectInfo_Type_SupportCategory" Member="SupportCategory" Storage="_SupportCategory" ThisKey="SupportCategoryID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_ProjectInfo_Type_SupportField" Member="SupportField" Storage="_SupportField" ThisKey="SupportFieldID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_ProjectInfo_Type_SupportSubField" Member="SupportSubField" Storage="_SupportSubField" ThisKey="SupportSubFieldID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_ProjectInfo_Type_Type" Member="Type" Storage="_Type" ThisKey="TypeID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectMember" Member="ProjectMember">
+    <Type Name="Srims.Server.Business.Projects.ProjectMember">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectID" Member="ProjectID" Storage="_ProjectID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="ExpertID" Member="ExpertID" Storage="_ExpertID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Order" Member="Order" Storage="_Order" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TaskNo" Member="TaskNo" Storage="_TaskNo" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TaskName" Member="TaskName" Storage="_TaskName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="IsExpertSecondCollege" Member="IsExpertSecondCollege" Storage="_IsExpertSecondCollege" DbType="Bit" UpdateCheck="Never" />
+      <Association Name="FK_ProjectMember_Expert" Member="Expert" Storage="_Expert" ThisKey="ExpertID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_ProjectMember_Project" Member="Project" Storage="_Project" ThisKey="ProjectID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectOut" Member="ProjectOut">
+    <Type Name="Srims.Server.Business.Fund.ProjectOut">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectID" Member="ProjectID" Storage="_ProjectID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Amount" Member="Amount" Storage="_Amount" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="OutsourcingID" Member="OutsourcingID" Storage="_OutsourcingID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_ProjectOut_Outsourcing" Member="Outsourcing" Storage="_Outsourcing" ThisKey="OutsourcingID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_ProjectOut_Project" Member="Project" Storage="_Project" ThisKey="ProjectID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectOutsourcingBudget" Member="ProjectOutsourcingBudget">
+    <Type Name="Srims.Server.Business.Fund.ProjectOutsourcingBudget">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectID" Member="ProjectID" Storage="_ProjectID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="OutsourcingID" Member="OutsourcingID" Storage="_OutsourcingID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Amount" Member="Amount" Storage="_Amount" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_ProjectOutsourcingBudget_Outsourcing" Member="Outsourcing" Storage="_Outsourcing" ThisKey="OutsourcingID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_ProjectOutsourcingBudget_Project" Member="Project" Storage="_Project" ThisKey="ProjectID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectQualityPrincipal" Member="ProjectQualityPrincipal">
+    <Type Name="Srims.Server.Business.Projects.ProjectQualityPrincipal">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectID" Member="ProjectID" Storage="_ProjectID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="ExpertID" Member="ExpertID" Storage="_ExpertID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_ProjectQualityPrincipal_Expert" Member="Expert" Storage="_Expert" ThisKey="ExpertID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_ProjectQualityPrincipal_Project" Member="Project" Storage="_Project" ThisKey="ProjectID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectRank" Member="ProjectRank">
+    <Type Name="Srims.Server.Business.Type.ProjectRank">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="IsHorizontal" Member="IsHorizontal" Storage="_IsHorizontal" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsAvailable" Member="IsAvailable" Storage="_IsAvailable" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_ProjectInfo_Type_Rank" Member="ProjectInfo_Type" Storage="_ProjectInfo_Type" ThisKey="ID" OtherKey="RankID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectType_ProjectRank" Member="ProjectType" Storage="_ProjectType" ThisKey="ID" OtherKey="ProjectRankID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectStateHistory" Member="ProjectStateHistory">
+    <Type Name="Srims.Server.Business.Projects.ProjectStateHistory">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectID" Member="ProjectID" Storage="_ProjectID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="State" Member="State" Storage="_State" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Operator" Member="Operator" Storage="_Operator" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="DateTime" Member="DateTime" Storage="_DateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Project_CurrentState" Member="Project" Storage="_Project" ThisKey="ID" OtherKey="CurrentStateID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectStateHistory_Project" Member="Project" Storage="_Project" ThisKey="ProjectID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectSupportCategory" Member="ProjectSupportCategory">
+    <Type Name="Srims.Server.Business.Type.ProjectSupportCategory">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectTypeID" Member="ProjectTypeID" Storage="_ProjectTypeID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="IsGetOverheadExpense" Member="IsGetOverheadExpense" Storage="_IsGetOverheadExpense" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsAvailable" Member="IsAvailable" Storage="_IsAvailable" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_ProjectInfo_Type_SupportCategory" Member="ProjectInfo_Type" Storage="_ProjectInfo_Type" ThisKey="ID" OtherKey="SupportCategoryID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectSupportCategory_ProjectType" Member="ProjectType" Storage="_ProjectType" ThisKey="ProjectTypeID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectSupportField" Member="ProjectSupportField">
+    <Type Name="Srims.Server.Business.Type.ProjectSupportField">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectTypeID" Member="ProjectTypeID" Storage="_ProjectTypeID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="IsAvailable" Member="IsAvailable" Storage="_IsAvailable" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_ProjectInfo_Type_SupportField" Member="ProjectInfo_Type" Storage="_ProjectInfo_Type" ThisKey="ID" OtherKey="SupportFieldID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectSupportField_ProjectType" Member="ProjectType" Storage="_ProjectType" ThisKey="ProjectTypeID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_ProjectSupportSubField_ProjectSupportField" Member="ProjectSupportSubField" Storage="_ProjectSupportSubField" ThisKey="ID" OtherKey="ProjectSupportFieldID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectSupportSubField" Member="ProjectSupportSubField">
+    <Type Name="Srims.Server.Business.Type.ProjectSupportSubField">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectSupportFieldID" Member="ProjectSupportFieldID" Storage="_ProjectSupportFieldID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="IsAvailable" Member="IsAvailable" Storage="_IsAvailable" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_ProjectInfo_Type_SupportSubField" Member="ProjectInfo_Type" Storage="_ProjectInfo_Type" ThisKey="ID" OtherKey="SupportSubFieldID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectSupportSubField_ProjectSupportField" Member="ProjectSupportField" Storage="_ProjectSupportField" ThisKey="ProjectSupportFieldID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProjectType" Member="ProjectType">
+    <Type Name="Srims.Server.Business.Type.ProjectType">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectRankID" Member="ProjectRankID" Storage="_ProjectRankID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="NameSpell" Member="NameSpell" Storage="_NameSpell" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="ShortName" Member="ShortName" Storage="_ShortName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Administration" Member="Administration" Storage="_Administration" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Code" Member="Code" Storage="_Code" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="PerCode" Member="PerCode" Storage="_PerCode" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="BakCode" Member="BakCode" Storage="_BakCode" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="ProjectComingFrom" Member="ProjectComingFrom" Storage="_ProjectComingFrom" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsBudget" Member="IsBudget" Storage="_IsBudget" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsExploit" Member="IsExploit" Storage="_IsExploit" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="OverheadExpenseInRate" Member="OverheadExpenseInRate" Storage="_OverheadExpenseInRate" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="OverheadExpenseOutRate" Member="OverheadExpenseOutRate" Storage="_OverheadExpenseOutRate" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="SubjectNature" Member="SubjectNature" Storage="_SubjectNature" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsAvailable" Member="IsAvailable" Storage="_IsAvailable" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="ManagementFeesType" Member="ManagementFeesType" Storage="_ManagementFeesType" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_DocumentModel_ProjectType" Member="DocumentModel" Storage="_DocumentModel" ThisKey="ID" OtherKey="ProjectTypeID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectInfo_Type_Type" Member="ProjectInfo_Type" Storage="_ProjectInfo_Type" ThisKey="ID" OtherKey="TypeID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectSupportCategory_ProjectType" Member="ProjectSupportCategory" Storage="_ProjectSupportCategory" ThisKey="ID" OtherKey="ProjectTypeID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectSupportField_ProjectType" Member="ProjectSupportField" Storage="_ProjectSupportField" ThisKey="ID" OtherKey="ProjectTypeID" DeleteRule="NO ACTION" />
+      <Association Name="FK_ProjectType_ProjectRank" Member="ProjectRank" Storage="_ProjectRank" ThisKey="ProjectRankID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Recovery" Member="Recovery">
+    <Type Name="Srims.Server.Business.Fund.Recovery">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ProjectID" Member="ProjectID" Storage="_ProjectID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="VoucherNumber" Member="VoucherNumber" Storage="_VoucherNumber" DbType="NVarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ReceivedOverheadExpensesIn" Member="ReceivedOverheadExpensesIn" Storage="_ReceivedOverheadExpensesIn" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="PlanedOverheadExpensesIn" Member="PlanedOverheadExpensesIn" Storage="_PlanedOverheadExpensesIn" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="PrintDateTime" Member="PrintDateTime" Storage="_PrintDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="IsPrint" Member="IsPrint" Storage="_IsPrint" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="PlanedPerformancePay" Member="PlanedPerformancePay" Storage="_PlanedPerformancePay" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="ReceivedPerformancePay" Member="ReceivedPerformancePay" Storage="_ReceivedPerformancePay" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="OldOverheadExpensesIn" Member="OldOverheadExpensesIn" Storage="_OldOverheadExpensesIn" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="NewOverheadExpensesIn" Member="NewOverheadExpensesIn" Storage="_NewOverheadExpensesIn" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="OldPerformancePay" Member="OldPerformancePay" Storage="_OldPerformancePay" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="NewPerformancePay" Member="NewPerformancePay" Storage="_NewPerformancePay" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="OldFundPlanIn" Member="OldFundPlanIn" Storage="_OldFundPlanIn" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="NewFundPlanIn" Member="NewFundPlanIn" Storage="_NewFundPlanIn" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="CurrentAllocationIn" Member="CurrentAllocationIn" Storage="_CurrentAllocationIn" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="OperateTime" Member="OperateTime" Storage="_OperateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="Operator" Member="Operator" Storage="_Operator" DbType="NVarChar(50)" UpdateCheck="Never" />
+      <Column Name="IsCanceled" Member="IsCanceled" Storage="_IsCanceled" DbType="Bit" UpdateCheck="Never" />
+      <Column Name="ReceivedOverheadExpensesMiddle" Member="ReceivedOverheadExpensesMiddle" Storage="_ReceivedOverheadExpensesMiddle" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="PlanedOverheadExpensesMiddle" Member="PlanedOverheadExpensesMiddle" Storage="_PlanedOverheadExpensesMiddle" DbType="BigInt" UpdateCheck="Never" />
+      <Association Name="FK_Performance_Recovery" Member="Performance" Storage="_Performance" ThisKey="ID" OtherKey="RecoveryID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Recovery_Project" Member="Project" Storage="_Project" ThisKey="ProjectID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Resource" Member="Resource">
+    <Type Name="Srims.Server.Business.Common.Resource">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Guid" Member="Guid" Storage="_Guid" DbType="UniqueIdentifier NOT NULL" UpdateCheck="Never" />
+      <Column Name="Type" Member="Type" Storage="_Type" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Content" Member="Content" Storage="_Content" DbType="Image" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stamp" Member="Stamp">
+    <Type Name="Srims.Server.Business.Stamps.Stamp">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Type" Member="Type" Storage="_Type" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="OwnerID" Member="OwnerID" Storage="_OwnerID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsDelete" Member="IsDelete" Storage="_IsDelete" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Stamp_Owner" Member="Owner" Storage="_Owner" ThisKey="OwnerID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_StuffStamp_Stamp" Member="StuffStamp" Storage="_StuffStamp" ThisKey="ID" OtherKey="StampID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StampApplication" Member="StampApplication">
+    <Type Name="Srims.Server.Business.Stamps.StampApplication">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="StampStuffFromID" Member="StampStuffFromID" Storage="_StampStuffFromID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="StampStuffFromName" Member="StampStuffFromName" Storage="_StampStuffFromName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="StuffNumber" Member="StuffNumber" Storage="_StuffNumber" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="StampReason" Member="StampReason" Storage="_StampReason" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="KeyWord" Member="KeyWord" Storage="_KeyWord" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Manager" Member="Manager" Storage="_Manager" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="ManagerPhone" Member="ManagerPhone" Storage="_ManagerPhone" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="PrincipalID" Member="PrincipalID" Storage="_PrincipalID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="CurrentStateID" Member="CurrentStateID" Storage="_CurrentStateID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="ManagerEmail" Member="ManagerEmail" Storage="_ManagerEmail" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="IsDuplexPrint" Member="IsDuplexPrint" Storage="_IsDuplexPrint" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="SealPerforation" Member="SealPerforation" Storage="_SealPerforation" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="ExpertPrint" Member="ExpertPrint" Storage="_ExpertPrint" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="StampApplicationTypeID" Member="StampApplicationTypeID" Storage="_StampApplicationTypeID" DbType="Int" UpdateCheck="Never" />
+      <Association Name="FK_StampApplication_CurrentState" Member="CurrentState" Storage="_CurrentState" ThisKey="CurrentStateID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_StampApplication_Principal" Member="Principal" Storage="_Principal" ThisKey="PrincipalID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_StampApplication_StampApplicationType" Member="StampApplicationType" Storage="_StampApplicationType" ThisKey="StampApplicationTypeID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_StampApplication_StampStuffFrom" Member="StampStuffFrom" Storage="_StampStuffFrom" ThisKey="StampStuffFromID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_StampStateHistory_StampApplication" Member="StampStateHistory_StampApplication" Storage="_StampStateHistory_StampApplication" ThisKey="ID" OtherKey="StampApplicationID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Stuff_StampApplication" Member="Stuff" Storage="_Stuff" ThisKey="ID" OtherKey="StampApplicationID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StampApplicationFirstAdmin" Member="StampApplicationFirstAdmin">
+    <Type Name="Srims.Server.Business.Stamps.StampApplicationFirstAdmin">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="StampApplicationTypeID" Member="StampApplicationTypeID" Storage="_StampApplicationTypeID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="UserID" Member="UserID" Storage="_UserID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_StampApplicationFirstAdmin_StampApplicationType" Member="StampApplicationType" Storage="_StampApplicationType" ThisKey="StampApplicationTypeID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_StampApplicationFirstAdmin_User" Member="User" Storage="_User" ThisKey="UserID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StampApplicationSecondAdmin" Member="StampApplicationSecondAdmin">
+    <Type Name="Srims.Server.Business.Stamps.StampApplicationSecondAdmin">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="StampApplicationTypeID" Member="StampApplicationTypeID" Storage="_StampApplicationTypeID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="UserID" Member="UserID" Storage="_UserID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_StampApplicationSecondAdmin_StampApplicationType" Member="StampApplicationType" Storage="_StampApplicationType" ThisKey="StampApplicationTypeID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_StampApplicationSecondAdmin_User" Member="User" Storage="_User" ThisKey="UserID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StampApplicationType" Member="StampApplicationType">
+    <Type Name="Srims.Server.Business.Stamps.StampApplicationType">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IsTwiceCancer" Member="IsTwiceCancer" Storage="_IsTwiceCancer" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsProjectRelated" Member="IsProjectRelated" Storage="_IsProjectRelated" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="StampApplicationTypeGroupID" Member="StampApplicationTypeGroupID" Storage="_StampApplicationTypeGroupID" DbType="Int" UpdateCheck="Never" />
+      <Association Name="FK_StampApplication_StampApplicationType" Member="StampApplication" Storage="_StampApplication" ThisKey="ID" OtherKey="StampApplicationTypeID" DeleteRule="NO ACTION" />
+      <Association Name="FK_StampApplicationFirstAdmin_StampApplicationType" Member="StampApplicationFirstAdmin" Storage="_StampApplicationFirstAdmin" ThisKey="ID" OtherKey="StampApplicationTypeID" DeleteRule="NO ACTION" />
+      <Association Name="FK_StampApplicationSecondAdmin_StampApplicationType" Member="StampApplicationSecondAdmin" Storage="_StampApplicationSecondAdmin" ThisKey="ID" OtherKey="StampApplicationTypeID" DeleteRule="NO ACTION" />
+      <Association Name="FK_StampApplicationType_StampApplicationTypeGroup" Member="StampApplicationTypeGroup" Storage="_StampApplicationTypeGroup" ThisKey="StampApplicationTypeGroupID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StampApplicationTypeGroup" Member="StampApplicationTypeGroup">
+    <Type Name="Srims.Server.Business.Stamps.StampApplicationTypeGroup">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" AutoSync="OnInsert" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="FK_StampApplicationType_StampApplicationTypeGroup" Member="StampApplicationType" Storage="_StampApplicationType" ThisKey="ID" OtherKey="StampApplicationTypeGroupID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StampStateHistory" Member="StampStateHistory">
+    <Type Name="Srims.Server.Business.Stamps.StampStateHistory">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="StampApplicationID" Member="StampApplicationID" Storage="_StampApplicationID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="State" Member="State" Storage="_State" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Operator" Member="Operator" Storage="_Operator" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="DateTime" Member="DateTime" Storage="_DateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_StampApplication_CurrentState" Member="StampApplication" Storage="_StampApplication" ThisKey="ID" OtherKey="CurrentStateID" DeleteRule="NO ACTION" />
+      <Association Name="FK_StampStateHistory_StampApplication" Member="StampApplication" Storage="_StampApplication" ThisKey="StampApplicationID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stuff" Member="Stuff">
+    <Type Name="Srims.Server.Business.Stamps.Stuff">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="StampApplicationID" Member="StampApplicationID" Storage="_StampApplicationID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="StuffName" Member="StuffName" Storage="_StuffName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="StuffType" Member="StuffType" Storage="_StuffType" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="StuffDocument" Member="StuffDocument" Storage="_StuffDocument" DbType="UniqueIdentifier NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Stuff_StampApplication" Member="StampApplication" Storage="_StampApplication" ThisKey="StampApplicationID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_StuffStamp_Stuff" Member="StuffStamp" Storage="_StuffStamp" ThisKey="ID" OtherKey="StuffID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StuffStamp" Member="StuffStamp">
+    <Type Name="Srims.Server.Business.Stamps.StuffStamp">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="StuffID" Member="StuffID" Storage="_StuffID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="StampID" Member="StampID" Storage="_StampID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Number" Member="Number" Storage="_Number" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsStamped" Member="IsStamped" Storage="_IsStamped" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="Pagination" Member="Pagination" Storage="_Pagination" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="FK_StuffStamp_Stamp" Member="Stamp" Storage="_Stamp" ThisKey="StampID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_StuffStamp_Stuff" Member="Stuff" Storage="_Stuff" ThisKey="StuffID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SubjectClassChineseEnglish" Member="SubjectClassChineseEnglish">
+    <Type Name="Srims.Server.Business.Papers.SubjectClassChineseEnglish">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="ChineseName" Member="ChineseName" Storage="_ChineseName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="EnglishName" Member="EnglishName" Storage="_EnglishName" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SubjectFirstLevel" Member="SubjectFirstLevel">
+    <Type Name="Srims.Server.Business.Common.SubjectFirstLevel">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Code" Member="Code" Storage="_Code" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Project_FirstLevelSubject" Member="Project" Storage="_Project" ThisKey="ID" OtherKey="FirstLevelSubjectID" DeleteRule="NO ACTION" />
+      <Association Name="FK_SubjectSecondLevel_SubjectFirstLevel" Member="SubjectSecondLevel" Storage="_SubjectSecondLevel" ThisKey="ID" OtherKey="SubjectFirstLevelID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SubjectSecondLevel" Member="SubjectSecondLevel">
+    <Type Name="Srims.Server.Business.Common.SubjectSecondLevel">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="SubjectFirstLevelID" Member="SubjectFirstLevelID" Storage="_SubjectFirstLevelID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="ChildCode" Member="ChildCode" Storage="_ChildCode" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Code" Member="Code" Storage="_Code" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Expert_MajorCode" Member="Expert" Storage="_Expert" ThisKey="ID" OtherKey="MajorCodeID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Expert_ResearchCode1" Member="Expert_ResearchCode1" Storage="_Expert_ResearchCode1" ThisKey="ID" OtherKey="ResearchCode1ID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Expert_ResearchCode2" Member="Expert_ResearchCode2" Storage="_Expert_ResearchCode2" ThisKey="ID" OtherKey="ResearchCode2ID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Expert_ResearchCode3" Member="Expert_ResearchCode3" Storage="_Expert_ResearchCode3" ThisKey="ID" OtherKey="ResearchCode3ID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Project_SecondLevelSubject" Member="Project" Storage="_Project" ThisKey="ID" OtherKey="SecondLevelSubjectID" DeleteRule="NO ACTION" />
+      <Association Name="FK_SubjectSecondLevel_SubjectFirstLevel" Member="SubjectFirstLevel" Storage="_SubjectFirstLevel" ThisKey="SubjectFirstLevelID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SystemSetting" Member="SystemSetting">
+    <Type Name="Srims.Server.Business.Common.SystemSetting">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="FundOutRatio" Member="FundOutRatio" Storage="_FundOutRatio" DbType="Int" UpdateCheck="Never" />
+      <Column Name="HorizontalVoucher" Member="HorizontalVoucher" Storage="_HorizontalVoucher" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="VerticalVoucher" Member="VerticalVoucher" Storage="_VerticalVoucher" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="DefaultOverheadExpenseInRateHorizonal" Member="DefaultOverheadExpenseInRateHorizonal" Storage="_DefaultOverheadExpenseInRateHorizonal" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="DefaultOverheadExpenseOutRateHorizonal" Member="DefaultOverheadExpenseOutRateHorizonal" Storage="_DefaultOverheadExpenseOutRateHorizonal" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="DefaultOverheadExpenseInRateVertical" Member="DefaultOverheadExpenseInRateVertical" Storage="_DefaultOverheadExpenseInRateVertical" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="DefaultOverheadExpenseOutRateVertical" Member="DefaultOverheadExpenseOutRateVertical" Storage="_DefaultOverheadExpenseOutRateVertical" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="LogType" Member="LogType" Storage="_LogType" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="EmailAddress" Member="EmailAddress" Storage="_EmailAddress" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="SmtpHost" Member="SmtpHost" Storage="_SmtpHost" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="SmtpPort" Member="SmtpPort" Storage="_SmtpPort" DbType="Int" UpdateCheck="Never" />
+      <Column Name="SmtpPassword" Member="SmtpPassword" Storage="_SmtpPassword" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="SmtpUsername" Member="SmtpUsername" Storage="_SmtpUsername" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="FinanceWebAddress" Member="FinanceWebAddress" Storage="_FinanceWebAddress" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="ExpertWebAddress" Member="ExpertWebAddress" Storage="_ExpertWebAddress" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="WindowsServiceType" Member="WindowsServiceType" Storage="_WindowsServiceType" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="PaperDescription" Member="PaperDescription" Storage="_PaperDescription" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="HorizontalPerformanceVoucher" Member="HorizontalPerformanceVoucher" Storage="_HorizontalPerformanceVoucher" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="VPV" Member="VPV" Storage="_VPV" DbType="Int NOT NULL" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.User" Member="User">
+    <Type Name="Srims.Server.Business.Users.User">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="UserRoleID" Member="UserRoleID" Storage="_UserRoleID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="LoginID" Member="LoginID" Storage="_LoginID" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="NameSpell" Member="NameSpell" Storage="_NameSpell" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Password" Member="Password" Storage="_Password" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Email" Member="Email" Storage="_Email" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="HomePhone" Member="HomePhone" Storage="_HomePhone" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="OfficePhone" Member="OfficePhone" Storage="_OfficePhone" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="MobilePhone" Member="MobilePhone" Storage="_MobilePhone" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Fax" Member="Fax" Storage="_Fax" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="IsSuper" Member="IsSuper" Storage="_IsSuper" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="AllowMultiLogin" Member="AllowMultiLogin" Storage="_AllowMultiLogin" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsCustomPermission" Member="IsCustomPermission" Storage="_IsCustomPermission" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="ExtClientState" Member="ExtClientState" Storage="_ExtClientState" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_AwardDocument_Author" Member="AwardDocument" Storage="_AwardDocument" ThisKey="ID" OtherKey="AuthorID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Diary_BlogUser" Member="Diary" Storage="_Diary" ThisKey="ID" OtherKey="BlogUserID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Expert_User" Member="Expert" Storage="_Expert" ThisKey="ID" OtherKey="UserID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Message_Receiver" Member="Message" Storage="_Message" ThisKey="ID" OtherKey="ReceiverID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Message_Sender" Member="Message_Sender" Storage="_Message_Sender" ThisKey="ID" OtherKey="SenderID" DeleteRule="NO ACTION" />
+      <Association Name="FK_Stamp_Owner" Member="Stamp" Storage="_Stamp" ThisKey="ID" OtherKey="OwnerID" DeleteRule="NO ACTION" />
+      <Association Name="FK_StampApplicationFirstAdmin_User" Member="StampApplicationFirstAdmin" Storage="_StampApplicationFirstAdmin" ThisKey="ID" OtherKey="UserID" DeleteRule="NO ACTION" />
+      <Association Name="FK_StampApplicationSecondAdmin_User" Member="StampApplicationSecondAdmin" Storage="_StampApplicationSecondAdmin" ThisKey="ID" OtherKey="UserID" DeleteRule="NO ACTION" />
+      <Association Name="FK_User_UserRole" Member="UserRole" Storage="_UserRole" ThisKey="UserRoleID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_UserLockLog_User" Member="UserLockLog" Storage="_UserLockLog" ThisKey="ID" OtherKey="UserID" DeleteRule="NO ACTION" />
+      <Association Name="FK_UserLoginLog_User" Member="UserLoginLog" Storage="_UserLoginLog" ThisKey="ID" OtherKey="UserID" DeleteRule="NO ACTION" />
+      <Association Name="FK_UserPermission_User" Member="UserPermission" Storage="_UserPermission" ThisKey="ID" OtherKey="UserID" DeleteRule="NO ACTION" />
+      <Association Name="FK_View_User" Member="View" Storage="_View" ThisKey="ID" OtherKey="UserID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserLockLog" Member="UserLockLog">
+    <Type Name="Srims.Server.Business.Users.UserLockLog">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="UserID" Member="UserID" Storage="_UserID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="StartTime" Member="StartTime" Storage="_StartTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="EndTime" Member="EndTime" Storage="_EndTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="Operator" Member="Operator" Storage="_Operator" DbType="NVarChar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="OperateDateTime" Member="OperateDateTime" Storage="_OperateDateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="Reason" Member="Reason" Storage="_Reason" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_UserLockLog_User" Member="User" Storage="_User" ThisKey="UserID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserLoginLog" Member="UserLoginLog">
+    <Type Name="Srims.Server.Business.Users.UserLoginLog">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="UserID" Member="UserID" Storage="_UserID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Token" Member="Token" Storage="_Token" DbType="UniqueIdentifier NOT NULL" UpdateCheck="Never" />
+      <Column Name="LoingIP" Member="LoingIP" Storage="_LoingIP" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="LoginTime" Member="LoginTime" Storage="_LoginTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="LastActiveTime" Member="LastActiveTime" Storage="_LastActiveTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsLogout" Member="IsLogout" Storage="_IsLogout" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_UserLoginLog_User" Member="User" Storage="_User" ThisKey="UserID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserPermission" Member="UserPermission">
+    <Type Name="Srims.Server.Business.Users.UserPermission">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="UserID" Member="UserID" Storage="_UserID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="PermissionID" Member="PermissionID" Storage="_PermissionID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_UserPermission_Permission" Member="Permission" Storage="_Permission" ThisKey="PermissionID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_UserPermission_User" Member="User" Storage="_User" ThisKey="UserID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserRole" Member="UserRole">
+    <Type Name="Srims.Server.Business.Users.UserRole">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Type" Member="Type" Storage="_Type" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_User_UserRole" Member="User" Storage="_User" ThisKey="ID" OtherKey="UserRoleID" DeleteRule="NO ACTION" />
+      <Association Name="FK_UserRolePermission_UserRole" Member="UserRolePermission" Storage="_UserRolePermission" ThisKey="ID" OtherKey="UserRoleID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserRolePermission" Member="UserRolePermission">
+    <Type Name="Srims.Server.Business.Users.UserRolePermission">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="UserRoleID" Member="UserRoleID" Storage="_UserRoleID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="PermissionID" Member="PermissionID" Storage="_PermissionID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_UserRolePermission_Permission" Member="Permission" Storage="_Permission" ThisKey="PermissionID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_UserRolePermission_UserRole" Member="UserRole" Storage="_UserRole" ThisKey="UserRoleID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View" Member="View">
+    <Type Name="Srims.Server.Business.Common.View">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="Name" Member="Name" Storage="_Name" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="Type" Member="Type" Storage="_Type" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Definition" Member="Definition" Storage="_Definition" DbType="NVarChar(MAX)" UpdateCheck="Never" />
+      <Column Name="Order" Member="Order" Storage="_Order" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsPublic" Member="IsPublic" Storage="_IsPublic" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="UserID" Member="UserID" Storage="_UserID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_View_User" Member="User" Storage="_User" ThisKey="UserID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Voucher" Member="Voucher">
+    <Type Name="Srims.Server.Business.Fund.Voucher">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="FundAllocationID" Member="FundAllocationID" Storage="_FundAllocationID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="FundMemberID" Member="FundMemberID" Storage="_FundMemberID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="VoucherNumber" Member="VoucherNumber" Storage="_VoucherNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="AccountBookNumber" Member="AccountBookNumber" Storage="_AccountBookNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="AllocationIn" Member="AllocationIn" Storage="_AllocationIn" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="AllocationOut" Member="AllocationOut" Storage="_AllocationOut" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="AllocationHardware" Member="AllocationHardware" Storage="_AllocationHardware" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="OverheadExpensesIn" Member="OverheadExpensesIn" Storage="_OverheadExpensesIn" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="OverheadExpensesOut" Member="OverheadExpensesOut" Storage="_OverheadExpensesOut" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="IsRead" Member="IsRead" Storage="_IsRead" DbType="Bit NOT NULL" UpdateCheck="Never" />
+      <Column Name="CurrentStateID" Member="CurrentStateID" Storage="_CurrentStateID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="FinanceNumber" Member="FinanceNumber" Storage="_FinanceNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="FinanceAllocateDateTime" Member="FinanceAllocateDateTime" Storage="_FinanceAllocateDateTime" DbType="DateTime" UpdateCheck="Never" />
+      <Column Name="OldID" Member="OldID" Storage="_OldID" DbType="Int" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="PerformancePay" Member="PerformancePay" Storage="_PerformancePay" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="PerformanceAccountBookNumber" Member="PerformanceAccountBookNumber" Storage="_PerformanceAccountBookNumber" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="OverheadPerformancePay" Member="OverheadPerformancePay" Storage="_OverheadPerformancePay" DbType="BigInt" UpdateCheck="Never" />
+      <Column Name="OverheadExpensesMiddle" Member="OverheadExpensesMiddle" Storage="_OverheadExpensesMiddle" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="OverheadExpensesExpert" Member="OverheadExpensesExpert" Storage="_OverheadExpensesExpert" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Association Name="FK_Voucher_CurrentState" Member="CurrentState" Storage="_CurrentState" ThisKey="CurrentStateID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Voucher_FundAllocation" Member="FundAllocation" Storage="_FundAllocation" ThisKey="FundAllocationID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_Voucher_FundMember" Member="FundMember" Storage="_FundMember" ThisKey="FundMemberID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_VoucherOut_Voucher" Member="VoucherOut" Storage="_VoucherOut" ThisKey="ID" OtherKey="VoucherID" DeleteRule="NO ACTION" />
+      <Association Name="FK_VoucherStateHistory_Voucher" Member="VoucherStateHistory_Voucher" Storage="_VoucherStateHistory_Voucher" ThisKey="ID" OtherKey="VoucherID" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VoucherOut" Member="VoucherOut">
+    <Type Name="Srims.Server.Business.Fund.VoucherOut">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="VoucherID" Member="VoucherID" Storage="_VoucherID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Amount" Member="Amount" Storage="_Amount" DbType="BigInt NOT NULL" UpdateCheck="Never" />
+      <Column Name="Corporation" Member="Corporation" Storage="_Corporation" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Column Name="OutsourcingID" Member="OutsourcingID" Storage="_OutsourcingID" DbType="Int" UpdateCheck="Never" />
+      <Association Name="FK_VoucherOut_Outsourcing" Member="Outsourcing" Storage="_Outsourcing" ThisKey="OutsourcingID" OtherKey="ID" IsForeignKey="true" />
+      <Association Name="FK_VoucherOut_Voucher" Member="Voucher" Storage="_Voucher" ThisKey="VoucherID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VoucherStateHistory" Member="VoucherStateHistory">
+    <Type Name="Srims.Server.Business.Fund.VoucherStateHistory">
+      <Column Name="ID" Member="ID" Storage="_ID" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" UpdateCheck="Never" AutoSync="OnInsert" />
+      <Column Name="VoucherID" Member="VoucherID" Storage="_VoucherID" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="State" Member="State" Storage="_State" DbType="Int NOT NULL" UpdateCheck="Never" />
+      <Column Name="Operator" Member="Operator" Storage="_Operator" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="DateTime" Member="DateTime" Storage="_DateTime" DbType="DateTime NOT NULL" UpdateCheck="Never" />
+      <Column Name="Remark" Member="Remark" Storage="_Remark" DbType="NVarChar(255)" UpdateCheck="Never" />
+      <Column Name="TimeStamp" Member="TimeStamp" Storage="_TimeStamp" DbType="rowversion" IsDbGenerated="true" IsVersion="true" UpdateCheck="Never" AutoSync="Always" />
+      <Association Name="FK_Voucher_CurrentState" Member="Voucher" Storage="_Voucher" ThisKey="ID" OtherKey="CurrentStateID" DeleteRule="NO ACTION" />
+      <Association Name="FK_VoucherStateHistory_Voucher" Member="Voucher" Storage="_Voucher" ThisKey="VoucherID" OtherKey="ID" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

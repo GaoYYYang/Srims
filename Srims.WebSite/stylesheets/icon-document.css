@@ -1,0 +1,20 @@
+﻿.icon-project-vertical-censor-document, .icon-project-horizontal-censor-document, .icon-award-waiting-censor-document
+{
+	background-image: url(../images/icon/document-censor.png) !important;
+}
+.icon-require-document, .icon-expert-my-unsubmit-document
+{
+	background-image: url(../images/icon/document-require.png) !important;
+}
+.icon-upload-project-type-document-model
+{
+	background-image: url(../images/icon/document-upload.png) !important;
+}
+.icon-Document-model-manage, .icon-document
+{
+	background-image: url(../images/icon/document.png) !important;
+}
+.icon-project-horizontal-censor-contract, .icon-project-vertical-censor-contract
+{
+	background-image: url(../images/icon/contract-censor.png) !important;
+}

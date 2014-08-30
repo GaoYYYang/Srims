@@ -1,0 +1,9 @@
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.Business\bin\Debug\Srims.Server.Business.dll
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.Business\bin\Debug\Srims.Server.Business.pdb
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.Business\bin\Debug\MIS.Common.dll
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.Business\bin\Debug\Interop.jmail.dll
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.Business\bin\Debug\MIS.Common.pdb
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.Business\bin\Debug\MIS.Common.xml
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.Business\obj\Debug\ResolveAssemblyReference.cache
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.Business\obj\Debug\Srims.Server.Business.dll
+D:\member\gaoyang\科技处\Solution\5.3\Srims.Server.Business\obj\Debug\Srims.Server.Business.pdb

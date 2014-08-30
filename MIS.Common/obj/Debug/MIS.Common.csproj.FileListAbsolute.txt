@@ -1,0 +1,6 @@
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Common\bin\Debug\MIS.Common.dll
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Common\bin\Debug\MIS.Common.pdb
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Common\bin\Debug\Interop.jmail.dll
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Common\obj\Debug\ResolveAssemblyReference.cache
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Common\obj\Debug\MIS.Common.dll
+D:\member\gaoyang\科技处\Solution\5.3\MIS.Common\obj\Debug\MIS.Common.pdb

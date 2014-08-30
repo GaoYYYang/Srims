@@ -1,0 +1,40 @@
+﻿.icon-user, .icon-user-list
+{
+	background-image: url(../images/icon/user.png) !important;
+}
+.icon-user-new
+{
+	background-image: url(../images/icon/user-new.png) !important;
+}
+.icon-user-lock
+{
+	background-image: url(../images/icon/logout.png) !important;
+}
+.icon-user-basic-edit
+{
+	background-image: url(../images/icon/edit.png) !important;
+}
+.icon-user-permission-edit
+{
+	background-image: url(../images/icon/permission.png) !important;
+}
+.icon-user-temporary-authorization
+{
+	background-image: url(../images/icon/pass.png) !important;
+}
+.icon-user-temporary-authorization-cancel
+{
+	background-image: url(../images/icon/reject.png) !important;
+}
+.icon-activeuser-list
+{
+	background-image: url(../images/icon/user-online.png) !important;
+}
+.icon-user-password-reset
+{
+	background-image: url(../images/icon/reset-password.png) !important;
+}
+.icon-change-password
+{
+	background-image: url(../images/icon/reset-password.png) !important;
+}

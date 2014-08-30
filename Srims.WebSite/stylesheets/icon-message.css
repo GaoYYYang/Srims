@@ -1,0 +1,12 @@
+﻿.icon-message, .icon-message-list, .icon-message-show
+{
+	background-image: url(../images/icon/message.png) !important;
+}
+.icon-message-send
+{
+	background-image: url(../images/icon/message-send.png) !important;
+}
+.icon-message-markasread, .icon-message-markallasread
+{
+	background-image: url(../images/icon/message-markasread.png) !important;
+}

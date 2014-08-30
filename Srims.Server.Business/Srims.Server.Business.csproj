@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CFA3CC51-A1EB-4090-81AB-7F17AD5AF305}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Srims.Server.Business</RootNamespace>
+    <AssemblyName>Srims.Server.Business</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Srims.Server.Business.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TeamSystem.Data.UnitTesting, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Awards\Award.cs" />
+    <Compile Include="Awards\Award.designer.cs">
+      <DependentUpon>Award.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Awards\AwardQueryInformation.cs" />
+    <Compile Include="Awards\AwardQueryInformation_Basic.cs" />
+    <Compile Include="Awards\AwardQueryInformation_Winner.cs" />
+    <Compile Include="Awards\AwardWinner.cs" />
+    <Compile Include="Awards\AwardWinner.designer.cs">
+      <DependentUpon>AwardWinner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\Base.cs" />
+    <Compile Include="Bases\Base.designer.cs">
+      <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\BaseQueryInformation.cs" />
+    <Compile Include="CensorState.cs" />
+    <Compile Include="Common\Announcement.cs" />
+    <Compile Include="Common\Announcement.designer.cs">
+      <DependentUpon>Announcement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\AnnouncementQueryInformation.cs" />
+    <Compile Include="Common\AnnouncementState.cs" />
+    <Compile Include="Common\CompanyManangeType.cs" />
+    <Compile Include="Common\CompanyType.cs" />
+    <Compile Include="Common\Outsourcing.cs" />
+    <Compile Include="Common\Outsourcing.designer.cs">
+      <DependentUpon>Outsourcing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\OutsourcingQueryInformation.cs" />
+    <Compile Include="Common\OutsourcingUnitQueryInformation.cs" />
+    <Compile Include="Common\EventType.cs" />
+    <Compile Include="Common\LogDescriptionItem.cs" />
+    <Compile Include="Common\ManagementType.cs" />
+    <Compile Include="Common\OutsourcingUnit.cs" />
+    <Compile Include="Common\OutsourcingUnit.designer.cs">
+      <DependentUpon>OutsourcingUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ProvinceFileReader.cs" />
+    <Compile Include="Common\ViewType.cs" />
+    <Compile Include="Common\Count.cs" />
+    <Compile Include="Common\Count.designer.cs">
+      <DependentUpon>Count.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Event.cs" />
+    <Compile Include="Common\Event.designer.cs">
+      <DependentUpon>Event.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Log.cs" />
+    <Compile Include="Common\Log.designer.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\LogQueryInformation.cs" />
+    <Compile Include="Common\LogType.cs" />
+    <Compile Include="Common\NoticeText.cs" />
+    <Compile Include="Common\NoticeText.designer.cs">
+      <DependentUpon>NoticeText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\NoticeTextType.cs" />
+    <Compile Include="Common\Resource.cs" />
+    <Compile Include="Common\Resource.designer.cs">
+      <DependentUpon>Resource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Subject.cs" />
+    <Compile Include="Common\SubjectFirstLevel.cs" />
+    <Compile Include="Common\SubjectFirstLevel.designer.cs">
+      <DependentUpon>SubjectFirstLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SubjectFirstLevelQueryInformation.cs" />
+    <Compile Include="Common\SubjectSecondLevel.cs" />
+    <Compile Include="Common\SubjectSecondLevel.designer.cs">
+      <DependentUpon>SubjectSecondLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SubjectSecondLevelQueryInformation.cs" />
+    <Compile Include="Common\SystemSetting.cs" />
+    <Compile Include="Common\SystemSetting.designer.cs">
+      <DependentUpon>SystemSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\View.cs" />
+    <Compile Include="Common\View.designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\WindowsServiceType.cs" />
+    <Compile Include="Documents\AwardDocument.cs" />
+    <Compile Include="Documents\AwardDocument.designer.cs">
+      <DependentUpon>AwardDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\Contract.cs" />
+    <Compile Include="Documents\Contract.designer.cs">
+      <DependentUpon>Contract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\ContractType.cs" />
+    <Compile Include="Documents\Document.cs" />
+    <Compile Include="Documents\Document.designer.cs">
+      <DependentUpon>Document.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\DocumentModel.cs" />
+    <Compile Include="Documents\DocumentModel.designer.cs">
+      <DependentUpon>DocumentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity.cs" />
+    <Compile Include="Experts\Department.cs" />
+    <Compile Include="Experts\Department.designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Experts\DepartmentQueryInformation.cs" />
+    <Compile Include="Experts\Expert.cs" />
+    <Compile Include="Experts\Expert.designer.cs">
+      <DependentUpon>Expert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Experts\ExpertAchieveStatistic.cs" />
+    <Compile Include="Experts\ExpertAchieveStatistic.designer.cs">
+      <DependentUpon>ExpertAchieveStatistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Experts\ExpertAchieveStatisticUpdateParameters.cs" />
+    <Compile Include="Experts\ExpertInfoHistory.cs" />
+    <Compile Include="Experts\ExpertInfoHistory.designer.cs">
+      <DependentUpon>ExpertInfoHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Experts\ExpertInfoHistoryPropertyValueType.cs" />
+    <Compile Include="Experts\ExpertInfoHistoryQueryInformation.cs" />
+    <Compile Include="Experts\ExpertPostAndLevel.cs" />
+    <Compile Include="Experts\ExpertPostAndLevel.designer.cs">
+      <DependentUpon>ExpertPostAndLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Experts\ExpertQueryInformation.cs" />
+    <Compile Include="Experts\ExpertQueryInformation_Award.cs" />
+    <Compile Include="Experts\ExpertQueryInformation_Basic.cs" />
+    <Compile Include="Experts\ExpertQueryInformation_Paper.cs" />
+    <Compile Include="Experts\ExpertQueryInformation_Patent.cs" />
+    <Compile Include="Experts\ExpertQueryInformation_Project.cs" />
+    <Compile Include="Experts\IExpertAchieveStatisticDataAccess.cs" />
+    <Compile Include="Experts\SexType.cs" />
+    <Compile Include="Fund\AccountBookNumberCount.cs" />
+    <Compile Include="Fund\AccountBookNumberCount.designer.cs">
+      <DependentUpon>AccountBookNumberCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Finance.cs" />
+    <Compile Include="Fund\Finance.designer.cs">
+      <DependentUpon>Finance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\FinanceBak.cs" />
+    <Compile Include="Fund\FinanceBak.designer.cs">
+      <DependentUpon>FinanceBak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\FinanceFundDescend.cs" />
+    <Compile Include="Fund\FinanceFundDescend.designer.cs">
+      <DependentUpon>FinanceFundDescend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\FinanceQueryInformation.cs" />
+    <Compile Include="Fund\FinanceQueryResult.cs" />
+    <Compile Include="Fund\FundAllocation.cs" />
+    <Compile Include="Fund\FundAllocation.designer.cs">
+      <DependentUpon>FundAllocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\FundAllocationQueryInformation.cs" />
+    <Compile Include="Fund\FundAllocationState.cs" />
+    <Compile Include="Fund\FundAllocationStateHistory.cs" />
+    <Compile Include="Fund\FundAllocationStateHistory.designer.cs">
+      <DependentUpon>FundAllocationStateHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\FundDescend.cs" />
+    <Compile Include="Fund\FundDescend.designer.cs">
+      <DependentUpon>FundDescend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\FundDescendQueryInformation.cs" />
+    <Compile Include="Fund\FundDescendState.cs" />
+    <Compile Include="Fund\FundDescendStateHistory.cs" />
+    <Compile Include="Fund\FundDescendStateHistory.designer.cs">
+      <DependentUpon>FundDescendStateHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\FundMember.cs" />
+    <Compile Include="Fund\FundMember.designer.cs">
+      <DependentUpon>FundMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\PayPlanItem.cs" />
+    <Compile Include="Fund\PayPlanItem.designer.cs">
+      <DependentUpon>PayPlanItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\ProjectInfo_Fund.cs" />
+    <Compile Include="Fund\ProjectInfo_Fund.designer.cs">
+      <DependentUpon>ProjectInfo_Fund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\ProjectOut.cs" />
+    <Compile Include="Fund\ProjectOut.designer.cs">
+      <DependentUpon>ProjectOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\ProjectOutsourcingBudget.cs" />
+    <Compile Include="Fund\ProjectOutsourcingBudget.designer.cs">
+      <DependentUpon>ProjectOutsourcingBudget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\Recovery.cs" />
+    <Compile Include="Fund\Recovery.designer.cs">
+      <DependentUpon>Recovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\RecoveryQueryResult.cs" />
+    <Compile Include="Fund\Voucher.cs" />
+    <Compile Include="Fund\Voucher.designer.cs">
+      <DependentUpon>Voucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\VoucherOut.cs" />
+    <Compile Include="Fund\VoucherOut.designer.cs">
+      <DependentUpon>VoucherOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\VoucherQueryInformation.cs" />
+    <Compile Include="Fund\VoucherState.cs" />
+    <Compile Include="Fund\VoucherStateHistory.cs" />
+    <Compile Include="Fund\VoucherStateHistory.designer.cs">
+      <DependentUpon>VoucherStateHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gobal.cs" />
+    <Compile Include="IDatabase.cs" />
+    <Compile Include="IEntityDataAccess.cs" />
+    <Compile Include="Papers\Language.cs" />
+    <Compile Include="Papers\LiberalArtsPaper.cs" />
+    <Compile Include="Papers\LiberalArtsPaper.designer.cs">
+      <DependentUpon>LiberalArtsPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Papers\LiberalArtsPaperAuthor.cs" />
+    <Compile Include="Papers\LiberalArtsPaperAuthor.designer.cs">
+      <DependentUpon>LiberalArtsPaperAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Papers\LiberalArtsPaperQueryInformation.cs" />
+    <Compile Include="Papers\LiberalArtsPaperQueryInformation_Basic.cs" />
+    <Compile Include="Papers\LiberalArtsPaperQueryInformation_OtherBasic.cs" />
+    <Compile Include="Papers\Magazine.cs" />
+    <Compile Include="Papers\Magazine.designer.cs">
+      <DependentUpon>Magazine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Papers\MagazineInformation.cs" />
+    <Compile Include="Papers\MagazineInformation.designer.cs">
+      <DependentUpon>MagazineInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Papers\MagazineOccupation.cs" />
+    <Compile Include="Papers\MagazineOccupation.designer.cs">
+      <DependentUpon>MagazineOccupation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Papers\MagazineQueryInformation.cs" />
+    <Compile Include="Papers\MagazineQueryInformation_Basic.cs" />
+    <Compile Include="Papers\MagazineQueryInformation_Infor.cs" />
+    <Compile Include="Papers\MagazineQueryInformation_SubjectClass.cs" />
+    <Compile Include="Papers\MagazineSubjectClass.cs" />
+    <Compile Include="Papers\MagazineSubjectClass.designer.cs">
+      <DependentUpon>MagazineSubjectClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Papers\Paper.cs" />
+    <Compile Include="Papers\Paper.designer.cs">
+      <DependentUpon>Paper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Papers\PaperAuthor.cs" />
+    <Compile Include="Papers\PaperAuthor.designer.cs">
+      <DependentUpon>PaperAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Papers\PaperIndexed.cs" />
+    <Compile Include="Papers\PaperIndexed.designer.cs">
+      <DependentUpon>PaperIndexed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Papers\PaperIndexedType.cs" />
+    <Compile Include="Papers\PaperQueryInformation.cs" />
+    <Compile Include="Papers\PaperQueryInformation_Author.cs" />
+    <Compile Include="Papers\PaperQueryInformation_Basic.cs" />
+    <Compile Include="Papers\PaperQueryInformation_Indexed.cs" />
+    <Compile Include="Papers\PaperQueryInformation_Magazine.cs" />
+    <Compile Include="Papers\PaperType.cs" />
+    <Compile Include="Papers\PublishType.cs" />
+    <Compile Include="Papers\ResultsType.cs" />
+    <Compile Include="Papers\SignUnit.cs" />
+    <Compile Include="Papers\SubjectClassChineseEnglish.cs" />
+    <Compile Include="Papers\SubjectClassChineseEnglish.designer.cs">
+      <DependentUpon>SubjectClassChineseEnglish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patents\Patent.cs" />
+    <Compile Include="Patents\Patent.designer.cs">
+      <DependentUpon>Patent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patents\PatentAgency.cs" />
+    <Compile Include="Patents\PatentAgency.designer.cs">
+      <DependentUpon>PatentAgency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patents\PatentAgencyQueryInformation.cs" />
+    <Compile Include="Patents\PatentInventer.cs" />
+    <Compile Include="Patents\PatentInventer.designer.cs">
+      <DependentUpon>PatentInventer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patents\PatentLawState.cs" />
+    <Compile Include="Patents\PatentLevel.cs" />
+    <Compile Include="Patents\PatentQueryInformation.cs" />
+    <Compile Include="Patents\PatentQueryInformation_Basic.cs" />
+    <Compile Include="Patents\PatentQueryInformation_Inventer.cs" />
+    <Compile Include="Patents\PatentType.cs" />
+    <Compile Include="Performances\PerformanceAllocationQueryResult.cs" />
+    <Compile Include="Performances\Performance.cs" />
+    <Compile Include="Performances\Performance.designer.cs">
+      <DependentUpon>Performance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Performances\PerformanceAllocation.cs" />
+    <Compile Include="Performances\PerformanceAllocation.designer.cs">
+      <DependentUpon>PerformanceAllocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Performances\PerformanceAllocationQueryInformation.cs" />
+    <Compile Include="Performances\PerformanceAllocationState.cs" />
+    <Compile Include="Performances\PerformanceAllocationStateHistory.cs" />
+    <Compile Include="Performances\PerformanceAllocationStateHistory.designer.cs">
+      <DependentUpon>PerformanceAllocationStateHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Performances\PerformanceQueryInformation.cs" />
+    <Compile Include="Performances\PerformanceQueryResut.cs" />
+    <Compile Include="Performances\PerformanceVoucher.cs" />
+    <Compile Include="Performances\PerformanceVoucher.designer.cs">
+      <DependentUpon>PerformanceVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Performances\PerformanceVoucherQueryInformation.cs" />
+    <Compile Include="Performances\PerformanceVoucherQueryResult.cs" />
+    <Compile Include="Performances\PerformanceVoucherState.cs" />
+    <Compile Include="Performances\PerformanceVoucherStateHistory.cs" />
+    <Compile Include="Performances\PerformanceVoucherStateHistory.designer.cs">
+      <DependentUpon>PerformanceVoucherStateHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\ExpertAttendType.cs" />
+    <Compile Include="Projects\Project.cs" />
+    <Compile Include="Projects\Project.designer.cs">
+      <DependentUpon>Project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\ProjectLevel.cs" />
+    <Compile Include="Projects\ProjectMember.cs" />
+    <Compile Include="Projects\ProjectMember.designer.cs">
+      <DependentUpon>ProjectMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\ProjectQualityPrincipal.cs" />
+    <Compile Include="Projects\ProjectQualityPrincipal.designer.cs">
+      <DependentUpon>ProjectQualityPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\ProjectQueryInformation.cs" />
+    <Compile Include="Projects\ProjectQueryInformation_Basic.cs" />
+    <Compile Include="Projects\ProjectQueryInformation_Fund.cs" />
+    <Compile Include="Projects\ProjectQueryInformation_Member.cs" />
+    <Compile Include="Projects\ProjectQueryInformation_State.cs" />
+    <Compile Include="Projects\ProjectQueryInformation_Type.cs" />
+    <Compile Include="Projects\ProjectQueryResult.cs" />
+    <Compile Include="Projects\ProjectState.cs" />
+    <Compile Include="Projects\ProjectStateHistory.cs" />
+    <Compile Include="Projects\ProjectStateHistory.designer.cs">
+      <DependentUpon>ProjectStateHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\RecoveryProjectQueryInformation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stamps\Stamp.cs" />
+    <Compile Include="Stamps\Stamp.designer.cs">
+      <DependentUpon>Stamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stamps\StampApplication.cs" />
+    <Compile Include="Stamps\StampApplication.designer.cs">
+      <DependentUpon>StampApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stamps\StampApplicationFirstAdmin.cs" />
+    <Compile Include="Stamps\StampApplicationFirstAdmin.designer.cs">
+      <DependentUpon>StampApplicationFirstAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stamps\StampApplicationSecondAdmin.cs" />
+    <Compile Include="Stamps\StampApplicationSecondAdmin.designer.cs">
+      <DependentUpon>StampApplicationSecondAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stamps\StampApplicationType.cs" />
+    <Compile Include="Stamps\StampApplicationType.designer.cs">
+      <DependentUpon>StampApplicationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stamps\StampApplicationTypeGroup.cs" />
+    <Compile Include="Stamps\StampApplicationTypeGroup.designer.cs">
+      <DependentUpon>StampApplicationTypeGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stamps\StampApplicationTypeQueryInformation.cs" />
+    <Compile Include="Stamps\StampQueryInformation.cs" />
+    <Compile Include="Stamps\StampState.cs" />
+    <Compile Include="Stamps\StampStateHistory.cs" />
+    <Compile Include="Stamps\StampStateHistory.designer.cs">
+      <DependentUpon>StampStateHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stamps\Stuff.cs" />
+    <Compile Include="Stamps\Stuff.designer.cs">
+      <DependentUpon>Stuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stamps\StuffStamp.cs" />
+    <Compile Include="Stamps\StuffStamp.designer.cs">
+      <DependentUpon>StuffStamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics\AwardStatistic.cs" />
+    <Compile Include="Statistics\VoucherStatistic.cs" />
+    <Compile Include="Statistics\PatentStatistic.cs" />
+    <Compile Include="Statistics\FundDescendStatistic.cs" />
+    <Compile Include="Statistics\PaperStatistic.cs" />
+    <Compile Include="Statistics\FundTotalStatistic.cs" />
+    <Compile Include="Statistics\Statistic.cs" />
+    <Compile Include="Statistics\Dimension.cs" />
+    <Compile Include="Statistics\ProjectCountStatistic.cs" />
+    <Compile Include="Type\ManagementFees.cs" />
+    <Compile Include="Type\ManagementFees.designer.cs">
+      <DependentUpon>ManagementFees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Type\ManagementFeesQueryInformation.cs" />
+    <Compile Include="Type\ProjectFrom.cs" />
+    <Compile Include="Type\ProjectInfo_Type.cs" />
+    <Compile Include="Type\ProjectInfo_Type.designer.cs">
+      <DependentUpon>ProjectInfo_Type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Type\ProjectRank.cs" />
+    <Compile Include="Type\ProjectRank.designer.cs">
+      <DependentUpon>ProjectRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Type\ProjectSupportCategory.cs" />
+    <Compile Include="Type\ProjectSupportCategory.designer.cs">
+      <DependentUpon>ProjectSupportCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Type\ProjectSupportField.cs" />
+    <Compile Include="Type\ProjectSupportField.designer.cs">
+      <DependentUpon>ProjectSupportField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Type\ProjectSupportSubField.cs" />
+    <Compile Include="Type\ProjectSupportSubField.designer.cs">
+      <DependentUpon>ProjectSupportSubField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Type\ProjectType.cs" />
+    <Compile Include="Type\ProjectType.designer.cs">
+      <DependentUpon>ProjectType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Type\ProjectTypeQueryInformation.cs" />
+    <Compile Include="SubjectNature.cs" />
+    <Compile Include="Users\EmailContentModel.cs" />
+    <Compile Include="Users\HasNoPermissionException.cs" />
+    <Compile Include="Users\LoginResult.cs" />
+    <Compile Include="Users\LoginResultState.cs" />
+    <Compile Include="Users\MessageContent.cs" />
+    <Compile Include="Users\Message.cs" />
+    <Compile Include="Users\Message.designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Permission.cs" />
+    <Compile Include="Users\Permission.designer.cs">
+      <DependentUpon>Permission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\PermissionItem.cs" />
+    <Compile Include="Users\PermissionOperation.cs" />
+    <Compile Include="Users\User.cs" />
+    <Compile Include="Users\User.designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserLockLog.cs" />
+    <Compile Include="Users\UserLockLog.designer.cs">
+      <DependentUpon>UserLockLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserLoginLog.cs" />
+    <Compile Include="Users\UserLoginLog.designer.cs">
+      <DependentUpon>UserLoginLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserPermission.cs" />
+    <Compile Include="Users\UserPermission.designer.cs">
+      <DependentUpon>UserPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserQueryInformation.cs" />
+    <Compile Include="Users\UserRole.cs" />
+    <Compile Include="Users\UserRole.designer.cs">
+      <DependentUpon>UserRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserRolePermission.cs" />
+    <Compile Include="Users\UserRolePermission.designer.cs">
+      <DependentUpon>UserRolePermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserRoleType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MIS.Common\MIS.Common.csproj">
+      <Project>{6362C727-4A13-4688-9EF6-E6DB9D3D8F9C}</Project>
+      <Name>MIS.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

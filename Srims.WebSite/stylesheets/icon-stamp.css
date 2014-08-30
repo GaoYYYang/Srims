@@ -1,0 +1,24 @@
+﻿.icon-stamp, .icon-stamp-list, .icon-waitingStamp-list, .icon-stampFeedback, .icon-stampApplicationType, .icon-expert-my-stamp, .icon-departmentStamp-list
+{
+    background-image: url(../images/icon/stamp.png) !important;
+}
+.icon-stamp-new, .icon-stamp-apply, .icon-expert-stamp-apply
+{
+    background-image: url(../images/icon/stamp-new.png) !important;
+}
+.icon-stamp-censor, .icon-stampDepartment-censor
+{
+    background-image: url(../images/icon/stamp-censor.png) !important;
+}
+.icon-stamp-manage
+{
+    background-image: url(../images/icon/stamp.png) !important;
+}
+.icon-stampapplication-type
+{
+    background-image: url(../images/icon/stamp.png) !important;
+}
+.icon-stampapplication-type-group
+{
+    background-image: url(../images/icon/stamp.png) !important;
+}

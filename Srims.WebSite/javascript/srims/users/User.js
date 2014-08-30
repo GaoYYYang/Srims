@@ -1,0 +1,118 @@
+
+if (!Srims.data) 
+    Ext.namespace('Srims.data');
+if (!Srims.users) 
+    Ext.namespace('Srims.users');
+
+Srims.users.User = new Ext.data.Record.create([{
+    name: 'id',
+    type: 'int',
+    mapping: 'ID'
+}, {
+    name: 'userRoleID',
+    type: 'int',
+    mapping: 'UserRoleID'
+}, {
+    name: 'userRole',
+    type: 'string',
+    mapping: 'UserRole'
+}, {
+    name: 'userRoleType',
+    type: 'string',
+    mapping: 'UserRoleType'
+}, {
+    name: 'loginID',
+    type: 'string',
+    mapping: 'LoginID'
+}, {
+    name: 'name',
+    type: 'string',
+    mapping: 'Name'
+}, {
+    name: 'nameSpell',
+    type: 'string',
+    mapping: 'NameSpell'
+}, {
+    name: 'password',
+    type: 'string',
+    mapping: 'Password'
+}, {
+    name: 'email',
+    type: 'string',
+    mapping: 'Email'
+}, {
+    name: 'homePhone',
+    type: 'string',
+    mapping: 'HomePhone'
+}, {
+    name: 'officePhone',
+    type: 'string',
+    mapping: 'OfficePhone'
+}, {
+    name: 'mobilePhone',
+    type: 'string',
+    mapping: 'MobilePhone'
+}, {
+    name: 'fax',
+    type: 'string',
+    mapping: 'Fax'
+}, {
+    name: 'isSuper',
+    type: 'boolean',
+    mapping: 'IsSuper',
+    convert: Boolean.toBoolean
+}, {
+    name: 'allowMultiLogin',
+    type: 'boolean',
+    mapping: 'AllowMultiLogin',
+    convert: Boolean.toBoolean
+}, {
+    name: 'isCustomPermission',
+    type: 'boolean',
+    mapping: 'IsCustomPermission',
+    convert: Boolean.toBoolean
+}, {
+    name: 'extClientState',
+    type: 'string',
+    mapping: 'ExtClientState'
+}, {
+    name: 'normalPermission',
+    type: 'string',
+    mapping: 'NormalPermission'
+}, {
+    name: 'isLocked',
+    type: 'boolean',
+    mapping: 'IsLocked',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_ShowUser',
+    type: 'boolean',
+    mapping: 'HasPermission_ShowUser',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_EditUser',
+    type: 'boolean',
+    mapping: 'HasPermission_EditUser',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_DeleteUser',
+    type: 'boolean',
+    mapping: 'HasPermission_DeleteUser',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canShowUser',
+    type: 'boolean',
+    mapping: 'CanShowUser',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canEditUser',
+    type: 'boolean',
+    mapping: 'CanEditUser',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canDeleteUser',
+    type: 'boolean',
+    mapping: 'CanDeleteUser',
+    convert: Boolean.toBoolean
+}]);
+Srims.data.Entity.apply(Srims.users.User);

@@ -1,0 +1,21 @@
+﻿.icon-expert, .icon-expert-list
+{
+	background-image: url(../images/icon/expert.png) !important;
+}
+.icon-expert-new, .icon-outsourcing-manage
+{
+	background-image: url(../images/icon/expert-new.png) !important;
+}
+.icon-expert-query, .icon-outsourcing-inquiry
+{
+	background-image: url(../images/icon/expert-search.png) !important;
+}
+.icon-expert-edit-censor, .icon-outsourcing-statistics
+{
+	background-image: url(../images/icon/expert-edit-censor.png) !important;
+}
+
+.expert-can-edit
+{
+	background-color: #00FF00;
+}

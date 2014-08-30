@@ -1,0 +1,742 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18.25, 12.5" name="SrimsV4">
+  <DataContextMoniker Name="/SrimsV4DataContext" />
+  <nestedChildShapes>
+    <classShape Id="8543fbce-b71c-4116-9d11-3c0ba5cb12f8" isExpanded="false" absoluteBounds="0.5, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/SubjectFirstLevel_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34a94c37-1182-4e59-87eb-b04415a89c47" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6d3f9807-ff9b-45ed-8692-3d0a9f1934d9" isExpanded="false" absoluteBounds="0.5, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/SubjectSecondLevel_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb5c01b8-deed-4960-a300-da5b8a240c4c" absoluteBounds="0.51500000000000012, 1.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="33c3d44c-7ff1-441f-912b-933984264516" isExpanded="false" absoluteBounds="5.375, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/SystemSetting_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46f757d9-3af3-4628-9b0c-0ecc5fd52c4d" absoluteBounds="5.39, 0.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a43f54aa-0132-4261-a9f8-94244340afe7" isExpanded="false" absoluteBounds="5.375, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/NoticeText_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95562e54-8bc0-4a0f-b9cc-9b21b8aa2ff9" absoluteBounds="5.3900000000000006, 1.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="100639cf-2490-4ed8-a81f-bcffedb2d1ae" isExpanded="false" absoluteBounds="2.875, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Log_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77c0561a-c081-4c97-88c6-5c7988fad105" absoluteBounds="2.89, 1.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 0.95); (1.5 : 1.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SrimsV4DataContext/SubjectFirstLevel_Old/SubjectFirstLevel_Old_SubjectSecondLevel_Old" />
+      <nodes>
+        <classShapeMoniker Id="8543fbce-b71c-4116-9d11-3c0ba5cb12f8" />
+        <classShapeMoniker Id="6d3f9807-ff9b-45ed-8692-3d0a9f1934d9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="003db4a3-13dc-4665-97ae-273482083fc2" isExpanded="false" absoluteBounds="2.875, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Count_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="44b49919-b0bb-466e-8ef7-2c620e8ff95b" absoluteBounds="2.89, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9470fdbd-f668-4e89-8325-cfdaffe89fd1" isExpanded="false" absoluteBounds="0.5, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/UserRole_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f1d5dad-33cb-4f66-89c2-16201f1fb7eb" absoluteBounds="0.51500000000000012, 3.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3878f1b1-0bbe-4e78-ad92-37512a16c806" isExpanded="false" absoluteBounds="0.5, 5.125, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Project_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46470c9c-fd0b-4777-93c3-c98ae8ff47f7" absoluteBounds="0.51500000000000057, 5.585, 1.9700000000000002, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="360f0870-3821-4eb5-94f9-fa063eeb998f" isExpanded="false" absoluteBounds="2.875, 5.125, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/ProjectMember_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03468456-55d9-4f2d-bde4-a738c642dfd2" absoluteBounds="2.8900000000000006, 5.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(0.5 : 1.7); (0.125 : 2.075); (0.125 : 4.75); (0.5 : 5.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/SubjectSecondLevel_Old/SubjectSecondLevel_Old_Project_Old" />
+      <nodes>
+        <classShapeMoniker Id="6d3f9807-ff9b-45ed-8692-3d0a9f1934d9" />
+        <classShapeMoniker Id="3878f1b1-0bbe-4e78-ad92-37512a16c806" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 5.47952290852865); (2.875 : 5.47952290852865)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Project_Old/Project_Old_ProjectMember_Old" />
+      <nodes>
+        <classShapeMoniker Id="3878f1b1-0bbe-4e78-ad92-37512a16c806" />
+        <classShapeMoniker Id="360f0870-3821-4eb5-94f9-fa063eeb998f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fbfc4c09-6887-4c25-bb27-5025de194cc4" isExpanded="false" absoluteBounds="0.5, 6.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Contract_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b8d1b08c-1e24-4ceb-9db9-a913d6720348" absoluteBounds="0.51500000000000012, 6.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dea03c73-3266-4427-bf49-9890c08230aa" isExpanded="false" absoluteBounds="2.875, 6.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Document_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c386683-eaf6-42e8-be71-a4cccfe61d71" absoluteBounds="2.89, 6.71, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5312525 : 5.575); (1.5312525 : 6.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Project_Old/Project_Old_Contract_Old" />
+      <nodes>
+        <classShapeMoniker Id="3878f1b1-0bbe-4e78-ad92-37512a16c806" />
+        <classShapeMoniker Id="fbfc4c09-6887-4c25-bb27-5025de194cc4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 5.575); (2.875 : 6.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Project_Old/Project_Old_Document_Old" />
+      <nodes>
+        <classShapeMoniker Id="3878f1b1-0bbe-4e78-ad92-37512a16c806" />
+        <classShapeMoniker Id="dea03c73-3266-4427-bf49-9890c08230aa" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a3cdcbce-fd19-4bb2-a0b3-02f0a55e378d" isExpanded="false" absoluteBounds="9, 4.5, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/ProjectRank_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f028e11-cc04-4236-917e-b62c0cc450ac" absoluteBounds="9.015, 4.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aa3f3bb4-c1a2-442d-9c4b-6f2b887f944d" isExpanded="false" absoluteBounds="10.25, 6.125, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/ProjectSupportField_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b796d07f-0b2d-4e55-804a-d401503c13c5" absoluteBounds="10.265, 6.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="01f61c86-333d-4954-8cd3-97849ca82f3e" isExpanded="false" absoluteBounds="10.25, 7, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/ProjectSupportSubField_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27d361c4-e309-4341-9f73-e79755dc29fb" absoluteBounds="10.265, 7.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="447d2e6f-57d2-4a04-8b78-6ec3bb04f1c2" isExpanded="false" absoluteBounds="6.375, 5.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/ProjectInfo_Type_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="07d76669-4e5c-4526-a5d2-0ede211a4ff2" absoluteBounds="6.39, 5.71, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.375 : 5.512499625); (5.125 : 5.512499625); (5.125 : 5.825); (2.72222222222222 : 5.825 : JumpStart); (2.55555555555556 : 5.825 : JumpEnd); (1.01562625 : 5.825); (1.01562625 : 5.575)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/ProjectInfo_Type_Old/ProjectInfo_Type_Old_Project_Old" />
+      <nodes>
+        <classShapeMoniker Id="447d2e6f-57d2-4a04-8b78-6ec3bb04f1c2" />
+        <classShapeMoniker Id="3878f1b1-0bbe-4e78-ad92-37512a16c806" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.15625 : 6.575); (11.15625 : 7)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/ProjectSupportField_Old/ProjectSupportField_Old_ProjectSupportSubField_Old" />
+      <nodes>
+        <classShapeMoniker Id="aa3f3bb4-c1a2-442d-9c4b-6f2b887f944d" />
+        <classShapeMoniker Id="01f61c86-333d-4954-8cd3-97849ca82f3e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.01562625 : 5.575); (2.01562625 : 5.6375); (5.04166666666667 : 5.6375 : JumpStart); (5.20833333333333 : 5.6375 : JumpEnd); (5.22916666666667 : 5.6375 : JumpStart); (5.39583333333333 : 5.6375 : JumpEnd); (6.28125 : 5.6375); (6.28125 : 5.3499978125); (6.375 : 5.3499978125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Project_Old/Project_Old_ProjectInfo_Type_Old" />
+      <nodes>
+        <classShapeMoniker Id="3878f1b1-0bbe-4e78-ad92-37512a16c806" />
+        <classShapeMoniker Id="447d2e6f-57d2-4a04-8b78-6ec3bb04f1c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 4.95); (8.375 : 5.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/ProjectRank_Old/ProjectRank_Old_ProjectInfo_Type_Old" />
+      <nodes>
+        <classShapeMoniker Id="a3cdcbce-fd19-4bb2-a0b3-02f0a55e378d" />
+        <classShapeMoniker Id="447d2e6f-57d2-4a04-8b78-6ec3bb04f1c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 6.125); (11.25 : 5.875); (10.7083333333333 : 5.875 : JumpStart); (10.5416666666667 : 5.875 : JumpEnd); (9.39583333333333 : 5.875 : JumpStart); (9.22916666666667 : 5.875 : JumpEnd); (8.75 : 5.875); (8.75 : 5.506252); (8.375 : 5.506252)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/ProjectSupportField_Old/ProjectSupportField_Old_ProjectInfo_Type_Old" />
+      <nodes>
+        <classShapeMoniker Id="aa3f3bb4-c1a2-442d-9c4b-6f2b887f944d" />
+        <classShapeMoniker Id="447d2e6f-57d2-4a04-8b78-6ec3bb04f1c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.25 : 7.225); (6.96875 : 7.225); (6.96875 : 5.7)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/ProjectSupportSubField_Old/ProjectSupportSubField_Old_ProjectInfo_Type_Old" />
+      <nodes>
+        <classShapeMoniker Id="01f61c86-333d-4954-8cd3-97849ca82f3e" />
+        <classShapeMoniker Id="447d2e6f-57d2-4a04-8b78-6ec3bb04f1c2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0686692f-ee44-4e76-900b-9e8cc791efb6" isExpanded="false" absoluteBounds="4.75, 8.625, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/FundDescend_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5375b7e6-2fd9-4853-b282-21cc18a51335" absoluteBounds="4.765, 9.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ff991569-1a15-4370-900e-77e751134564" isExpanded="false" absoluteBounds="1.25, 8.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/ProjectInfo_Fund_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="64cba473-f3cc-48d4-abd7-bae17483a99f" absoluteBounds="1.2650000000000001, 8.71, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="945d5ed2-50ad-4f42-b32a-d6a19aa30e74" isExpanded="false" absoluteBounds="4.75, 10.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/FundAllocation_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa123518-77e0-4127-be7e-502b963b9735" absoluteBounds="4.765, 10.71, 1.9700000000000002, 3.9031168619791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="647c078c-8f0a-4210-bc32-c980ab300a61" isExpanded="false" absoluteBounds="6.625, 11.75, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/VoucherItemHardware_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0aafa736-4410-45d5-ac6c-2c194f0b2a2f" absoluteBounds="6.64, 12.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e877046-3b9e-4dc9-b57e-50850a06fde6" isExpanded="false" absoluteBounds="8.75, 11.75, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/VoucherItemOversea_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce14097e-b786-4b6c-bf92-7e14b9a08745" absoluteBounds="8.765, 12.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c737ce50-65f3-4982-b7b8-2ec0580e631c" isExpanded="false" absoluteBounds="2.25, 11.75, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/VoucherItemIn_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1d5c06d-7c7b-4d04-89be-773dbbc65046" absoluteBounds="2.2649999999999997, 12.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="606e1bbc-0ede-4e33-bc50-5231a1779bf2" isExpanded="false" absoluteBounds="4.5, 11.75, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/VoucherItemOut_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1856a6bb-0893-4ac8-a531-c85de4653970" absoluteBounds="4.515, 12.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.25 : 8.25); (0.875 : 7.875); (0.333333333333333 : 7.875 : JumpStart); (0.166666666666667 : 7.875 : JumpEnd); (0.125 : 7.875); (0.125 : 5.95); (0.5 : 5.575)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/ProjectInfo_Fund_Old/ProjectInfo_Fund_Old_Project_Old" />
+      <nodes>
+        <classShapeMoniker Id="ff991569-1a15-4370-900e-77e751134564" />
+        <classShapeMoniker Id="3878f1b1-0bbe-4e78-ad92-37512a16c806" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.25 : 8.4374995); (5.75 : 8.4374995); (5.75 : 8.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/ProjectInfo_Fund_Old/ProjectInfo_Fund_Old_FundDescend_Old" />
+      <nodes>
+        <classShapeMoniker Id="ff991569-1a15-4370-900e-77e751134564" />
+        <classShapeMoniker Id="0686692f-ee44-4e76-900b-9e8cc791efb6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.273439375 : 5.575); (1.273439375 : 6); (0.25 : 6); (0.25 : 8.506252); (1.25 : 8.506252)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Project_Old/Project_Old_ProjectInfo_Fund_Old" />
+      <nodes>
+        <classShapeMoniker Id="3878f1b1-0bbe-4e78-ad92-37512a16c806" />
+        <classShapeMoniker Id="ff991569-1a15-4370-900e-77e751134564" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 9.075); (5.75 : 10.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/FundDescend_Old/FundDescend_Old_FundAllocation_Old" />
+      <nodes>
+        <classShapeMoniker Id="0686692f-ee44-4e76-900b-9e8cc791efb6" />
+        <classShapeMoniker Id="945d5ed2-50ad-4f42-b32a-d6a19aa30e74" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e0c00230-32b1-47b3-a90d-b4d4af5e4dba" isExpanded="false" absoluteBounds="8.625, 9.875, 2.625, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/AccountBookNumberCount_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37497239-2428-4273-9e65-4076ec7f4a3c" absoluteBounds="8.64, 10.335, 2.5949999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7abaf900-11ed-4936-b7a5-a654db92f621" isExpanded="false" absoluteBounds="2.5, 9.125, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/PayPlanItem_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="06d3b60c-e1c9-4f0e-92f4-5e24792764be" absoluteBounds="2.515, 9.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 8.7); (2.875 : 9.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/ProjectInfo_Fund_Old/ProjectInfo_Fund_Old_PayPlanItem_Old" />
+      <nodes>
+        <classShapeMoniker Id="ff991569-1a15-4370-900e-77e751134564" />
+        <classShapeMoniker Id="7abaf900-11ed-4936-b7a5-a654db92f621" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="231e2629-536d-44aa-bc09-4fecd4c8e1f5" isExpanded="false" absoluteBounds="0.625, 10.5, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/FundMember_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b7afb91-c3e3-45ff-b303-7ddae3253c70" absoluteBounds="0.64000000000000012, 10.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.84375 : 8.7); (1.84375 : 10.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/ProjectInfo_Fund_Old/ProjectInfo_Fund_Old_FundMember_Old" />
+      <nodes>
+        <classShapeMoniker Id="ff991569-1a15-4370-900e-77e751134564" />
+        <classShapeMoniker Id="231e2629-536d-44aa-bc09-4fecd4c8e1f5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1b03df90-bb77-491c-a724-f00a69eedeba" isExpanded="false" absoluteBounds="5.375, 3.375, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Department_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="032f5cb7-5e61-4c1d-8dd5-c9dfaeeab941" absoluteBounds="5.39, 3.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="80239a12-5db9-4017-83a6-9349ecdb3753" isExpanded="false" absoluteBounds="8, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Announcement_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a59236f-289d-482a-adf2-cfe2d128c01a" absoluteBounds="8.015, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5eb68fa2-0757-4547-ac55-52ea595f2c4f" isExpanded="false" absoluteBounds="8.625, 1.875, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Base_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e63a6226-b5d9-49bb-bb44-261a9e3d2c89" absoluteBounds="8.64, 2.335, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.62534515384615 : 2.325); (8.25 : 2.70034515384615); (8.25 : 5); (5.39583333333333 : 5 : JumpStart); (5.22916666666667 : 5 : JumpEnd); (2.63261438461538 : 5); (2.5 : 5.13261438461538)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Base_Old/Base_Old_Project_Old" />
+      <nodes>
+        <classShapeMoniker Id="5eb68fa2-0757-4547-ac55-52ea595f2c4f" />
+        <classShapeMoniker Id="3878f1b1-0bbe-4e78-ad92-37512a16c806" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" isExpanded="false" absoluteBounds="5.375, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Expert_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3783a89-b17f-4fad-8e98-36a6fc2aef9c" absoluteBounds="5.39, 3.085, 1.9700000000000002, 8.7106526692708321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fdc23eea-865e-420d-b6dc-be70175a66d0" isExpanded="false" absoluteBounds="3, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/User_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="57a44bcb-4d2e-4bee-964f-97e21b464f5b" absoluteBounds="3.015, 3.085, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 3.075); (5 : 3.45); (5 : 4.75); (2.86773076923077 : 4.75); (2.49273076923077 : 5.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Expert_Old/Expert_Old_Project_Old" />
+      <nodes>
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+        <classShapeMoniker Id="3878f1b1-0bbe-4e78-ad92-37512a16c806" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.39715284615385 : 3.075); (5.15625 : 3.31590284615385); (5.15625 : 4.875); (2.73892307692308 : 4.875); (2.48892307692308 : 5.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Expert_Old/Expert_Old_Project_Old1" />
+      <nodes>
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+        <classShapeMoniker Id="3878f1b1-0bbe-4e78-ad92-37512a16c806" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.41732842307692 : 3.075); (6.41732842307692 : 3.3125); (5.3125 : 3.3125); (5.3125 : 5.32500025); (4.875 : 5.32500025)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Expert_Old/Expert_Old_ProjectMember_Old" />
+      <nodes>
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+        <classShapeMoniker Id="360f0870-3821-4eb5-94f9-fa063eeb998f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.01913883173077 : 3.075); (6.01913883173077 : 3.25); (5.70428257371794 : 3.25 : JumpStart); (5.53761590705128 : 3.25 : JumpEnd); (5.3125 : 3.25); (5.3125 : 8.5625); (4.6875 : 8.5625); (4.6875 : 10.725); (2.625 : 10.725)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Expert_Old/Expert_Old_FundMember_Old" />
+      <nodes>
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+        <classShapeMoniker Id="231e2629-536d-44aa-bc09-4fecd4c8e1f5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.375 : 2.778124); (9.65642507692307 : 2.778124); (9.65642507692307 : 2.325)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Expert_Old/Expert_Old_Base_Old" />
+      <nodes>
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+        <classShapeMoniker Id="5eb68fa2-0757-4547-ac55-52ea595f2c4f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.95866421153846 : 3.375); (6.95866421153846 : 3.075)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Department_Old/Department_Old_Expert_Old" />
+      <nodes>
+        <classShapeMoniker Id="1b03df90-bb77-491c-a724-f00a69eedeba" />
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.62094924038461 : 3.375); (5.62094924038461 : 3.075)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Department_Old/Department_Old_Expert_Old1" />
+      <nodes>
+        <classShapeMoniker Id="1b03df90-bb77-491c-a724-f00a69eedeba" />
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.68799631730769 : 3.375); (6.68799631730769 : 3.075)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Department_Old/Department_Old_Expert_Old2" />
+      <nodes>
+        <classShapeMoniker Id="1b03df90-bb77-491c-a724-f00a69eedeba" />
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.49238461538462 : 1.7); (2.64863461538462 : 1.85625); (6.375 : 1.85625); (6.375 : 2.625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SrimsV4DataContext/SubjectSecondLevel_Old/SubjectSecondLevel_Old_Expert_Old" />
+      <nodes>
+        <classShapeMoniker Id="6d3f9807-ff9b-45ed-8692-3d0a9f1934d9" />
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.49723076923077 : 1.7); (2.77848076923077 : 1.98125); (6.375 : 1.98125); (6.375 : 2.625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SrimsV4DataContext/SubjectSecondLevel_Old/SubjectSecondLevel_Old_Expert_Old1" />
+      <nodes>
+        <classShapeMoniker Id="6d3f9807-ff9b-45ed-8692-3d0a9f1934d9" />
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 1.69792207692308); (2.72082792307692 : 1.91875); (6.375 : 1.91875); (6.375 : 2.625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SrimsV4DataContext/SubjectSecondLevel_Old/SubjectSecondLevel_Old_Expert_Old2" />
+      <nodes>
+        <classShapeMoniker Id="6d3f9807-ff9b-45ed-8692-3d0a9f1934d9" />
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 1.69307592307692); (2.60067407692308 : 1.79375); (6.375 : 1.79375); (6.375 : 2.625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SrimsV4DataContext/SubjectSecondLevel_Old/SubjectSecondLevel_Old_Expert_Old3" />
+      <nodes>
+        <classShapeMoniker Id="6d3f9807-ff9b-45ed-8692-3d0a9f1934d9" />
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 1.67784515384615); (2.99090484615385 : 2.16875); (6.375 : 2.16875); (6.375 : 2.625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SrimsV4DataContext/SubjectSecondLevel_Old/SubjectSecondLevel_Old_Expert_Old4" />
+      <nodes>
+        <classShapeMoniker Id="6d3f9807-ff9b-45ed-8692-3d0a9f1934d9" />
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 1.67784515384615); (2.95965484615385 : 2.1375); (6.375 : 2.1375); (6.375 : 2.625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SrimsV4DataContext/SubjectSecondLevel_Old/SubjectSecondLevel_Old_Expert_Old5" />
+      <nodes>
+        <classShapeMoniker Id="6d3f9807-ff9b-45ed-8692-3d0a9f1934d9" />
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 1.68130669230769); (2.92494330769231 : 2.10625); (6.375 : 2.10625); (6.375 : 2.625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SrimsV4DataContext/SubjectSecondLevel_Old/SubjectSecondLevel_Old_Expert_Old6" />
+      <nodes>
+        <classShapeMoniker Id="6d3f9807-ff9b-45ed-8692-3d0a9f1934d9" />
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.48269230769231 : 1.7); (2.85769230769231 : 2.075); (6.375 : 2.075); (6.375 : 2.625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SrimsV4DataContext/SubjectSecondLevel_Old/SubjectSecondLevel_Old_Expert_Old7" />
+      <nodes>
+        <classShapeMoniker Id="6d3f9807-ff9b-45ed-8692-3d0a9f1934d9" />
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 2.85); (5.375 : 2.85)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/User_Old/User_Old_Expert_Old" />
+      <nodes>
+        <classShapeMoniker Id="fdc23eea-865e-420d-b6dc-be70175a66d0" />
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 2.85); (3 : 2.85)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/UserRole_Old/UserRole_Old_User_Old" />
+      <nodes>
+        <classShapeMoniker Id="9470fdbd-f668-4e89-8325-cfdaffe89fd1" />
+        <classShapeMoniker Id="fdc23eea-865e-420d-b6dc-be70175a66d0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f522d2fd-94b6-4ae0-9a40-5b28b7cdda16" isExpanded="false" absoluteBounds="4.75, 11, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Voucher_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="32bfba25-3eba-4b60-ac5a-d74f534e52c5" absoluteBounds="4.765, 11.46, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dafe9014-db9b-4a2b-9aec-ba56eb4edee3" isExpanded="false" absoluteBounds="15.5, 3.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/AwardWinner_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d3a5c5d-8436-49af-8620-dc22710676bc" absoluteBounds="15.515, 3.7100000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b15ad101-162c-4418-b673-34c48d683726" isExpanded="false" absoluteBounds="13.25, 3.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Award_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05ebc599-37e7-4caa-8475-3b83af4af9a5" absoluteBounds="13.265, 3.7100000000000009, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.6875 : 11.45); (6.6875 : 11.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Voucher_Old/Voucher_Old_VoucherItemHardware_Old" />
+      <nodes>
+        <classShapeMoniker Id="f522d2fd-94b6-4ae0-9a40-5b28b7cdda16" />
+        <classShapeMoniker Id="647c078c-8f0a-4210-bc32-c980ab300a61" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.781252 : 11.45); (5.781252 : 11.734375); (8.7265625 : 11.734375); (8.7265625 : 11.975); (8.75 : 11.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Voucher_Old/Voucher_Old_VoucherItemOversea_Old" />
+      <nodes>
+        <classShapeMoniker Id="f522d2fd-94b6-4ae0-9a40-5b28b7cdda16" />
+        <classShapeMoniker Id="1e877046-3b9e-4dc9-b57e-50850a06fde6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.75 : 11.45); (4.25 : 11.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Voucher_Old/Voucher_Old_VoucherItemIn_Old" />
+      <nodes>
+        <classShapeMoniker Id="f522d2fd-94b6-4ae0-9a40-5b28b7cdda16" />
+        <classShapeMoniker Id="c737ce50-65f3-4982-b7b8-2ec0580e631c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.6562525 : 11.45); (5.6562525 : 11.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Voucher_Old/Voucher_Old_VoucherItemOut_Old" />
+      <nodes>
+        <classShapeMoniker Id="f522d2fd-94b6-4ae0-9a40-5b28b7cdda16" />
+        <classShapeMoniker Id="606e1bbc-0ede-4e33-bc50-5231a1779bf2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 10.7); (5.75 : 11)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/FundAllocation_Old/FundAllocation_Old_Voucher_Old" />
+      <nodes>
+        <classShapeMoniker Id="945d5ed2-50ad-4f42-b32a-d6a19aa30e74" />
+        <classShapeMoniker Id="f522d2fd-94b6-4ae0-9a40-5b28b7cdda16" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.625 : 10.95); (1.625 : 11.1937475); (4.75 : 11.1937475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/FundMember_Old/FundMember_Old_Voucher_Old" />
+      <nodes>
+        <classShapeMoniker Id="231e2629-536d-44aa-bc09-4fecd4c8e1f5" />
+        <classShapeMoniker Id="f522d2fd-94b6-4ae0-9a40-5b28b7cdda16" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.375 : 2.9578145); (8.16666666666667 : 2.9578145 : JumpStart); (8.33333333333333 : 2.9578145 : JumpEnd); (16.5 : 2.9578145); (16.5 : 3.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Expert_Old/Expert_Old_AwardWinner_Old" />
+      <nodes>
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+        <classShapeMoniker Id="dafe9014-db9b-4a2b-9aec-ba56eb4edee3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.25 : 3.475); (15.5 : 3.475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Award_Old/Award_Old_AwardWinner_Old" />
+      <nodes>
+        <classShapeMoniker Id="b15ad101-162c-4418-b673-34c48d683726" />
+        <classShapeMoniker Id="dafe9014-db9b-4a2b-9aec-ba56eb4edee3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.375 : 3.5375); (8.16666666666667 : 3.5375 : JumpStart); (8.33333333333333 : 3.5375 : JumpEnd); (13.25 : 3.5375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Department_Old/Department_Old_Award_Old" />
+      <nodes>
+        <classShapeMoniker Id="1b03df90-bb77-491c-a724-f00a69eedeba" />
+        <classShapeMoniker Id="b15ad101-162c-4418-b673-34c48d683726" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0c4f15c4-f122-426b-9cca-91232cdd5035" isExpanded="false" absoluteBounds="13.375, 5.5, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Patent_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3a9ab6e-d668-4395-8aaa-e43416ec54a6" absoluteBounds="13.39, 5.96, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f2d6df83-03f4-4347-b16c-158d0495e2c8" isExpanded="false" absoluteBounds="13.375, 6.375, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/PatentAgency_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d43cbf0-a97f-42d6-a84f-72e8b3de8b46" absoluteBounds="13.39, 6.8350000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a84e684-b677-42e9-92fc-c457c82438ed" isExpanded="false" absoluteBounds="15.625, 5.5, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/PatentInventer_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cbb854de-a4b5-4618-9e0d-2779cf7d8ecd" absoluteBounds="15.64, 5.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c9cca1b4-22ce-4981-a2c6-43354eecb9f1" isExpanded="false" absoluteBounds="13.5, 8.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Paper_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3883c0b-63b9-4771-aa13-2cad38d641a2" absoluteBounds="13.515, 8.71, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="94a97fbe-d5a4-47cf-95ee-f84f6fd7f13e" isExpanded="false" absoluteBounds="15.875, 8.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/PaperAuthor_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90745943-8288-4225-850f-62c00e7e593b" absoluteBounds="15.89, 8.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c85b9ed1-6a15-4a65-8e15-e3ec5f3ec920" isExpanded="false" absoluteBounds="13.375, 9.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/PaperIndexed_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6382150d-fe26-4f76-9c4f-d2bc03e61a91" absoluteBounds="13.39, 9.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ed4d048f-0cb8-46c4-b6f1-877133830db6" isExpanded="false" absoluteBounds="14.5, 10.5, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/MagazineSubjectClass_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58ec048c-bb7a-48f8-91bd-04400bb818c8" absoluteBounds="14.515, 10.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4a879578-a287-4089-adab-b9d3ccfa0866" isExpanded="false" absoluteBounds="11.875, 11.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Magazine_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7212a055-d079-4343-83fa-c71c2d254c23" absoluteBounds="11.89, 11.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4d12ab9-d879-4899-8ba2-029c099db5f1" isExpanded="false" absoluteBounds="14.625, 11.625, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/MagazineInformation_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b85350c-91da-4baa-889e-ee2bcf40d673" absoluteBounds="14.64, 12.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.375 : 3.79375); (8.16666666666667 : 3.79375 : JumpStart); (8.33333333333333 : 3.79375 : JumpEnd); (13.1041666666667 : 3.79375 : JumpStart); (13.2708333333333 : 3.79375 : JumpEnd); (15.34375 : 3.79375); (15.34375 : 5.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Department_Old/Department_Old_Patent_Old" />
+      <nodes>
+        <classShapeMoniker Id="1b03df90-bb77-491c-a724-f00a69eedeba" />
+        <classShapeMoniker Id="0c4f15c4-f122-426b-9cca-91232cdd5035" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.375 : 6.375); (14.375 : 5.95)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/PatentAgency_Old/PatentAgency_Old_Patent_Old" />
+      <nodes>
+        <classShapeMoniker Id="f2d6df83-03f4-4347-b16c-158d0495e2c8" />
+        <classShapeMoniker Id="0c4f15c4-f122-426b-9cca-91232cdd5035" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.375 : 2.6703095); (9.57309174358974 : 2.6703095 : JumpStart); (9.7397584102564 : 2.6703095 : JumpEnd); (17.59375 : 2.6703095); (17.59375 : 5.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Expert_Old/Expert_Old_PatentInventer_Old" />
+      <nodes>
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+        <classShapeMoniker Id="0a84e684-b677-42e9-92fc-c457c82438ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.375 : 5.725); (15.625 : 5.725)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Patent_Old/Patent_Old_PatentInventer_Old" />
+      <nodes>
+        <classShapeMoniker Id="0c4f15c4-f122-426b-9cca-91232cdd5035" />
+        <classShapeMoniker Id="0a84e684-b677-42e9-92fc-c457c82438ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.375 : 3.553123); (8.16666666666667 : 3.553123 : JumpStart); (8.33333333333333 : 3.553123 : JumpEnd); (13.1875 : 3.553123); (13.1875 : 3.8875); (15.4375 : 3.8875); (15.4375 : 8.15625); (14.8125005 : 8.15625); (14.8125005 : 8.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Department_Old/Department_Old_Paper_Old" />
+      <nodes>
+        <classShapeMoniker Id="1b03df90-bb77-491c-a724-f00a69eedeba" />
+        <classShapeMoniker Id="c9cca1b4-22ce-4981-a2c6-43354eecb9f1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.96875 : 11.25); (11.96875 : 8.63205485026042); (13.5 : 8.63205485026042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Magazine_Old/Magazine_Old_Paper_Old" />
+      <nodes>
+        <classShapeMoniker Id="4a879578-a287-4089-adab-b9d3ccfa0866" />
+        <classShapeMoniker Id="c9cca1b4-22ce-4981-a2c6-43354eecb9f1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.375 : 2.989067); (17.78125 : 2.989067); (17.78125 : 8.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Expert_Old/Expert_Old_PaperAuthor_Old" />
+      <nodes>
+        <classShapeMoniker Id="e3f357ca-8f86-4edc-a514-392a5e49ec57" />
+        <classShapeMoniker Id="94a97fbe-d5a4-47cf-95ee-f84f6fd7f13e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15.5 : 8.475); (15.875 : 8.475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Paper_Old/Paper_Old_PaperAuthor_Old" />
+      <nodes>
+        <classShapeMoniker Id="c9cca1b4-22ce-4981-a2c6-43354eecb9f1" />
+        <classShapeMoniker Id="94a97fbe-d5a4-47cf-95ee-f84f6fd7f13e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.4375 : 8.7); (14.4375 : 9.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Paper_Old/Paper_Old_PaperIndexed_Old" />
+      <nodes>
+        <classShapeMoniker Id="c9cca1b4-22ce-4981-a2c6-43354eecb9f1" />
+        <classShapeMoniker Id="c85b9ed1-6a15-4a65-8e15-e3ec5f3ec920" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.875 : 11.25); (14.5 : 10.95)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Magazine_Old/Magazine_Old_MagazineSubjectClass_Old" />
+      <nodes>
+        <classShapeMoniker Id="4a879578-a287-4089-adab-b9d3ccfa0866" />
+        <classShapeMoniker Id="ed4d048f-0cb8-46c4-b6f1-877133830db6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.875 : 11.506252); (14.25 : 11.506252); (14.25 : 11.85); (14.625 : 11.85)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Magazine_Old/Magazine_Old_MagazineInformation_Old" />
+      <nodes>
+        <classShapeMoniker Id="4a879578-a287-4089-adab-b9d3ccfa0866" />
+        <classShapeMoniker Id="a4d12ab9-d879-4899-8ba2-029c099db5f1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="05594bfd-90eb-40e1-8ca1-1dd12f265e5f" isExpanded="false" absoluteBounds="0.5, 3.75, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Power_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1555d357-c68b-4989-b150-f2b1ed690bc6" absoluteBounds="0.51500000000000012, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 3.75); (1.5 : 3.075)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Power_Old/Power_Old_UserRole_Old" />
+      <nodes>
+        <classShapeMoniker Id="05594bfd-90eb-40e1-8ca1-1dd12f265e5f" />
+        <classShapeMoniker Id="9470fdbd-f668-4e89-8325-cfdaffe89fd1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 3.75); (3 : 3.075)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Power_Old/Power_Old_User_Old" />
+      <nodes>
+        <classShapeMoniker Id="05594bfd-90eb-40e1-8ca1-1dd12f265e5f" />
+        <classShapeMoniker Id="fdc23eea-865e-420d-b6dc-be70175a66d0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="36a72969-00a8-4317-be80-ba2a763db3a5" isExpanded="false" absoluteBounds="8.375, 7.875, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/FinanceBak_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c073899-364e-4ccc-ae33-415df5743540" absoluteBounds="8.39, 8.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a15d8b2f-01d1-43b1-a698-42c5b73ce2a5" isExpanded="false" absoluteBounds="8.375, 8.625, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/Finance_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6287a3a-999d-4db2-a931-a0bdaa054a64" absoluteBounds="8.39, 9.085, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 8.85); (6.75 : 8.85)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SrimsV4DataContext/Finance_Old/Finance_Old_FundDescend_Old" />
+      <nodes>
+        <classShapeMoniker Id="a15d8b2f-01d1-43b1-a698-42c5b73ce2a5" />
+        <classShapeMoniker Id="0686692f-ee44-4e76-900b-9e8cc791efb6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b1a811c0-fd90-41dd-b5a0-6cf79c84480f" isExpanded="false" absoluteBounds="7.625, 6.125, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/ProjectSupportCategory_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d4904f8-7a34-4292-aaad-5ad523c09614" absoluteBounds="7.6400000000000006, 6.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2fe4edbf-f4b6-4409-99e7-2941e4c91a92" isExpanded="false" absoluteBounds="9, 5.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/ProjectType_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0de0f54d-df35-4cdb-9de5-c2d5fb7a5d1d" absoluteBounds="9.015, 5.71, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.625 : 5.7); (10.625 : 6.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SrimsV4DataContext/ProjectType_Old/ProjectType_Old_ProjectSupportField_Old" />
+      <nodes>
+        <classShapeMoniker Id="2fe4edbf-f4b6-4409-99e7-2941e4c91a92" />
+        <classShapeMoniker Id="aa3f3bb4-c1a2-442d-9c4b-6f2b887f944d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8 : 6.125); (8 : 5.7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SrimsV4DataContext/ProjectSupportCategory_Old/ProjectSupportCategory_Old_ProjectInfo_Type_Old" />
+      <nodes>
+        <classShapeMoniker Id="b1a811c0-fd90-41dd-b5a0-6cf79c84480f" />
+        <classShapeMoniker Id="447d2e6f-57d2-4a04-8b78-6ec3bb04f1c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 5.3468785); (8.375 : 5.3468785)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SrimsV4DataContext/ProjectType_Old/ProjectType_Old_ProjectInfo_Type_Old" />
+      <nodes>
+        <classShapeMoniker Id="2fe4edbf-f4b6-4409-99e7-2941e4c91a92" />
+        <classShapeMoniker Id="447d2e6f-57d2-4a04-8b78-6ec3bb04f1c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.3125 : 5.7); (9.3125 : 6.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SrimsV4DataContext/ProjectType_Old/ProjectType_Old_ProjectSupportCategory_Old" />
+      <nodes>
+        <classShapeMoniker Id="2fe4edbf-f4b6-4409-99e7-2941e4c91a92" />
+        <classShapeMoniker Id="b1a811c0-fd90-41dd-b5a0-6cf79c84480f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.0312525 : 4.95); (10.0312525 : 5.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SrimsV4DataContext/ProjectRank_Old/ProjectRank_Old_ProjectType_Old" />
+      <nodes>
+        <classShapeMoniker Id="a3cdcbce-fd19-4bb2-a0b3-02f0a55e378d" />
+        <classShapeMoniker Id="2fe4edbf-f4b6-4409-99e7-2941e4c91a92" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9363dc1a-8604-489b-8dd1-0678414c2fbf" isExpanded="false" absoluteBounds="15.875, 9.25, 2, 0.45">
+      <DataClassMoniker Name="/SrimsV4DataContext/SubjectClassChineseEnglish_Old" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffa7f227-89c3-471f-b636-a960ef282f68" absoluteBounds="15.89, 9.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

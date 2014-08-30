@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+根节点的命名空间对应版本。
+
+Entitis下可能包含两种节点：Entity，Item。
+  1，Entity：表示实体，如果Entity节点的hasmany属性为true，则对应表，否则只表示分类。根节点下的Entity节点的hasmany属性固定为true，即对应表。
+  2，Item：必须从属于一个Entity下，表示一个属性
+  
+Entity包含的属性
+  1，name：该实体的名称，必须存在。对应数据库表名。
+  2，title：该实体的可视化名称，必须存在。
+  3，module：实体所属的模块，必须存在
+  4，hasmany：是否是一对多关系。可能的取值为true|falsh，默认为false。当值为true时对应表，否则只对应分类。根节点下的Entity节点的hasmany属性固定为true，即对应表。
+
+
+Item下每一个节点可能包含的属性：
+  1，name：该属性的名称，必须存在。对应数据库表名。同一个表的属性名不能重复。
+  2，title：该信息的可视化名称，必须存在。
+  3，type：类型，必须存在，可能的取值为：
+    entity：实体，即该列对应其他的业务实体，需要提供entityName属性。
+    enum：对应枚举，需要提供enumName属性。
+    int：整型。
+    text：文本，表示长度小于100个汉字的信息。
+    longtext：长文本，长度不限。
+    datetime：日期和时间。
+    bool：是否。
+    bytes：二进制流。
+    guid：全球统一标识。
+  4，enumName：对应的枚举名称，仅当字段类型是enum时有效。
+  5，entityName：对应的实体，仅当字段类型是entity时有效。
+  6，property：所生成的代码的属性。可能的取值有（默认为both）：
+    get：只有get属性。
+    set：只有set属性。
+    both：同时包含get和set属性。
+    none：两种属性都没有（不生成该属性）。
+  7，require：是否必填属性，可能的取值为true|false，默认为true。
+  8，description：说明。
+
+-->
+<xs:schema xmlns="http://it.ouc.edu.cn/DatabaseDescription/V2" targetNamespace="http://it.ouc.edu.cn/DatabaseDescription/V2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="itemType">
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="title" type="xs:string" use="required" />
+    <xs:attribute name="type" use="required" >
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="entity" />
+          <xs:enumeration value="enum" />
+          <xs:enumeration value="int" />
+          <xs:enumeration value="long" />
+          <xs:enumeration value="text" />
+          <xs:enumeration value="longtext" />
+          <xs:enumeration value="datetime" />
+          <xs:enumeration value="bool" />
+          <xs:enumeration value="bytes" />
+          <xs:enumeration value="guid" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="enumName" type="xs:string" use="optional" />
+    <xs:attribute name="entityName" type="xs:string" use="optional" />
+    <xs:attribute name="property" use="optional" >
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="get" />
+          <xs:enumeration value="set" />
+          <xs:enumeration value="both" />
+          <xs:enumeration value="none" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="require" type="xs:boolean" use="optional" default="false" />
+    <xs:attribute name="description" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="entityType">
+    <xs:sequence>
+      <xs:element ref="Item" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element ref="Entity" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="module" type="xs:string" use="required" />
+    <xs:attribute name="title" type="xs:string" use="required" />
+    <xs:attribute name="hasmany" type="xs:boolean" use="optional" />
+  </xs:complexType>
+  <xs:element name="Entity" type="entityType" />
+  <xs:element name="Item" type="itemType" />
+  <xs:element name="Entities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Entity" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

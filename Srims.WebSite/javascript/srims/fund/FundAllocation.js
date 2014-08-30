@@ -1,0 +1,220 @@
+if (!Srims.fund)
+    Ext.namespace('Srims.fund');
+
+Srims.fund.FundAllocation = Ext.data.Record.create([{
+    name: 'id',
+    type: 'int',
+    mapping: 'ID'
+}, {
+    name: 'allocationDateTime',
+    type: 'date',
+    mapping: 'AllocationDateTime'
+}, {
+    name: 'fundPlanOut',
+    type: 'int',
+    mapping: 'FundPlanOut'
+}, {
+    name: 'fundAlreadyOut',
+    type: 'int',
+    mapping: 'FundAlreadyOut'
+}, {
+    name: 'projectNumber',
+    type: 'string',
+    mapping: 'ProjectNumber'
+}, {
+    name: 'allocationTotal',
+    type: 'int',
+    mapping: 'AllocationTotal'
+}, {
+    name: 'allocationIn',
+    type: 'int',
+    mapping: 'AllocationIn'
+}, {
+    name: 'allocationOut',
+    type: 'int',
+    mapping: 'AllocationOut'
+},
+{
+    name: 'allocationWantOut',
+    type: 'int',
+    mapping: 'AllocationWantOut'
+}, {
+    name: 'performanceTotal',
+    type: 'int',
+    mapping: 'PerformanceTotal'
+}, {
+    name: 'performancePay',
+    type: 'int',
+    mapping: 'PerformancePay'
+}, {
+    name: 'allocationHardware',
+    type: 'int',
+    mapping: 'AllocationHardware'
+}, {
+    name: 'overheadExpensesOut',
+    type: 'int',
+    mapping: 'OverheadExpensesOut'
+}, {
+    name: 'overheadPerformancePay',
+    type: 'int',
+    mapping: 'OverheadPerformancePay'
+}, {
+    name: 'state',
+    type: 'string',
+    mapping: 'CurrentState'
+}, {
+    name: 'operator',
+    type: 'string',
+    mapping: 'Operator'
+}, {
+    name: 'dateTime',
+    type: 'date',
+    mapping: 'DateTime'
+}, {
+    name: 'remark',
+    type: 'string',
+    mapping: 'Remark'
+}, {
+    name: 'overheadExpenses',
+    type: 'int',
+    mapping: 'OverheadExpenses'
+}, {
+    name: 'projectID',
+    type: 'int',
+    mapping: 'ProjectID'
+}, {
+    name: 'projectName',
+    type: 'string',
+    mapping: 'ProjectName'
+}, {
+    name: 'projectPricinpalName',
+    type: 'string',
+    mapping: 'ProjectPricinpalName'
+}, {
+    name: 'projectTypeName',
+    type: 'string',
+    mapping: 'ProjectTypeName'
+}, {
+    name: 'isHorizontal',
+    type: 'bool',
+    mapping: 'IsHorizontal',
+    convert: Boolean.toBoolean
+}, {
+    name: 'financeID',
+    type: 'int',
+    mapping: 'FinanceID'
+}, {
+    name: 'financeAmount',
+    type: 'int',
+    mapping: 'FinanceAmount'
+}, {
+    name: 'financeReceivedDate',
+    type: 'date',
+    mapping: 'FinanceReceivedDate'
+}, {
+    name: 'financeVoucherNumber',
+    type: 'string',
+    mapping: 'FinanceVoucherNumber'
+}, {
+    name: 'financeAbstract',
+    type: 'string',
+    mapping: 'FinanceAbstract'
+}, {
+    name: 'isBorrow',
+    type: 'bool',
+    mapping: 'IsBorrow',
+    convert: Boolean.toBoolean
+}, {
+    name: 'fundDescendID',
+    type: 'int',
+    mapping: 'FundDescendID'
+}, {
+    name: 'hasPermission_Allocation',
+    type: 'bool',
+    mapping: 'HasPermission_Allocation',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_Canel',
+    type: 'bool',
+    mapping: 'HasPermission_Canel',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_Censor',
+    type: 'bool',
+    mapping: 'HasPermission_Censor',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_Submit',
+    type: 'bool',
+    mapping: 'HasPermission_Submit',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_UndoSubmit',
+    type: 'bool',
+    mapping: 'HasPermission_UndoSubmit',
+    convert: Boolean.toBoolean
+}, {
+    name: 'hasPermission_Correct',
+    type: 'bool',
+    mapping: 'HasPermission_Correct',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canAllocation',
+    type: 'bool',
+    mapping: 'CanAllocation',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canCancel',
+    type: 'bool',
+    mapping: 'CanCancel',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canCensorPass',
+    type: 'bool',
+    mapping: 'CanCensorPass',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canCensorReject',
+    type: 'bool',
+    mapping: 'CanCensorReject',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canSubmit',
+    type: 'bool',
+    mapping: 'CanSubmit',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canUndoSubmit',
+    type: 'bool',
+    mapping: 'CanUndoSubmit',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canCorrect',
+    type: 'bool',
+    mapping: 'CanCorrect',
+    convert: Boolean.toBoolean
+}, {
+    name: 'canAllocationPerformancePay',
+    type: 'bool',
+    mapping: 'CanAllocationPerformancePay',
+    convert: Boolean.toBoolean
+}, {
+    name: 'overheadExpensesIn',
+    type: 'int',
+    mapping: 'OverheadExpensesIn'
+}, {
+    name: 'overheadExpensesMiddle',
+    type: 'int',
+    mapping: 'OverheadExpensesMiddle'
+}, {
+    name: 'overheadExpensesExpert',
+    type: 'int',
+    mapping: 'OverheadExpensesExpert'
+}, {
+    name: 'overheadExpenses',
+    type: 'int',
+    mapping: 'OverheadExpenses'
+}
+]);
+
+Srims.data.Entity.apply(Srims.fund.FundAllocation);

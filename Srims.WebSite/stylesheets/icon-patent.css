@@ -1,0 +1,23 @@
+﻿.icon-patent, .icon-patent-list, .icon-expert-my-patent
+{
+	background-image: url(../images/icon/patent.png) !important;
+}
+
+.icon-patent-new
+{
+	background-image: url(../images/icon/patent-new.png) !important;
+}
+
+.icon-patent-agency-manage
+{
+	background-image: url(../images/icon/patent-agenda.png) !important;
+}
+
+.icon-patent-query
+{
+	background-image: url(../images/icon/patent-query.png) !important;
+}
+.icon-patent-expert-match
+{
+	background-image: url(../images/icon/patent-expert-match.png) !important;
+}
